@@ -173,7 +173,8 @@ def parse_xml(url):
 
     path_item_full = './/div[@id="app"]//div[@data-marker="catalog-serp"]//div[@data-marker="item"]'
     path_item = '//div[@data-marker="item"]'
-    path_item_url = '//a[@href]'
+    path_item_url = './/div[@data-marker="item"]//@href' '//a[@href]'
+    path_url = './/a[@data-marker="item-title"]/@href'
 
     #tree = etree.fromstring(html, etree.HTMLParser())
     #tree = etree.fromstring(html_txt, etree.HTMLParser())
@@ -208,9 +209,6 @@ def parse_xml(url):
         #description = item.xpath('//div[substring(@class,1,13) ="iva-item-text"]//text()')
         #path_title = './/div[substring(@class,1,13) ="iva-item-desc"]//text()'
         title = item.xpath(path_title)[0]
-        #title = item.xpath('.//div[@class="iva-item-descriptionStep-QGE8Y"]//text()')[0]
-
-        #description = item.xpath('./div[@class="description"]/text()')
 #        if index < 10:
             #print(etree.tostring(item), name, description)
         print(f' {index} title = {title}')
