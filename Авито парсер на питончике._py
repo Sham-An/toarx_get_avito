@@ -1,3 +1,6 @@
+
+#'https://m.avito.ru/api/1/items/search/header?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&'
+#            f'lastStamp={time}&parameters[locationId]={region_id}&parameters[categoryId]={category_id}'
 # Инструкции:
 # первый метод: get_region_id_by_name - принимает аргрумент названия города, возвращает id города
 # второй метод: get_all_categories_by_region_id - выдает ВСЕ существующие категории в этом городе. вход - id города
