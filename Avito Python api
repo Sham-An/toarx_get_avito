@@ -1,0 +1,107 @@
+https://ru.stackoverflow.com/questions/1126271/%D0%9F%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3-%D0%B0%D0%B2%D0%B8%D1%82%D0%BE-python
+Парсинг авито Python ХРОМ БЛОКИРУЕт. MOZILLA работает.
+https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30
+Вопрос задан 2 года 3 месяца назад
+Изменён 1 месяц назад
+Просмотрен 4k раза
+
+0
+
+
+1
+Проблема с парсингом последующих страниц, в том варианте, до которого я допер, могу выдернуть только первую страницу, если использовать этот вариант pagination = soup.find('div', class_='pagination-root-2oCjZ'), то все вроде хорошо, выводится весь список страниц в html, но как их выдернуть я не понимаю... Сама страниц - https://www.avito.ru/murmanskaya_oblast/avtomobili/mitsubishi-ASgBAgICAUTgtg3ymCg?cd=1
+
+import requests
+from bs4 import BeautifulSoup
+
+def get_pages_count(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    pagination = soup.find('span', class_='pagination-item-1WyVp').findNext('span')['data-marker']
+    if pagination:
+       return int(pagination[-2])
+    else:
+        return 1
+
+
+
+def parse():
+    html = get_html(URL)
+    if html.status_code == 200:
+        cars = []
+        pages_count = get_pages_count(html.text)
+        for page in range(1, pages_count + 1):
+            print(f'Парсинг старницы {page} из {pages_count}...')
+            html = get_html(URL, params={"p": page})
+            cars.extend(get_content(html.text))
+        print(cars)
+    else:
+        print('Error')
+
+
+parse()
+python
+парсер
+Поделиться
+Улучшить вопрос
+Отслеживать
+задан 15 мая 2020 в 18:46
+user avatar
+Banki
+2711 серебряный знак99 бронзовых знаков
+Добавить комментарий
+3 ответа
+Сортировка:
+
+Наивысший рейтинг (по умолчанию)
+
+0
+
+URL = "https://www.avito.ru/murmanskaya_oblast/avtomobili/mitsubishi-ASgBAgICAUTgtg3ymCg?cd=1&p="
+
+#Так выглядит твоя ссылка
+#И на каждом шаге цикла меняй свой url
+for page in range(1, pages_count + 1):
+    html = get_html(URL + str(page))
+    # и далее твоя логика
+Поделиться
+Улучшить ответ
+Отслеживать
+ответ дан 16 мая 2020 в 13:25
+user avatar
+v.volkov
+3866 бронзовых знаков
+Это-то даа, а как мне посчитать, сколько всего страниц по ссылке? –
+Banki
+ 16 мая 2020 в 19:27
+Добавить комментарий
+
+0
+
+В общем, к-во страниц я посчитал так
+
+def get_pages_count(html):
+    soup = BeautifulSoup(html, 'html.parser')
+    pagination = soup.find('div', class_='pagination-root-2oCjZ')
+    line = pagination.text
+    p_count = line[-8]
+    print(p_count)
+Естественно вместо print поставить return, это касается конкретно авито на момент написания. Возможно будет проблема когда страница будет одна, тк. в этом случае снизу страницы не будет их кол-ва вообще.
+
+Поделиться
+Улучшить ответ
+Отслеживать
+ответ дан 16 мая 2020 в 20:33
+user avatar
+Banki
+2711 серебряный знак99 бронзовых знаков
+Добавить комментарий
+
+0
+
+Можно попробовать по ссылке ниже получить список объявлений, а дальше уже посчитать количество items в json просто. Не забывай прописывать headers и куки, дабы сайт не заблочил
+
+Ссылка - https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params[1283]=14756&locationId=640000&params[110000]=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30
+
+Вот тут есть статья как парсить авито, чтобы не забанили - правда только про номер телефона, но все же кое что полезное там есть.
+
+Вообще парсить Авито через html дело неблагодарное

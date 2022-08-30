@@ -103,7 +103,7 @@ def parse_xml(resp_text):
     #tree = etree.fromstring(html_txt, etree.HTMLParser())
     #print(html_txt)
     tree = html.fromstring(html_txt)
-    index = 1
+    index = 0
 #    print("tree.xpath(path_item) №№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№")
 
     for item in tree.xpath(path_item):  # .getall():
@@ -111,12 +111,12 @@ def parse_xml(resp_text):
         #print(item)
         # del item_id = item.xpath(".//@id")
         item_id = item.xpath(path_id)
-        #print(f'ITEM____ID {item_id}')
-        print(f'ITEM_ID {item.xpath(path_id)[0]} type{type(item_id)} {item.xpath(path_id)[0]}')
+        print(f'ITEM____________________________________ID {item_id}')
+        print(f' ################################### \nITEM_ID {item.xpath(path_id)[0]} type{type(item_id)} {item.xpath(path_id)[0]}')
         name = item.xpath(path_name)[0]
         price = item.xpath(path_price)
         url_item = item.xpath(path_url)
-        print(f'!!!!!!!!!!!!NAME {name} @@@@ ЦЕНА {price} ----- URLL {url_item}')
+        print(f'!!!!!!!!!!!!NAME {name} @@@@ ЦЕНА {price} \n----- URLL {url_item}')
         index += 1
         description =""
         #description = item.xpath('//div[substring(@class,1,13) ="iva-item-text"]//text()')
@@ -159,6 +159,8 @@ def main():
         #https://www.avito.ru
         r = session.request('GET', url_av)
         #print(r.text)
+        print(r.json())
+        #parse_xml(r.json())
         parse_xml(r.text)
 #        parse_xml(url)
 #        print(r.text)#[1000])#[1000]
