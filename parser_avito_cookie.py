@@ -104,13 +104,14 @@ def get_json():
     try:
         response = session.request('GET', url, headers=headers, params=params)
         #r = session.request('GET', 'https://www.avito.ru')
-        print(response.text)[1000]
+        resp = open('items_api_2.json').read()
+        print(response)#.text)[1000]
     except Exception as exception:
         print(exception)
 
     #response = requests.get(url=url, headers=headers, params=params)
-    data = response.json()
-
+    #data = response.json()
+    data = resp
     return data
 
 

@@ -48,7 +48,9 @@ def main():
         #https://m.avito.ru/api/11/items
         #https://www.avito.ru
         r = session.request('GET', url_av)
-        print(r.text)#[1000])#[1000]
+        r = open('items_api_2.json').read()
+
+        print(r)#.text)#[1000])#[1000]
     except Exception as exception:
         print(exception)
 

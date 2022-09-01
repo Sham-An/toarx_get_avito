@@ -36,8 +36,9 @@ url_api = 'https://m.avito.ru/api/11/items?key=af0deccbgcgidddjgnvljitntccdduijh
 
 try:
     #r = session.request('GET', 'https://www.avito.ru')
-    r = session.request('GET', url_api)
-    print(r.text)[1000]
+    #r = session.request('GET', url_api)
+    r = open('items_api_2.json').read()
+    print(r)#.text)[1000]
 except Exception as exception:
     print(exception)
 
