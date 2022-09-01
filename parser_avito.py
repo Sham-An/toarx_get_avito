@@ -116,6 +116,7 @@ def get_json():
 
 def main():
     data = get_json()
+    print(data)
     get_offers(data)
 
 
