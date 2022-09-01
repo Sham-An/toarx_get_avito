@@ -1,5 +1,6 @@
 #Requests в Python по умолчанию использует устаревший протокол TLS V1.
 # Для корректной работы парсера рекомендую вам использовать TLS не ниже V1.2.
+#https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30
 
 #
 import io
@@ -7,14 +8,14 @@ from urllib.request import urlopen
 import lxml.html
 from lxml import html
 from lxml import etree
-#from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup
 from random import randint
 #######################################
 import json
 import sqlite3
 import time
 from datetime import datetime
-#import requests
+import requests
 from realty import check_database
 import ssl
 import requests
@@ -49,19 +50,56 @@ def parse_xml(resp_text):
 #    headers = {'Content-Type': 'text/html', }
 #    response = requests.get(url, headers=headers)
     html_txt = resp_text #response.text
+#    with open('test.html', 'w') as output_file:
+#        output_file.write(html_txt.text.encode('cp1251'))
+
+    #print(html_txt)
+    #doc = lxml.html.fromstring(resp_text.content)
     print('doc############################################')
+    #print(doc)
+#    new_releases = doc.xpath('//div[@elementtiming="bx.catalog.container"]')[0]
+#    new_releases = doc.xpath('//div[@id="app"]')[0]
+##    new_releases = doc.xpath('//div[@id="app"]')
+##    print(new_releases) #.//div[@data-item-id]
+
+##    items_id = new_releases.xpath('.//div[@data-item-id]')[0]  # , smart_strings=False) #.decode('utf8')
+##    meta_items_id = new_releases.xpath('.//meta[@itemprop="description"]/@content')  # , smart_strings=False)
+##    print(f'meta_items_id {meta_items_id[0]}')
+##   print(f'ВСЕГО {len(items_id)} В {items_id}')
+##    titles = new_releases.xpath('.//div[substring(@class,1,13) ="iva-item-desc"]//text()')
+##    prices = new_releases.xpath('.//div[@data-item-id]//meta[@itemprop="price"]/@content')
+    ###all_in_one = new_releases.xpath('//*[//div[@data-item-id]//div[@data-marker="item-date"]//preceding::div[@data-marker="item-line"]]')
+##    print(len(titles))
+##    print(len(prices))
+
+    # results = []
+    # resp = requests.get(url, headers=headers)
+    # text = resp.text
+    # print("requests.get(url, headers=headers)")
+    #
+    # html_tree = html.fromstring(text)
+    # print(html_tree)
+    # Из окна с таблицей элементов выбор элементов
+    # AVITO дерево группы
+
     path = './/div[@elementtiming="bx.catalog.container"]//div[@data-marker="catalog-serp"]'
     #deskription это коротко из title
     path_title_long = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//div[substring(@class,1,13) ="iva-item-desc"]//text()'
     path_title = './/div[substring(@class,1,13) ="iva-item-desc"]//text()'
+    path_description_long = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//meta[@itemprop="description"]'
     path_description = './/meta[@itemprop="description"]'
     # preceding-sibling
-    path_name_long = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//h3[@itemprop="name"]'
+    path_name_long        = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//h3[@itemprop="name"]'
     path_name = './/h3[@itemprop="name"]/text()'
     path_price_long = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//meta[@itemprop="price"]'
-    # брать с объявления а не с общего контейнера path_trader = './/div[@data-marker="item-line"]//a/text()'
+
+    path_price_old = './/meta[@itemprop="price"]'
+    #path_price = './/meta[@itemprop="price"]//content'
+    path_trader_long = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//div[@data-marker="item-line"]//a'
+    path_trader = './/div[@data-marker="item-line"]//a/text()'
     # preceding-sibling
-    #оставлен для примера path_descrip_full = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//div[@data-marker="item-line"]//preceding-sibling::div[1]//div/text()'
+    #path_descrip_full = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//div[@data-marker="item-line"]//preceding-sibling::div[1]//div/text()'
+    path_descrip = './/preceding-sibling::div[1]//div/text()'
 
     ##!!!!!!!####!!!!!!###!!!!#БОМБА ## БОМБА ## БОМБА ## БОМБА ## БОМБА ## БОМБА ## БОМБА ## БОМБА
     # substring(@class,1,13) ="iva-item-text"
@@ -81,29 +119,25 @@ def parse_xml(resp_text):
     # following-sibling
     path_location = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//div[@data-marker="item-line"]//following-sibling::div[2]//span'
 
+    # tree = html.fromstring(text)
+    #
+    # film_list_lxml = tree.xpath('//div[@class = "profileFilmsList"]')[0]
+    # items_lxml = film_list_lxml.xpath('//div[@class = "item even" or @class = "item"]')
+    # for item_lxml in items_lxml:
 #    path_container = './/div[@elementtiming="bx.catalog.container"]//div[@data-marker="catalog-serp"]'
     path_container = './/div[@id="app"]//div[@data-marker="catalog-serp"]' #//div[@id="app"]
 
     path_item_full = './/div[@id="app"]//div[@data-marker="catalog-serp"]//div[@data-marker="item"]'
-    path_item = './/div[@data-marker="item"]'
-    path_id = './/@id'    #path_id = './/div[@id]' #data-item-id]//@id'   #path_id ='.//div[@data-marker="item"][@id]'
-    #path_id = './/div[@data-item-id]' #//@id' #'.//div[@data-marker="item"]//@id'
-    path_url = './/a[@data-marker="item-title"]/@href' #'//div[@data-marker="item"]//div//a[@data-marker="item-title"]//@href' #'//div[@data-marker="item"]//@href' #'.//div[@data-marker="item"]//div//div//@itemprop' #'.//div[@itemprop="url"]'
-    #'//div[@data-marker="item"]//div//a[@data-marker="item-title"]//@href'
-    #path_title = './/div[substring(@class,1,13) ="iva-item-desc"]//text()'
-    #path_name = './/h3[@itemprop="name"]/text()'
-
-#div data-marker="item"
-#data-item-id="2502697383"
-#id="i2502697383"
-#itemprop="url" href="/veselyy/mototsikly_i_mototehnika/skuter_2502697383"
+    path_item = '//div[@data-marker="item"]'
+    path_item_url = '//a[@href]'
+    path_id = ".//@id"
     path_price = './/meta[@itemprop="price"]//@content'
 
 #tree = etree.fromstring(html, etree.HTMLParser())
     #tree = etree.fromstring(html_txt, etree.HTMLParser())
     #print(html_txt)
     tree = html.fromstring(html_txt)
-    index = 0
+    index = 1
 #    print("tree.xpath(path_item) №№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№")
 
     for item in tree.xpath(path_item):  # .getall():
@@ -111,12 +145,11 @@ def parse_xml(resp_text):
         #print(item)
         # del item_id = item.xpath(".//@id")
         item_id = item.xpath(path_id)
-        print(f'ITEM____________________________________ID {item_id}')
-        print(f' ################################### \nITEM_ID {item.xpath(path_id)[0]} type{type(item_id)} {item.xpath(path_id)[0]}')
+        print(f'ITEM_ID {item.xpath(path_id)[0]} type{type(item_id)} {item.xpath(path_id)[0]}')
+        #print(f'ITEM_ID {etree.tostring(item.xpath("//@id"))}')
         name = item.xpath(path_name)[0]
         price = item.xpath(path_price)
-        url_item = item.xpath(path_url)
-        print(f'!!!!!!!!!!!!NAME {name} @@@@ ЦЕНА {price} \n----- URLL {url_item}')
+        print(f'!!!!!!!!!!!!NAME {name} @@@@ ЦЕНА {price}')
         index += 1
         description =""
         #description = item.xpath('//div[substring(@class,1,13) ="iva-item-text"]//text()')
@@ -154,13 +187,13 @@ def main():
         url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery-ASgBAgICAUQ82gE?f=ASgBAgECAUQ82gEBRcaaDBZ7ImZyb20iOjMwMCwidG8iOjcwMDB9&q=%D1%81%D0%BA%D1%83%D1%82%D0%B5%D1%80&radius=100'
         url_av_1 = 'https://www.avito.ru/novosibirsk/muzykalnye_instrumenty/midi-klaviatura_cme_u-key_2521013620'
         url_av = url_0
+        url_api = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30'
+        #url_av = url_api
 
         #https://m.avito.ru/api/11/items
         #https://www.avito.ru
         r = session.request('GET', url_av)
         #print(r.text)
-        print(r.json())
-        #parse_xml(r.json())
         parse_xml(r.text)
 #        parse_xml(url)
 #        print(r.text)#[1000])#[1000]

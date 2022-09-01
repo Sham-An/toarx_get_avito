@@ -29,8 +29,7 @@ class HttpParser:
     AVITO_MAIN = 'avito_main'
 
     avito_urls = {
-        'region_info': 'https://m.avito.ru/api/1/slocations?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'
-                       '&locationId=621540&limit=10&q=',
+        'region_info': 'https://m.avito.ru/api/1/slocations?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=621540&limit=10&q=',
         'categories_info': 'https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=',
         'avito_main': 'https://avito.ru'
     }

@@ -1,0 +1,109 @@
+https://fox-code.ru/a/kak-sparsit-nomer-telefona-s-avito/
+
+Как спарсить номер телефона с авито?
+
+    FoxFox18 января, 2021Статьи1 коммент
+
+Привет! Сегодня я покажу как просто парсить номер телефона с Авито без Selenium,
+Google Puppeteer и прочих headless-бразуеров. Делается это довольно просто.
+Подготовительные работы
+
+Собственно парсить номер телефона а Авито не сложно. Для этих целей нам
+не понадобится распознавать картинку, как советуют на Хабр Q&A,
+достаточно лишь немного уметь работать с панелью разработчика в Хроме
+(или любом другом браузере) и знать как сделать HTTP запрос в Kotlin.
+
+Для начала открываем Авито, и консоль разработчика.
+Я буду это делать в Хроме, поэтому нажму F12. Далее переходим на вкладку — Network.
+Затем кликаем по значку мобильного девайса, чтобы наш Авито отображался в виде мобильной версии.
+Девайс можете выбрать любой из списка, я взял — Pixel 2 XL.
+Далее переключаем фильтр запросов в режим XHR и очищаем наш список (иконка clear)
+и кликаем по кнопке «Позвонить».
+
+В списке увидим запрос такого вида: «phone?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir» и далее. Сохраняем строку после key — это наш ключ, который понадобиться нам, чтобы написать парсер телефонов Авито.
+Парсер телефонов Авито
+
+Все что нужно у нас есть, теперь напишем простой класс для GET-запроса в Kotlin.
+Добавим туда несколько заголовков, чтобы не словить бан от сайта.
+
+Кроме того, нам понадобится место, где хранить параметры.
+Можно просто указать переменную с помощью val, а можно создать объект,
+если будет желание расширить функционал парсера — так и поступим.
+
+object PARAMS {
+    val key: String = "af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir"
+}
+
+Теперь создадим объект, в котором будут храниться наши заголовки для того,
+чтобы парсить номер Авито. В принципе, этого небольшого набора должно хватить.
+
+object HEADERS {
+    val userAgent = "Mozilla/5.0 (Linux; Android 8.1.0; Nokia 6.1) " +
+            "AppleWebKit/537.36 (KHTML, like Gecko) " +
+            "Chrome/74.0.3729.157 Mobile Safari/537.36"
+    val authority = "m.avito.ru"
+    val contentType = "application/json;charset=utf-8"
+    val secChUaMobile = "?1"
+    val secFetchDest = "empty"
+    val secFetchMode = "cors"
+    val secFetchSite = "same-origin"
+}
+
+Готово. Создадим класс для http запроса в Kotlin, и пропишем туда наши заголовки.
+Вместо явного указания заголовков можно к примеру объект HEADERS переделать в Map,
+тогда код получится красивее, но это уже на Ваше усмотрение.
+
+class RequestHelper {
+    fun getData(url: String): String {
+        val sb = StringBuilder()
+
+        with(URL(url).openConnection() as HttpURLConnection) {
+
+            addRequestProperty("User-Agent", HEADERS.userAgent)
+            addRequestProperty("authority", HEADERS.authority)
+            addRequestProperty("referer", url)
+            addRequestProperty("content-type", HEADERS.contentType)
+            addRequestProperty("sec-ch-ua-mobile", HEADERS.secChUaMobile)
+            addRequestProperty("sec-fetch-dest", HEADERS.secFetchDest)
+            addRequestProperty("sec-fetch-mode", HEADERS.secFetchMode)
+            addRequestProperty("sec-fetch-site", HEADERS.secFetchSite)
+
+            try {
+                val text = inputStream.bufferedReader().readText()
+                sb.append(text)
+            } catch (ex: Exception) {
+                ex.printStackTrace()
+            } finally {
+                disconnect()
+            }
+        }
+        return sb.toString()
+    }
+}
+
+Все готово, теперь в главной функции fun main() можно вывести полученный номер в формате
+JSON вызвав наш RequestHelper. Не забываем подставить ID объявления вместо ad_ID,
+которое состоит из цифр, и указывается в конце ссылки на объявление.
+Например «https://……/avtomobili/ford_c-max_2007_id объявления»,
+
+val ad_ID = "id объявления"
+val data = RequestHelper()
+                .getData("https://m.avito.ru/api/1/items/${ad_ID}/phone?key=${PARAMS.key}")
+println(data)
+
+В ответ получаем JSON, где в параметре uri указан наш номер
+
+{
+    status: "ok",
+    result: {
+        action: {
+            title: "Позвонить",
+            uri: "ru.avito://1/phone/call?number=%2B79031112233",
+        }
+    }
+}
+
+Можно не останавливаться на этом, а распарсить JSON c номером телефона Авито с
+помощью библиотеки GSON.
+
+    Внимание! Статья приведена в ознакомительных целях и не является руководством к действию. Все последствия читатель берет на себя! Уважайте законы об информации.
