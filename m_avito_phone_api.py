@@ -57,11 +57,12 @@ headers = { 'authority': 'm.avito.ru',
 #         sec-fetch-mode: cors
 #         sec-fetch-site: same-origin
 #         user-agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Mobile Safari/537.36
-#         x-requested-with: XMLHttpRequest
+#         x-requested-with: XMLHttpRequest'
+# }
 ##############################################################################
 
-# if cookie:                                      # Добавим куки, если есть внешние куки
-#     headers['cookie'] = cookie
+if cookie:                                      # Добавим куки, если есть внешние куки
+    headers['cookie'] = cookie
 s.headers.update(headers)                       # Сохраняем заголовки в сессию
 s.get('https://m.avito.ru/')                    # Делаем запрос на мобильную версию.
 url_api_9 = 'https://m.avito.ru/api/9/items'    # Урл первого API, позволяет получить id и url объявлений по заданным фильтрам

@@ -29,8 +29,9 @@ class TlsAdapter(HTTPAdapter):
 session = requests.session()
 adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
 session.mount("https://", adapter)
-url_api = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30'
-url_api = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9'#&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30'
+
+#url_api = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30'
+url_api = 'https://m.avito.ru/api/11/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9'#&params[1283]D=14756'#&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1' #&lastStamp=1611316560&display=list&limit=30'
 
 
 try:
@@ -41,8 +42,10 @@ except Exception as exception:
     print(exception)
 
 # def main():
-#
-#     #burp0_url = "https://m.avito.ru/api/11/items?key=1&priceMin=1&priceMax=9999999&owner[]=private&sort=date&query=iphone&page=1&display=list&limit=30"
+# https://m.avito.ru/api/9
+# https://m.avito.ru/api/10
+# https://m.avito.ru/api/11
+#   OK!!! JSON!!!!  #burp0_url = "https://m.avito.ru/api/11/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&priceMin=1&priceMax=9999999&owner[]=private&sort=date&query=iphone&page=1&display=list&limit=30"
 #     burp0_url = "https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/turenduro_fuego_scrambler_250_v_nalichii_2562662581"
 #     burp0_headers = {
 #         "User-Agent": "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/14.2 Chrome/87.0.4280.141 Mobile Safari/537.36",
