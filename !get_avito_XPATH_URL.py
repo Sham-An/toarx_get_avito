@@ -132,17 +132,28 @@ def parse_xml(resp_text):
     path_item_url = '//a[@href]'
     path_id = ".//@id"
     path_price = './/meta[@itemprop="price"]//@content'
+    #path_pages = '//div[contains(@class, "pagination-root")]'
+    #path_pages ='//div[contains(@class, "pagination-page")]/a/@href'
+    #path_pages = '//div[contains(@class, "pagination-page")]/a[last()]/text()'
+    #OK! path_pages = '//div[contains(@class, "pagination-page")]/a[last()-1]/text()'
+    # path_pages = '//div[contains(@class, "pagination-page")]/a[last()-1]/text()'
+    path_pages = '//div[contains(@class, "pagination-root")]/span[last()-1]/text()'
 
 #tree = etree.fromstring(html, etree.HTMLParser())
     #tree = etree.fromstring(html_txt, etree.HTMLParser())
     #print(html_txt)
+
+    page_tree = html.fromstring(html_txt)
+    count_p = page_tree.xpath(path_pages)
+    print (f'Ctranic === {count_p}')
+    #
+
     tree = html.fromstring(html_txt)
-    index = 1
+    index = 0
 #    print("tree.xpath(path_item) №№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№")
 
     for item in tree.xpath(path_item):  # .getall():
 
-        #print(item)
         # del item_id = item.xpath(".//@id")
         item_id = item.xpath(path_id)
         print(f'ITEM_ID {item.xpath(path_id)[0]} type{type(item_id)} {item.xpath(path_id)[0]}')

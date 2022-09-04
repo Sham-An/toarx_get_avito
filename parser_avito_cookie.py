@@ -110,8 +110,8 @@ def get_json():
         print(exception)
 
     #response = requests.get(url=url, headers=headers, params=params)
-    #data = response.json()
-    data = resp
+    data = response.json()
+    #data = response
     return data
 
 
