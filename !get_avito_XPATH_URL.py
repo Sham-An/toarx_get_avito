@@ -143,12 +143,12 @@ def parse_xml(resp_text):
     #tree = etree.fromstring(html_txt, etree.HTMLParser())
     #print(html_txt)
 
-    page_tree = html.fromstring(html_txt)
-    count_p = page_tree.xpath(path_pages)
-    print (f'Ctranic === {count_p}')
+    tree = html.fromstring(html_txt)
+    count_p = int(tree.xpath(path_pages)[-1])
+    print (f'Pages count === {count_p}')
     #
 
-    tree = html.fromstring(html_txt)
+    #tree = html.fromstring(html_txt)
     index = 0
 #    print("tree.xpath(path_item) №№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№")
 
@@ -196,6 +196,10 @@ def main():
     try:
         url_api_9 = 'https://m.avito.ru/api/9/items'  # Урл первого API, позволяет получить id и url объявлений по заданным фильтрам
         url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery-ASgBAgICAUQ82gE?f=ASgBAgECAUQ82gEBRcaaDBZ7ImZyb20iOjMwMCwidG8iOjcwMDB9&q=%D1%81%D0%BA%D1%83%D1%82%D0%B5%D1%80&radius=100'
+       #url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery-ASgBAgICAUQ82gE?f=ASgBAgECAUQ82gEBRcaaDBZ7ImZyb20iOjMwMCwidG8iOjgwMDB9&q=скутер&radius=100'
+                #https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery-ASgBAgICAUQ82gE?f=ASgBAgECAUQ82gEBRcaaDBR7ImZyb20iOjAsInRvIjoxMDAwfQ&q=скутер?pmax=7000&pmin=2000&radius=100
+                #?pmax=7000&pmin=2000
+        url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika?radius=100&pmin=2000&pmax=10000'
         url_av_1 = 'https://www.avito.ru/novosibirsk/muzykalnye_instrumenty/midi-klaviatura_cme_u-key_2521013620'
         url_av = url_0
         url_api = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30'
