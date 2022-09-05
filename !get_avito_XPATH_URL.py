@@ -120,10 +120,6 @@ def parse_xml(resp_text):
     path_location = './/div[@elementtiming="bx.catalog.container"]//div[@data-item-id]//div[@data-marker="item-line"]//following-sibling::div[2]//span'
 
     # tree = html.fromstring(text)
-    #
-    # film_list_lxml = tree.xpath('//div[@class = "profileFilmsList"]')[0]
-    # items_lxml = film_list_lxml.xpath('//div[@class = "item even" or @class = "item"]')
-    # for item_lxml in items_lxml:
 #    path_container = './/div[@elementtiming="bx.catalog.container"]//div[@data-marker="catalog-serp"]'
     path_container = './/div[@id="app"]//div[@data-marker="catalog-serp"]' #//div[@id="app"]
 
@@ -138,29 +134,43 @@ def parse_xml(resp_text):
     #OK! path_pages = '//div[contains(@class, "pagination-page")]/a[last()-1]/text()'
     # path_pages = '//div[contains(@class, "pagination-page")]/a[last()-1]/text()'
     path_pages = '//div[contains(@class, "pagination-root")]/span[last()-1]/text()'
+    #!Не наша деревня поиска OK! path_location = './/span[contains(@class, "geo-addr")]/span/text()'
+    path_location_free = './/span[contains(@class, "geo-addr")]/span/text()'
+    path_location = './/div[contains(@class, "geo-geo")]/span/span/text()'
 
 #tree = etree.fromstring(html, etree.HTMLParser())
     #tree = etree.fromstring(html_txt, etree.HTMLParser())
     #print(html_txt)
 
     tree = html.fromstring(html_txt)
-    count_p = int(tree.xpath(path_pages)[-1])
-    print (f'Pages count === {count_p}')
-    #
+    count_page = tree.xpath(path_pages)
 
-    #tree = html.fromstring(html_txt)
+    if count_page:
+        count_page = int(count_page[0])
+        print (f'Pages count === {count_page}')
+    else:
+        count_page = 1#int(tree.xpath(path_pages)[0])
+        print (f'Pages count === {count_page}')
+    #
+    tree = html.fromstring(html_txt)
     index = 0
 #    print("tree.xpath(path_item) №№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№")
 
     for item in tree.xpath(path_item):  # .getall():
+    #for item in tree.xpath(path_location):  # .getall():
 
         # del item_id = item.xpath(".//@id")
         item_id = item.xpath(path_id)
         print(f'ITEM_ID {item.xpath(path_id)[0]} type{type(item_id)} {item.xpath(path_id)[0]}')
-        #print(f'ITEM_ID {etree.tostring(item.xpath("//@id"))}')
         name = item.xpath(path_name)[0]
         price = item.xpath(path_price)
-        print(f'!!!!!!!!!!!!NAME {name} @@@@ ЦЕНА {price}')
+        location = item.xpath(path_location)
+        location_free = item.xpath(path_location_free)
+        print(location_free)
+        print(f'!!!!!!!!!!!!NAME {name} @@@@ ЦЕНА {price} Location {location}')
+        #count_p2 = item.xpath(path_pages)#int(tree.xpath(path_pages)[-1])
+        #print(f'Pages count === {count_p2}')
+
         index += 1
         description =""
         #description = item.xpath('//div[substring(@class,1,13) ="iva-item-text"]//text()')
@@ -196,10 +206,13 @@ def main():
     try:
         url_api_9 = 'https://m.avito.ru/api/9/items'  # Урл первого API, позволяет получить id и url объявлений по заданным фильтрам
         url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery-ASgBAgICAUQ82gE?f=ASgBAgECAUQ82gEBRcaaDBZ7ImZyb20iOjMwMCwidG8iOjcwMDB9&q=%D1%81%D0%BA%D1%83%D1%82%D0%B5%D1%80&radius=100'
-       #url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery-ASgBAgICAUQ82gE?f=ASgBAgECAUQ82gEBRcaaDBZ7ImZyb20iOjMwMCwidG8iOjgwMDB9&q=скутер&radius=100'
+        #url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery-ASgBAgICAUQ82gE?f=ASgBAgECAUQ82gEBRcaaDBZ7ImZyb20iOjMwMCwidG8iOjgwMDB9&q=скутер&radius=100'
                 #https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery-ASgBAgICAUQ82gE?f=ASgBAgECAUQ82gEBRcaaDBR7ImZyb20iOjAsInRvIjoxMDAwfQ&q=скутер?pmax=7000&pmin=2000&radius=100
                 #?pmax=7000&pmin=2000
-        url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika?radius=100&pmin=2000&pmax=10000'
+                #&forceLocation=1&localPriority=1
+        url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery/?radius=100&p=2&forceLocation=1&localPriority=1&pmin=1000&pmax=10000'
+        url_0 = 'https://www.avito.ru/rostovskaya_oblast/mototsikly_i_mototehnika/mopedy_i_skutery?cd=1&q=скутер&forceLocation=1&localPriority=1&pmax=7000&pmin=2000'
+        #url_0 = 'https://www.avito.ru/rostov-na-donu?cd=1&q=e-mu+1616'
         url_av_1 = 'https://www.avito.ru/novosibirsk/muzykalnye_instrumenty/midi-klaviatura_cme_u-key_2521013620'
         url_av = url_0
         url_api = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30'
