@@ -7,11 +7,25 @@ from urllib.parse import unquote
 from datetime import datetime
 from math import floor
 from time import sleep
+import ssl
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.poolmanager import PoolManager
+from requests.packages.urllib3.util import ssl_
 from time import time
-
 import warnings
 
 warnings.filterwarnings("ignore")
+CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
+
+class TlsAdapter(HTTPAdapter):
+
+    def __init__(self, ssl_options=0, **kwargs):
+        self.ssl_options = ssl_options
+        super(TlsAdapter, self).__init__(**kwargs)
+
+    def init_poolmanager(self, *pool_args, **pool_kwargs):
+        ctx = ssl_.create_urllib3_context(ciphers=CIPHERS, cert_reqs=ssl.CERT_REQUIRED, options=self.ssl_options)
+        self.poolmanager = PoolManager(*pool_args, ssl_context=ctx, **pool_kwargs)
 
 
 class HttpParser:
@@ -30,10 +44,21 @@ class HttpParser:
 
     @staticmethod
     def get_json_by_request(url):
+        session = requests.session()
+        adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
+        session.mount("https://", adapter)
+
+        #r = session.request('GET', 'https://www.avito.ru')
+
         try:
-            resp = requests.get(
-                url, verify=False
-            )
+            # resp = requests.get(
+            #     url, verify=False
+            # )
+            resp = session.request('GET', url, verify=False)
+                #requests.get(
+                #url, verify=False
+           # )
+
             json_content = resp.json()
             if 'status' in json_content.keys():
                 if json_content['status'] == 'internal-error':
@@ -204,6 +229,9 @@ class HttpParser:
 
         return adds_list
 
+session = requests.session()
+adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
+session.mount("https://", adapter)
 
 region_id = HttpParser.get_region_id_by_name('Казань')
 all_categories = HttpParser.get_all_categories_by_region_id(region_id)
