@@ -1,0 +1,6 @@
+from I:\Python3\pythonProjects\realty_avito
+To I:\Oblaco\andrej.shamraev_yandex.ru\YandexDisk
+
+mklink /j (TO)C:\Games (FROM)D:\Games
+
+mklink /j I:\Oblaco\andrej.shamraev_yandex.ru\YandexDisk\realty_avito2 I:\Python3\pythonProjects\realty_avito1

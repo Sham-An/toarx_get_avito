@@ -148,6 +148,7 @@ index = 1
 for i in items: # Теперь идем по ябъявлениям:
     ad_id = str(i['value']['id'])
     print(f'ad_id {ad_id}')
+
     #args = [city, categories, subcategory, 1, district_or_metro, direction]
     #url = "https://avito.ru/{}/{}/{}?p={}&{}={}".format(*args)
 
@@ -208,3 +209,38 @@ for i in items: # Теперь идем по ябъявлениям:
 
 #https: // rest - app.net / api / ad?login = ваш_логин & token = ваш_ключ & id = 685674499
 
+'''
+{'type': 'item', 
+    'value': {'id': 2548812127, 
+            'category': {'id': 14, 'name': 'Мотоциклы и мототехника'}, 
+            'time': 1660975970, 
+            'title': 'Suzuki GSX-R 1000 K7', 
+            'images': {'count': 8, 
+                'main': {'140x140': 'https://53.img.avito.st/image/1/1.hKWRfLa5KEy_3bJMlWbdnkrfLkYvRyjWJd8qSC3dIk4.9ZG7xufqONsHYiOTRkYvUe_-03sfNndj43Eez8FfHFY', 
+                        '278x278': 'https://53.img.avito.st/image/1/1.hKWRfLa5KEyL24ZKlWbdnkrfLkYvcy7iI98qSC3dIk4.sCSaVxmjtA6f57EeAVhJdfRjRUpmcYwKjKfyLNm_uhs', 
+                        '339x339': 'https://53.img.avito.st/image/1/1.hKWRfLa5KEyB2oxLlWbdnkrfLkYveS_oIt8qSC3dIk4.H9FHbDhH6dAPY-4_KDO7v03lJKbiTslUFWiKSmWB_Ts', 
+                        '372x372': 'https://53.img.avito.st/image/1/1.hKWRfLa5KEzP2sJLlWbdnkrfLkYvNy-mIt8qSC3dIk4.OrpM3PXzIcfF61Xpi1hObOzdr16-gTVA4M8dS2s2d1s', 
+                        '507x507': 'https://53.img.avito.st/image/1/1.hKWRfLa5KEzR2NxJlWbdnkrfLkYvKS24IN8qSC3dIk4.yfzZEpiMfcF-b_hBV78jA6erkvtlvy9dpVQkvmWEMps', 
+                        '558x558': 'https://53.img.avito.st/image/1/1.hKWRfLa5KEz71_ZGlWbdnkrfLkYvAyKSL98qSC3dIk4.-BSYdw1NcKZXtN3kWCFHPs8hx_G_mnUcxCVwx4oIulU', 
+                        '678x678': 'https://53.img.avito.st/image/1/1.hKWRfLa5KEzr1eZElWbdnkrfLkYvEyCCLd8qSC3dIk4.LyT1Fq3dryovf2N4oawzB44-fLRae_RcslTeYkmEFMg'
+                         }
+                       },
+             'price': '390 000 ₽', 
+             'isFavorite': False, 
+             'geoReferences': [{'content': 'Барнаул'}],
+             'location': 'Барнаул', 
+             'address': '', 
+             'coords': {'lat': '53.3410076816952', 'lng': '83.6719359047852'}, 
+             'userType': 'private', 
+             'hasVideo': False, 
+             'hasRealtyLayout': False, 
+             'isVerified': False, 
+             'contactlessView': False, 
+             'uri': 'ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKKrFMyrUstUgrN8lNLDcvNTXMzTQtzigvMM4yTE2vULKuBQQAAP__3VzYajUAAAA&itemId=2548812127', 
+             'uri_mweb': '/barnaul/mototsikly_i_mototehnika/suzuki_gsx-r_1000_k7_2548812127?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKKrFMyrUstUgrN8lNLDcvNTXMzTQtzigvMM4yTE2vULKuBQQAAP__3VzYajUAAAA'}
+             }
+'''
+
+# https://m.avito.ru/api//1/item/show?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKKrFMyrUstUgrN8lNLDcvNTXMzTQtzigvMM4yTE2vULKuBQQAAP__3VzYajUAAAA&itemId=2548812127'
+# https://m.avito.ru/api/14/items/2467534891?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir
+#f'lastStamp={time}&parameters[locationId]={region_id}&parameters[categoryId]={category_id}'
