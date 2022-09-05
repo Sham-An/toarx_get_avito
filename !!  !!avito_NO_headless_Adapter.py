@@ -61,7 +61,8 @@ s.headers.update(headers)                       # Сохраняем загол�
 ss = s.get('https://m.avito.ru/')                    # Делаем запрос на мобильную версию.
 #print(f'######### OK HTML!!! {ss.content}')
 url_api_9 = 'https://m.avito.ru/api/9/items'    # Урл первого API, позволяет получить id и url объявлений по заданным фильтрам
-                                                # Тут уже видно цену и название объявлений
+#'lastStamp': 1610905380,
+# Тут уже видно цену и название объявлений
 params = {
     'categoryId': 14,
     'params[30]': 4969,
@@ -72,7 +73,7 @@ params = {
     'params[110275]': 426645,
     'sort': sort,
     'withImagesOnly': withImagesOnly,
-    'lastStamp': 1610905380,
+    'lastStamp': 1660975970,
     'display': 'list',
     'limit': limit_page,
     'query': search,
@@ -111,17 +112,17 @@ for i in items: # Теперь идем по ябъявлениям:
     # url_more_data_1 = 'https://m.avito.ru/api/1/rmp/show/' + ad_id  # more_data_1 = s.get(url_more_data_1, params=params).json() # Тут тоже моного информации, можете посмотреть
     url_more_data_2 = 'https://m.avito.ru/api/15/items/' + ad_id
 
-    more_data_2 = s.get(url_more_data_2, params=params).json()
-    if not 'error' in more_data_2:
-        # print(more_data_2)            # В more_data_2 есть всё, что надо, я вывел на принт наиболее интересные для наглядности:
-        print(more_data_2['title'])
-        print(more_data_2['price'])
-        print(more_data_2['address'])
-        url_get_phone = 'https://m.avito.ru/api/1/items/' + ad_id + '/phone'    # URL для получения телефона
-        phone = s.get(url_get_phone, params=params).json()                      # Сам запрос
-        if phone['status'] == 'ok': phone_number = requests.utils.unquote(phone['result']['action']['uri'].split('number=')[1]) # Прверка на наличие телефона, такой странный синтсксис, чтоб уместиться в 100 сторочек кода)))
-        else: phone_number = phone['result']['message']
-        print(phone_number)
-        print(more_data_2['seller'])
-        # print(more_data_2['description']) # Скрыл, т.к. много букв
-        print('=======================================================\n')
+    # more_data_2 = s.get(url_more_data_2, params=params).json()
+    # if not 'error' in more_data_2:
+    #     # print(more_data_2)            # В more_data_2 есть всё, что надо, я вывел на принт наиболее интересные для наглядности:
+    #     print(more_data_2['title'])
+    #     print(more_data_2['price'])
+    #     print(more_data_2['address'])
+    #     url_get_phone = 'https://m.avito.ru/api/1/items/' + ad_id + '/phone'    # URL для получения телефона
+    #     phone = s.get(url_get_phone, params=params).json()                      # Сам запрос
+    #     if phone['status'] == 'ok': phone_number = requests.utils.unquote(phone['result']['action']['uri'].split('number=')[1]) # Прверка на наличие телефона, такой странный синтсксис, чтоб уместиться в 100 сторочек кода)))
+    #     else: phone_number = phone['result']['message']
+    #     print(phone_number)
+    #     print(more_data_2['seller'])
+    #     # print(more_data_2['description']) # Скрыл, т.к. много букв
+    #     print('=======================================================\n')

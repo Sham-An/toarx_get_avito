@@ -85,6 +85,7 @@ url_api_9 = 'https://m.avito.ru/api/9/items'    # Урл первого API, п�
 #print(f'UAG {uag}')
 
 params = {
+    'key': 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir',
     'categoryId': 14,
     'params[30]': 4969,
     'locationId': locationId,
@@ -94,7 +95,7 @@ params = {
     'params[110275]': 426645,
     'sort': sort,
     'withImagesOnly': withImagesOnly,
-    'lastStamp': 1610905380,
+    'lastStamp': 1660975970,
     'display': 'list',
     'limit': limit_page,
     'query': search,
@@ -102,7 +103,7 @@ params = {
 cicle_stop = True       # Переменная для остановки цикла
 cikle = 0               # Переменная для перебора страниц с объявлениями
 items = []              # Список, куда складываем объявления
-params['key'] = key
+#params['key'] = key
 while cicle_stop:
     cikle += 1          # Так как страницы начинаются с 1, то сразу же итерируем
     params['page'] = cikle
@@ -130,7 +131,8 @@ while cicle_stop:
             sys.exit(1)
     if res['status'] == 'ok':
         items_page = int(len(res['result']['items']))
-        print("res['status'] == 'ok':")
+        lastStamp =  int(res['result']['lastStamp'])
+        print(f"res['status'] == 'ok': lastStamp {lastStamp}")
 
         if items_page > limit_page: # проверка на "snippet"
             items_page = items_page - 1
@@ -141,13 +143,38 @@ while cicle_stop:
         if items_page < limit_page:
             cicle_stop = False
 ####################################################################
-key = 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'
-params = {'key': key}
+#key = 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'
+#params = {'key': key}
 print(f'!!!!! ПОЛУЧИЛИ ИТЕМС') # {items}')
 index = 1
 for i in items: # Теперь идем по ябъявлениям:
     ad_id = str(i['value']['id'])
-    print(f'ad_id {ad_id}')
+    val = i['value']
+    print(f'val  {val}')
+    category = val['category']
+    print(f'category  {category}')
+    time = val['time']
+    print(f'time  {time}')
+    title = val['title']
+    print(f'title  {title}')
+    images = ''
+    price = val['price']
+    print(f'price  {price}')
+    address = val['address']
+    print(f'address  {address}')
+    coords = val['coords']
+    print(f'coords  {coords}')
+    uri = val['uri']
+    print(f'uri  {uri}')
+    uri_mweb = val['uri_mweb']
+    print(f'uri_mweb  {uri_mweb}')
+
+
+
+
+
+
+    ''')
 
     #args = [city, categories, subcategory, 1, district_or_metro, direction]
     #url = "https://avito.ru/{}/{}/{}?p={}&{}={}".format(*args)
