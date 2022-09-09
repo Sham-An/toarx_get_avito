@@ -5,20 +5,31 @@ from config import token, chat_id
 
 
 def check_database(offer):
+    print('check_database')
     offer_id = offer["offer_id"]
+    #print(offer_id)
     with sqlite3.connect('realty.db') as connection:
         cursor = connection.cursor()
         cursor.execute("""
             SELECT offer_id FROM offers WHERE offer_id = (?)
         """, (offer_id,))
         result = cursor.fetchone()
+        print(f'result cursor.fetchone() = {result}')
         if result is None:
-            send_telegram(offer)
+            #send_telegram(offer)
             cursor.execute("""
                 INSERT INTO offers
-                VALUES (NULL, :url, :offer_id, :date, :price,
-                    :address, :area, :rooms, :floor, :total_floor)
+                VALUES (NULL,: id_item,: category_name,: category_kod,
+                : date,: time,: title_desk,: title_full,: img,: price,
+                : address,: coords,: url,: uri_mweb,: offer_id,: area,
+                : rooms,: floor,: total_floor)
             """, offer)
+
+            # VALUES(NULL,: url,:offer_id,: date,:price,
+            # : address,:area,: rooms,:floor,: total_floor)
+
+            #(NULL,: url,:offer_id,: date,:price,: address,: area,: rooms,:floor,: total_floor)
+#  id, id_item,: category_name,: category_kod,: date,: time,: title_desk,: title_full,: img,: price,: address,: coords,: url,: uri_mweb,: offer_id,: area,: rooms floor,: total_floor
             connection.commit()
             print(f'Объявление {offer_id} добавлено в базу данных')
 

@@ -84,6 +84,6 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
     print_hi('PyCharm3')
-    #create_city_db()
+    create_city_db()
     #city_from_js_to_db()
     city_list_from_db()

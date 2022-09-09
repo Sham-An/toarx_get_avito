@@ -1,0 +1,517 @@
+типы HTTP запросов, такие как : PUT, DELETE, HEAD и OPTIONS так же очень легко выполнить:
+
+r = requests.put('https://httpbin.org/put', data = {'key':'value'})  
+r = requests.delete('https://httpbin.org/delete')  
+r = requests.head('https://httpbin.org/get')  
+r = requests.options('https://httpbin.org/get')  
+
+
+Методы requests.get() и requests.post() модуля requests.
+
+Передача параметров в URL для HTTP GET-запросов.
+Часто в строке запроса URL-адреса, необходимо отправить какие-то данные. При составлении URL-адреса вручную, эти данные задаются в виде пар ключ/значение в конце URL-адреса после вопросительного знака, например httpbin.org/get?key=val. Модуль requests позволяет передавать эти параметры в метод requests.get() виде словаря строк, используя ключевой аргумент params. Например, если надо передать key1=value1 и key2=value2 для GET запроса к URL-адресу httpbin.org/get, то используйте следующий код:
+
+>>> import requests
+# подготовка дополнительных параметров для GET запроса
+>>> params = {'key1': 'value1', 'key2': 'value2'}
+>>> resp = requests.get('https://httpbin.org/get', params=params)
+# смотрим, что URL-адрес был правильно закодирован
+>>> print(resp.url)
+# https://httpbin.org/get?key2=value2&key1=value1
+Обратите внимание, что любой ключ словаря, значение которого равно None, не будет добавлен в строку запроса URL-адреса.
+
+В качестве значения словаря можно передать список дополнительных элементов URL-адреса:
+
+>>> import requests
+# ключ словаря 'key2' имеет список значений
+>>> params = {'key1': 'value1', 'key2': ['value2', 'value3']}
+# создаем GET запрос 
+>>> resp = requests.get('https://httpbin.org/get', params=params)
+# смотрим полученный URL
+>>> print(resp.url)
+# https://httpbin.org/get?key1=value1&key2=value2&key2=value3
+Передача параметров в URL для HTTP POST-запросов.
+Как правило, в POST-запросах встает необходимость отправить некоторые закодированные в форме данные. Для этого необходимо передать словарь в аргумент data метода requests.post(). Словарь с данными формы будет автоматически закодирован.
+
+Обратите внимание, что имя аргумента для передачи параметров метода requests.post(), отличается от имени аргумента дополнительных параметров метода requests.get().
+
+>>> import requests
+# подготовка параметров для POST-запроса
+
+>>> param = {'key1': 'value1', 'key2': 'value2'}
+
+# обратите внимание, что для метода POST, аргумент для 
+# передачи параметров в запрос отличается от метода GET  
+
+>>> resp = requests.post("https://httpbin.org/post", data=param)
+>>> print(resp.text)
+# {
+#   ...
+#   "form": {
+#     "key2": "value2",
+#     "key1": "value1"
+#   },
+#   ...
+# }
+Аргумент data также может иметь несколько значений для каждого ключа. Это можно сделать, передав данные либо списком кортежей, либо словарем со списками в качестве значений. Это особенно полезно, когда форма содержит несколько элементов, использующих один и тот же ключ:
+Ключ словаря, значение которого None, не будет добавлен в строке запроса URL
+
+>>> import requests
+>>> param_tuples = [('key1', 'value1'), ('key1', 'value2')]
+>>> resp1 = requests.post('https://httpbin.org/post', data=payload_tuples)
+>>> param_dict = {'key1': ['value1', 'value2']}
+>>> resp2 = requests.post('https://httpbin.org/post', data=payload_dict)
+>>> print(resp1.text)
+# {
+#   ...
+#   "form": {
+#     "key1": [
+#       "value1",
+#       "value2"
+#     ]
+#   },
+#   ...
+# }
+>>> resp1.text == resp2.text
+# True
+Содержание раздела:
+КРАТКИЙ ОБЗОР МАТЕРИАЛА.
+GET и POST запросы c модулем requests.
+Получение/отправка заголовков сервера модулем requests.
+Извлечение и установка cookies с модулем requests.
+Сессии/сеансы Session() модуля requests.
+Объект ответа сервера Response модуля requests.
+Получение и отправка данных в виде JSON с модулем requests.
+Установка timeout для модуля requests.
+Объект PreparedRequest модуля requests.
+Загрузка файлов на сервер модулем requests.
+Загрузка больших данных модулем requests.
+HTTP-прокси или SOCKS-прокси с модулем requests.
+Использование хуков модуля requests.
+Аутентификация с модулем requests.
+SSL и модуль requests.
+
+
+Вы можете передать список параметров в качестве значения:
+
+>>> payload = {'key1': 'value1', 'key2': ['value2', 'value3']}  
+>>> r = requests.get('https://httpbin.org/get', params=payload)  
+>>> print(r.url)  
+https://httpbin.org/get?key1=value1&key2=value2&key2=value3 
+
+Мы можем прочитать содержимое ответа сервера. Рассмотрим снова тайм-лайн GitHub:
+
+КОПИРОВАТЬ
+>>> import requests
+>>> r = requests.get('https://api.github.com/events')
+>>> r.text
+'[{"repository":{"open_issues":0,"url":"https://github.com/...
+
+Requests будет автоматически декодировать содержимое ответа сервера. Большинство кодировок unicode декодируются без проблем.
+Когда вы делаете запрос, Requests делает предположение о кодировке, основанное на заголовках HTTP. Эта же кодировка текста, используется при обращение к r.text. Можно узнать, какую кодировку использует Requests, и изменить её с помощью r.encoding:
+
+
+>>> r.encoding
+'utf-8'
+>>> r.encoding = 'ISO-8859-1'
+Если вы измените кодировку, Requests будет использовать новое значение r.encoding всякий раз, когда вы будете использовать r.text. Вы можете сделать это в любой ситуации, где нужна более специализированная логика работы с кодировкой содержимого ответа.
+
+Например, в HTML и XML есть возможность задавать кодировку прямо в теле документа. В подобных ситуациях вы должны использовать r.content, чтобы найти кодировку, а затем установить r.encoding. Это позволит вам использовать r.text с правильной кодировкой.
+
+Requests может также использовать пользовательские кодировки в случае, если в них есть потребность. Если вы создали свою собственную кодировку и зарегистрировали ее в модуле codecs, используйте имя кодека в качестве значения r.encoding.
+
+Вы можете также получить доступ к телу ответа в виде байтов для не текстовых ответов:
+>>> r.content
+
+
+Содержимое ответа в JSON
+Если вы работаете с данными в формате JSON, воспользуйтесь встроенным JSON декодером:
+
+
+РЕКЛАМА
+
+КОПИРОВАТЬ
+>>> import requests
+>>> r = requests.get('https://api.github.com/events')
+>>> r.json()
+[{'repository': {'open_issues': 0, 'url': 'https://github.com/...
+Если декодирование в JSON не удалось, r.json() вернет исключение. Например, если ответ с кодом 204 (No Content), или на случай если ответ содержит не валидный JSON, попытка обращения к r.json() будет возвращать ValueError: No JSON object could be decoded.
+
+Следует отметить, что успешный вызов r.json() не указывает на успешный ответ сервера. Некоторые серверы могут возвращать объект JSON при неудачном ответе (например, сведения об ошибке HTTP 500). Такой JSON будет декодирован и возвращен. Для того, чтобы проверить успешен ли запрос, используйте r.raise_for_status() или проверьте какой r.status_code.
+
+Необработанное содержимое ответа
+В тех редких случаях, когда вы хотите получить доступ к “сырому” ответу сервера на уровне сокета, обратитесь к r.raw. Если вы хотите сделать это, убедитесь, что вы указали stream=True в вашем первом запросе. После этого вы уже можете проделать следующее:
+
+КОПИРОВАТЬ
+>>> r = requests.get('https://api.github.com/events', stream=True)
+>>> r.raw
+<urllib3.response.HTTPResponse object at 0x101194810>
+>>> r.raw.read(10)
+'\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\x03'
+Однако, можно использовать подобный код как шаблон, чтобы сохранить результат в файл:
+
+КОПИРОВАТЬ
+with open(filename, 'wb') as fd:
+    for chunk in r.iter_content(chunk_size=128):
+        fd.write(chunk)
+Использование r.iter_content обработает многое из того, с чем бы вам пришлось иметь дело при использовании r.raw напрямую. Для извлечения содержимого при потоковой загрузке, используйте способ, описанный выше. Обратите внимание, что chunk_size можно свободно скорректировать до числа, которое лучше подходит в вашем случае.
+
+Важное замечание об использовании Response.iter_content и Response.raw. Response.iter_content будет автоматически декодировать gzip и deflate. Response.raw — необработанный поток байтов, он не меняет содержимое ответа. Если вам действительно нужен доступ к байтам по мере их возврата, используйте Response.raw.
+
+Пользовательские заголовки
+Если вы хотите добавить HTTP заголовки в запрос, просто передайте соответствующий dict в параметре headers.
+Например, мы не указали наш user-agent в предыдущем примере:
+
+КОПИРОВАТЬ
+url = 'https://api.github.com/some/endpoint'  
+headers = {'user-agent': 'my-app/0.0.1'}  
+r = requests.get(url, headers=headers)
+Заголовкам дается меньший приоритет, чем более конкретным источникам информации. Например:
+
+Заголовки авторизации, установленные с помощью headers= будут переопределены, если учетные данные указаны .netrc, которые, в свою очередь переопределены параметром auth=.
+Они же будут удалены при редиректе.
+Заголовки авторизации с прокси будут переопределены учетными данными прокси-сервера, которые указаны в вашем URL.
+Content-Length будут переопределены, когда вы определите длину содержимого.
+Кроме того, запросы не меняют свое поведение вообще, основываясь на указанных пользовательских заголовках.
+
+Значения заголовка должны быть string, bytestring или unicode. Хотя это разрешено, рекомендуется избегать передачи значений заголовков unicode.
+
+Более сложные POST запросы
+Часто вы хотите послать некоторые form-encoded данные таким же образом, как это делается в HTML форме. Для этого просто передайте соответствующий словарь в аргументе data. Ваш словарь данных в таком случае будет автоматически закодирован как HTML форма, когда будет сделан запрос:
+
+КОПИРОВАТЬ
+>>> payload = {'key1': 'value1', 'key2': 'value2'}
+>>> r = requests.post("https://httpbin.org/post", data=payload)
+>>> print(r.text)
+{
+  ...
+  "form": {
+    "key2": "value2",
+    "key1": "value1"
+  },
+  ...
+}
+Аргумент data также может иметь несколько значений для каждого ключа. Это можно сделать, указав data в формате tuple, либо в виде словаря со списками в качестве значений. Особенно полезно, когда форма имеет несколько элементов, которые используют один и тот же ключ:
+
+
+
+htmlacademy.ru
+Реклама
+
+Онлайн-самоучитель HTML и CSS. Бесплатные тренажеры
+
+
+skillbox.ru
+Реклама
+
+Курс Python-разработчик. 6 месяцев бесплатно
+
+КОПИРОВАТЬ
+>>> payload_tuples = [('key1', 'value1'), ('key1', 'value2')]
+>>> r1 = requests.post('https://httpbin.org/post', data=payload_tuples)
+>>> payload_dict = {'key1': ['value1', 'value2']}
+>>> r2 = requests.post('https://httpbin.org/post', data=payload_dict)
+>>> print(r1.text)
+{
+  ...
+  "form": {
+    "key1": [
+      "value1",
+      "value2"
+    ]
+  },
+  ...
+}
+>>> r1.text == r2.text
+True
+Бывают случаи, когда нужно отправить данные не закодированные методом form-encoded. Если вы передадите в запрос строку вместо словаря, эти данные отправятся в не измененном виде.
+
+К примеру, GitHub API v3 принимает закодированные JSON POST/PATCH данные:
+
+КОПИРОВАТЬ
+import json
+
+url = 'https://api.github.com/some/endpoint'  
+payload = {'some': 'data'}  
+r = requests.post(url, data=json.dumps(payload))  
+Вместо того, чтобы кодировать dict, вы можете передать его напрямую, используя параметр json (добавленный в версии 2.4.2), и он будет автоматически закодирован:
+
+КОПИРОВАТЬ
+url = 'https://api.github.com/some/endpoint'  
+payload = {'some': 'data'}  
+r = requests.post(url, json=payload) 
+Обратите внимание, параметр json игнорируется, если передаются data или files.
+Использование параметра json в запросе изменит заголовок Content-Type на application/json.
+
+POST отправка Multipart-Encoded файла
+Запросы упрощают загрузку файлов с многостраничным кодированием (Multipart-Encoded) :
+
+КОПИРОВАТЬ
+>>> url = 'https://httpbin.org/post'
+>>> files = {'file': open('report.xls', 'rb')}
+>>> r = requests.post(url, files=files)
+>>> r.text
+{
+  ...
+  "files": {
+    "file": "<censored...binary...data>"
+  },
+  ...
+}
+Вы можете установить имя файла, content_type и заголовки в явном виде:
+
+КОПИРОВАТЬ
+>>> url = 'https://httpbin.org/post'
+>>> files = {'file': ('report.xls', open('report.xls', 'rb'), 'application/vnd.ms-excel', {'Expires': '0'})}
+>>> r = requests.post(url, files=files)
+>>> r.text
+{
+  ...
+  "files": {
+    "file": "<censored...binary...data>"
+  },
+  ...
+}
+Можете отправить строки, которые будут приняты в виде файлов:
+
+КОПИРОВАТЬ
+>>> url = 'https://httpbin.org/post'
+>>> files = {'file': ('report.csv', 'some,data,to,send\nanother,row,to,send\n')}
+>>> r = requests.post(url, files=files)
+>>> r.text
+{
+  ...
+  "files": {
+    "file": "some,data,to,send\\nanother,row,to,send\\n"
+  },
+  ...
+}
+В случае, если вы отправляете очень большой файл как запрос multipart/form-data, возможно понадобиться отправить запрос потоком. По умолчанию, requests не поддерживает этого, но есть отдельный пакет, который это делает — requests-toolbelt. Ознакомьтесь с документацией toolbelt для получения более детальной информации о том, как им пользоваться.
+
+Для отправки нескольких файлов в одном запросе, обратитесь к расширенной документации.
+
+Предупреждение!
+Настоятельно рекомендуется открывать файлы в бинарном режиме. Это связано с тем, что запросы могут пытаться предоставить для вас заголовок Content-Length, и если это значение будет установлено на количество байтов в файле будут возникать ошибки, при открытии файла в текстовом режиме.
+
+Коды состояния ответа
+Мы можем проверить код состояния ответа:
+
+КОПИРОВАТЬ
+>>> r = requests.get('https://httpbin.org/get')
+>>> r.status_code
+200
+У requests есть встроенный объект вывода кодов состояния:
+
+КОПИРОВАТЬ
+>>> r.status_code == requests.codes.ok
+True
+Если мы сделали неудачный запрос (ошибка 4XX или 5XX), то можем вызвать исключение с помощью r.raise_for_status():
+
+КОПИРОВАТЬ
+>>> bad_r = requests.get('https://httpbin.org/status/404')
+>>> bad_r.status_code
+404
+>>> bad_r.raise_for_status()
+Traceback (most recent call last):
+  File "requests/models.py", line 832, in raise_for_status
+    raise http_error
+requests.exceptions.HTTPError: 404 Client Error
+Но если status_code для r оказался 200, то когда мы вызываем raise_for_status() мы получаем:
+
+
+
+htmlacademy.ru
+Реклама
+
+Онлайн-самоучитель HTML и CSS. Бесплатные тренажеры
+
+
+skillbox-ru.turbopages.org
+Реклама
+
+Почему лучше учить сложный C++, чем простые Python/Java
+
+КОПИРОВАТЬ
+>>> r.raise_for_status()
+None
+Заголовки ответов
+Мы можем просматривать заголовки ответа сервера, используя словарь Python:
+
+КОПИРОВАТЬ
+>>> r.headers
+{
+    'content-encoding': 'gzip',
+    'transfer-encoding': 'chunked',
+    'connection': 'close',
+    'server': 'nginx/1.0.4',
+    'x-runtime': '148ms',
+    'etag': '"e1ca502697e5c9317743dc078f67693f"',
+    'content-type': 'application/json'
+}
+Это словарь особого рода, он создан специально для HTTP заголовков. Согласно с RFC 7230, имена заголовков HTTP нечувствительны к регистру.
+
+Теперь мы можем получить доступ к заголовкам с большим буквами или без, если захотим:
+
+КОПИРОВАТЬ
+>>> r.headers['Content-Type']
+'application/json'
+>>> r.headers.get('content-type')
+'application/json'
+Cookies
+Если в запросе есть cookies, вы сможете быстро получить к ним доступ:
+
+КОПИРОВАТЬ
+>>> url = 'https://example.com/some/cookie/setting/url'
+>>> r = requests.get(url)
+>>> r.cookies['example_cookie_name']
+'example_cookie_value'
+Чтобы отправить собственные cookies на сервер, используйте параметр cookies:
+
+КОПИРОВАТЬ
+>>> url = 'https://httpbin.org/cookies'
+>>> cookies = dict(cookies_are='working')
+>>> r = requests.get(url, cookies=cookies)
+>>> r.text
+'{"cookies": {"cookies_are": "working"}}'
+Cookies возвращаются в RequestsCookieJar, который работает как dict, но также предлагает более полный интерфейс, подходящий для использования в нескольких доменах или путях. Словарь с cookie может также передаваться в запросы:
+
+КОПИРОВАТЬ
+>>> jar = requests.cookies.RequestsCookieJar()
+>>> jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')
+>>> jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/elsewhere')
+>>> url = 'https://httpbin.org/cookies'
+>>> r = requests.get(url, cookies=jar)
+>>> r.text
+'{"cookies": {"tasty_cookie": "yum"}}'
+Редиректы и история
+По умолчанию Requests будет выполнять редиректы для всех HTTP глаголов, кроме HEAD.
+
+Мы можем использовать свойство history объекта Response, чтобы отслеживать редиректы .
+
+Список Response.history содержит объекты Response, которые были созданы для того, чтобы выполнить запрос. Список сортируется от более ранних, до более поздних ответов.
+
+Например, GitHub перенаправляет все запросы HTTP на HTTPS:
+
+КОПИРОВАТЬ
+>>> r = requests.get('https://github.com/')
+>>> r.url
+'https://github.com/'
+>>> r.status_code
+200
+>>> r.history
+[<Response [301]>]
+Если вы используете запросы GET, OPTIONS, POST, PUT, PATCH или DELETE, вы можете отключить обработку редиректа с помощью параметра allow_redirects:
+
+КОПИРОВАТЬ
+>>> r = requests.get('https://github.com/', allow_redirects=False)
+>>> r.status_code
+301
+>>> r.history
+[]
+Если вы используете HEAD, вы также можете включить редирект:
+
+КОПИРОВАТЬ
+>>> r = requests.head('https://github.com/', allow_redirects=True)
+>>> r.url
+'https://github.com/'
+>>> r.history
+[<Response [301]>]
+Тайм-ауты
+Вы можете сделать так, чтобы Requests прекратил ожидание ответа после определенного количества секунд с помощью параметра timeout.
+
+Почти весь код должен использовать этот параметр в запросах. Несоблюдение этого требования может привести к зависанию вашей программы:
+
+КОПИРОВАТЬ
+>>> requests.get('https://github.com/', timeout=0.001)
+Traceback (most recent call last):
+  File "", line 1, in 
+requests.exceptions.Timeout: HTTPConnectionPool(host='github.com', port=80): Request timed out. (timeout=0.001)
+Timeout это не ограничение по времени полной загрузки ответа. Исключение возникает, если сервер не дал ответ за timeout секунд (точнее, если ни одного байта не было получено от основного сокета за timeout секунд).
+
+Ошибки и исключения
+В случае неполадок в сети (например, отказа DNS, отказа соединения и т.д.), Requests вызовет исключение ConnectionError.
+
+Response.raise_for_status() вызовет HTTPError если в запросе HTTP возникнет статус код ошибки.
+
+Если выйдет время запроса, вызывается исключение Timeout. Если запрос превышает заданное значение максимального количества редиректов, то вызывают исключение TooManyRedirects.
+
+Все исключения, которые вызывает непосредственно Requests унаследованы от requests.exceptions.RequestException.
+
+Объект сессии requests.Session позволяет сохранять определенные параметры в запросах к одному и тому же сайту. Он также сохраняет файлы cookie во всех запросах, сделанных из экземпляра Session, и будет использовать пул соединений модуля urllib3. Поэтому, если делать несколько запросов к одному и тому же хосту, базовое TCP-соединение будет использоваться повторно, что приводит к значительному увеличению производительности.
+
+Объект сессии Session имеет все методы основного API модуля requests.
+
+import requests
+sess = requests.Session()
+sess.get('https://httpbin.org/cookies/set/sessioncookie/123456789')
+resp = sess.get('https://httpbin.org/cookies')
+print(resp.text)
+# '{"cookies": {"sessioncookie": "123456789"}}'
+Сессии/сеансы также могут использоваться для предоставления данных по умолчанию методам запроса. Это делается путем предоставления данных в свойства объекта Session:
+
+import requests
+sess = requests.Session()
+# установленные таким образом данные , будут передаваться 
+# в каждый запрос к сайту в рамках жизни одной сессии
+sess.headers.update({'x-test': 'true'})
+# посылаются как "x-test", так и "x-test2"
+resp = sess.get('https://httpbin.org/headers', headers={'x-test2': 'true'})
+>>> print(resp.text)
+# {
+#   "headers": {
+#    ...
+#     "X-Test": "true", 
+ #    "X-Test2": "true"
+#   }
+# }
+Любые словари, которые передаются методу запроса sess.get(), sess.post() и т.д., будут объединены с установленными значениями уровня сессии/сеанса. Параметры уровня метода sess.get() переопределяют параметры сессии/сеанса sess.headers. Другими словами, если например установить в sess.headers.update({'one': 'true'}), а потом передать параметр 'one' с другим значением в метод sess.get(..., headers={'one': 'false'}), то на сайт попадет последний заголовок, т.е. 'one': 'false'.
+
+import requests
+sess = requests.Session()
+sess.headers.update({'one': 'true'})
+# переопределяем заголовок в только этом запросе 'one' на 'false'
+resp = sess.get('https://httpbin.org/headers', headers={'one': 'false'})
+>>> print(resp.text)
+# {
+#   "headers": {
+#    ...
+#    "One": "false", 
+#   }
+# }
+Обратите внимание, что параметры переданные напрямую в методы sess.get(), sess.post() и т.д. не будут сохраняться в запросах, даже если используется объект Session. Этот пример будет отправлять файлы cookie только с первым запросом, но не со вторым:
+
+import requests
+sess = requests.Session()
+resp = sess.get('https://httpbin.org/cookies', cookies={'from-my': 'browser'})
+print(resp.text)
+# '{"cookies": {"from-my": "browser"}}'
+
+# файл cookie больше не передается, что бы закрепить 
+# cookie в сессии используйте `sess.cookies.update()`
+resp = sess.get('https://httpbin.org/cookies')
+print(resp.text)
+# '{"cookies": {}}'
+Если необходимо вручную добавить ранее сохраненные файлы cookie в сессию/сеанс, то для управления Session.cookies используйте функцию requests.utils.add_dict_to_cookiejar(cj, cookie_dict), где cj - это экземпляр requests.cookies.RequestsCookieJar(), а cookie_dict это словарь ключ/значения для вставки в cj.
+
+Сеансы/сессии также можно использовать в качестве контекстных менеджеров:
+
+with requests.Session() as sess:
+    sess.get('https://httpbin.org/cookies/set/sessioncookie/123456789')
+Это гарантирует, что сеанс будет закрыт сразу же после выхода из блока with, даже если произошли необработанные исключения.
+
+Примечание: Иногда надо опустить некоторые ключи, добавленные в сеанс/сессию как постоянные. Чтобы сделать это, необходимо установить значение этого ключа равным None в аргументе метода запроса, и он будет автоматически опущен.
+
+import requests
+sess = requests.Session()
+# установленные таким образом данные , будут передаваться 
+# в каждый запрос к сайту в рамках жизни одной сессии
+sess.headers.update({'one': 'true', 'two': 'true'})
+# отключаем заголовок 'one' только в данном запросе
+resp = sess.get('https://httpbin.org/headers', headers={'one': None})
+>>> print(resp.text)
+# {
+#   "headers": {
+#    ...
+#     "Two": "true", 
+#   }
+# }
