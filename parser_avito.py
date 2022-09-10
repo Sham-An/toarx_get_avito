@@ -16,6 +16,7 @@ import requests
 
 CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
 
+
 class TlsAdapter(HTTPAdapter):
 
     def __init__(self, ssl_options=0, **kwargs):
@@ -25,6 +26,7 @@ class TlsAdapter(HTTPAdapter):
     def init_poolmanager(self, *pool_args, **pool_kwargs):
         ctx = ssl_.create_urllib3_context(ciphers=CIPHERS, cert_reqs=ssl.CERT_REQUIRED, options=self.ssl_options)
         self.poolmanager = PoolManager(*pool_args, ssl_context=ctx, **pool_kwargs)
+
 
 # session = requests.session()
 # adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
@@ -38,97 +40,99 @@ class TlsAdapter(HTTPAdapter):
 
 
 def get_offer(item):
-
     offer = {}
-#    id
+    #    id
     id_item = item["id"]
     offer["offer_id"] = id_item
-#    id_item
+    #    id_item
     offer["id_item"] = id_item
-#    category_name
+    #    category_name
     offer["category_name"] = ''
-#    category_kod
+    #    category_kod
     offer["category_kod"] = ''
-#    date
+    #    date
     time_item = item['time']
     timestamp = datetime.fromtimestamp(time_item)
     timestamp = datetime.strftime(timestamp, '%Y-%m-%d %H:%M:%S')
     offer["date"] = timestamp
-#    time
+    #    time
     offer["time"] = time_item
-#    title_desk
-    title = 'Error title'#item['title'].split(', ')
+    #    title_desk
+
+    title = 'Error title'#item['title'].split(', ') #'Error title'  # item['title'].split(', ') str.replace(u"\u202F", " ")
+    titl=str(item['title'])
+    print("".join(titl))
+    title = titl.replace('\xa0', ' ')#"".join(titl) #titl
+    print(title)
     rooms = title[0]
-    #area = float(title[1].replace(' м²', '').replace(',', '.'))
-    area = '100'#float(title[1].replace(',', '.'))
+    # area = float(title[1].replace(' м²', '').replace(',', '.'))
+    area = '100'  # float(title[1].replace(',', '.'))
     print(f'area     {area}')
-    #title = item['title']
+    # title = item['title']
     offer["title_desk"] = title
-#    title_full
-    offer["title_full"] = title #item['title']
-#    img
+    #    title_full
+    offer["title_full"] = title  # item['title']
+    #    img
     offer["img"] = ''
-#    price
+    #    price
     price = ''.join(item['price'].replace(' ₽ в месяц', '').split())
     offer["price"] = int(price)
-#    address
+    #    address
     offer["address"] = f"{item['location']}, {item['address']}"
-#    coords
-    offer["coords"] = ''
+    #    coords
+    offer["coords"] = "error coords"#['coords']
     #    url
     url_item = "https://www.avito.ru" + item["uri_mweb"]
-    offer["url"] = url_item #"https://www.avito.ru" + item["uri_mweb"]
-#    uri
+    offer["url"] = url_item  # "https://www.avito.ru" + item["uri_mweb"]
+    #    uri
     offer["uri"] = ''
-#    uri_mweb
+    #    uri_mweb
     offer["uri_mweb"] = url_item
-#    offer_id
+    #    offer_id
     offer["offer_id"] = int(id_item)
-#    area
-    offer["area"] = 200 #area
-#    rooms
+    #    area
+    offer["area"] = 200  # area
+    #    rooms
     offer["rooms"] = "rooms"
-#    floor
+    #    floor
     floor_info = title[2].replace(' эт.', '').split('/')
-    floor = 1 # этажи floor_info[0]
-    total_floor = 1 #floor_info[-1]
+    floor = 1  # этажи floor_info[0]
+    total_floor = 1  # floor_info[-1]
     offer["floor"] = floor
-#    total_floor
+    #    total_floor
     offer["total_floor"] = total_floor
 
+    #    offer["url"] = "https://www.avito.ru" + item["uri_mweb"]
+    #    offer["offer_id"] = item["id"]
 
-
-#    offer["url"] = "https://www.avito.ru" + item["uri_mweb"]
-#    offer["offer_id"] = item["id"]
-
-#    price = ''.join(item['price'].replace(' ₽ в месяц', '').split())
-#    title = item['title'].split(', ')
-#    area = float(title[1].replace(' м²', '').replace(',', '.'))
-#    print(f'title[1] = {str(title[1])}')
-#    rooms = title[0]
-#     floor_info = title[2].replace(' эт.', '').split('/')
-#     floor = floor_info[0]
-#     total_floor = floor_info[-1]
+    #    price = ''.join(item['price'].replace(' ₽ в месяц', '').split())
+    #    title = item['title'].split(', ')
+    #    area = float(title[1].replace(' м²', '').replace(',', '.'))
+    #    print(f'title[1] = {str(title[1])}')
+    #    rooms = title[0]
+    #     floor_info = title[2].replace(' эт.', '').split('/')
+    #     floor = floor_info[0]
+    #     total_floor = floor_info[-1]
 
     # timestamp = datetime.fromtimestamp(item['time'])
     # timestamp = datetime.strftime(timestamp, '%Y-%m-%d %H:%M:%S')
     # offer["date"] = timestamp
 
-#    offer["price"] = price
-#    offer["address"] = f"{item['location']}, {item['address']}"
-#    offer["area"] = area
-#    offer["rooms"] = rooms
-#    offer["floor"] = floor
-#    offer["total_floor"] = total_floor
+    #    offer["price"] = price
+    #    offer["address"] = f"{item['location']}, {item['address']}"
+    #    offer["area"] = area
+    #    offer["rooms"] = rooms
+    #    offer["floor"] = floor
+    #    offer["total_floor"] = total_floor
 
     print(f'offer {offer}')
     return offer
 
 
 def get_offers(data):
-    #ok print(f'DATA =++++++++++++++++ {data}')
+    # ok print(f'DATA =++++++++++++++++ {data}')
     items = data["result"]["items"]
-    #ok print(f'items =++++++++++++++++ {items}')
+    # ok print(f'items =++++++++++++++++ {items}')
     for item in items:
         if "item" in item["type"]:
             offer = get_offer(item["value"])
@@ -174,27 +178,54 @@ def get_json():
     session.mount("https://", adapter)
     headers['cookie'] = cookie
     session.headers.update(headers)  # Сохраняем заголовки в сессию
-    session.get('https://m.avito.ru/') #, proxies=proxiess)
+    session.get('https://m.avito.ru/')  # , proxies=proxiess)
     url_api_9 = 'https://m.avito.ru/api/9/items'
-    #url = url_api_9
+    # url = url_api_9
 
-    resp = session.get(url_api_9, params=params)#, proxies = proxiess)
+    resp = session.get(url_api_9, params=params)  # , proxies = proxiess)
 
     try:
         res = resp.json()
-        #response = session.request('GET', url, headers=headers, params=params)
-        #r = session.request('GET', 'https://www.avito.ru')
+        # response = session.request('GET', url, headers=headers, params=params)
+        # r = session.request('GET', 'https://www.avito.ru')
         print(res)
     except Exception as exception:
         print(exception)
 
-    #response = requests.get(url=url, headers=headers, params=params)
-    data = res #response.json()
+    # response = requests.get(url=url, headers=headers, params=params)
+    data = res  # response.json()
 
     return data
 
 
+def delete_record():
+    try:
+        with sqlite3.connect('realty.db') as connection:
+            cursor = connection.cursor()
+            # sqlite3.connect('realty.db') as connection:
+            # sqlite_connection = sqlite3.connect('sqlite_python.db')
+            # cursor = sqlite_connection.cursor()
+            print("Подключен к SQLite")
+
+            # sql_delete_query = """DELETE from sqlitedb_developers where id = 6"""
+            # cursor.execute(sql_delete_query)
+            # sqlite_connection.commit()
+            # print("Запись успешно удалена")
+            # cursor.close()
+
+            cursor.execute('DELETE FROM offers;', );
+            connection.commit()
+
+    except sqlite3.Error as error:
+        print("Ошибка при работе с SQLite", error)
+    finally:
+        if connection:
+            connection.close()
+            print("Соединение с SQLite закрыто")
+
+
 def main():
+    delete_record()
     data = get_json()
     print(data)
     get_offers(data)
