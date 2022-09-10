@@ -70,7 +70,7 @@ def get_offer(item):
     offer["img"] = ''
 #    price
     price = ''.join(item['price'].replace(' ₽ в месяц', '').split())
-    offer["price"] = price
+    offer["price"] = int(price)
 #    address
     offer["address"] = f"{item['location']}, {item['address']}"
 #    coords
@@ -83,15 +83,15 @@ def get_offer(item):
 #    uri_mweb
     offer["uri_mweb"] = url_item
 #    offer_id
-    offer["offer_id"] = id_item
+    offer["offer_id"] = int(id_item)
 #    area
-    offer["area"] = area
+    offer["area"] = 200 #area
 #    rooms
-    offer["rooms"] = rooms
+    offer["rooms"] = "rooms"
 #    floor
     floor_info = title[2].replace(' эт.', '').split('/')
-    floor = floor_info[0]
-    total_floor = floor_info[-1]
+    floor = 1 # этажи floor_info[0]
+    total_floor = 1 #floor_info[-1]
     offer["floor"] = floor
 #    total_floor
     offer["total_floor"] = total_floor
