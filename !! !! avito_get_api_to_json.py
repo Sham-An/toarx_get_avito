@@ -1,6 +1,12 @@
 # авито парсер на питончике ._py
 # https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30
 # !!!! Categories from location https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=650400
+#locationId=650400
+#"shops":{"title":"Магазины на Авито","uri":"ru.avito://1/shops/search?locationId=650400","uri_mweb":"/shops/kazan"}}
+
+#locationId=651110
+#"shops":{"title":"Магазины на Авито","uri":"ru.avito://1/shops/search?locationId=651110","uri_mweb":"/shops/rostovskaya_oblast"}}
+
 ##!!!!!!!!!!!  OK Categories https://m.avito.ru/api/1/items/search/header?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9
 import requests
 from urllib.parse import quote
@@ -177,7 +183,8 @@ class HttpParser:
 
     @staticmethod
     def get_all_categories_by_region_id(region_id):
-        print(f'HttpParser.avito_urls[HttpParser.CATEGORIES_INFO] == {HttpParser.avito_urls[HttpParser.CATEGORIES_INFO]}{region_id}')
+        #?https://m.avito.ru/api/4/items/search/header?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&regiononId=650400&categoryId=9
+        print(f'!!! OK HttpParser.avito_urls[HttpParser.CATEGORIES_INFO] == {HttpParser.avito_urls[HttpParser.CATEGORIES_INFO]}{region_id}')
         json_content = HttpParser.get_json_by_request(f'{HttpParser.avito_urls[HttpParser.CATEGORIES_INFO]}{region_id}')
         main_categories = json_content['categories']
         print(f'main_categories = = {main_categories}')
