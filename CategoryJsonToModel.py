@@ -130,7 +130,7 @@ def Open_json_category():
         data = json.load(file)
         #list_dict(data)
         list_category(data)
-        #print(data)
+        print(data)
 
 
 def Open_json_region():
