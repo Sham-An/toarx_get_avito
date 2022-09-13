@@ -3,7 +3,7 @@ import sqlite3
 def main():
     pass
 
-def create_db():
+def create_db_items():
     #При подключении к базе, автоматически создается realty.db
     connection = sqlite3.connect('realty_tmp.db')
     cursor = connection.cursor()

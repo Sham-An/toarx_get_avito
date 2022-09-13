@@ -130,6 +130,7 @@ def get_offer(item):
 
 
 def get_offers(data):
+
     # ok print(f'DATA =++++++++++++++++ {data}')
     items = data["result"]["items"]
     # ok print(f'items =++++++++++++++++ {items}')
