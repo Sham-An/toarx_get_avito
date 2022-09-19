@@ -49,9 +49,12 @@ def get_offer(item):
     #    id_item
     offer["id_item"] = id_item
     #    category_name
-    offer["category_name"] = ''
+    category_name = item["category"]['name'].strip() #[1]
+    #print(f'category_name = {category_name}')
+    offer["category_name"] = category_name
     #    category_kod
-    offer["category_kod"] = ''
+    category_kod = item["category"]['id']#.strip() #[1]
+    offer["category_kod"] = category_kod
     #    date
     time_item = item['time']
     timestamp = datetime.fromtimestamp(time_item)
@@ -62,13 +65,17 @@ def get_offer(item):
     #    title_desk
 
     title = 'Error title'#item['title'].split(', ') #'Error title'  # item['title'].split(', ') str.replace(u"\u202F", " ")
-    titl=str(item['title'])
-    print("".join(titl))
-    title = titl.replace('\xa0', ' ')#"".join(titl) #titl
-    print(title)
+    titl= (item['title'])#str(item['title'])
+    #print("".join(titl))
+    title = titl.replace('\xa0', ' ')#.split(', ')#"".join(titl) #titl
+
+    #print(title)
     rooms = title[0]
-    # area = float(title[1].replace(' м²', '').replace(',', '.'))
-    area = '100'  # float(title[1].replace(',', '.'))
+    #area = float(title[1].replace(' м²', '').replace(',', '.'))
+    area = title[1]#.replace(' м²', '').replace(',', '.')
+
+    print(area)
+    area = '-'  # float(title[1].replace(',', '.'))
     print(f'area     {area}')
     # title = item['title']
     offer["title_desk"] = title
@@ -157,13 +164,13 @@ def get_json():
                'sec-fetch-user': '?1',
                'sec-fetch-dest': 'document',
                'accept-language': 'ru-RU,ru;q=0.9', }
-
+    #'locationId': 107620,651110
     params = {
         'key': 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir',
         'categoryId': 24,
         'params[30]': 4969,
         'params[201]': 1060,
-        'locationId': 107620,
+        'locationId': 651110,
         'params[504]': '5256',
         'searchRadius': 100,
         'priceMin': 50000,
