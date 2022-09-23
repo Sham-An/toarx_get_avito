@@ -8,7 +8,7 @@ def check_database(offer):
     print('check_database')
     offer_id = offer["offer_id"]
     #print(offer_id)
-    with sqlite3.connect('realty_tmp.db.db') as connection:
+    with sqlite3.connect('realty_tmp.db') as connection:
         cursor = connection.cursor()
         cursor.execute("""
             SELECT offer_id FROM offers WHERE offer_id = (?)
