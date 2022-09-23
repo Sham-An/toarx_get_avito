@@ -72,7 +72,7 @@ def check_database(offer):
 
 def prnpcs():
     #offer = {}
-    PCS = {}
+    #
     #offer["offer_id"] = id_item
     #offer["id_item"] = id_item
 
@@ -95,6 +95,7 @@ def prnpcs():
     key2 = 'Старт Печати Индекс текущей записи'#Старт Печати Индекс текущей записи 2636.
     key3 = 'Стоп печати Индекс текущей записи' #Стоп печати Индекс текущей записи 2666.
     insert_db = 0
+    PCS = "" #{}
     #with closing(sqlite3.connect(database)) as connection:
     with closing(conn_PCS_main) as connection:
         #conn = sqlite3.connect
@@ -107,19 +108,22 @@ def prnpcs():
         # получаем все значения
         rows = cursor.fetchall()
         for row in rows:
+            #PCS = {}
 
-            ID_PCS = row[0]
+            #ID_PCS = row[0]
             Log_Time = row[3]
             cont = row[4]
-            #string = 'Hello World!'
-            #substring = 'Wor'
-            #if substring in string:
             if key1 in cont:
+                PCS = {}
+                ID_PCS = row[0]
                 #print('key1', cont)
+                PCS["PCS_id"] = ID_PCS
                 PCS["Log_Time"] = Log_Time
                 PCS["cont"] = cont
-                print('PCS 11111 ++++++++++++====', PCS)
-                insert_db = 1
+                PCS["start"] = ""
+                PCS["stop"] = ""
+                print('\n   ')
+                insert_db = 'Insert  '
                 #print('PCS ++++++++++++====', PCS)
 
                 ## "INSERT INTO PCSparse (PCS_time,PCS_context) VALUES (Log_Time, cont)"
@@ -131,45 +135,42 @@ def prnpcs():
                 #print("Record inserted successfully")
 
             elif key2 in cont:
-                print('key2', cont)
+                #print('key2', cont, PCS)
+
                 PCS["start"] = cont
-                print('PCS 2222 ++++++++++++====', PCS)
+                #print('PCS 2222 ++++++++++++====', PCS)
 
                 #cur.execute("UPDATE STUDENT set AGE = 20 where ADMISSION = 3420")
                 #con.commit()
-                insert_db = 1
+                insert_db = "Update 1"
 
             elif key3 in cont:
-                print('key3', cont, '\n')
+                #print('key3', cont, '\n')
                 #cur.execute("UPDATE STUDENT set AGE = 20 where ADMISSION = 3420")
                 #con.commit()
+                #print('key3', cont, PCS)
+
                 PCS["stop"] = cont
-                print('PCS 3333 ++++++++++++====', PCS)
-                insert_db = 1
+                #print('PCS 3333 ++++++++++++====', PCS)
+                insert_db = "Update 2"
 
             #else:
                 #state3
             #else: #delete
             if insert_db:
-                print('PCS INSERT ++++++++++++====', PCS)
+                print(f'PCS {insert_db} == {PCS}')
                 insert_db = 0
+                #PCS = {}
+
             #cur.execute("DELETE from STUDENT where ADMISSION=3420;")
             #con.commit()
-
-            #    print('String does not contain substring.')
-                        #print("row =", row, ' \n')
             #print("ID =", row[0], ' \n')
             #print("Log_Time =", row[3])
             #print("Log_Context =", cont)
-
-            #print("COURSE =", row[3])
-            #print("DEPARTMENT =", row[4], "\n")
-
-    print("Operation done successfully")
-        #print(f'{cursor.fetchall()}\n')
-
+   #print("Operation done successfully")
 
 def CreateLogDB():
+
     # При подключении к базе, автоматически создается realty.db
     connection = sqlite3.connect('Pcsparse.db')
     cursor = connection.cursor()
