@@ -1,6 +1,10 @@
 import psycopg2
 import sqlite3
-
+import os
+#from os import path
+from pathlib import Path
+import pathlib
+from pathlib import Path
 import sqlite3
 from contextlib import closing
 
@@ -112,7 +116,7 @@ def prnpcs():
 
             #ID_PCS = row[0]
             Log_Time = row[3]
-            cont = row[4]
+            cont = str(row[4])
             if key1 in cont:
                 PCS = {}
                 ID_PCS = row[0]
@@ -120,9 +124,45 @@ def prnpcs():
                 PCS["PCS_id"] = ID_PCS
                 PCS["Log_Time"] = Log_Time
                 PCS["cont"] = cont
+
+                #'C:\\Users\\Solmark\\Desktop\\СЕРИИ\\Омепразол 30\\бланк1.VDF')
+                #full_path = path
+                cont_txt = cont
+                full_path = str(Path(cont.replace(key1, "").strip()))
+                print('cont1 ', cont_txt)
+                cont_txt.replace("\\", "/")
+                print('cont2 ', cont_txt)
+                path: Path = Path(full_path)
+
+                fulll_path =full_path
+
+                print(path)
+                name = os.path.basename(full_path)
+                name.replace("\\", "/")
+
+                print('name win32', name)
+                path: Path = Path(name)
+                #name = path.splitext(name)[0]
+                name = pathlib.Path(name).stem
+                print('name', name)
+
+                PCS["Full_path1"] = name# path #os.path.basename(full_path)
+
+                #name = os.path.splitext(os.path.basename(full_path))[1]#.replace('\', "")))[0]
+
+
+                filesurvey = []
+                for row in os.walk(fulll_path):  # row beinhaltet jeweils einen Ordnerinhalt
+                    print(f'row = {row}')
+                    for filename in row[2]:  # row[2] ist ein tupel aus Dateinamen
+                        print(filename)
+                        full_path1: Path = Path(row[0]) / Path(filename)  # row[0] ist der Ordnerpfad
+                        filesurvey.append([full_path1, filename, full_path1.stat().st_mtime, full_path1.stat().st_size])
+                PCS["file_name"] = name
+
                 PCS["start"] = ""
                 PCS["stop"] = ""
-                print('\n   ')
+                print(' \n Печать работы:   ')
                 insert_db = 'Insert  '
                 #print('PCS ++++++++++++====', PCS)
 
@@ -177,12 +217,14 @@ def CreateLogDB():
     cursor.execute("""
         CREATE TABLE PCSparse (
             id INTEGER PRIMARY KEY AUTOINCREMENT, 
-            PCS_id integer,
-            PCS_time text,
+            PCS_start integer,
+            PCS_time_start text,
+            PCS_time_print text,
             PCS_context text,
             Parent_name text,
             gtin_kod text,
             gtin_name text,
+            last_kod_id text,
             last_kod text,
             status text            
             )     

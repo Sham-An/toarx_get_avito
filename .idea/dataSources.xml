@@ -26,7 +26,7 @@
       </libraries>
     </data-source>
     <data-source source="LOCAL" name="orders" uuid="adcafef0-7bf6-4655-8990-0d7e32616a4c">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>1cfb1f28-ba65-4439-9531-7ed43243b65b</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:G:\Arxiv\Python3\PycharmProjects\get_avito\PySQL\orders.db</jdbc-url>
@@ -53,7 +53,7 @@
       </libraries>
     </data-source>
     <data-source source="LOCAL" name="PcsLog" uuid="398c11b2-9893-41e1-aebc-ea12a64693d4">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>1cfb1f28-ba65-4439-9531-7ed43243b65b</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:G:\Arxiv\Python3\PycharmProjects\get_avito\PcsLog.db</jdbc-url>
@@ -67,15 +67,27 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Pcsparse" uuid="130a3467-9bb5-4d54-a2bb-f2b6389ce7da">
+    <data-source source="LOCAL" name="PcsLog [2]" uuid="26399cac-15e5-433d-a8f3-7a349196b369">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:G:\Arxiv\Python3\PycharmProjects\get_avito\Pcsparse.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/PcsLog.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.39.2/sqlite-jdbc-3.39.2.jar</url>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.38.0/sqlite-jdbc-3.38.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Pcsparse" uuid="5e2530ce-2618-40a9-9fac-54995e19592b">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Pcsparse.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.38.0/sqlite-jdbc-3.38.0.jar</url>
         </library>
         <library>
           <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.38.0/sqlite-jdbc-3.38.0.jar</url>

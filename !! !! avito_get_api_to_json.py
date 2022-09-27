@@ -150,8 +150,8 @@ class HttpParser:
         print(f'!!! json_content = {json_content}')
 
         #item = json_content['result']['seo']
-        item = json_content['result']['seo']
-        link = item['canonicalUrl']
+        #item = json_content['result']['seo']
+        #link = item['canonicalUrl']
 
         #return link
         return None
