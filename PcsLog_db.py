@@ -130,26 +130,26 @@ def prnpcs():
                 #full_path = path
                 cont_txt = cont
                 full_path = str(Path(cont.replace(key1, "").strip()))
-                print('cont1 ', cont_txt)
+                print('full_path !!! ', full_path)
                 #cont_txt.replace("\\", "/")
                 #################################################
                 ###!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                print(os.path.basename(cont_txt).split('\\')[-1])
-                filename = os.path.basename(cont_txt).split('\\')[-1]
+                filename = os.path.basename(full_path).split('\\')[-1]
 
-                #kod_name = pathlib.Path(full_path).stem
-                print(os.path.basename(full_path).split('\\')[-1])
+                print('split2 !!basename ', os.path.basename(full_path).split('\\')[-1])
                 print('name full', filename)
                 kod_name = pathlib.Path(filename).stem
                 print('kod_name ', kod_name)
                 kod = os.path.basename(kod_name).split(' ')[-1]
+                parent_group = os.path.basename(kod_name).split(' ')#[0]
                 #kod = os.path.basename(name).split(' ')[-1]
-                print('kod ', kod)
+                print(f'kod  {kod}  GROUP {parent_group}')
 
-                print('name parent ',os.path.basename(cont_txt).split('\\')[-2])
-                print(Path(full_path).name)
+                print('name DIR ',os.path.basename(cont_txt).split('\\')[-2])
+
+                print('FULL PATH NAME    ', Path(full_path).name)
                 parentname = os.path.basename(cont_txt).split('\\')[-2]
-                print(f'группа {parentname} File {filename}')
+                print(f'!!!!!!!!!!!!!!!!!! директория {parentname} File {filename} kod {kod}')
                 #####################################################
                 print('cont2 ', cont_txt)
                 path: Path = Path(full_path)
