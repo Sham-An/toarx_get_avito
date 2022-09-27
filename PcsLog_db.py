@@ -118,6 +118,7 @@ def prnpcs():
             Log_Time = row[3]
             cont = str(row[4])
             if key1 in cont:
+
                 PCS = {}
                 ID_PCS = row[0]
                 #print('key1', cont)
@@ -130,7 +131,16 @@ def prnpcs():
                 cont_txt = cont
                 full_path = str(Path(cont.replace(key1, "").strip()))
                 print('cont1 ', cont_txt)
-                cont_txt.replace("\\", "/")
+                #cont_txt.replace("\\", "/")
+                #################################################
+                ###!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                print(os.path.basename(cont_txt).split('\\')[-1])
+                filename = os.path.basename(cont_txt).split('\\')[-1]
+                print(os.path.basename(cont_txt).split('\\')[-2])
+                print(Path(full_path).name)
+                parentname = os.path.basename(cont_txt).split('\\')[-2]
+                print(f'группа {parentname} File {filename}')
+                #####################################################
                 print('cont2 ', cont_txt)
                 path: Path = Path(full_path)
 
@@ -139,27 +149,23 @@ def prnpcs():
                 print(path)
                 name = os.path.basename(full_path)
                 name.replace("\\", "/")
-
-                print('name win32', name)
                 path: Path = Path(name)
                 #name = path.splitext(name)[0]
                 name = pathlib.Path(name).stem
                 print('name', name)
 
-                PCS["Full_path1"] = name# path #os.path.basename(full_path)
-
+                PCS["Full_path"] = name# path #os.path.basename(full_path)
                 #name = os.path.splitext(os.path.basename(full_path))[1]#.replace('\', "")))[0]
-
-
-                filesurvey = []
-                for row in os.walk(fulll_path):  # row beinhaltet jeweils einen Ordnerinhalt
-                    print(f'row = {row}')
-                    for filename in row[2]:  # row[2] ist ein tupel aus Dateinamen
-                        print(filename)
-                        full_path1: Path = Path(row[0]) / Path(filename)  # row[0] ist der Ordnerpfad
-                        filesurvey.append([full_path1, filename, full_path1.stat().st_mtime, full_path1.stat().st_size])
-                PCS["file_name"] = name
-
+                #
+                # filesurvey = []
+                # for row in os.walk(fulll_path):  # row beinhaltet jeweils einen Ordnerinhalt
+                #     print(f'row = {row}')
+                #     for filename in row[2]:  # row[2] ist ein tupel aus Dateinamen
+                #         print(filename)
+                #         full_path1: Path = Path(row[0]) / Path(filename)  # row[0] ist der Ordnerpfad
+                #         filesurvey.append([full_path1, filename, full_path1.stat().st_mtime, full_path1.stat().st_size])
+                PCS["file_name"] = filename #name
+                PCS["parent_group"] = parentname
                 PCS["start"] = ""
                 PCS["stop"] = ""
                 print(' \n Печать работы:   ')

@@ -14,6 +14,9 @@ def main():
     path1.is_file()
     #path1.stat().st_size
 
+    path = 'D:\home\Riot Games\VALORANT\live\VALORANT.exe'
+    print(os.path.basename(path).split('\\')[-1])
+
     filename: Path = Path("some_file.txt")
     'C:\\Users\\Solmark\\Desktop\\СЕРИИ\\Омепразол 30\\бланк1.VDF'
     # hier path mit überflüssigem Trenner am Schluss
