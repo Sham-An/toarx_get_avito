@@ -1,7 +1,7 @@
 #
 import os
 from pathlib import Path
-
+import pathlib
 
 def main():
     path1 = "C:/Users/sselt/Documents/blog_demo/"
@@ -13,10 +13,13 @@ def main():
     print(path1.is_dir())
     path1.is_file()
     #path1.stat().st_size
-
-    path = 'D:\home\Riot Games\VALORANT\live\VALORANT.exe'
+#C:\Users\Solmark\Desktop\СЕРИИ\Омепразол 30\бланк1.VDF
+    path = (r'C:\\Users\\Solmark\\Desktop\\СЕРИИ\\Азитрмицин 500\\АЗИТРОМИЦИН 500 000000661.VDF') #'D:\home\Riot Games\VALORANT\live\VALORANT.exe'
+    kod_name = pathlib.Path(path).stem
     print(os.path.basename(path).split('\\')[-1])
-
+    print('name', kod_name)
+    kod = os.path.basename(kod_name).split(' ')[-1]
+    print('kod ', kod)
     filename: Path = Path("some_file.txt")
     'C:\\Users\\Solmark\\Desktop\\СЕРИИ\\Омепразол 30\\бланк1.VDF'
     # hier path mit überflüssigem Trenner am Schluss

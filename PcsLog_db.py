@@ -136,7 +136,17 @@ def prnpcs():
                 ###!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 print(os.path.basename(cont_txt).split('\\')[-1])
                 filename = os.path.basename(cont_txt).split('\\')[-1]
-                print(os.path.basename(cont_txt).split('\\')[-2])
+
+                #kod_name = pathlib.Path(full_path).stem
+                print(os.path.basename(full_path).split('\\')[-1])
+                print('name full', filename)
+                kod_name = pathlib.Path(filename).stem
+                print('kod_name ', kod_name)
+                kod = os.path.basename(kod_name).split(' ')[-1]
+                #kod = os.path.basename(name).split(' ')[-1]
+                print('kod ', kod)
+
+                print('name parent ',os.path.basename(cont_txt).split('\\')[-2])
                 print(Path(full_path).name)
                 parentname = os.path.basename(cont_txt).split('\\')[-2]
                 print(f'группа {parentname} File {filename}')
