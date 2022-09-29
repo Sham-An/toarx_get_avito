@@ -21,22 +21,11 @@ def open_cur():
 
     return cursor
 
-def check_database(offer):
-    print('check_database\n')
-    print(offer)
-    # offer = {'offer_id': 2465411376, 'id_item': 2465411375, 'category_name': 'category_name',
-    #          'category_kod': 'category_kod',
-    #          'date': '2022-09-06 15:37:49', 'time': '1662467869', 'title_desk': 'Error title',
-    #          'title_full': 'Error title',
-    #          'img': 'img', 'price': 3000000, 'address': 'Москва', 'coords': 'coords',
-    #          'url': 'url',
-    #          'uri': 'uri',
-    #          'uri_mweb': 'uri_mweb',
-    #          'area': 100,
-    #          'rooms': 'E',
-    #          'floor': 5,
-    #          'total_floor': 'r',
-    #          }
+def check_database(PCS_in):
+
+    PCS = PCS_in
+    print('!!!!!!!!!!!!!!!!check_database\n')
+    #print(f'PCS = {PCS}')
 
     # offer2 = {'offer_id': 2465411376, 'id_item': 1, 'category_name': '2', 'category_kod': '3',
     #           'date': '4', 'time': "5", 'title_desk': '6', 'title_full': '7',
@@ -49,12 +38,25 @@ def check_database(offer):
     #           'floor': '17',
     #           'total_floor': '18',
     #           }
+# '''
+#     {'PCS_id': 78800,
+#     'kod_start': '2802',
+#     'Log_Time': '2022-09-16 09:37:59.952',
+#     'start': '2022-09-16 09:38:00.186',
+#     'kod_stop': '4886',
+#     'stop': '2022-09-16 09:42:35.963',
+#     'parent_group_file': 'АЗИТРОМИЦИН',
+#     'kalibr': '500',
+#     'kog_group': '000000661',
+#     'file_dir': 'Азитрмицин 500',
+#     'Full_path': WindowsPath('C:/Users/Solmark/Desktop/СЕРИИ/Азитрмицин 500/АЗИТРОМИЦИН 500 000000661.VDF'),
+#     'file_name': 'АЗИТРОМИЦИН 500 000000661.VDF'}
+# '''
 
-    offer_id = offer["offer_id"]
-    print(type(offer))
-    with sqlite3.connect('Pcsparse.db') as connection:
-        cursor = connection.cursor()
-
+    # PCS_id = PCS["offer_id"]
+    # print(type(offer))
+    # with sqlite3.connect('Pcsparse.db') as connection:
+    #     cursor = connection.cursor()
         # cursor.execute("""
         #     SELECT offer_id FROM offers WHERE offer_id = (?)
         # """, (offer_id,))
@@ -63,15 +65,15 @@ def check_database(offer):
         #
         # if result is None:
 
-        cursor.execute("""
-                INSERT INTO offers 
-                VALUES (NULL, :id_item, :category_name, :category_kod, 
-                :date, :time, :title_desk, :title_full, :img, :price,
-                :address, :coords, :url, :uri, :uri_mweb, :offer_id, :area,
-                :rooms, :floor, :total_floor)
-                """, offer)
-        connection.commit()
-        print(f'добавлено в базу данных')
+        # cursor.execute("""
+        #         INSERT INTO offers
+        #         VALUES (NULL, :id_item, :category_name, :category_kod,
+        #         :date, :time, :title_desk, :title_full, :img, :price,
+        #         :address, :coords, :url, :uri, :uri_mweb, :offer_id, :area,
+        #         :rooms, :floor, :total_floor)
+        #         """, PCS)
+        # connection.commit()
+    print(f'добавлено в базу данных')
 
 
 def prnpcs():
@@ -252,6 +254,7 @@ def prnpcs():
                 insert_db = ''
             if insert_db == "Update 2":
                 print(f'PCS UUUUUUpdate  {insert_db} == {PCS} \n \n')
+                check_database(PCS)
                 #insert_db = ''
 
             insert_db = ''
@@ -273,11 +276,19 @@ def CreateLogDB():
     cursor.execute("""
         CREATE TABLE PCSparse (
             id INTEGER PRIMARY KEY AUTOINCREMENT, 
-            PCS_start integer,
-            PCS_time_start text,
+            PCS_id text,
+            PCS_kod_start integer,
+            PCS_kod_stop integer,
             PCS_time_print text,
-            PCS_context text,
-            Parent_name text,
+            PCS_time_start text,
+            PCS_time_stop text,
+            PCS_context text,            
+            Parent_name_file text,
+            Parent_kalibr text,
+            Parent_kog_group text,
+            PCS_file_dir text,
+            PCS_Full_path text,
+            PCS_file_name text,
             gtin_kod text,
             gtin_name text,
             last_kod_id text,
@@ -286,6 +297,18 @@ def CreateLogDB():
             )     
     """)
     connection.close()
+    #     {'PCS_id': 78800,
+    #     'kod_start': '2802',
+    #     'Log_Time': '2022-09-16 09:37:59.952',
+    #     'start': '2022-09-16 09:38:00.186',
+    #     'kod_stop': '4886',
+    #     'stop': '2022-09-16 09:42:35.963',
+    #     'parent_group_file': 'АЗИТРОМИЦИН',
+    #     'kalibr': '500',
+    #     'kog_group': '000000661',
+    #     'file_dir': 'Азитрмицин 500',
+    #     'Full_path': WindowsPath('C:/Users/Solmark/Desktop/СЕРИИ/Азитрмицин 500/АЗИТРОМИЦИН 500 000000661.VDF'),
+    #     'file_name': 'АЗИТРОМИЦИН 500 000000661.VDF'}
 
 
 if __name__ == '__main__':
