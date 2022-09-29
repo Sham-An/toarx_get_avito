@@ -14,18 +14,27 @@ def main():
     path1.is_file()
     #path1.stat().st_size
 #C:\Users\Solmark\Desktop\СЕРИИ\Омепразол 30\бланк1.VDF
-    path = (r'C:\\Users\\Solmark\\Desktop\\СЕРИИ\\Азитрмицин 500\\АЗИТРОМИЦИН 500 000000661.VDF') #'D:\home\Riot Games\VALORANT\live\VALORANT.exe'
+    path = Path(r'C:\\Users\\Solmark\\Desktop\\СЕРИИ\\Азитрмицин 500\\АЗИТРОМИЦИН 500 000000661.VDF') #'D:\home\Riot Games\VALORANT\live\VALORANT.exe'
     kod_name = pathlib.Path(path).stem
-    print(os.path.basename(path).split('\\')[-1])
+    print('path split ', os.path.basename(path).split('\\')[-1])
     print('name', kod_name)
     kod = os.path.basename(kod_name).split(' ')[-1]
     print('kod ', kod)
     filename: Path = Path("some_file.txt")
     'C:\\Users\\Solmark\\Desktop\\СЕРИИ\\Омепразол 30\\бланк1.VDF'
     # hier path mit überflüssigem Trenner am Schluss
-    path: Path = Path("C:/Users/sselt/Documents/blog_demo/")
-
+    #path: Path = Path("C:/Users/sselt/Documents/blog_demo/")
+    #parts: Path = Path.parts("C:/Users/sselt/Documents/blog_demo/")
+    #print(f'####################################### {parts} ### {Path}')
     # hier path mit doppeltem Trenner
+
+    #path = Path('C:/Users/Jano/Documents')
+    list_path = path.parts
+
+    #print(f' ##################################################################  #path.parts path.parts[-1] {list_path[-2]}')
+    #print(path.drive)
+    #print(path.root)
+
     path: Path = Path("C:/Users/sselt/Documents/blog_demo//")
     # hier path völlig durcheinander
     path: Path = Path("C:\\Users\\sselt\\Documents\\blog_demo")  # hier ein wilder Mix

@@ -1,6 +1,8 @@
 Write Excel with Python Pandas
 
-Write Excel with Python Pandas. You can write any data (lists, strings, numbers etc) to Excel, by first converting it into a Pandas DataFrame and then writing the DataFrame to Excel.
+Write Excel with Python Pandas. You can write any data
+(lists, strings, numbers etc) to Excel, by first converting it into a Pandas
+DataFrame and then writing the DataFrame to Excel.
 
 To export a Pandas DataFrame as an Excel file (extension: .xlsx, .xls), use the to_excel() method.
 
@@ -20,7 +22,8 @@ $ pip install openpyxl
 Write Excel
 Write DataFrame to Excel file
 
-Importing openpyxl is required if you want to append it to an existing Excel file described at the end.
+Importing openpyxl is required if you want to append it to an existing Excel file
+described at the end.
 A dataframe is defined below:
 
 import pandas as pd

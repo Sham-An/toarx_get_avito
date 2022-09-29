@@ -98,8 +98,12 @@ def prnpcs():
     key1 = 'Печать работы:'#Печать работы: C:\Users\Solmark\Desktop\СЕРИИ\Омепразол 30\бланк1.VDF
     key2 = 'Старт Печати Индекс текущей записи'#Старт Печати Индекс текущей записи 2636.
     key3 = 'Стоп печати Индекс текущей записи' #Стоп печати Индекс текущей записи 2666.
-    insert_db = 0
-    PCS = "" #{}
+    insert_db = ''
+    control_db = 'Insert  '
+    PCS = {}#"" #{}
+    PCS["start"] = ''
+    PCS["kod_start"] = ''
+    blank = 'бланк'
     #with closing(sqlite3.connect(database)) as connection:
     with closing(conn_PCS_main) as connection:
         #conn = sqlite3.connect
@@ -112,75 +116,107 @@ def prnpcs():
         # получаем все значения
         rows = cursor.fetchall()
         for row in rows:
-            #PCS = {}
-
+            ##PCS = {}
             #ID_PCS = row[0]
             Log_Time = row[3]
             cont = str(row[4])
+            #blank = 'бланк'
+            insert_db = ''
+
             if key1 in cont:
 
+                #print(f'UPPER {PCS}')
                 PCS = {}
-                ID_PCS = row[0]
-                #print('key1', cont)
-                PCS["PCS_id"] = ID_PCS
-                PCS["Log_Time"] = Log_Time
-                PCS["cont"] = cont
+                PCS["PCS_id"] = '--'
+                PCS["kod_start"] = '--'
+                PCS["Log_Time"] = '--' #Log_Time
+                PCS["start"] = '--'
+                PCS["kod_stop"] = '--'
+                PCS["stop"] = "--"
+                PCS["parent_group_file"] = '--'
+                PCS["kalibr"] = "--"
+                PCS["kog_group"] = "--"
+                PCS["file_dir"] = '--'
+                PCS["Full_path"] = '--'
+                PCS["file_name"] = '--'
 
+                if blank in cont:
+                    continue
+                    cont = cont.replace('бланк', "бланк бланк бланк")
+                    #print('############################################################', cont)
+
+                ID_PCS = row[0]
+                PCS["PCS_id"] = ID_PCS
+                PCS["Log_Time"] = row[3] #Log_Time
+                #PCS["cont"] = cont
                 #'C:\\Users\\Solmark\\Desktop\\СЕРИИ\\Омепразол 30\\бланк1.VDF')
-                #full_path = path
                 cont_txt = cont
                 full_path = str(Path(cont.replace(key1, "").strip()))
-                print('full_path !!! ', full_path)
-                #cont_txt.replace("\\", "/")
+
+#                print('full_path !!! ', full_path)
                 #################################################
                 ###!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                filename = os.path.basename(full_path).split('\\')[-1]
-
-                print('split2 !!basename ', os.path.basename(full_path).split('\\')[-1])
-                print('name full', filename)
+                #filename = os.path.basename(full_path).split('\\')[-1]
+                path = Path(full_path)
+                list_path = path.parts
+                name_dir = list_path[-2]
+                if name_dir == 'CheckNozzle':
+                    continue
+                filename = list_path[-1]
                 kod_name = pathlib.Path(filename).stem
-                print('kod_name ', kod_name)
-                kod = os.path.basename(kod_name).split(' ')[-1]
-                parent_group = os.path.basename(kod_name).split(' ')#[0]
-                #kod = os.path.basename(name).split(' ')[-1]
-                print(f'kod  {kod}  GROUP {parent_group}')
+                length_kod = int(len(kod_name) - int('9'))
+                #kod = os.path.basename(kod_name).split(' ')[-1]
+                kod1 = kod_name[length_kod:]
+                group_dict1 = kod_name.replace('-', " ")
+                group_dict = group_dict1.replace('  ', " ")
+                parent_group = os.path.basename(kod_name).split('-')  # [0]
+                parent_group2 = group_dict.split(' ')  # [0]
+                #print(f'parent_group2  === === {parent_group2} NAME {parent_group2[0]} trotil {parent_group2[-1]} kod {parent_group2[-1]}')
+                if len(parent_group2) != 3:
+                    print(f'parent_group2  !!! === === {parent_group2} NAME {parent_group2[0]} trotil {parent_group2[-1]} kod {parent_group2[-1]}')
+                    name_group = parent_group2[0]
+                    trotil = 'Не определен'
+                    kog_group = parent_group2[-1]
+                else:
+                    name_group = parent_group2[0].upper()
+                    trotil = parent_group2[-2]
+                    kog_group = parent_group2[-1]
 
-                print('name DIR ',os.path.basename(cont_txt).split('\\')[-2])
+                    #continue
+                    #print(f'$$$$$$$$$$$$$$$$$$$$$$$   len(parent_group2)  {parent_group2}  len {len(parent_group2)}')
+                #print(f'parent_group2  === === {parent_group2} NAME {parent_group2[0]} trotil {parent_group2[-2]} kod {parent_group2[-1]}')
+                #name_group = (parent_group[0]).upper()
+                #kog_group = (parent_group[-1]).upper()
+#                name_group = parent_group2[0].upper()
+#                trotil = parent_group2[-2]
+#                kog_group = parent_group2[-1]
 
-                print('FULL PATH NAME    ', Path(full_path).name)
-                parentname = os.path.basename(cont_txt).split('\\')[-2]
-                print(f'!!!!!!!!!!!!!!!!!! директория {parentname} File {filename} kod {kod}')
+                #                print(f'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% kog_group {kog_group}')
+#                kod = os.path.basename(filename).split('-')[-1]
+
+                print(f'\n \n -----------___--Path_path {path}'
+                      f' \n name_dir                              {name_dir} '
+                      f' \n filename                              {filename} '
+                      f' \n kod(-9)                               {kod1} '
+                      f' \n GROUP file NAME {parent_group} \n '
+                      f' \n GROUP {name_group} '                      
+                      f' \n kod from file NAME {kog_group} \n \n')
+
+                #parentname = os.path.basename(cont_txt).split('\\')#[-1]
                 #####################################################
-                print('cont2 ', cont_txt)
-                path: Path = Path(full_path)
-
-                fulll_path =full_path
-
-                print(path)
-                name = os.path.basename(full_path)
-                name.replace("\\", "/")
-                path: Path = Path(name)
-                #name = path.splitext(name)[0]
-                name = pathlib.Path(name).stem
-                print('name', name)
-
-                PCS["Full_path"] = name# path #os.path.basename(full_path)
-                #name = os.path.splitext(os.path.basename(full_path))[1]#.replace('\', "")))[0]
-                #
-                # filesurvey = []
-                # for row in os.walk(fulll_path):  # row beinhaltet jeweils einen Ordnerinhalt
-                #     print(f'row = {row}')
-                #     for filename in row[2]:  # row[2] ist ein tupel aus Dateinamen
-                #         print(filename)
-                #         full_path1: Path = Path(row[0]) / Path(filename)  # row[0] ist der Ordnerpfad
-                #         filesurvey.append([full_path1, filename, full_path1.stat().st_mtime, full_path1.stat().st_size])
+                PCS["Full_path"] = path # str(full_path) #path# path #os.path.basename(full_path)
+                PCS["file_dir"] = name_dir
                 PCS["file_name"] = filename #name
-                PCS["parent_group"] = parentname
-                PCS["start"] = ""
-                PCS["stop"] = ""
-                print(' \n Печать работы:   ')
+                PCS["parent_group_file"] = name_group#parent_group #parentname
+                PCS["kalibr"] = trotil
+                PCS["kog_group"] = kog_group
+
+                #PCS["start"] = ""
+                #PCS["kod_start"] = ''
+                #PCS["stop"] = ""
+                #PCS["kod_stop"] = ''
+                #print(' \n Печать работы:   ')
                 insert_db = 'Insert  '
-                #print('PCS ++++++++++++====', PCS)
 
                 ## "INSERT INTO PCSparse (PCS_time,PCS_context) VALUES (Log_Time, cont)"
                 # cur.execute(
@@ -191,32 +227,36 @@ def prnpcs():
                 #print("Record inserted successfully")
 
             elif key2 in cont:
-                #print('key2', cont, PCS)
 
-                PCS["start"] = cont
-                #print('PCS 2222 ++++++++++++====', PCS)
-
+                kod_start = cont.replace('.', "").split(' ')[-1]
+                PCS["start"] = row[3]  # cont
+                PCS["kod_start"] = kod_start  # cont
+                print('key2', cont, PCS)
                 #cur.execute("UPDATE STUDENT set AGE = 20 where ADMISSION = 3420")
                 #con.commit()
                 insert_db = "Update 1"
 
             elif key3 in cont:
-                #print('key3', cont, '\n')
                 #cur.execute("UPDATE STUDENT set AGE = 20 where ADMISSION = 3420")
                 #con.commit()
-                #print('key3', cont, PCS)
-
-                PCS["stop"] = cont
-                #print('PCS 3333 ++++++++++++====', PCS)
+                PCS["stop"] = row[3]#cont
+                kod_stop = cont.replace('.', "").split(' ')[-1]
+                PCS["kod_stop"] = kod_stop
                 insert_db = "Update 2"
 
             #else:
                 #state3
             #else: #delete
-            if insert_db:
+            if insert_db == 'Insert  ':
                 print(f'PCS {insert_db} == {PCS}')
-                insert_db = 0
-                #PCS = {}
+                insert_db = ''
+            if insert_db == "Update 2":
+                print(f'PCS UUUUUUpdate  {insert_db} == {PCS} \n \n')
+                #insert_db = ''
+
+            insert_db = ''
+
+        print(f'\n \n \n !!! !!!! !!!! {insert_db}  Finish     {PCS}')
 
             #cur.execute("DELETE from STUDENT where ADMISSION=3420;")
             #con.commit()
