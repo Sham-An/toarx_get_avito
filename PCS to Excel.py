@@ -35,10 +35,12 @@ def prnDataframe():
 
 def pandasToExcel():
     df2 = df[['a', 'c']]
+    dframe = pd.DataFrame(dict_list)
     print(df2)
     with pd.ExcelWriter('pandas_to_excel.xlsx') as writer:
         df.to_excel(writer, sheet_name='sheet1')
         df2.to_excel(writer, sheet_name='sheet2')
+        dframe.to_excel(writer, sheet_name='sheet_dframe')
 
 
 if __name__ == '__main__':
