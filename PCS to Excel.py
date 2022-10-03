@@ -1,6 +1,10 @@
 import pandas as pd
 import openpyxl
 import subprocess
+from openpyxl.styles import Border, Side
+from openpyxl import Workbook
+from openpyxl.styles import PatternFill, Font, Alignment
+from openpyxl.styles import NamedStyle, Font, Border, Side
 
 #>>> subprocess.Popen('C:\\Windows\\System32\\calc.exe')
 # Метод poll() возвращает значение None, если в момент его вызова процесс все еще выполняется. Если же процесс к этому моменту завершен, то он возвращает код завершения процесса. Код заверешения служит индикатором того, завершился ли процесс без ошибок (код равен нулю) или же его завершение было вызвано ошибкой (ненулевой код).
@@ -83,8 +87,18 @@ def editCells():
     sheet.cell(row=1, column=6).value = 'stop'
     sheet.cell(row=1, column=7).value = 'время'
 
+
+    # определим стили сторон
+    thins = Side(border_style="medium", color="0000ff")
+    double = Side(border_style="dashDot", color="ff0000")
+    # рисуем границы
+    ws = wb.active
+    cell = ws['B2']
+    cell.border = Border(top=double, bottom=double, left=thins, right=thins)
+    #wb.save("styled_border.xlsx")
+
     # set the height of the row
-    #sheet.row_dimensions[1].height = 70
+    #sheet.row_dimensions[1].height = 70 #высота строки
 
     # set the width of the column
     sheet.column_dimensions['A'].width = 5
@@ -97,7 +111,32 @@ def editCells():
     sheet.column_dimensions['J'].width = 20
     sheet.column_dimensions['H'].width = 20
 
+
     # save the file
+    # выравниваем текст в ячейках стилями
+    # >> > ws['A1'].alignment = Alignment(horizontal='left')
+    # >> > ws['A2'].alignment = Alignment(horizontal='center')
+    # >> > ws['A3'].alignment = Alignment(horizontal='right')
+    #>> > ws = wb.active
+    # объединим ячейки в диапазоне `B2:E2`
+    #>> > ws.merge_cells('B2:E2')
+    # в данном случае крайняя верхняя-левая ячейка это `B2`
+    #>> > megre_cell = ws['B2']
+    # запишем в нее текст
+    #>> > megre_cell.value = 'Объединенные ячейки `B2 : E2`'
+    # установить высоту строки
+    #>> > ws.row_dimensions[2].height = 30
+    # установить ширину столбца
+    #>> > ws.column_dimensions['B'].width = 40
+    # выравнивание текста
+    #>> > megre_cell.alignment = Alignment(horizontal="center", vertical="center")
+    # определим стили сторон
+    #>> > thins = Side(border_style="medium", color="0000ff")
+    #>> > double = Side(border_style="dashDot", color="ff0000")
+    # рисуем границы
+    #>> > cell.border = Border(top=double, bottom=double, left=thins, right=thins)
+
+
     wb.save('pandas_to_excel.xlsx')
     subprocess.Popen(('start', 'pandas_to_excel.xlsx'), shell=True)
 
@@ -114,9 +153,125 @@ def pandasToExcel():
 
     subprocess.Popen(('start', 'pandas_to_excel.xlsx'), shell=True)
 
+def Styles():
+    wb = Workbook()
+    ws = wb.active
+
+    # определим стили сторон
+    thins = Side(border_style="thin", color="0000ff")
+    double = Side(border_style="double", color="ff0000")
+
+    # начинаем заполнение области ячеек 10x10 данными
+    # при этом будем стилизировать границы области
+    for r, row in enumerate(range(5, 15), start=1):
+        for c, col in enumerate(range(5, 15), start=1):
+            # это значение, которое будем записывать в ячейку
+            val_cell = r * c
+            # левая верхняя ячейка
+            if r == 1 and c == 1:
+                ws.cell(row=row, column=col, value=val_cell).border = Border(top=double, left=thins)
+            # правая верхняя ячейка
+            elif r == 1 and c == 10:
+                ws.cell(row=row, column=col, value=val_cell).border = Border(top=double, right=thins)
+            # верхние ячейки
+            if r == 1 and c != 1 and c != 10:
+                ws.cell(row=row, column=col, value=val_cell).border = Border(top=double)
+            # левая нижняя ячейка
+            elif r == 10 and c == 1:
+                ws.cell(row=row, column=col, value=val_cell).border = Border(bottom=double, left=thins)
+            # правая нижняя ячейка
+            elif r == 10 and c == 10:
+                ws.cell(row=row, column=col, value=val_cell).border = Border(bottom=double, right=thins)
+            # нижние ячейки
+            elif r == 10 and c != 1 and c != 10:
+                ws.cell(row=row, column=col, value=val_cell).border = Border(bottom=double)
+            # левые ячейки
+            elif c == 1 and r != 1 and r != 10:
+                ws.cell(row=row, column=col, value=val_cell).border = Border(left=thins)
+            # правые ячейки
+            elif c == 10 and r != 1 and r != 10:
+                ws.cell(row=row, column=col, value=val_cell).border = Border(right=thins)
+            else:
+                # здесь ячейки просто заполняются данными
+                ws.cell(row=row, column=col, value=val_cell)
+
+    # сохраняем и смотрим что получилось
+    wb.save("styled_border.xlsx")
+
+def Stylecolor():
+
+    #from openpyxl import Workbook
+    #from openpyxl.styles import PatternFill, Font, Alignment
+    wb = Workbook()
+    ws = wb.active
+
+    # объединим ячейки в диапазоне `B2:E2`
+    ws.merge_cells('B2:E2')
+    megre_cell = ws['B2']
+    # запишем в нее текст
+    megre_cell.value = 'Объединенные ячейки `B2 : E2`'
+    # установить высоту строки
+    ws.row_dimensions[2].height = 30
+    # установить ширину столбца
+    ws.column_dimensions['B'].width = 40
+    # заливка ячейки цветом
+    megre_cell.fill = PatternFill('solid', fgColor="DDDDDD")
+    # шрифт и цвет текста ячейки
+    megre_cell.font = Font(bold=True, color='FF0000', name='Arial', size=14)
+    # ну и для красоты выровним текст
+    megre_cell.alignment = Alignment(horizontal='center', vertical='center')
+
+    #Создание именованного стиля.
+    #from openpyxl.styles import NamedStyle, Font, Border, Side
+
+    #wb = Workbook()
+    #ws = wb.active
+
+    # создание переменной именованного стиля
+    name_style = NamedStyle(name="highlight")
+    # применение стилей к созданной переменной
+    name_style.font = Font(bold=True, size=20)
+    bd = Side(style='thick', color="000000")
+    name_style.border = Border(left=bd, top=bd, right=bd, bottom=bd)
+    #После создания именованного стиля его нужно зарегистрировать в рабочей книге:
+
+    wb.add_named_style(name_style)
+    #Именованные стили также будут автоматически зарегистрированы при первом назначении их ячейке:
+
+    ws['A10'].style = name_style
+    #После регистрации стиля в рабочей книге, применять его можно только по имени:
+    ws['D5'].style = 'highlight'
+
+    # сохраняем и смотрим что получилось
+
+    wb.save("cell_color.xlsx")
+
+def namedStyle():
+    #Создание именованного стиля.
+    #from openpyxl.styles import NamedStyle, Font, Border, Side
+    wb = Workbook()
+    ws = wb.active
+
+    # создание переменной именованного стиля
+    name_style = NamedStyle(name="highlight")
+    # применение стилей к созданной переменной
+    name_style.font = Font(bold=True, size=20)
+    bd = Side(style='thick', color="000000")
+    name_style.border = Border(left=bd, top=bd, right=bd, bottom=bd)
+    #После создания именованного стиля его нужно зарегистрировать в рабочей книге:
+
+    wb.add_named_style(name_style)
+    #Именованные стили также будут автоматически зарегистрированы при первом назначении их ячейке:
+
+    ws['A1'].style = name_style
+    #После регистрации стиля в рабочей книге, применять его можно только по имени:
+    ws['D5'].style = 'highlight'
+
 
 if __name__ == '__main__':
 
     #prnDataframe()
     #pandasToExcel()
-    editCells()
+    #editCells()
+    Styles()
+    Stylecolor()
