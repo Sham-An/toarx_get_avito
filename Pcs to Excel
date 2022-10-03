@@ -86,3 +86,78 @@ with pd.ExcelWriter(path) as writer:
     writer.book = openpyxl.load_workbook(path)
     df.to_excel(writer, sheet_name='new_sheet1')
     df2.to_excel(writer, sheet_name='new_sheet2')
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> # http://openpyxl.readthedocs.io/en/2.5/tutorial.html#create-a-workbook
+>>> from openpyxl import Workbook
+>>> wb = Workbook()
+>>> print(wb.sheetnames)
+['Sheet']
+>>>
+>>> print(wb.active)
+<Worksheet "Sheet">
+>>> ws = wb.active
+>>> ws.title = "alpha"
+>>>
+>>> ws = wb.create_sheet('bravo')
+>>> print(wb.sheetnames)
+['alpha', 'bravo']
+>>> print(wb.active)
+<Worksheet "alpha">
+>>>
+>>> ws = wb.create_sheet('charlie',0)  # insert at index 0
+>>> print(wb.sheetnames)
+['charlie', 'alpha', 'bravo']
+>>> print(wb.active)
+<Worksheet "charlie">
+>>>
+>>>
+>>> wb.active = 1
+>>> print(wb.active)
+<Worksheet "alpha">
+>>>
+>>> wb.active = 2
+>>> print(wb.active)
+<Worksheet "bravo">
+>>>
+>>> wb.active = 0
+>>> print(wb.active)
+<Worksheet "charlie">
+>>>
+>>> wb.active = 3
+>>> print(wb.active)
+None
+>>>
+>>> ws = wb.create_sheet(index=0)  # insert at index
+>>> print(wb.active)
+<Worksheet "bravo">
+>>> print(wb.sheetnames)
+['Sheet', 'charlie', 'alpha', 'bravo']
+>>>
+>>>
+>>> ws_active = wb.get_sheet_by_name('charlie')
+<stdin>:1: DeprecationWarning: Call to deprecated function get_sheet_by_name (Use wb[sheetname]).
+>>> ws_active = wb['charlie']
+>>> print(wb.active)
+<Worksheet "bravo">
+>>> ws4 = wb["charlie"] # from https://stackoverflow.com/a/36814135/4539999
+>>> print(wb.active)
+<Worksheet "bravo">
+>>>
+>>> # Set Active Sheet
+>>> for i, s in enumerate(wb.sheetnames):
+...     if s == 'charlie':
+...         break
+...
+>>> wb.active = i
+>>>
+>>> # Confirm Active Sheet
+>>> print(wb.active)
+<Worksheet "charlie">
+>>>
+>>> # Open workbook to verify
+>>> wb.save("Demo.xlsx")
