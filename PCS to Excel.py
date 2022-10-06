@@ -99,6 +99,25 @@ def editCells():
 
     # set the height of the row
     #sheet.row_dimensions[1].height = 70 #высота строки
+    # создание переменной именованного стиля
+    name_style = NamedStyle(name="highlight5")
+    # применение стилей к созданной переменной
+    name_style.font = Font(bold=True, size=20)
+    bd = Side(style='thick', color="000000")
+    name_style.border = Border(left=bd, top=bd, right=bd, bottom=bd)
+    #После создания именованного стиля его нужно зарегистрировать в рабочей книге:
+    #if 'highlight4' not in ws.style_names:
+    #    ws.add_named_style(name_style)
+
+    # Directly Use as:
+    #ws['D5'].style = 'NormalBorderStyle'
+    #wb.add_named_style(name_style)
+    #Именованные стили также будут автоматически зарегистрированы при первом назначении их ячейке:
+
+    ws['A1'].style = name_style
+    #После регистрации стиля в рабочей книге, применять его можно только по имени:
+    ws['D5'].style = 'highlight5'
+
 
     # set the width of the column
     sheet.column_dimensions['A'].width = 5
@@ -228,7 +247,7 @@ def Stylecolor():
     #ws = wb.active
 
     # создание переменной именованного стиля
-    name_style = NamedStyle(name="highlight")
+    name_style = NamedStyle(name="highlight3")
     # применение стилей к созданной переменной
     name_style.font = Font(bold=True, size=20)
     bd = Side(style='thick', color="000000")
@@ -240,7 +259,7 @@ def Stylecolor():
 
     ws['A10'].style = name_style
     #После регистрации стиля в рабочей книге, применять его можно только по имени:
-    ws['D5'].style = 'highlight'
+    ws['D5'].style = 'highlight3'
 
     # сохраняем и смотрим что получилось
 
@@ -253,7 +272,7 @@ def namedStyle():
     ws = wb.active
 
     # создание переменной именованного стиля
-    name_style = NamedStyle(name="highlight")
+    name_style = NamedStyle(name="highlight2")
     # применение стилей к созданной переменной
     name_style.font = Font(bold=True, size=20)
     bd = Side(style='thick', color="000000")
@@ -265,13 +284,13 @@ def namedStyle():
 
     ws['A1'].style = name_style
     #После регистрации стиля в рабочей книге, применять его можно только по имени:
-    ws['D5'].style = 'highlight'
+    ws['D5'].style = 'highlight2'
 
 
 if __name__ == '__main__':
 
     #prnDataframe()
     #pandasToExcel()
-    #editCells()
-    Styles()
-    Stylecolor()
+    editCells()
+    #Styles()
+    #Stylecolor()
