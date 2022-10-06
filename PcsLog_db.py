@@ -291,7 +291,70 @@ def CreateLogDB():
     #     'Full_path': WindowsPath('C:/Users/Solmark/Desktop/СЕРИИ/Азитрмицин 500/АЗИТРОМИЦИН 500 000000661.VDF'),
     #     'file_name': 'АЗИТРОМИЦИН 500 000000661.VDF'}
 
+def CreateParentDB():
+    # При подключении к базе, автоматически создается realty.db
+    connection = sqlite3.connect('Pcsparent.db')
+    cursor = connection.cursor()
+    cursor.execute("""
+        CREATE TABLE PCSparent(
+            id INTEGER PRIMARY KEY AUTOINCREMENT, 
+            PAR_id text,
+            PAR_kod text,
+            PAR_NAME_FULL text,
+            PAR_NAME_short text,
+            PAR_kalibr text,
+            PAR_Name_Dir text,
+            Parent_kog_group text,
+            gtin_kod text,
+            gtin_name text
+            )     
+    """)
+
+
+    cursor.execute('''
+              INSERT INTO PCSparent (
+              id, PAR_id, PAR_kod, PAR_NAME_FULL, PAR_NAME_short, PAR_kalibr, 
+              PAR_Name_Dir, Parent_kog_group, gtin_kod, gtin_name)
+
+                    VALUES
+                    (NULL, '1', '', 'Азитромицин 500', 'Азитромицин', '500', 'Азитромицин 500', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '2', '', 'Азитромицин 250', 'Азитромицин', '250', 'Азитромицин 250', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '3', '', 'Индапамид 2.5', 'Индапамид', '2.5', 'Индапамид 2.5', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '4', '', 'ИТРАКОНАЗОЛ 100', 'ИТРАКОНАЗОЛ', '100', 'ИТРАКОНАЗОЛ 100', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '5', '', 'ЛЕВОФЛОКСАЦИН 500', 'ЛЕВОФЛОКСАЦИН', '500', 'ЛЕВОФЛОКСАЦИН 500', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '6', '', 'Лоперамид 10', 'Лоперамид', '10', 'Лоперамид 10', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '7', '', 'НИФУРОКСАЗИД  100 №30', 'НИФУРОКСАЗИД', '100', 'НИФУРОКСАЗИД  100 №30', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '8', '', 'НИФУРОКСАЗИД  200 №20', 'НИФУРОКСАЗИД', '200', 'НИФУРОКСАЗИД  200 №20', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '9', '', 'Омепразол 30', 'Омепразол', '30', 'Омепразол 30', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '10', '', 'Пироксикам 10', 'Пироксикам', '10', 'Пироксикам 10', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '11', '', 'Пироксикам 20', 'Пироксикам', '20', 'Пироксикам 20', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '12', '', 'Флуконазол 150', 'Флуконазол', '150', 'Флуконазол 150', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '13', '', 'Флуконазол 50', 'Флуконазол', '50', 'Флуконазол 50', 'Parent_kog_group', 'gtin_kod', 'gtin_name'),
+                    (NULL, '14', '', 'Флуоксетин', 'Флуоксетин', '', 'Флуоксетин', 'Parent_kog_group', 'gtin_kod', 'gtin_name')
+              ''')
+    connection.commit()
+    # Азитрмицин 500
+    # Азитромицин 250
+    # Индапамид 2.5
+    # ИТРАКОНАЗОЛ 100
+    # ЛЕВОФЛОКСАЦИН 500
+    # Лоперамид 10
+    # НИФУРОКСАЗИД  100 №30
+    # НИФУРОКСАЗИД  200 №20
+    # Омепразол 30
+    # Пироксикам 10
+    # Пироксикам 20
+    # Флуконазол 150
+    # Флуконазол 50
+    # Флуоксетин
+
+    connection.commit()
+
+    connection.close()
+
+
 
 if __name__ == '__main__':
     # CreateLogDB()
-    prnpcs()
+    #prnpcs()
+    CreateParentDB()
