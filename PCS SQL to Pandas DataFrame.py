@@ -1,4 +1,19 @@
 #SQL to Pandas DataFrame(with examples)
+#Азитрмицин 500
+#Азитромицин 250
+#Индапамид 2.5
+#ИТРАКОНАЗОЛ 100
+#ЛЕВОФЛОКСАЦИН 500
+#Лоперамид 10
+#НИФУРОКСАЗИД  100 №30
+#НИФУРОКСАЗИД  200 №20
+#Омепразол 30
+#Пироксикам 10
+#Пироксикам 20
+#Флуконазол 150
+#Флуконазол 50
+#Флуоксетин
+#
 import sqlite3
 #Here is the complete script to create the database and table in Python:
 
@@ -46,7 +61,7 @@ sql_query = pd.read_sql_query('''
                                FROM PCSparse
                                ''', conn)
 
-df = pd.DataFrame(sql_query, columns=['PCS_id', 'PCS_time_print', 'PCS_kod_start', 'PCS_kod_stop', 'PCS_time_print', 'PCS_context'])#['product_id', 'product_name', 'price'])
+df = pd.DataFrame(sql_query, columns=['PCS_id', 'PCS_time_print', 'PCS_kod_start', 'PCS_kod_stop', 'PCS_time_print', 'Parent_name_file', 'Parent_kalibr', 'Parent_kog_group', 'PCS_file_dir', 'PCS_file_name'])#['product_id', 'product_name', 'price'])
 print(df)
 with pd.ExcelWriter('pandas_to_excel.xlsx') as writer:
     df.to_excel(writer, sheet_name='sheet1')
