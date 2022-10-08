@@ -7,8 +7,9 @@ import pathlib
 from pathlib import Path
 import sqlite3
 from contextlib import closing
+import json  # json.dumps(['please','help','me']) json.loads(s)
 
-datamain = 'PcsLog.db'
+datamain = 'PcsLog2.db'
 conn_PCS_main = sqlite3.connect(datamain)
 
 database = 'Pcsparse.db'
@@ -23,6 +24,14 @@ def open_cur():
     return cursor
 
 
+def clearparse():
+    with sqlite3.connect('Pcsparse.db') as connection:
+        cursor = connection.cursor()
+
+        cursor.execute('DELETE FROM PCSparse;', )  # cursor.com
+        connection.commit()
+
+
 def check_database(PCS_in):
     PCS = PCS_in
     print('!!!!!!!!!!!!!!!!check_database\n')
@@ -30,8 +39,10 @@ def check_database(PCS_in):
     PCS__id = PCS_in['PCS_id']
     # if result is None:
     with sqlite3.connect('Pcsparse.db') as connection:
-
         cursor = connection.cursor()
+
+        # cursor.execute('DELETE FROM PCSparse;', )        #cursor.com
+        # connection.commit()
 
         cursor.execute("""
             SELECT PCS_id FROM PCSparse WHERE PCS_id = (?)
@@ -40,7 +51,6 @@ def check_database(PCS_in):
         print(f'!!!!!!!!!!!!!!   result cursor.fetchone() = {result}')
 
         if result is None:
-
             cursor.execute("""
                      INSERT INTO PCSparse
                      VALUES (NULL, :PCS_id, :kod_start, :kod_stop, :start, :start, :stop, :Full_path,
@@ -139,7 +149,10 @@ def prnpcs():
                 ###!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 # filename = os.path.basename(full_path).split('\\')[-1]
                 path = Path(full_path)
-                list_path = path.parts
+                print(f' path path path path path path path path {path}')
+                list_path = path.parts[:]  # json.dumps(['please','help','me']) json.loads(s) path.parts[1:]
+
+                print(f'list_path list_pathlist_pathlist_pathlist_pathlist_path {list_path}')
                 name_dir = list_path[-2]
                 if name_dir == 'CheckNozzle':
                     continue
@@ -186,7 +199,7 @@ def prnpcs():
 
                 # parentname = os.path.basename(cont_txt).split('\\')#[-1]
                 #####################################################
-                PCS["Full_path"] = "FULL PATH"  # path  # str(full_path) #path# path #os.path.basename(full_path)
+                PCS["Full_path"] = json.dumps(list_path)  #json.loads(s) # "FULL PATH"#list_path[-3:]#"FULL PATH"  # path  # str(full_path) #path# path #os.path.basename(full_path)
                 PCS["file_dir"] = name_dir
                 PCS["file_name"] = filename  # name
                 PCS["parent_group_file"] = name_group  # parent_group #parentname
@@ -291,6 +304,7 @@ def CreateLogDB():
     #     'Full_path': WindowsPath('C:/Users/Solmark/Desktop/СЕРИИ/Азитрмицин 500/АЗИТРОМИЦИН 500 000000661.VDF'),
     #     'file_name': 'АЗИТРОМИЦИН 500 000000661.VDF'}
 
+
 def CreateParentDB():
     # При подключении к базе, автоматически создается realty.db
     connection = sqlite3.connect('Pcsparent.db')
@@ -303,13 +317,13 @@ def CreateParentDB():
             PAR_NAME_FULL text,
             PAR_NAME_short text,
             PAR_kalibr text,
+            PAR_numer text,
             PAR_Name_Dir text,
             Parent_kog_group text,
             gtin_kod text,
             gtin_name text
             )     
     """)
-
 
     cursor.execute('''
               INSERT INTO PCSparent (
@@ -353,8 +367,8 @@ def CreateParentDB():
     connection.close()
 
 
-
 if __name__ == '__main__':
     # CreateLogDB()
-    #prnpcs()
-    CreateParentDB()
+    clearparse()
+    prnpcs()
+    # CreateParentDB()
