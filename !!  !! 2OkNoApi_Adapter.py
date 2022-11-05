@@ -5,7 +5,7 @@ import sys
 import time
 #import datetime
 from random import randint
-from fake_useragent import UserAgent
+#from fake_useragent import UserAgent
 import ssl
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.poolmanager import PoolManager
@@ -75,7 +75,7 @@ if cookie:                                      # Добавим куки, ес�
 s.headers.update(headers)                       # Сохраняем заголовки в сессию
 #proxiess = {'http': '176.9.75.42:3128'}
 #proxiess = {'http': '207.154.231.208:3128'}
-UA = UserAgent().random
+#UA = UserAgent().random
 s.get('https://m.avito.ru/', proxies = proxiess)#, useragent = UA) #   useragent = str(UA)                 # Делаем запрос на мобильную версию.
 url_api_9 = 'https://m.avito.ru/api/9/items'    # Урл первого API, позволяет получить id и url объявлений по заданным фильтрам
                                                 # Тут уже видно цену и название объявлений
