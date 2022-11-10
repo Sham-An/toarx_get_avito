@@ -32,8 +32,8 @@ search = 'suzuki+gsx-r'     # Строка поиска на сайте и ни�
 categoryId = 14
 locationId = 641780         # Новосибирск
 searchRadius = 200
-priceMin = 200000
-priceMax = 450000
+priceMin = 100000
+priceMax = 200000
 sort = 'priceDesc'
 withImagesOnly = 'true'     # Только с фото
 limit_page = 50     # Количество объявлений на странице 50 максимум
@@ -172,7 +172,7 @@ for i in items: # Теперь идем по ябъявлениям:
 
 
 
-
+#https://www.avito.ru/rostovskaya_oblast/avtomobili?cd=1&f=ASgBAQECAkTyCrCKAeC2DaSKNANA5rYNJL63KMy3KPC2DRTutyj2xA0UvrA6AUWMFBl7ImZyb20iOjE0NzY4LCJ0byI6MTQ3NzN9
 
     ''')
 
