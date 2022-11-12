@@ -1,0 +1,7 @@
+2022-10-30 10:30:39,381 - testLogger - Exception in onExcept:
+Traceback (most recent call last):
+  File "F:\pythonProjects\Parse_Print\wxPython\wxLogger.py", line 22, in logger_func
+    return func(*args)
+  File "F:\pythonProjects\Parse_Print\wxPython\wxLogger.py", line 62, in onExcept
+    1 / 0
+ZeroDivisionError: division by zero
