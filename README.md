@@ -2,6 +2,13 @@
 Мониторинг недвижимости
 https://www.youtube.com/playlist?list=PLveyMGRVUwrB6r-krN8cfR1QPiNcpUouV
 
+#адрес статьи https://lolz.guru/threads/1634990/
+#док авито API https://rest-app.net/api
+#Region https://rest-app.net/api/region
+#Нас пункты https://rest-app.net/api/city
+#категории https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=650400
+
+
 view-source:
 
 view-source:https://www.avito.ru/rostov-na-donu/transport?q=%D0%BC%D0%BE%D1%82%D0%BE
