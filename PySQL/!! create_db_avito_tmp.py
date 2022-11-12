@@ -35,7 +35,7 @@ def create_db_items():
 
 
 if __name__ == '__main__':
-    create_db()
+    create_db_items()
 #    main()
 '''
 #   id_item
