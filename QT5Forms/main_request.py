@@ -26,14 +26,34 @@ class Request_board(QtWidgets.QMainWindow, Ui_MainWindow):
         super().__init__()
         # Создание формы и Ui (наш дизайн)
         self.setupUi(self)
+        #self.checkBox.setObjectName("check_Box")
+        #self.checkBox.setObjectName(u"CcheckBox")
+        self.retranslateUi2(Ui_MainWindow)
         self.show()
-        #        self.lineEdit.setText('0')
-
+        self.checkBox.setText('111')
+        self.retranslateUi2(Ui_MainWindow)
         self.first_value = None
         self.second_value = None
         self.result = None
         self.example = ""
         self.equal = ""
+
+
+    def retranslateUi2(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Main_Window", None))
+        self.groupBox.setTitle(QCoreApplication.translate("Main_Window", u"GGroupBox", None))
+        print("retranslateUi2")
+        self.label.setText(QCoreApplication.translate("MainWindow", u"categoryId", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"search", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"locationId", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"searchRadius", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"priceMin", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"priceMax", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"sort", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"withImagesOnly", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"limit_page", None))
+        self.label_result.setText(QCoreApplication.translate("MainWindow", u"result", None))
+        self.checkBox.setText(QCoreApplication.translate("MainWindow", u"CCheckBox", None))
 
 
 ##################################################

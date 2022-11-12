@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
+
 ################################################################################
-## Form generated from reading UI file 'main_requestbVMroy.ui'
+## Form generated from reading UI file 'main_requestNMgsua.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
 ##
@@ -61,12 +62,15 @@ class Ui_MainWindow(object):
         self.label_9.setObjectName(u"label_9")
         self.label_9.setGeometry(QRect(10, 180, 81, 21))
         self.label_9.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.label_10 = QLabel(self.groupBox)
-        self.label_10.setObjectName(u"label_10")
-        self.label_10.setGeometry(QRect(40, 230, 701, 31))
+        self.label_result = QLabel(self.groupBox)
+        self.label_result.setObjectName(u"label_result")
+        self.label_result.setGeometry(QRect(40, 230, 701, 31))
         self.lineEdit = QLineEdit(self.groupBox)
         self.lineEdit.setObjectName(u"lineEdit")
         self.lineEdit.setGeometry(QRect(110, 20, 261, 21))
+        self.checkBox = QCheckBox(self.groupBox)
+        self.checkBox.setObjectName(u"checkBox")
+        self.checkBox.setGeometry(QRect(400, 20, 70, 17))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
@@ -84,6 +88,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"GroupBox", None))
+        print("retranslateUi")
         self.label.setText(QCoreApplication.translate("MainWindow", u"categoryId", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"search", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"locationId", None))
@@ -93,6 +98,7 @@ class Ui_MainWindow(object):
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"sort", None))
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"withImagesOnly", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"limit_page", None))
-        self.label_10.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.label_result.setText(QCoreApplication.translate("MainWindow", u"result", None))
+        self.checkBox.setText(QCoreApplication.translate("MainWindow", u"CheckBox", None))
     # retranslateUi
 

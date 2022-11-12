@@ -4,8 +4,17 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/parse_engine LINUX" />
+      <excludeFolder url="file://$MODULE_DIR$/QT5_stepone_tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/QT5Forms" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (get_avito)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyNamespacePackagesService">
+    <option name="namespacePackageFolders">
+      <list>
+        <option value="$MODULE_DIR$/QT5_stepone_tmp" />
+      </list>
+    </option>
   </component>
 </module>
