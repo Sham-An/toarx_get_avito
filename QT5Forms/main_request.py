@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # https://www.youtube.com/watch?v=CnMfhhx0GBI&list=PL0lO_mIqDDFXeDkOLHmEsL_HAEhw4-xDX&index=3
-
 ################################################################################
+
 ## Form generated from reading UI file 'calcbthNXo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.14.1
