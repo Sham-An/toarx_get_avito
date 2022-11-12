@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 # https://www.youtube.com/watch?v=CnMfhhx0GBI&list=PL0lO_mIqDDFXeDkOLHmEsL_HAEhw4-xDX&index=3
+
+#Creeate LineEdit with Qt Designer - PyQt5 tutorial #7
+#https://www.youtube.com/watch?v=7TMPaRnX6RQ
 ################################################################################
 
 ## Form generated from reading UI file 'calcbthNXo.ui'
