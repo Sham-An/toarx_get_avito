@@ -320,13 +320,6 @@ def createConnection():
         return False
     return True
 
-# app = QApplication(sys.argv)
-# if not createConnection():
-#     sys.exit(1)
-# win = Contacts_edit()
-# #win = Contacts_view()
-# win.show()
-# sys.exit(app.exec_())
 
 def createConnection_view():
     con = QSqlDatabase.addDatabase("QSQLITE")
@@ -339,6 +332,7 @@ def createConnection_view():
         )
         return False
     return True
+
 
 def start_app_edit():
     app = QApplication(sys.argv)
@@ -363,9 +357,7 @@ if __name__ == "__main__":
     # query_static()
     # query_dynamic()
     #select_sql()
-    #start_app()
     #start_app_view()
-    #createConnection()
     start_app_edit()
 
 # con = QSqlDatabase.addDatabase("QSQLITE")
