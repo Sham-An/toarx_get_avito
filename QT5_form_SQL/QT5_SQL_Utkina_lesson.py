@@ -25,18 +25,26 @@ class Contacts_edit(QMainWindow):
         self.setWindowTitle("QTableView Example")
         self.resize(415, 200)
         # Set up the model
-        self.model = QSqlTableModel(self)
-        self.model.setTable("contacts")
-        self.model.setEditStrategy(QSqlTableModel.OnFieldChange)
+        """
+        некоторые из классов моделей, которые PyQt предоставляет для работы с базами данных SQL:
+
+        Модель Класс	                Описание
+        QSqlQueryModel	            Модель данных только для чтения для запросов SQL
+        QSqlTableModel	            Редактируемая модель данных для чтения и записи записей в одной таблице
+        QSqlRelationalTableModel	Редактируемая модель данных для чтения и записи записей в реляционной таблице
+        """
+        self.model = QSqlTableModel(self)   #создает редактируемый QSqlTableModel объект.
+        self.model.setTable("contacts") #связывает вашу модель с contacts таблицей в вашей базе данных с помощью .setTable().
+        self.model.setEditStrategy(QSqlTableModel.OnFieldChange) #устанавливает стратегию редактирования модели OnFieldChange, позволяет модели автоматически обновлять данные
         self.model.setHeaderData(0, Qt.Horizontal, "ID")
         self.model.setHeaderData(1, Qt.Horizontal, "Name")
         self.model.setHeaderData(2, Qt.Horizontal, "Job")
         self.model.setHeaderData(3, Qt.Horizontal, "Email")
-        self.model.select()
+        self.model.select() #загружает данные из вашей базы данных и заполняет модель путем вызова .select().
         # Set up the view
-        self.view = QTableView()
-        self.view.setModel(self.model)
-        self.view.resizeColumnsToContents()
+        self.view = QTableView() #создает объект табличного представления для отображения данных, содержащихся в модели.
+        self.view.setModel(self.model) #связывает представление с моделью, вызывая .setModel() представление с вашей моделью данных в качестве аргумента.
+        self.view.resizeColumnsToContents() #вызывает .resizeColumnsToContents() объект просмотра, чтобы настроить таблицу в соответствии с ее содержимым.
         self.setCentralWidget(self.view)
 
 
@@ -56,7 +64,7 @@ class Contacts_view(QMainWindow):
             rows = self.view.rowCount()
             self.view.setRowCount(rows + 1) #увеличивает количество строк в таблице с 1 помощью .setRowCount().
             self.view.setItem(rows, 0, QTableWidgetItem(str(query.value(0)))) #id столбцах целыми числами,
-            # необходимо преобразовать их в строки, чтобы иметь возможность хранить их в QTableWidgetItem объекте.
+                                                                                # необходимо преобразовать их в строки, чтобы иметь возможность хранить их в QTableWidgetItem объекте.
             self.view.setItem(rows, 1, QTableWidgetItem(query.value(1)))
             self.view.setItem(rows, 2, QTableWidgetItem(query.value(2)))
             self.view.setItem(rows, 3, QTableWidgetItem(query.value(3)))
@@ -350,6 +358,7 @@ def start_app_view():
     win = Contacts_view()
     win.show()
     sys.exit(app.exec_())
+
 
 if __name__ == "__main__":
     # main()
