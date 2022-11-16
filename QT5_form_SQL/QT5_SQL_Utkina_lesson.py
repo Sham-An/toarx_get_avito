@@ -1,10 +1,16 @@
 # from PyQt5.QtSql import QSqlDatabase
 
-from PyQt5.QtSql import QSqlDatabase, QSqlQuery
+#from PyQt5.QtSql import QSqlDatabase, QSqlQuery
+from PySide2.QtSql import QSqlDatabase, QSqlQuery
 
-from PyQt5.QtCore import Qt
-from PyQt5.QtSql import QSqlDatabase, QSqlTableModel
-from PyQt5.QtWidgets import (
+#from PyQt5.QtCore import Qt
+from PySide2.QtCore import Qt
+
+#from PyQt5.QtSql import QSqlDatabase, QSqlTableModel
+from PySide2.QtSql import QSqlDatabase, QSqlTableModel
+
+#from PyQt5.QtWidgets import (
+from PySide2.QtWidgets import (
     QApplication,
     QMainWindow,
     QMessageBox,
@@ -12,7 +18,6 @@ from PyQt5.QtWidgets import (
     QTableWidget,
     QTableWidgetItem,
     QLabel,
-
 )
 import sys
 

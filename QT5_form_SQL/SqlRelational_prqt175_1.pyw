@@ -1,4 +1,5 @@
-from PyQt5 import QtCore, QtWidgets, QtSql
+#from PyQt5 import QtCore, QtWidgets, QtSql
+from PySide2 import QtCore, QtWidgets, QtSql
 import sys
 def addRecord():
     # Вставляем пустую запись, в которую пользователь сможет
