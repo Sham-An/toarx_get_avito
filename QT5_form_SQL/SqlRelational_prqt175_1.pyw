@@ -28,6 +28,11 @@ def delRecord():
 #Первый аргумент QSqlTableModel::removeRows() является номером первой строки, второй количеством удаляемых записей.
 #Обратите внимание: После окончания изменения записей необходимо вызвать QSqlTableModel::submitAll(), которая гарантирует, что изменения записались в БД. Необходимость и время, когда необходимо вызвать submitAll(), зависят от текущей стратегии редактирования табличной модели: ·
 
+# 1. OnFieldChange, // изм. применяются (сразу) при вводе значения
+# 2. OnRowChange,   // изм. применяются при обр. к другой строке (по умолч.)
+# 3. OnManualSubmit // изм. применяются только после вызова submitAll()6. };
+
+
 
 
 app = QtWidgets.QApplication(sys.argv)
@@ -41,8 +46,10 @@ con.open()
 # Создаем модель
 stm = QtSql.QSqlRelationalTableModel(parent=window)
 # 1-я вставка
-stm.setEditStrategy(QtSql.QSqlTableModel.OnManualSubmit)
+stm.setEditStrategy(QtSql.QSqlTableModel.OnManualSubmit) #OnRowChange
 #stm.setEditStrategy(QtSql.QSqlTableModel.OnFieldChange)
+#stm.setEditStrategy(QtSql.QSqlTableModel.OnRowChange)
+
 #model->setEditStrategy(QSqlRelationalTableModel::OnFieldChange);
 # Конец 1-й вставки
 stm.setTable('good')
