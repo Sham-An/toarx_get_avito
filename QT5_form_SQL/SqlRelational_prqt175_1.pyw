@@ -1,33 +1,54 @@
-#from PyQt5 import QtCore, QtWidgets, QtSql
-from PySide2 import QtCore, QtWidgets, QtSql
+from PyQt5 import QtCore, QtWidgets, QtSql
+#from PySide2 import QtCore, QtWidgets, QtSql
 import sys
+
+
 def addRecord():
     # Вставляем пустую запись, в которую пользователь сможет
     # ввести нужные данные
     stm.insertRow(stm.rowCount())
+
+
 def delRecord():
     # Удаляем запись из модели
-    stm.removeRow(tv.currentIndex().row())
+
+    currow = tv.currentIndex().row()
+    print(currow)
+    #stm.removeRow(tv.currentIndex().row())
+    #stm.setRowHidden()
+    stm.removeRow(currow)
+    #Регистрируем в базе изменения
+    stm.submitAll() #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
     # Выполняем повторное считывание данных в модель,
     # чтобы убрать пустую "мусорную" запись
     stm.select()
-    
+
+#Пример удаления пяти записей:
+#1. model.removeRows(row, 5);2. model.submitAll();
+#Первый аргумент QSqlTableModel::removeRows() является номером первой строки, второй количеством удаляемых записей.
+#Обратите внимание: После окончания изменения записей необходимо вызвать QSqlTableModel::submitAll(), которая гарантирует, что изменения записались в БД. Необходимость и время, когда необходимо вызвать submitAll(), зависят от текущей стратегии редактирования табличной модели: ·
+
+
+
 app = QtWidgets.QApplication(sys.argv)
 window = QtWidgets.QWidget()
 window.setWindowTitle("QSqlRelationalTableModel")
 # Устанавливаем соединение с базой данных
 con = QtSql.QSqlDatabase.addDatabase('QSQLITE')
-#con.setDatabaseName('c:\\temp\\data.sqlite')
+# con.setDatabaseName('c:\\temp\\data.sqlite')
 con.setDatabaseName('data.sqlite')
 con.open()
 # Создаем модель
-stm = QtSql.QSqlRelationalTableModel(parent = window)
+stm = QtSql.QSqlRelationalTableModel(parent=window)
 # 1-я вставка
 stm.setEditStrategy(QtSql.QSqlTableModel.OnManualSubmit)
+#stm.setEditStrategy(QtSql.QSqlTableModel.OnFieldChange)
+#model->setEditStrategy(QSqlRelationalTableModel::OnFieldChange);
 # Конец 1-й вставки
 stm.setTable('good')
 stm.setSort(1, QtCore.Qt.AscendingOrder)
 # Задаем для поля категории связь с таблицей списка категорий
+#stm.setRelation(3, QtSql.QSqlRelation('category', 'id', 'catname'))
 stm.setRelation(3, QtSql.QSqlRelation('category', 'id', 'catname'))
 stm.select()
 stm.setHeaderData(1, QtCore.Qt.Horizontal, 'Название')
