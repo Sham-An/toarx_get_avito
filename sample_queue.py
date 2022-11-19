@@ -20,6 +20,7 @@ import os
 import time 
 import sqlite3
 import re
+#import wxpython
 import wx
 import wx.lib.mixins.inspection
 import wx.lib.mixins.listctrl as listmix

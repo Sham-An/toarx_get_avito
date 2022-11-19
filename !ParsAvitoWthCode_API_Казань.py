@@ -1,5 +1,11 @@
 #адрес статьи https://lolz.guru/threads/1634990/
 #док авито API https://rest-app.net/api
+#Регионы rus https://rest-app.net/api panel panel-default
+#.//div[@class="site-api"]/div[@class="panel panel-default"]
+#//*[@id="wrapper"]/section/div/div/div[1]/div/div[4]/div[3]/div/div/div/table
+
+#/html/body/div[1]/section/div/div/div[1]/div/div[4]/div[3]/div/div/div/table
+#.//div[@data-item-id]//meta[@itemprop="price"]/@content'
 #Region https://rest-app.net/api/region
 #https://rest-app.net/api/city
 #категории https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=650400

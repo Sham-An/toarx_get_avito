@@ -13,7 +13,7 @@ def delRecord():
     # Удаляем запись из модели
 
     currow = tv.currentIndex().row()
-    print(currow)
+    #print(currow)
     #stm.removeRow(tv.currentIndex().row())
     #stm.setRowHidden()
     stm.removeRow(currow)
