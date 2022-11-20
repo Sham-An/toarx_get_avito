@@ -8,74 +8,68 @@ import json
 # import sqlite
 def open_file_city():
     # Открываем файл
+    item_list = []
     with open("avito_city.json", encoding='utf-8') as file:  # Без указания кодировки выдает ошибку
-        #        print(file)
-
         data = json.load(file)  # loadS из строки, load из файла
-    #        print(data)
     # Поиск filter(lambda x: x['plate']=='E222EE177', str1['cars'])[0]['model']
-
     data_1 = data['data']
-    # print(data_1)
-    # for item in data['data']:
-    #     print(f"Первый файл {item['id']} = {item['name']}")
-    return data_1
+    for item in data_1:
+        item.setdefault('index_post', "______")
+        item.setdefault('name_en', "non_seting")  # , "non")
+        item.setdefault('geo_local', "__________________________")
+        item_list.append(item)
+    #pprint.pprint(item_list)
+
+    return item_list #data_1
 
 
 def open_file_region():
     # Открываем файл
     with open("avito_region.json", encoding='utf-8') as file:  # Без указания кодировки выдает ошибку
-        #        print(file)
-
         data = json.load(file)  # loadS из строки, load из файла
-    #        print(data)
     # Поиск filter(lambda x: x['plate']=='E222EE177', str1['cars'])[0]['model']
-
     data_1 = data['data']
-    print(data_1)
-    # for item in data['data']:
-    #     print(f"Первый файл {item['id']} = {item['name']}")
+    #    print(data_1)
     return data_1
 
 
 def open_json_data():
     conn = sqlite3.connect("region.db")
-
-#data.to_sql('table_name', con=engine, schema = 'dbo', if_exists='replace')
-
+    c = conn.cursor()
+    # data.to_sql('table_name', con=engine, schema = 'dbo', if_exists='replace')
     data = list(open_file_region())
     print(type(data))
     # Create A DataFrame From the JSON Data
-    df = pd.DataFrame(data)#, index='id')
-    # conn = sqlite3.connect("data.db")
-    #conn = sqlite3.connect("region.db")
-    c = conn.cursor()
-    #df = pd.DataFrame(tuples_list, columns = ['Courses', 'Fee', 'Duration'])
-    df.to_sql("region", conn, index=False, index_label='id')#, index_label='id')#,  index_col='id'
+    df = pd.DataFrame(data)  # , index='id')
+
+    # df = pd.DataFrame(tuples_list, columns = ['Courses', 'Fee', 'Duration'])
+    df.to_sql("region", conn, if_exists="replace", index=False,
+              index_label='id')  # , index_label='id')#,  index_col='id'
     createSecondaryIndex = "CREATE INDEX key_1 ON region(id)"
     conn.execute(createSecondaryIndex)
-    #CREATE INDEX IF NOT EXISTS dbname.ixname ON tblname (columnname) WHERE…
-    #CREATE INDEX ind_name ON table1 (column_name) WHERE column_name IS NOT NULL;
-    #CREATE INDEX id_key ON table1 (column_name) WHERE column_name IS NOT NULL;
-    #createSecondaryIndex = "CREATE INDEX index_part_name ON parts(name)"
+    # CREATE INDEX IF NOT EXISTS dbname.ixname ON tblname (columnname) WHERE…
+    # CREATE INDEX ind_name ON table1 (column_name) WHERE column_name IS NOT NULL;
+    # CREATE INDEX id_key ON table1 (column_name) WHERE column_name IS NOT NULL;
+    # createSecondaryIndex = "CREATE INDEX index_part_name ON parts(name)"
     # sqliteCursor.execute(createSecondaryIndex)
 
     data2 = open_file_city()
-    print(type(data2))
-    df2 = pd.DataFrame(data2)#, index='parent_Id')#, index='id')
-    #conn = sqlite3.connect("region.db")
+    df2 = pd.DataFrame(data2)  # , index='parent_Id')#, index='id')
+    # conn = sqlite3.connect("region.db")
     c = conn.cursor()
     df2.to_sql("city",
                conn,
+               if_exists="replace",
                index=False,
                index_label='parent_Id'
-               ) #index_label='id'index_label='parent_Id'
+               )  # index_label='id'index_label='parent_Id'
     createSecondaryIndex = "CREATE INDEX key_2 ON city(parent_Id)"
     conn.execute(createSecondaryIndex)
+    # index=False, index_label=‘id’
+    # Если имя первичного ключа в вашей базе данныхindexВам не нужно устанавливать эти два элемента, если нет, установите в соответствии с именем первичного ключа!
 
-    #index=False, index_label=‘id’
-    #Если имя первичного ключа в вашей базе данныхindexВам не нужно устанавливать эти два элемента, если нет, установите в соответствии с именем первичного ключа!
-#DataFrame.to_sql(
+
+# DataFrame.to_sql(
 #     name,
 #     con,
 #     schema=None,
@@ -86,8 +80,6 @@ def open_json_data():
 #     dtype=None,
 #     method=None
 # )
-
-
 
 def import_one():
     pass
@@ -130,9 +122,8 @@ def import_one():
 
 # open_file()
 # open_file_city()
-#open_file_region()
+# open_file_region()
 open_json_data()
-
 
 # 1. Quick Examples of pandas Set Index Name
 # In case you hurry, below are some quick examples of how to set the index name to pandas DataFrame.

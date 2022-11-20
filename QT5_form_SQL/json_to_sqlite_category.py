@@ -1,8 +1,10 @@
+import copy
 import json
 import sqlite3
 from datetime import datetime
 import pandas as pd
 import json
+import pprint
 
 """
 Чтобы проверить, есть ли указанный ключ в словаре, используйте ключевое слово in или метод get словаря:
@@ -88,76 +90,97 @@ if __name__ == '__main__':
 # {'one': 0, 'two': 20, 'three': 3, 'four': 4, 'ten': None, 'six': 6} 
 
 """
+
+
 # import sqlite
+
+
 def open_file_category():
     # Открываем файл
     with open("avito_category.json", encoding='utf-8') as file:  # Без указания кодировки выдает ошибку
-        #        print(file)
-
         data = json.load(file)  # loadS из строки, load из файла
-    #        print(data)
-    # Поиск filter(lambda x: x['plate']=='E222EE177', str1['cars'])[0]['model']
 
     data_1 = data['categories']
-    print(data_1)
-    for item in data_1: #['data']:
-        #print(f"Первый файл {item['id']} = {item['name']}")
-        print(f"Категория родитель {item['id']} = {item['name']} {item['children']}")
-    #return data_1
+    child_1 = []
+    #
+    parent_list = []
+    child_list = []
+    # print(data_1)
+    for item in data_1:  # ['data']:
+        item.setdefault('children', child_1)
+        item.setdefault('parentId')  # , "non")
+
+        parent_clean = copy.deepcopy(item)
+        parent_clean.pop('showMap', "")
+        child = parent_clean.pop('children', child_1)
+        parent_clean.setdefault('children', len(child))
+
+        print(f'parent_clean = {parent_clean} child_clean = {child}')
+        parent_list.append(parent_clean)
+        if child:  # != 'non':
+            for i in child:  # item['children']:
+                i.setdefault('children', "-")
+                i.setdefault('parentId')  # , "non")
+                i.pop('showMap')
+                # print(type(item['children']))
+                print('      !!!!      ', i)
+                child_list.append(i)
+
+    df1 = pd.DataFrame(parent_list)
+    df2 = pd.DataFrame(child_list)
+    pprint.pprint(df1)  # , '\n\n')
+
+    print('\n\n', df2)
+    conn = sqlite3.connect("region.db")
+    c = conn.cursor()
+    df1.to_sql("parent_cat", conn, if_exists="replace", index=False, index_label='id')
+    createSecondaryIndex = "CREATE INDEX key_3 ON parent_cat(id)"
+    conn.execute(createSecondaryIndex)
+    df2.to_sql("category", conn, if_exists="replace", index=False, index_label='parentId')
+    createSecondaryIndex = "CREATE INDEX key_4 ON category(parentId)"
+    conn.execute(createSecondaryIndex)
 
 
 def open_json_data():
     conn = sqlite3.connect("region.db")
 
-#data.to_sql('table_name', con=engine, schema = 'dbo', if_exists='replace')
+    # data.to_sql('table_name', con=engine, schema = 'dbo', if_exists='replace')
 
     data = list(open_file_category())
     print(type(data))
     # Create A DataFrame From the JSON Data
-    df = pd.DataFrame(data)#, index='id')
+    df = pd.DataFrame(data)  # , index='id')
     # conn = sqlite3.connect("data.db")
-    #conn = sqlite3.connect("region.db")
+    # conn = sqlite3.connect("region.db")
     c = conn.cursor()
-    #df = pd.DataFrame(tuples_list, columns = ['Courses', 'Fee', 'Duration'])
-    df.to_sql("region", conn, index=False, index_label='id')#, index_label='id')#,  index_col='id'
+    # df = pd.DataFrame(tuples_list, columns = ['Courses', 'Fee', 'Duration'])
+    df.to_sql("region", conn, index=False, index_label='id')  # , index_label='id')#,  index_col='id'
     createSecondaryIndex = "CREATE INDEX key_1 ON region(id)"
     conn.execute(createSecondaryIndex)
-    #CREATE INDEX IF NOT EXISTS dbname.ixname ON tblname (columnname) WHERE…
-    #CREATE INDEX ind_name ON table1 (column_name) WHERE column_name IS NOT NULL;
-    #CREATE INDEX id_key ON table1 (column_name) WHERE column_name IS NOT NULL;
-    #createSecondaryIndex = "CREATE INDEX index_part_name ON parts(name)"
+    # CREATE INDEX IF NOT EXISTS dbname.ixname ON tblname (columnname) WHERE…
+    # CREATE INDEX i_name ON table1 (column_name) WHERE column_name IS NOT NULL;
+    # CREATE INDEX id_key ON table1 (column_name) WHERE column_name IS NOT NULL;
+    # createSecondaryIndex = "CREATE INDEX index_part_name ON parts(name)"
     # sqliteCursor.execute(createSecondaryIndex)
 
-    # data2 = open_file_city()
-    # print(type(data2))
-    # df2 = pd.DataFrame(data2)#, index='parent_Id')#, index='id')
-    # #conn = sqlite3.connect("region.db")
-    # c = conn.cursor()
-    # df2.to_sql("city",
-    #            conn,
-    #            index=False,
-    #            index_label='parent_Id'
-    #            ) #index_label='id'index_label='parent_Id'
-    # createSecondaryIndex = "CREATE INDEX key_2 ON city(parent_Id)"
-    # conn.execute(createSecondaryIndex)
 
-    #index=False, index_label=‘id’
-    #Если имя первичного ключа в вашей базе данныхindexВам не нужно устанавливать эти два элемента, если нет, установите в соответствии с именем первичного ключа!
-#DataFrame.to_sql(
+open_file_category()
+# open_json_data()
+
+# index=False, index_label=‘id’
+# Если имя первичного ключа в вашей базе данныхindexВам не нужно устанавливать эти два элемента, если нет, установите в соответствии с именем первичного ключа!
+
+# DataFrame.to_sql(
 #     name,
 #     con,
 #     schema=None,
-#     if_exists='fail',
+#     if_exists=‘replace’ #‘fail’, ‘replace’, ‘append’
 #     index=True,
 #     index_label=None,
 #     chunksize=None,
 #     dtype=None,
 #     method=None
 # )
-
-
-open_file_category()
-#open_json_data()
 
 
 # 1. Quick Examples of pandas Set Index Name
