@@ -1,102 +1,102 @@
+# Write Python3 code here
+import sys
+import sqlite3
+from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 from PyQt5 import QtCore, QtGui, QtWidgets, QtSql
+#from PyQt5.QtCore import QString
+
+from PyQt5.QtSql import QSqlDatabase, QSqlQuery
+from PyQt5.QtWidgets import (
+    QApplication,
+    QMainWindow,
+    QMessageBox,
+    QTableWidget,
+    QTableWidgetItem,
+)
+#from PyQt5 import QtCore, QtWidgets, QtSql
+# from PySide2 import QtCore, QtWidgets, QtSql
+import sys
 
 
-class Ui_Form_2(object):
-    def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(833, 519)
-        self.verticalLayoutWidget = QtWidgets.QWidget(Form)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(10, 10, 631, 501))
-        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
-        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.tableView = QtWidgets.QTableView(self.verticalLayoutWidget)
-        self.tableView.setObjectName("tableView")
-        self.verticalLayout.addWidget(self.tableView)
-        self.verticalLayoutWidget_2 = QtWidgets.QWidget(Form)
-        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(650, 10, 171, 441))
-        self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.label_2 = QtWidgets.QLabel(self.verticalLayoutWidget_2)
-        self.label_2.setObjectName("label_2")
-        self.verticalLayout_2.addWidget(self.label_2)
-        self.lineEdit = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
-        self.lineEdit.setObjectName("lineEdit")
-        self.verticalLayout_2.addWidget(self.lineEdit)
-        self.pushButton = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
-        self.pushButton.setObjectName("pushButton")
-        self.verticalLayout_2.addWidget(self.pushButton)
-        self.pushButton_2 = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.verticalLayout_2.addWidget(self.pushButton_2)
-        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem)
+class Ui_MainWindow(object): #have
 
-        self.sql()
 
-        self.retranslateUi(Form)
-        QtCore.QMetaObject.connectSlotsByName(Form)
+    def setupUi(self, MainWindow):
+        # Setting mainwindow
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(432, 813)
+        MainWindow.setMinimumSize(QtCore.QSize(432, 813))
+        MainWindow.setMaximumSize(QtCore.QSize(432, 813))
 
-    def sql(self):
-        self.db = QtSql.QSqlDatabase.addDatabase("QMYSQL")
-        self.db.setHostName("")
-        self.db.setDatabaseName("")
-        self.db.setUserName("")
-        self.db.setPassword("")
-        self.db.open()
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.frame = QtWidgets.QFrame(self.centralwidget)
+        self.frame.setGeometry(QtCore.QRect(0, 0, 781, 821))
 
-        self.sql_table()
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
 
-    #  self.db.close()
+        # setting up the output table
+        self.tableWidget = QtWidgets.QTableWidget(self.frame)
+        self.tableWidget.setGeometry(QtCore.QRect(0, 10, 431, 731))
+        self.tableWidget.setRowCount(10)
+        self.tableWidget.setColumnCount(2)
+        self.tableWidget.setObjectName("tableWidget")
 
-    def sql_table(self):
-        self.mod = QtSql.QSqlRelationalTableModel(parent=None)
-        self.mod.setEditStrategy(QtSql.QSqlTableModel.OnManualSubmit)
-        self.mod.setTable('Прогули')
-        self.mod.setSort(1, QtCore.Qt.AscendingOrder)
-        self.mod.setRelation(0, QtSql.QSqlRelation('Студенти', 'КодСтудента', 'ПІБ'))
-        self.mod.setRelation(1, QtSql.QSqlRelation('Групи', 'КодГрупи', 'НомерГрупи'))
-        self.mod.select()
-        self.mod.setHeaderData(0, QtCore.Qt.Horizontal, "ПІБ")
-        self.mod.setHeaderData(1, QtCore.Qt.Horizontal, "Номер групи")
-        self.mod.setHeaderData(2, QtCore.Qt.Horizontal, "Прогули")
+        # initializing items to be added in the table
+        item = QtWidgets.QTableWidgetItem()
+        item1 = QtWidgets.QTableWidgetItem()
+        # inserting above items to the table
+        self.tableWidget.setHorizontalHeaderItem(0, item)
+        self.tableWidget.setHorizontalHeaderItem(1, item1)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(185)
+        self.tableWidget.verticalHeader().setMinimumSectionSize(50)
+        MainWindow.setCentralWidget(self.centralwidget)
 
-        self.mod.dataChanged.connect(self.mod.submitAll)
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-        self.findTextPushButton()
+        # connection to the database
+        # self.QSqlDatabase.addDatabase("QMYSQL")
+        # self.db.setHostName("geeksforgeeks")
+        # self.db.setDatabaseName("gfgdb")
+        # self.db.setUserName("geeks")
+        # self.db.setPassword("gfg")
+        #conn = sqlite3.connect("region.db")
+        #con = QSqlDatabase.addDatabase('QSQLITE')
+        self.QSqlDatabase.addDatabase("QSQLITE")
 
-        self.tv = self.tableView
-        self.tv.setModel(self.find)
+        self.db.setDatabaseName('region.db')
+        #self.db.setDatabaseName('region.db')
+        # con.setDatabaseName('data.sqlite')
+        # executing MySql query
+        
+        self.qry = QString("SELECT * FROM region") #QString
+        self.query = QSqlQuery()
+        self.query.prepare(self.qry)
+        self.query.exec()
 
-        self.tv.setSortingEnabled(True)
-        self.tv.setItemDelegateForColumn(0, QtSql.QSqlRelationalDelegate(self.tv))
-        self.tv.setItemDelegateForColumn(1, QtSql.QSqlRelationalDelegate(self.tv))
-        self.tv.setColumnWidth(0, 300)
-        self.tv.setColumnWidth(1, 150)
-        self.tv.setColumnWidth(2, 100)
-        self.pushButton.clicked.connect(self.addStr)
-        self.pushButton_2.clicked.connect(self.deletStr)
+        # displaying output of query in the table
+        for row_number, row_data in enumerate(self.query.result()):
+            for column_number, data in enumerate(row_data):
+                self.tableWidget.setItem(row_number, column_number, QtWidgets.QTableWidgetItem(data))
 
-    def findTextPushButton(self):
-        self.find = QtCore.QSortFilterProxyModel(parent=None)
-        self.find.setSourceModel(self.mod)
-        self.find.sort(1, order=QtCore.Qt.AscendingOrder)
-        self.find.setFilterKeyColumn(-1)
-        self.lineEdit.textChanged.connect(self.find.setFilterRegExp)
 
-    def addStr(self):
-        self.mod.insertRow(self.mod.rowCount())
-
-    def deletStr(self):
-        self.mod.removeRow(self.tv.currentIndex().row())
-        self.mod.select()
-
-    def retranslateUi(self, Form):
+    def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.label_2.setText(_translate("Form", "Пошук"))
-        self.pushButton.setText(_translate("Form", "Добавити запис"))
-        self.pushButton_2.setText(_translate("Form", "Видалити запис"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "List of All Employee(GFGdb)"))
+        item = self.tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "NAME"))
+        item1 = self.tableWidget.horizontalHeaderItem(1)
+        item1.setText(_translate("MainWindow", "SALARY"))
+
+
+if __name__ == "__main__":
+#    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
