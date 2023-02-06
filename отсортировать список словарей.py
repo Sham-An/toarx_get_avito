@@ -18,9 +18,9 @@ if __name__ == '__main__':
     sort2 = sorted(users, key=lambda x: (x['salary'], x['name']), reverse=True)
     sort3 = sorted(users, key=operator.itemgetter('salary', 'name'))
 
-    print("sort1", '\n')
+    print('\n', "sort1", '\n')
     print(*sort1, sep='\n')
-    print("sort2", '\n')
+    print('\n', "sort2", '\n')
     print(*sort2, sep='\n')
-    print("sort3", '\n')
+    print('\n', "sort3", '\n')
     print(*sort3, sep='\n')

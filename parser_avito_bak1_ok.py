@@ -47,7 +47,7 @@ def get_offer(item):
 
     price = ''.join(item['price'].replace(' ₽ в месяц', '').split())
     title = item['title'].split(', ')
-    area = float(title[1].replace(' м²', '').replace(',', '.'))
+    area = 999 #float(title[1].replace(' м²', '').replace(',', '.'))
     rooms = title[0]
 
     floor_info = title[2].replace(' эт.', '').split('/')
