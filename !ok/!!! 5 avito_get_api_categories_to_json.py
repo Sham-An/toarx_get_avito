@@ -16,8 +16,10 @@ from math import floor
 from time import sleep
 import ssl
 from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.poolmanager import PoolManager
-from requests.packages.urllib3.util import ssl_
+#from requests.packages.urllib3.poolmanager import PoolManager
+from urllib3.poolmanager import PoolManager
+#from requests.packages.urllib3.util import ssl_
+from urllib3.util import ssl_
 from time import time
 import warnings
 import json

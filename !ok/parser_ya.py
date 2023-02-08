@@ -46,7 +46,7 @@ def get_offer(item):
     offer["rooms"] = item["roomsTotalKey"]
     offer["floor"] = item["floorsOffered"][0]
     offer["total_floor"] = item["floorsTotal"]
-
+    print(offer)
     return offer
 
 
@@ -60,6 +60,7 @@ def get_offers(data):
 
 def main():
     data = get_json()
+    print(data)
     get_offers(data)
 
 
