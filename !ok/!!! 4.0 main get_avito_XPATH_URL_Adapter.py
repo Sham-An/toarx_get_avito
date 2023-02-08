@@ -4,20 +4,9 @@
 
 #https://www.avito.ru/rostovskaya_oblast/mototsikly_i_mototehnika?cd=1&f=ASgCAgECAUXGmgwXeyJmcm9tIjoyMDAwLCJ0byI6NzAwMH0&q=скутер&s=1
 #
-import io
-from urllib.request import urlopen
-import lxml.html
 from lxml import html
-from lxml import etree
 #from bs4 import BeautifulSoup
-from random import randint
 #######################################
-import json
-import sqlite3
-import time
-from datetime import datetime
-import requests
-from realty import check_database
 import ssl
 import requests
 ##########################################
@@ -25,6 +14,20 @@ from requests.adapters import HTTPAdapter
 #from requests.packages.urllib3.poolmanager import PoolManager
 from urllib3.poolmanager import PoolManager
 #from requests.packages.urllib3.util import ssl_
+from urllib3.util import ssl_
+# from bs4 import BeautifulSoup
+#######################################
+import ssl
+
+import requests
+# https://www.avito.ru/rostovskaya_oblast/mototsikly_i_mototehnika?cd=1&f=ASgCAgECAUXGmgwXeyJmcm9tIjoyMDAwLCJ0byI6NzAwMH0&q=скутер&s=1
+#
+from lxml import html
+##########################################
+from requests.adapters import HTTPAdapter
+# from requests.packages.urllib3.poolmanager import PoolManager
+from urllib3.poolmanager import PoolManager
+# from requests.packages.urllib3.util import ssl_
 from urllib3.util import ssl_
 
 CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
