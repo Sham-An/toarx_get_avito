@@ -1,0 +1,109 @@
+response = requests.get("http://httpbin.org/") ("http://httpbin.org/get") 
+print(response.text) (response.status_code) (response.headers) (response.headers["Content-type"]) (response.content) (response.json()) 
+
+print(response.status_code)
+print(response.url)
+
+response_1 = requests.request("get", "http://httpbin.org/") 
+
+if response.status_code = requsts.codes.not_found: #404 
+	print('not found')
+else:
+	print('ok')	
+####################################
+import json
+
+respotse = requests.get("http://httpbin.org/get?name=max&height=178")
+print(response.json())
+
+params = {
+	'name': "Nick",
+	'age': "17",
+}
+
+response = requests.get("http://httpbin.org/get", params=params)
+print(response.json()) #смотрим агента и параметры в заголовках ("Accept": "text/html" *)
+
+print(json.loads(response.content))
+
+########################################
+
+headers = {
+	"User-Agent": "" (в браузере Net / Headers / Requests Headers / user-agent)
+	"Accept": "text/html"
+}
+
+response = requests.get("http://httpbin.org/get", headers=headers, params=params)
+##########################################
+
+headers = {
+	"User-Agent": "" (в браузере Net / Headers / Requests Headers / user-agent)
+	"Accept": "image/png"
+}
+
+response = requests.get("http://httpbin.org/image/png", headers=headers) #,params=params)
+##/image/jpeg ...
+
+
+!!! (файловый дескриптор file - присвоенный операционной системой идентификатор (ссылка на объект), 
+по которому обращается полученному объекту)
+
+with open("pic.png", "wb") as file: 
+	file.write(response.content)
+
+
+###################### POST POST POST POST POST
+
+payload ={
+	"article_id": 23,
+	"title": "Hello!"
+}
+response = requests.post("http://httpbin.org/post", data=payload)
+print(response.json()) 
+
+######################## HEAD HEAD HEAD HEAD HEAD
+Заголовки
+
+response = requests.post("http://httpbin.org/head")
+print(response.headers) #для теста просмотр параметров сессии
+
+####################### OPTIONS OPTIONS OPTIONS OPTIONS OPTIONS
+# OPTIONS preflight (предзапрос о поддержке типа запросов)
+
+import json
+
+response = requests.options("http://httpbin.org")
+with open('results.json', 'w') as file:
+	json.dump(dict(response.headers), file, indent=2)
+смотрим допустимые параметры из ответа options
+подробно смотреть CORS Cross Origin Resource Share
+
+################ PUT PUT 
+Добавить или положить/изменить
+
+response = requests.put("http://httpbin.org/put", params={"key": "value"})
+
+################# PATH PATH PATH PATH PATH
+частично изменить 
+response = requests.path("http://httpbin.org/path", params={"key": "value"})
+print(response.status_code)
+
+################### DELETE DELETE DELETE DELETE DELETE DELETE
+
+response = requests.delete("http://httpbin.org/delete", params={"key": "value"})
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+

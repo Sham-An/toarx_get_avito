@@ -4,6 +4,8 @@
 
 #https://www.avito.ru/rostovskaya_oblast/mototsikly_i_mototehnika?cd=1&f=ASgCAgECAUXGmgwXeyJmcm9tIjoyMDAwLCJ0byI6NzAwMH0&q=скутер&s=1
 #
+import datetime
+
 from lxml import html
 #from bs4 import BeautifulSoup
 #######################################
@@ -189,6 +191,7 @@ def parse_xml(resp_text):
 #        if index < 10:
             #print(etree.tostring(item), name, description)
         print(f' {index} title = {title}')
+        print(datetime.datetime.now())
             #index +=1
             #print(index)
 
@@ -230,6 +233,8 @@ def main():
         #url_av = 'https://m.avito.ru/api/9/items'
         #https://www.avito.ru
         r = session.request('GET', url_av)
+        print(f'################################################################## res2.url = {r.url}')
+
         #print(r.text)
         parse_xml(r.text)
 #        parse_xml(url)

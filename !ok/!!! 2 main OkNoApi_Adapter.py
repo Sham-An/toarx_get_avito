@@ -1,5 +1,9 @@
+# -*- coding: utf-8 -*-
+
 #URL https://habr.com/ru/post/537834/
 import json
+import datetime
+
 import requests
 import sys
 import time
@@ -12,6 +16,11 @@ from requests.adapters import HTTPAdapter
 from urllib3.poolmanager import PoolManager
 #from requests.packages.urllib3.util import ssl_
 from urllib3.util import ssl_
+
+import sys
+#from __future__ import unicode_literals
+
+#sys.setdefaultencoding('utf-8')
 
 CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
 
@@ -58,8 +67,17 @@ proxiess = {'http': '79.143.225.152:60517'} #79.143.225.152:60517
 #str(UA1),
 
 s = requests.session()
+s2 = requests.session()
+s3 = requests.session()
+
 adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
+adapter2 = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
+adapter3 = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
+
 s.mount("https://", adapter)
+s2.mount("https://", adapter)
+s3.mount("https://", adapter)
+
 #UA 	Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
 #'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Mobile Safari/537.36',
 #Host	m.avito.ru
@@ -79,10 +97,17 @@ if cookie:                                      # Добавим куки, ес�
     headers['cookie'] = cookie
 print(f'куки = {cookie}')
 s.headers.update(headers)                       # Сохраняем заголовки в сессию
+s2.headers.update(headers)                       # Сохраняем заголовки в сессию
+s3.headers.update(headers)                       # Сохраняем заголовки в сессию
 #proxiess = {'http': '176.9.75.42:3128'}
 #proxiess = {'http': '207.154.231.208:3128'}
 #UA = UserAgent().random
 s.get('https://m.avito.ru/', proxies = proxiess)#, useragent = UA) #   useragent = str(UA)                 # Делаем запрос на мобильную версию.
+s2.get('https://m.avito.ru/', proxies = proxiess)#, useragent = UA) #   useragent = str(UA)                 # Делаем запрос на мобильную версию.
+s3.get('https://m.avito.ru/', proxies = proxiess)#, useragent = UA) #   useragent = str(UA)                 # Делаем запрос на мобильную версию.
+# id_session = s.cookies#['sessionid'] Cookie v=1669231788
+#print(f'################   id_session = {id_session}')
+
 url_api_9 = 'https://m.avito.ru/api/9/items'    # Урл первого API, позволяет получить id и url объявлений по заданным фильтрам
                                                 # Тут уже видно цену и название объявлений
 #uag = useragent.Random()
@@ -116,15 +141,35 @@ while cicle_stop:
     #print(params)
 
     res = s.get(url_api_9, params=params, proxies = proxiess) #, useragent = UA) #, useragent = str(UA))
+    res2 = s2.get(url_api_9, params=params, proxies=proxiess)  # , useragent = UA) #, useragent = str(UA))
+    res3 = s3.get(url_api_9, params=params, proxies=proxiess)  # , useragent = UA) #, useragent = str(UA))
+    print(f'################################################################## res2.url = {res2.url}')
+
     #print(f'PROXIIESS {proxiess} Agent {UA} \n HEADERS {headers}')
     # OK!!! print(f'################################################# \n{res.json()}')
 
     try:
         res = res.json()
+        with open('results.json', 'w', encoding='utf-8') as file:
+            json.dump(res, file, indent=2, ensure_ascii=False)
         #ok!!! print(f'res= {res}')
 
     except json.decoder.JSONDecodeError: #{'code': 403, 'error': {'message': 'Доступ с вашего IP-адреса временно ограничен', 'link': 'ru.avito://1/info/ipblock/show'}}
         except_error(res)
+
+    try:
+        res2 = res2.json()
+        #ok!!! print(f'res= {res}')
+
+    except json.decoder.JSONDecodeError: #{'code': 403, 'error': {'message': 'Доступ с вашего IP-адреса временно ограничен', 'link': 'ru.avito://1/info/ipblock/show'}}
+        except_error(res2)
+
+    try:
+        res3 = res3.json()
+        #ok!!! print(f'res= {res}')
+
+    except json.decoder.JSONDecodeError: #{'code': 403, 'error': {'message': 'Доступ с вашего IP-адреса временно ограничен', 'link': 'ru.avito://1/info/ipblock/show'}}
+        except_error(res3)
 
  #   if res['status'] != 'ok':
  #           print(res['result'])
@@ -172,8 +217,9 @@ for i in items: # Теперь идем по ябъявлениям:
     print(f'coords  {coords}')
     uri = val['uri']
     print(f'uri  {uri}')
-    uri_mweb = val['uri_mweb']
+    uri_mweb = ("https://www.avito.ru"+val['uri_mweb'])
     print(f'uri_mweb  {uri_mweb}')
+    print(datetime.datetime.now())
 
 
 
