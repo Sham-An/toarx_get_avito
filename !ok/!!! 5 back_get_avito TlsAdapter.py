@@ -34,8 +34,8 @@ session.mount("https://", adapter)
 
 #url_api = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30'
 url_api = 'https://m.avito.ru/api/11/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9'#&params[1283]D=14756'#&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1' #&lastStamp=1611316560&display=list&limit=30'
-
-
+#key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir
+#https://m.avito.ru/api/9/items?<%sp%>&page=<%page%>&lastStamp=<%laststamp%>&display=list&limit=30
 try:
     r = session.request('GET', 'https://www.avito.ru')
     #r = session.request('GET', url_api)

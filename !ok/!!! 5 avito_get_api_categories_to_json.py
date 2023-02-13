@@ -1,4 +1,11 @@
 # авито парсер на питончике ._py
+#api/1 Локации Наименование области : id, нас. пункта : id
+#{"status":"ok","result":{"locations":[{"parent":{"names":{"1":"Ростовская область"},"id":651110},"names":{"1":"Тарасовский"},"id":652120},{"names":{"1":"Ростовская область"},"id":651110},{"names":{"1":"Все регионы"},"id":621540}]}}
+#https://m.avito.ru/api/1/slocations?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=621540&limit=10&q=%D0%A2%D0%B0%D1%80%D0%B0%D1%81%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9
+
+#api/2/ Категории полный список, locationId=652120, "uri_mweb":"/shops/tarasovskiy"}
+#https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=652120
+
 # https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30
 # !!!! Categories from location https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=650400
 #locationId=650400
@@ -309,7 +316,7 @@ session.mount("https://", adapter)
 #region_id = HttpParser.get_region_id_by_name('Казань')
 region_id = HttpParser.get_region_id_by_name('Тарасовский')
 all_categories = HttpParser.get_all_categories_by_region_id(region_id)
-all_adds = HttpParser.get_adds_list('Квартиры', region_id, all_categories, limit_shows=50)
+all_adds = HttpParser.get_adds_list('Мотоциклы и мототехника', region_id, all_categories, limit_shows=50)
 example_add = HttpParser.get_add_info_by_id(1861843197)
 
 print(f'all_categories')

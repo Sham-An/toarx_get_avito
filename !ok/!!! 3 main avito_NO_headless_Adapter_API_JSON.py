@@ -28,7 +28,7 @@ cookie = '__cfduid=da6b6b5b9f01fd022f219ed53ac3935791610912291; sessid=ef757cc13
 # Если забанили, то добавьте свои куки, это не боевой код но он делает то, что надо
 search = 'suzuki+gsx-r'     # Строка поиска на сайте и ниже параметры выбора города, радиуса разброса цены и т.п.
 categoryId = 14
-locationId = 641780         # Новосибирск
+locationId= 652220 #Рязанская обл   locationId = 641780         # Новосибирск
 searchRadius = 200
 priceMin = 200000
 priceMax = 450000
@@ -66,7 +66,8 @@ url_api_9 = 'https://m.avito.ru/api/9/items'    # Урл первого API, п�
 #'lastStamp': 1610905380,
 # Тут уже видно цену и название объявлений
 params = {
-    'categoryId': 14,
+    'category_Id': 14,
+    'category[name]': 'Мотоциклы и мототехника',
     'params[30]': 4969,
     'locationId': locationId,
     'searchRadius': searchRadius,
@@ -113,7 +114,7 @@ for i in items: # Теперь идем по ябъявлениям:
     ad_id = str(i['value']['id'])
     # url_more_data_1 = 'https://m.avito.ru/api/1/rmp/show/' + ad_id  # more_data_1 = s.get(url_more_data_1, params=params).json() # Тут тоже моного информации, можете посмотреть
     url_more_data_2 = 'https://m.avito.ru/api/15/items/' + ad_id
-
+    print(url_more_data_2)
     # more_data_2 = s.get(url_more_data_2, params=params).json()
     # if not 'error' in more_data_2:
     #     # print(more_data_2)            # В more_data_2 есть всё, что надо, я вывел на принт наиболее интересные для наглядности:

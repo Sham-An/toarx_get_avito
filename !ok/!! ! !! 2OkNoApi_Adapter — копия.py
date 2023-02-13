@@ -8,8 +8,8 @@ from random import randint
 #from fake_useragent import UserAgent
 import ssl
 from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.poolmanager import PoolManager
-from requests.packages.urllib3.util import ssl_
+from urllib3.poolmanager import PoolManager
+from urllib3.util import ssl_
 
 CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
 
@@ -184,10 +184,10 @@ for i in items: # Теперь идем по ябъявлениям:
     # URL API OK https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params[1283]=14756&locationId=640000&params[110000]=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30
     url_more_data_2 = 'https://m.avito.ru/api/15/items/' + ad_id
     #https://m.avito.ru/api/14/items/{add_id}?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir
-    ####https://m.avito.ru/api/14/items/2467534891?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir
+    ####https://m.avito.ru/api/14/items/2737496826?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir
     #2467534891
     url_more_data_2 = 'https://m.avito.ru/api/9/items/' + ad_id
-    #url_more_data_2 = 'https://m.avito.ru/api/9/items/'
+    #url_more_data_2 = 'https://m.avito.ru/api/9/items/2737496826'
     print(f'url_more_data_2 +ad_id {url_more_data_2}')
     print(i)
     print('=======================================================\n')

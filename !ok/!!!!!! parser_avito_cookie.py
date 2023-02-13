@@ -6,8 +6,10 @@ import requests
 from realty import check_database
 
 from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.poolmanager import PoolManager
-from requests.packages.urllib3.util import ssl_
+#from requests.packages.urllib3.poolmanager import PoolManager
+from urllib3.poolmanager import PoolManager
+#from requests.packages.urllib3.util import ssl_
+from urllib3.util import ssl_
 from datetime import datetime
 from realty import check_database
 
@@ -77,25 +79,33 @@ def get_offers(data):
 
 
 def get_json():
+
     headers = {
         'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
     }
+    #    ('priceMin', priceMin)
+    priceMin = 5000
+    #'priceMax': priceMax,
+    priceMax = 15000
 
     params = (
         ('key', 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'),
-        ('categoryId', '24'),
+        ('categoryId', '19'),
         ('params[201]', '1060'),
-        ('locationId', '107620'),
+        ('locationId', '652000'),
+        ('priceMin', priceMin),
+        ('priceMax', priceMax),
         ('params[504]', '5256'),
         ('owner[]', 'private'),
         ('sort', 'date'),
         ('page', '1'),
         ('display', 'list'),
         ('limit', '30'),
-    )
+)
 
     url = 'https://m.avito.ru/api/11/items'
     #url = 'https://m.avito.ru/api/11/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9'  # &params[1283]D=14756'#&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1' #&lastStamp=1611316560&display=list&limit=30'
+    #OK https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=24&params[1283]D=14756%27#&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1'%20#&lastStamp=1611316560
 
     session = requests.session()
     adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
@@ -104,8 +114,8 @@ def get_json():
     try:
         response = session.request('GET', url, headers=headers, params=params)
         #r = session.request('GET', 'https://www.avito.ru')
-        resp = open('items_api_2.json').read()
-        print(response)#.text)[1000]
+        #resp = open('items_api_21.json').read()
+        print(f'response {response.status_code}, {response.url}')#.text)[1000]
     except Exception as exception:
         print(exception)
 
@@ -116,8 +126,9 @@ def get_json():
 
 
 def main():
+
     data = get_json()
-    print(data)
+    print(f'data = get_json() {data}')
     get_offers(data)
 
 

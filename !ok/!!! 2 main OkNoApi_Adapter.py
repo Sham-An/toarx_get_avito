@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#(( -*-(( coding: utf-8 -*-
 
 #URL https://habr.com/ru/post/537834/
 import json
@@ -18,6 +18,7 @@ from urllib3.poolmanager import PoolManager
 from urllib3.util import ssl_
 
 import sys
+from fake_useragent import UserAgent
 #from __future__ import unicode_literals
 
 #sys.setdefaultencoding('utf-8')
@@ -37,17 +38,18 @@ class TlsAdapter(HTTPAdapter):
 
 #af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir
 key = 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir' # ключ, с которым всё работает, не разбирался где его брать, но похоже он статичен, т.к. гуглится на различных форумах
-#cookie = '__cfduid=da6b6b5b9f01fd022f219ed53ac3935791610912291; sessid=ef757cc130c5cd228be88e869369c654.1610912291; _ga=GA1.2.559434019.1610912292; _gid=GA1.2.381990959.1610912292; _fbp=fb.1.1610912292358.1831979940; u=2oiycodt.1oaavs8.dyu0a4x7fxw0; v=1610912321; buyer_laas_location=641780; buyer_location_id=641780; luri=novosibirsk; buyer_selected_search_radius4=0_general; buyer_local_priority_v2=0; sx=H4sIAAAAAAACAxXLQQqAIBAF0Lv8dYvRLEdvU0MIBU0iKCHePXr71zGfefd1W5RLYick2kSakiB2VETclpf85n19RJMSp4vJOSlM%2F2BMOBDNaigE9taM8QH0oydNVAAAAA%3D%3D; dfp_group=100; _ym_uid=1610912323905107257; _ym_d=1610912323; _ym_visorc_34241905=b; _ym_isad=2; _ym_visorc_419506=w; _ym_visorc_188382=w; __gads=ID=2cff056a4e50a953-22d0341a94b900a6:T=1610912323:S=ALNI_MZMbOe0285QjW7EVvsYtSa-RA_Vpg; f=5.8696cbce96d2947c36b4dd61b04726f1a816010d61a371dda816010d61a371dda816010d61a371dda816010d61a371ddbb0992c943830ce0bb0992c943830ce0bb0992c943830ce0a816010d61a371dd2668c76b1faaa358c08fe24d747f54dc0df103df0c26013a0df103df0c26013a2ebf3cb6fd35a0ac0df103df0c26013a8b1472fe2f9ba6b978e38434be2a23fac7b9c4258fe3658d831064c92d93c3903815369ae2d1a81d04dbcad294c152cb0df103df0c26013a20f3d16ad0b1c5462da10fb74cac1eab2da10fb74cac1eab3c02ea8f64acc0bdf0c77052689da50d2da10fb74cac1eab2da10fb74cac1eab2da10fb74cac1eab2da10fb74cac1eab91e52da22a560f5503c77801b122405c48ab0bfc8423929a6d7a5083cc1669877def5708993e2ca678f1dc04f891d61e35b0929bad7c1ea5dec762b46b6afe81f200c638bc3d18ce60768b50dd5e12c30e37135e8f7c6b64dc9f90003c0354a346b8ae4e81acb9fa46b8ae4e81acb9fa02c68186b443a7acf8b817f3dc0c3f21c1eac53cc61955882da10fb74cac1eab2da10fb74cac1eab5e5aa47e7d07c0f95e1e792141febc9cb841da6c7dc79d0b'
-cookie = 'u=2thd5s2p.pzwwe1.1etr7b0jx5r00; _ym_uid=1662353765728917265; _ym_d=1662353765; _gcl_au=1.1.1119694243.1662353765; adrcid=ApqrCZ0fGgHkPN1lmnApjVQ; uxs_uid=419f7cd0-2cd9-11ed-a825-bfa45587e009; buyer_location_id=651110; _ga=GA1.1.1011885097.1662353766; buyer_laas_location=651110; _ym_isad=2; f=5.367a37203faa7618a7d90a8d0f8c6e0b47e1eada7172e06c47e1eada7172e06c47e1eada7172e06c47e1eada7172e06cb59320d6eb6303c1b59320d6eb6303c1b59320d6eb6303c147e1eada7172e06c8a38e2c5b3e08b898a38e2c5b3e08b890df103df0c26013a0df103df0c26013a2ebf3cb6fd35a0ac0df103df0c26013a8b1472fe2f9ba6b91772440e04006def90d83bac5e6e82bd59c9621b2c0fa58f915ac1de0d034112251851063192bbc234d62295fceb188df88859c11ff008953de19da9ed218fe23de19da9ed218fe2e992ad2cc54b8aa87fde300814b1e8553de19da9ed218fe23de19da9ed218fe23de19da9ed218fe23de19da9ed218fe2b5b87f59517a23f2a9a996d174584814352c31daf983fa077a7b6c33f74d335c84df0fd22b85d35f79d9917d15a693b61ba6d8b24fb5a1f7844df89026cf8a26ab4f4837d4a574d617c7721dca45217b6c65352774715db435a3e6780a79bb9b2ebf3cb6fd35a0ac0df103df0c26013a28a353c4323c7a3a140a384acbddd748e894de4bdfb6ea9b3de19da9ed218fe23de19da9ed218fe29e05a03e27b662cf3740ddbb7a20c377567037a1138bc3a59ddcb939a425458a; ft="B0jtNY3r7H/uEYH1QdVonjvwI6UJ8cKTVaUS64wh0blXwnjaYjtfR00knmzmA38zfTkUD1n4ZMFZnyN2aFx4v8x2wzttosMSctIS0x/PSUUKPskrWGUKVGv4i/S9rb3C6THoaNpdLq9G2EGqx2E2lH+wkEyK9PCZVTXrdzZClqhooqD4buOLksjS+XTz/1Ni"; v=1669231788; luri=rostovskaya_oblast; sx=H4sIAAAAAAAC/wTAQQ6CMBQE0LvM2gUNdn6nx/G3ikYUo1gj6d15G0jSi/EsKvJIVTvVUcXi4G5FyBu+yLi3KV7+0/qwz9zSb1jbbfbr05ZFL/GNAypyIDWGFFLqfQ8AAP//D10PqVsAAAA=; abp=0; _ga_M29JC28873=GS1.1.1669231791.6.0.1669231791.60.0.0; _ga_9E363E7BES=GS1.1.1669231792.6.0.1669231792.60.0.0; cto_bundle=-ZVwkV9pMmJvTG41bHQxS2g4cUNVQ3ZQZ3pqdW8wY0pFayUyQnFYOGhveEdIYkhadDklMkJFZEk4NU0lMkJZVDZ4Q0o1ZlJjQzMyN1ZXbGM0YkpNQ05SamREJTJCQTJRZHJQWTZTTVV2RGFaazhJcnE4ZExmZiUyRmx2OTZ0QmRoaEQ3MG4lMkZHdmlLNEh5eVhqSEdPZDVCQnpOZmtFNzhwWCUyQnNBZyUzRCUzRA; _ym_visorc=b; _buzz_fpc=JTdCJTIycGF0aCUyMiUzQSUyMiUyRiUyMiUyQyUyMmRvbWFpbiUyMiUzQSUyMi53d3cuYXZpdG8ucnUlMjIlMkMlMjJleHBpcmVzJTIyJTNBJTIyVGh1JTJDJTIwMjMlMjBOb3YlMjAyMDIzJTIwMTklM0EyOSUzQTUzJTIwR01UJTIyJTJDJTIyU2FtZVNpdGUlMjIlM0ElMjJMYXglMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMiU3QiU1QyUyMnZhbHVlJTVDJTIyJTNBJTVDJTIyYTFlYzk2NTAyZGRjYTU2OWI0NmZmYTYwOWZkNzdjNjglNUMlMjIlMkMlNUMlMjJmcGpzRm9ybWF0JTVDJTIyJTNBdHJ1ZSU3RCUyMiU3RA==; isCriteoSetNew=true; tmr_detect=0|1669231794811; buyer_from_page=main'
-
+sentry_key = 'f1cfe913d6f44732a4b1601444eccb74' #&sentry_version=7
+cookie = '__cfduid=da6b6b5b9f01fd022f219ed53ac3935791610912291; sessid=4e50185a2b0bf36f9f2d6d12485159e9.1675680145; _ga=GA1.2.559434019.1610912292; _gid=GA1.2.381990959.1610912292; _fbp=fb.1.1610912292358.1831979940; u=2oiycodt.1oaavs8.dyu0a4x7fxw0; v=1660912321; buyer_laas_location=651110; buyer_location_id=651110; buyer_local_priority_v2=0; sx=H4sIAAAAAAACAxXLQQqAIBAF0Lv8dYvRLEdvU0MIBU0iKCHePXr71zGfefd1W5RLYick2kSakiB2VETclpf85n19RJMSp4vJOSlM%2F2BMOBDNaigE9taM8QH0oydNVAAAAA%3D%3D; dfp_group=100; _ym_uid=1660912323905107257; _ym_d=1610912323; _ym_visorc_34241905=b; _ym_isad=2; _ym_visorc_419506=w; _ym_visorc_188382=w; __gads=ID=2cff056a4e50a953-22d0341a94b900a6:T=1610912323:S=ALNI_MZMbOe0285QjW7EVvsYtSa-RA_Vpg;'# f=5.8696cbce96d2947c36b4dd61b04726f1a816010d61a371dda816010d61a371dda816010d61a371dda816010d61a371ddbb0992c943830ce0bb0992c943830ce0bb0992c943830ce0a816010d61a371dd2668c76b1faaa358c08fe24d747f54dc0df103df0c26013a0df103df0c26013a2ebf3cb6fd35a0ac0df103df0c26013a8b1472fe2f9ba6b978e38434be2a23fac7b9c4258fe3658d831064c92d93c3903815369ae2d1a81d04dbcad294c152cb0df103df0c26013a20f3d16ad0b1c5462da10fb74cac1eab2da10fb74cac1eab3c02ea8f64acc0bdf0c77052689da50d2da10fb74cac1eab2da10fb74cac1eab2da10fb74cac1eab2da10fb74cac1eab91e52da22a560f5503c77801b122405c48ab0bfc8423929a6d7a5083cc1669877def5708993e2ca678f1dc04f891d61e35b0929bad7c1ea5dec762b46b6afe81f200c638bc3d18ce60768b50dd5e12c30e37135e8f7c6b64dc9f90003c0354a346b8ae4e81acb9fa46b8ae4e81acb9fa02c68186b443a7acf8b817f3dc0c3f21c1eac53cc61955882da10fb74cac1eab2da10fb74cac1eab5e5aa47e7d07c0f95e1e792141febc9cb841da6c7dc79d0b'
+#cookie = 'u=2thd5s2p.pzwwe1.1etr7b0jx5r00; _ym_uid=1662353765728917265; _ym_d=1662353765; _gcl_au=1.1.1119694243.1662353765; adrcid=ApqrCZ0fGgHkPN1lmnApjVQ; uxs_uid=419f7cd0-2cd9-11ed-a825-bfa45587e009; buyer_location_id=651110; _ga=GA1.1.1011885097.1662353766; buyer_laas_location=651110; _ym_isad=2; f=5.367a37203faa7618a7d90a8d0f8c6e0b47e1eada7172e06c47e1eada7172e06c47e1eada7172e06c47e1eada7172e06cb59320d6eb6303c1b59320d6eb6303c1b59320d6eb6303c147e1eada7172e06c8a38e2c5b3e08b898a38e2c5b3e08b890df103df0c26013a0df103df0c26013a2ebf3cb6fd35a0ac0df103df0c26013a8b1472fe2f9ba6b91772440e04006def90d83bac5e6e82bd59c9621b2c0fa58f915ac1de0d034112251851063192bbc234d62295fceb188df88859c11ff008953de19da9ed218fe23de19da9ed218fe2e992ad2cc54b8aa87fde300814b1e8553de19da9ed218fe23de19da9ed218fe23de19da9ed218fe23de19da9ed218fe2b5b87f59517a23f2a9a996d174584814352c31daf983fa077a7b6c33f74d335c84df0fd22b85d35f79d9917d15a693b61ba6d8b24fb5a1f7844df89026cf8a26ab4f4837d4a574d617c7721dca45217b6c65352774715db435a3e6780a79bb9b2ebf3cb6fd35a0ac0df103df0c26013a28a353c4323c7a3a140a384acbddd748e894de4bdfb6ea9b3de19da9ed218fe23de19da9ed218fe29e05a03e27b662cf3740ddbb7a20c377567037a1138bc3a59ddcb939a425458a; ft="B0jtNY3r7H/uEYH1QdVonjvwI6UJ8cKTVaUS64wh0blXwnjaYjtfR00knmzmA38zfTkUD1n4ZMFZnyN2aFx4v8x2wzttosMSctIS0x/PSUUKPskrWGUKVGv4i/S9rb3C6THoaNpdLq9G2EGqx2E2lH+wkEyK9PCZVTXrdzZClqhooqD4buOLksjS+XTz/1Ni"; v=1669231788; luri=rostovskaya_oblast; sx=H4sIAAAAAAAC/wTAQQ6CMBQE0LvM2gUNdn6nx/G3ikYUo1gj6d15G0jSi/EsKvJIVTvVUcXi4G5FyBu+yLi3KV7+0/qwz9zSb1jbbfbr05ZFL/GNAypyIDWGFFLqfQ8AAP//D10PqVsAAAA=; abp=0; _ga_M29JC28873=GS1.1.1669231791.6.0.1669231791.60.0.0; _ga_9E363E7BES=GS1.1.1669231792.6.0.1669231792.60.0.0; cto_bundle=-ZVwkV9pMmJvTG41bHQxS2g4cUNVQ3ZQZ3pqdW8wY0pFayUyQnFYOGhveEdIYkhadDklMkJFZEk4NU0lMkJZVDZ4Q0o1ZlJjQzMyN1ZXbGM0YkpNQ05SamREJTJCQTJRZHJQWTZTTVV2RGFaazhJcnE4ZExmZiUyRmx2OTZ0QmRoaEQ3MG4lMkZHdmlLNEh5eVhqSEdPZDVCQnpOZmtFNzhwWCUyQnNBZyUzRCUzRA; _ym_visorc=b; _buzz_fpc=JTdCJTIycGF0aCUyMiUzQSUyMiUyRiUyMiUyQyUyMmRvbWFpbiUyMiUzQSUyMi53d3cuYXZpdG8ucnUlMjIlMkMlMjJleHBpcmVzJTIyJTNBJTIyVGh1JTJDJTIwMjMlMjBOb3YlMjAyMDIzJTIwMTklM0EyOSUzQTUzJTIwR01UJTIyJTJDJTIyU2FtZVNpdGUlMjIlM0ElMjJMYXglMjIlMkMlMjJ2YWx1ZSUyMiUzQSUyMiU3QiU1QyUyMnZhbHVlJTVDJTIyJTNBJTVDJTIyYTFlYzk2NTAyZGRjYTU2OWI0NmZmYTYwOWZkNzdjNjglNUMlMjIlMkMlNUMlMjJmcGpzRm9ybWF0JTVDJTIyJTNBdHJ1ZSU3RCUyMiU3RA==; isCriteoSetNew=true; tmr_detect=0|1669231794811; buyer_from_page=main'
+#4e50185a2b0bf36f9f2d6d12485159e9.1675680145
 
 # Если забанили, то добавьте свои куки, это не боевой код но он делает то, что надо
 search = 'suzuki+gsx-r'     # Строка поиска на сайте и ниже параметры выбора города, радиуса разброса цены и т.п.
-categoryId = 14
-locationId = 641780         # Новосибирск
-searchRadius = 200
-priceMin = 100000
-priceMax = 200000
+categoryId = '4'
+locationId = '621590' #641780         # Новосибирск
+searchRadius = 10
+priceMin = 1000
+priceMax = 20000
 sort = 'priceDesc'
 withImagesOnly = 'true'     # Только с фото
 limit_page = 50     # Количество объявлений на странице 50 максимум
@@ -58,8 +60,8 @@ def except_error(res): # Эту функцию можно дополнить, н
     UA1 = UserAgent().random
 s = requests.Session()                          # Будем всё делать в рамках одной сессии
 # Задаем заголовки:
-proxiess = {'http': '185.170.215.228:80'} #79.143.225.152:60517
-proxiess = {'http': '79.143.225.152:60517'} #79.143.225.152:60517
+#proxiess = {'http': '185.170.215.228:80'} #79.143.225.152:60517
+#proxiess = {'http': '79.143.225.152:60517'} #79.143.225.152:60517
 
 # 'user-agent': UserAgent().random, #'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Mobile Safari/537.36',
 # 'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Mobile Safari/537.36',
@@ -82,25 +84,28 @@ s3.mount("https://", adapter)
 #'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Mobile Safari/537.36',
 #Host	m.avito.ru
 #'authority': 'm.avito.ru'
+ua = UserAgent(browsers=['edge', 'chrome'])
+ua_str = ua.random
+print(ua_str)
 headers = { 'Host': 'm.avito.ru',
             'pragma': 'no-cache',
             'cache-control': 'no-cache',
             'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0',
+            'user-agent': ua_str,
             'accept':  'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
             'sec-fetch-site': 'none',
             'sec-fetch-mode': 'navigate',
             'sec-fetch-user': '?1',
             'sec-fetch-dest': 'document',
             'accept-language': 'ru-RU,ru;q=0.9',}
-if cookie:                                      # Добавим куки, если есть внешние куки
-    headers['cookie'] = cookie
+#if cookie:                                      # Добавим куки, если есть внешние куки
+#    headers['cookie'] = cookie
 print(f'куки = {cookie}')
 s.headers.update(headers)                       # Сохраняем заголовки в сессию
 s2.headers.update(headers)                       # Сохраняем заголовки в сессию
 s3.headers.update(headers)                       # Сохраняем заголовки в сессию
 #proxiess = {'http': '176.9.75.42:3128'}
-#proxiess = {'http': '207.154.231.208:3128'}
+proxiess = {'http': '207.154.231.208:3128'}
 #UA = UserAgent().random
 s.get('https://m.avito.ru/', proxies = proxiess)#, useragent = UA) #   useragent = str(UA)                 # Делаем запрос на мобильную версию.
 s2.get('https://m.avito.ru/', proxies = proxiess)#, useragent = UA) #   useragent = str(UA)                 # Делаем запрос на мобильную версию.
@@ -114,23 +119,28 @@ url_api_9 = 'https://m.avito.ru/api/9/items'    # Урл первого API, п�
 
 # Print user agent
 #print(f'UAG {uag}')
+#'category': 14,
+#'categoryId': 14,
+#'params[30]': 4969,
+#'params[110275]': 426645,
+#'catid': 38,
+
+#!!!!!!!!!!!!!!!!!!!!!    "categories": 14,
+#https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categories=14&locationId=621590&searchRadius=10&priceMin=1000&priceMax=20000&sort=priceDesc&withImagesOnly=true&lastStamp=1670975970&display=list&limit=50&query=suzuki%2Bgsx-r&page=1
 
 params = {
-    'key': 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir',
-    'categoryId': 14,
-    'params[30]': 4969,
+    'key': 'f1cfe913d6f44732a4b1601444eccb74',
+    'categoryId': '14',
     'locationId': locationId,
     'searchRadius': searchRadius,
     'priceMin': priceMin,
     'priceMax': priceMax,
-    'params[110275]': 426645,
     'sort': sort,
     'withImagesOnly': withImagesOnly,
-    'lastStamp': 1660975970,
+    'lastStamp': 1670975970,
     'display': 'list',
     'limit': limit_page,
-    'query': search,
-}
+    'query': search }
 cicle_stop = True       # Переменная для остановки цикла
 cikle = 0               # Переменная для перебора страниц с объявлениями
 items = []              # Список, куда складываем объявления
@@ -140,18 +150,19 @@ while cicle_stop:
     params['page'] = cikle
     #print(params)
 
-    res = s.get(url_api_9, params=params, proxies = proxiess) #, useragent = UA) #, useragent = str(UA))
+    res = s.get(url_api_9, params=params, proxies=proxiess) #, useragent = UA) #, useragent = str(UA))
     res2 = s2.get(url_api_9, params=params, proxies=proxiess)  # , useragent = UA) #, useragent = str(UA))
     res3 = s3.get(url_api_9, params=params, proxies=proxiess)  # , useragent = UA) #, useragent = str(UA))
+    print(params)
     print(f'################################################################## res2.url = {res2.url}')
 
     #print(f'PROXIIESS {proxiess} Agent {UA} \n HEADERS {headers}')
     # OK!!! print(f'################################################# \n{res.json()}')
 
     try:
-        res = res.json()
-        with open('results.json', 'w', encoding='utf-8') as file:
-            json.dump(res, file, indent=2, ensure_ascii=False)
+        ress = res.json()
+        with open('results_4.json', 'w', encoding='utf-8') as file:
+            json.dump(ress, file, indent=2, ensure_ascii=False)
         #ok!!! print(f'res= {res}')
 
     except json.decoder.JSONDecodeError: #{'code': 403, 'error': {'message': 'Доступ с вашего IP-адреса временно ограничен', 'link': 'ru.avito://1/info/ipblock/show'}}
@@ -175,7 +186,7 @@ while cicle_stop:
  #           print(res['result'])
  #           sys.exit(1)
 
-
+#    print(res.text)
     if res['status'] != 'ok':
             #print(f'''result = {res['result']}''')
             print(f'''result = NON''')

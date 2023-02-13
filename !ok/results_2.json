@@ -1,0 +1,2306 @@
+{
+  "status": "ok",
+  "result": {
+    "options": {
+      "isLocationVisible": true,
+      "isMetroVisible": false,
+      "display": "grid"
+    },
+    "count": 3083,
+    "totalCount": 3083,
+    "mainCount": 3083,
+    "expanded_count": 0,
+    "witchersCount": 0,
+    "lastStamp": 1676219760,
+    "items": [
+      {
+        "type": "item",
+        "value": {
+          "id": 2756947379,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676217653,
+          "title": "iPhone 8, Gold, 64GB",
+          "images": {
+            "count": 10,
+            "main": {
+              "100x75": "https://87.img.avito.st/image/1/1.hlSqNLa_Kr3Ulr6-qh7cOWOXLLcUNysHHpcouR5fKSkdlw.m1j7uQ3NNxpJuxqwKnUJ051w2d4pakVPXHJRMXv3j3U",
+              "1280x960": "https://87.img.avito.st/image/1/1.hlSqNLaxKr2cg6iwqh7cOWOXKrkWnSC_.vzRVUPKlUQ3ocNp3VP8gcK3I37kG-SN4DGLCDRV8ZJo",
+              "140x105": "https://87.img.avito.st/image/1/1.hlSqNLa_Kr2Elfq-qh7cOWOXLLcUNysHHpcouR4PKm0dlw.iUg6PO9wjsXHUdysgCq96CiKBe9E0rGqu7VwWNPrVsQ",
+              "208x156": "https://87.img.avito.st/image/1/1.hlSqNLa2Kr28lJC9qh7cOWOXKrcUNysHHpco.kY1mdPx0TTyrBpnwy6zKeuP9TLWdKzDeUDB8T4G-GRk",
+              "240x180": "https://87.img.avito.st/image/1/1.hlSqNLa2Kr38lMC9qh7cOWOXKrcUdytXHpco.y1vY3EptW-UDbHTA9cvnNkigIpKyxk0YqTkBIIGcefc",
+              "288x216": "https://87.img.avito.st/image/1/1.hlSqNLa2Kr3ck5i8qh7cOWOXKrcUVywPH5co.-yNdI4ORyP2qRDkSAGh5Kcz0h5oPxiuFZ2s64xj8dME",
+              "432x324": "https://87.img.avito.st/image/1/1.hlSqNLauKr38kaC6qh7cOWOXKA.8G0jNFS67XbEPZeTn5FQMQzSHkCNc5nByDIlLyBusrk",
+              "640x480": "https://87.img.avito.st/image/1/1.hlSqNLa6Kr2cnei4qh7cOWOXLLkeFyJ_G5cutRafKA.ysKEtXHTREqXYXkONw5dHAdc5_y9augaoOTz5QdRj5c",
+              "75x55": "https://87.img.avito.st/image/1/1.hlSqNLawKr2KlkYJlWOuwByVILeKlka_HA.nP_6QhXB8OkI-OI_M5YzRPGOf5SobNlVuQwQXOGNK1s",
+              "80x60": "https://87.img.avito.st/image/1/1.hlSqNLa5Kr28llAJlWOuwByTILe8lJC9HJcuvbyWUL8.tRoxNPH_i3uzjrsPwvkQ00wyZ5BK6blFkHvtvnOqCjc"
+            }
+          },
+          "price": "10 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Горки",
+              "after": " 2,7 км",
+              "afterWithIcon": {
+                "text": "от 31 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Горки, 2,7 км",
+          "address": "",
+          "coords": {
+            "lat": "55.78096",
+            "lng": "49.213131"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2756947379",
+          "uri_mweb": "/kazan/telefony/iphone_8_gold_64gb_2756947379?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "4.7 дюйм, 64 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2152962364,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676216779,
+          "title": "Телефон iPhone 4 s 32gb",
+          "images": {
+            "count": 7,
+            "main": {
+              "100x75": "https://16.img.avito.st/image/1/1.lUwc9ra_OaViVK2mOvTVQ99VP6-i9TgfqFU7oaidOjGrVQ.Mw6qF6yJEluisg0w6uX40xBOz0Zeyf4krjykMUxPnJU",
+              "1280x960": "https://16.img.avito.st/image/1/1.lUwc9raxOaUqQbuoOvTVQ99VOaGgXzOn.1dwjZQ1DNhMmded0EML9HOMrD1G9o10AI_E26nqaATk",
+              "140x105": "https://16.img.avito.st/image/1/1.lUwc9ra_OaUyV-mmOvTVQ99VP6-i9TgfqFU7oajNOXWrVQ.EXzhFexXRDCOIS-Cwl-oHCiMcFJDji0ASGqTbIb-8XA",
+              "208x156": "https://16.img.avito.st/image/1/1.lUwc9ra2OaUKVoOlOvTVQ99VOa-i9TgfqFU7.m8dtWO4Zmr9IZwCAqdfSo9r95BlWV-AVRcmI-nQdW4g",
+              "240x180": "https://16.img.avito.st/image/1/1.lUwc9ra2OaVKVtOlOvTVQ99VOa-itThPqFU7.TKkpShwWNJ3uvH1-honw9vNfNmTzYNVwugukUvVXOc0",
+              "288x216": "https://16.img.avito.st/image/1/1.lUwc9ra2OaVqUYukOvTVQ99VOa-ilT8XqVU7.YrApjpy0BS24DsrqlcuucGG2Z3ZgbzegZJaYgqEYyos",
+              "432x324": "https://16.img.avito.st/image/1/1.lUwc9rauOaVKU7OiOvTVQ99VOw.Qf1vM-bai7nzXwUz61E0TM_M4Uaex-TvsVagQ4MslQ4",
+              "640x480": "https://16.img.avito.st/image/1/1.lUwc9ra6OaUqX_ugOvTVQ99VP6Go1TFnrVU9raBdOw.tCMYBd70XvySgmXeSYEDGQE7YoenlhR0-ELuJk0dyMk",
+              "75x55": "https://16.img.avito.st/image/1/1.lUwc9rawOaU8VFU3C7vf0qpXM688VFWnqg.f7rCuq8_lQQwZm5eUbotS-FCe_bxSTdnX_NmnF2dKZI",
+              "80x60": "https://16.img.avito.st/image/1/1.lUwc9ra5OaUKVEM3C7vf0qpRM68KVoOlqlU9pQpUQ6c.--S8hdBYQnM0mVmPM83r7vyzKn5Kao2H3eclIVYiVO4"
+            }
+          },
+          "price": "2 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Аметьево",
+              "after": " 2,7 км",
+              "afterWithIcon": {
+                "text": "от 31 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Аметьево, 2,7 км",
+          "address": "",
+          "coords": {
+            "lat": "55.787525",
+            "lng": "49.181267"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2152962364",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_4_s_32gb_2152962364?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "specifications": {
+            "text": "3.5 дюйм, 32 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2153074787,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676216722,
+          "title": "Телефон iPhone 5c 16gb Ростест",
+          "images": {
+            "count": 8,
+            "main": {
+              "100x75": "https://27.img.avito.st/image/1/1.hl-E7La_Krb6Tr61hOqcX0hPLLw67ysMME8osjCHKSIzTw.Dac8KNtcOzPJV5CKgs-gpJd1rbhVUumVRSAbt_NIoUU",
+              "1280x960": "https://27.img.avito.st/image/1/1.hl-E7LaxKrayW6i7hOqcX0hPKrI4RSC0.SpGfBKv6CRR7qHreMZmSIVsZri7o8sMUvYb3AQME82o",
+              "140x105": "https://27.img.avito.st/image/1/1.hl-E7La_KraqTfq1hOqcX0hPLLw67ysMME8osjDXKmYzTw.ZVqvyVOlAeQKM2x4xW3bxZTmk3T16Yee5JcLxEPDP-8",
+              "208x156": "https://27.img.avito.st/image/1/1.hl-E7La2KraSTJC2hOqcX0hPKrw67ysMME8o.YztMA3NNK7amWkTDyPc38Ewho6zmT9QEEODdInS7-1s",
+              "240x180": "https://27.img.avito.st/image/1/1.hl-E7La2KrbSTMC2hOqcX0hPKrw6rytcME8o.IVJlS6rnoih1SpL2n-EIBx9gBEXPcyGJseE9664F0zg",
+              "288x216": "https://27.img.avito.st/image/1/1.hl-E7La2KrbyS5i3hOqcX0hPKrw6jywEMU8o.7COCvbIs1aEZWNCXBasT7nbj4zFTPQZLSjaFNUVXDEk",
+              "432x324": "https://27.img.avito.st/image/1/1.hl-E7LauKrbSSaCxhOqcX0hPKA.RMRZTie5RPfe3eelRdM5CyS6VNd4DKxvGMK4sfoSEu8",
+              "640x480": "https://27.img.avito.st/image/1/1.hl-E7La6KrayReizhOqcX0hPLLIwzyJ0NU8uvjhHKA.t-Bd608_qpBP29Ka30tGNIcyhmY1Ypb9w8N57OBrAlQ",
+              "75x55": "https://27.img.avito.st/image/1/1.hl-E7LawKrakTkYCl_vDzjJNILykTka0Mg.gawWYtAypbon8DVwrIV1RNKLV-8S4ImLVQT7kF6Vx7M",
+              "80x60": "https://27.img.avito.st/image/1/1.hl-E7La5KraSTlACl_vDzjJLILySTJC2Mk8utpJOULQ.-WhoN5zgLhIeQk7Q1E9a-itRvEI6NXlSdfTKdnxHCV4"
+            }
+          },
+          "price": "2 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Аметьево",
+              "after": " 2,7 км",
+              "afterWithIcon": {
+                "text": "от 31 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Аметьево, 2,7 км",
+          "address": "",
+          "coords": {
+            "lat": "55.787525",
+            "lng": "49.181267"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2153074787",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_5c_16gb_rostest_2153074787?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "4 дюйм, 16 ГБ, 1 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2503808262,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676215113,
+          "title": "Телефон iPhone 6",
+          "images": {
+            "count": 5,
+            "main": {
+              "100x75": "https://81.img.avito.st/image/1/1.jHK8lba_IJvCN7SYqMvZDGc2JpECliEhCDYinwj-Iw8LNg.068vbivM67Jwz1tQ2zrTCYqVh1zEYrVkuANPLoMQ0vM",
+              "1280x960": "https://81.img.avito.st/image/1/1.jHK8lbaxIJuKIqKWqMvZDGc2IJ8APCqZ.DajH6o-3F-72tKhC3BWH2h1EESLc0WJUNx6RrksD8xY",
+              "140x105": "https://81.img.avito.st/image/1/1.jHK8lba_IJuSNPCYqMvZDGc2JpECliEhCDYinwiuIEsLNg.-xq0uJo3EPXiJGmeYZrubUdKAx4wYkGuHev-uHpkLZM",
+              "208x156": "https://81.img.avito.st/image/1/1.jHK8lba2IJuqNZqbqMvZDGc2IJECliEhCDYi.124pUWI2I9h85jtuLmUoOLTCMAtlP01kb7eoSLup40E",
+              "240x180": "https://81.img.avito.st/image/1/1.jHK8lba2IJvqNcqbqMvZDGc2IJEC1iFxCDYi.aw4R5lw4TeI3qB_Ee19NuRsV6Ip5GQPr5DF8d9vGtqo",
+              "288x216": "https://81.img.avito.st/image/1/1.jHK8lba2IJvKMpKaqMvZDGc2IJEC9iYpCTYi.eoMwpUexCLCVMW8APnhaa8Bk41oauqYyG9CIHibHoMw",
+              "432x324": "https://81.img.avito.st/image/1/1.jHK8lbauIJvqMKqcqMvZDGc2Ig.DIr2oGDNct8E8gFTk0WJvQ824hd9zm5pjWxhPlJ5ma8",
+              "640x480": "https://81.img.avito.st/image/1/1.jHK8lba6IJuKPOKeqMvZDGc2Jp8ItihZDTYkkwA-Ig.B7zB6UI6lbqSXjG7r07RtOBoFu1mH7DCL_LPNaYRqcQ",
+              "75x55": "https://81.img.avito.st/image/1/1.jHK8lbawIJucN0w798239Ao0KpGcN0yZCg.VNCnHmmoFxutwr5CHuQDQzElHY58MH9-VysadgISX8M",
+              "80x60": "https://81.img.avito.st/image/1/1.jHK8lba5IJuqN1o798239AoyKpGqNZqbCjYkm6o3Wpk.7-8i4dRbYafgRJaajbVx5DGZ5AmWZ6vLYCRT6kHvkAA"
+            }
+          },
+          "price": "3 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Козья Слобода",
+              "after": " 3,1 км",
+              "afterWithIcon": {
+                "text": "от 31 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Козья Слобода, 3,1 км",
+          "address": "",
+          "coords": {
+            "lat": "55.823904",
+            "lng": "49.146353"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2503808262",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_6_2503808262?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "specifications": {
+            "text": "4.7 дюйм, 128 ГБ, 1 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2834722890,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676214531,
+          "title": "iPhone xr 64 gb",
+          "images": {
+            "count": 6,
+            "main": {
+              "100x75": "https://11.img.avito.st/image/1/1.1vctFra_eh5TtO4dDRXsmuS1fBSTFXukmbV4Gpl9eYqatQ.AqfVpor1ClZ9qmvYmO_PwswN6B6tmWoZh4k0EL_tgv0",
+              "1280x960": "https://11.img.avito.st/image/1/1.1vctFraxeh4bofgTDRXsmuS1ehqRv3Ac.w2jpGc_Fn-8YKkfKHjCSmrCz28LOdIvTqqVXbMKoFio",
+              "140x105": "https://11.img.avito.st/image/1/1.1vctFra_eh4Dt6odDRXsmuS1fBSTFXukmbV4Gpktes6atQ._269Ed2rZK96l9i2Jc6VUa-Mfiu24RF7J39ETbBUsGM",
+              "208x156": "https://11.img.avito.st/image/1/1.1vctFra2eh47tsAeDRXsmuS1ehSTFXukmbV4.w9VtUkmncjDl0mBtQT5aOE5zFWvYA-tmYoVrXG-EJfk",
+              "240x180": "https://11.img.avito.st/image/1/1.1vctFra2eh57tpAeDRXsmuS1ehSTVXv0mbV4.JGiKKyorxwV2d7ueiDfij6E9z3XF31XlSdtkqCIi8BU",
+              "288x216": "https://11.img.avito.st/image/1/1.1vctFra2eh5bscgfDRXsmuS1ehSTdXysmLV4.Z_g_dVMChA9qkEEVcLLWP1FSUhmMO9dd5lPivZyrBMc",
+              "432x324": "https://11.img.avito.st/image/1/1.1vctFraueh57s_AZDRXsmuS1eA.oWWALJ8Op_MG1T1ySh0XQNP-Hl_aL_i3xW1cIam3Tnw",
+              "640x480": "https://11.img.avito.st/image/1/1.1vctFra6eh4bv7gbDRXsmuS1fBqZNXLcnLV-FpG9eA.Wx-UIIK6wS_u4qQWGrRlaTUYZ9LGkqeXax8i7pVFlI8",
+              "75x55": "https://11.img.avito.st/image/1/1.1vctFraweh4NtBaKOyH-Y5u3cBQNtBYcmw.oNdk55DWn6Ewv0pLvUAOSEaC0452enOttYgHGUtcXG4",
+              "80x60": "https://11.img.avito.st/image/1/1.1vctFra5eh47tACKOyH-Y5uxcBQ7tsAem7V-Hju0ABw.j4BssU-mCraPSRczWyQScCqPKLvFDxfp2bOqnO_g4Jw"
+            }
+          },
+          "price": "14 800 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Суконная слобода",
+              "after": " 1,2 км",
+              "afterWithIcon": {
+                "text": "16–20 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Суконная слобода, 1,2 км",
+          "address": "",
+          "coords": {
+            "lat": "55.784027099609375",
+            "lng": "49.15617370605469"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2834722890",
+          "uri_mweb": "/kazan/telefony/iphone_xr_64_gb_2834722890?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Цена ниже рыночной",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "6.1 дюйм, 64 ГБ, 3 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2816282772,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676213999,
+          "title": "Apple iPhone 7 plus 32gb",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://34.img.avito.st/image/1/1.2yglhba_d8FbJ-PCH4r1RewmccubhnZ7kSZ1xZHudFWSJg.o_ObPkBo8UKMMr9tQiuMyMcuXetuZWH6rOEBVNzJJqM",
+              "1280x960": "https://34.img.avito.st/image/1/1.2yglhbaxd8ETMvXMH4r1Rewmd8WZLH3D.2QVNU0UulPyq18rBI7UR0nczkCuxd9Xm5sLeEc4hG80",
+              "140x105": "https://34.img.avito.st/image/1/1.2yglhba_d8ELJKfCH4r1RewmccubhnZ7kSZ1xZG-dxGSJg.wMfJqQTsNUkWwcozgnfT1KZE3llNT0PaNHhJHQlTDI0",
+              "208x156": "https://34.img.avito.st/image/1/1.2yglhba2d8EzJc3BH4r1Rewmd8ubhnZ7kSZ1.71qa5cj8UtPg86eTg-8SvMkNNHEgljgGWh84Y9xCw0g",
+              "240x180": "https://34.img.avito.st/image/1/1.2yglhba2d8FzJZ3BH4r1Rewmd8ubxnYrkSZ1.8GeeNAmF3M4eRXtyHJIBDcAJym76SU3ITiIjXVvwJLA",
+              "288x216": "https://34.img.avito.st/image/1/1.2yglhba2d8FTIsXAH4r1Rewmd8ub5nFzkCZ1.iLDgPSBvZMgRvwJOC7npqXDFPh7GXG9gEXx6zyxoVU8",
+              "432x324": "https://34.img.avito.st/image/1/1.2yglhbaud8FzIP3GH4r1RewmdQ.LVSRimi4h2Ewl_Bwf2DdWkhKbNIryTRxgH4alspH0MQ",
+              "640x480": "https://34.img.avito.st/image/1/1.2yglhba6d8ETLLXEH4r1RewmccWRpn8DlCZzyZkudQ.qlTs9VOioQ7GAbYP97v-CMjxsTd4MZ4VTD-M7b2THiY",
+              "75x55": "https://34.img.avito.st/image/1/1.2yglhbawd8EFJxtPP6bzvJMkfcsFJxvDkw.eOd26lezjuyaA2sFprpc8lGSEZiiaLjFg3gCjfLkP9g",
+              "80x60": "https://34.img.avito.st/image/1/1.2yglhba5d8EzJw1PP6bzvJMifcszJc3BkyZzwTMnDcM.QOFu3tOYshXG6Mca2cKvCJrKcaEbJ1g8yg2ztM7LZ0A"
+            }
+          },
+          "price": "8 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Козья Слобода",
+              "after": " 1,7 км",
+              "afterWithIcon": {
+                "text": "21–30 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Козья Слобода, 1,7 км",
+          "address": "",
+          "coords": {
+            "lat": "55.8286546318988",
+            "lng": "49.1171800868293"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2816282772",
+          "uri_mweb": "/kazan/telefony/apple_iphone_7_plus_32gb_2816282772?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "5.5 дюйм, 32 ГБ, 3 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2661808543,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676213304,
+          "title": "Телефон iPhone 8",
+          "images": {
+            "count": 5,
+            "main": {
+              "100x75": "https://61.img.avito.st/image/1/1.lNRuLba_OD0Qj6w-SiOMyKCOPjfQLjmH2o46OdpGO6nZjg.lFtdJPSC5BqaSAlfRjLBWN8e4CbBAnsJ-81AtdjrYXs",
+              "1280x960": "https://61.img.avito.st/image/1/1.lNRuLbaxOD1YmrowSiOMyKCOODnShDI_.fSdI-FilqqFVwlwtJjS6-vL2CyECqyNGpDKMCK2QIwg",
+              "140x105": "https://61.img.avito.st/image/1/1.lNRuLba_OD1AjOg-SiOMyKCOPjfQLjmH2o46OdoWOO3Zjg.VW8pglTVVW0A7-HEDjxeFoZ_LIXmzyx6iZIAhvELwm4",
+              "208x156": "https://61.img.avito.st/image/1/1.lNRuLba2OD14jYI9SiOMyKCOODfQLjmH2o46.8DR_B8h6Q9m-unPwOfQxhNGhiYigiOhgYtdrc4-1XsU",
+              "240x180": "https://61.img.avito.st/image/1/1.lNRuLba2OD04jdI9SiOMyKCOODfQbjnX2o46.ycbZTHnDY8tfkrLrmnfWWnpkEutwM5vLD7cYqa14vr4",
+              "288x216": "https://61.img.avito.st/image/1/1.lNRuLba2OD0Yioo8SiOMyKCOODfQTj6P2446.NEwmhGtvK8h8yzD7UDobPKpJ-T8aGUrrJ0kJBi0DiRs",
+              "432x324": "https://61.img.avito.st/image/1/1.lNRuLbauOD04iLI6SiOMyKCOOg.z6i-4UzwavMzoGg-YJ4U3FSV3J0jH6Iytir46t5jvpI",
+              "640x480": "https://61.img.avito.st/image/1/1.lNRuLba6OD1YhPo4SiOMyKCOPjnaDjD_3448NdKGOg.xq1Q4s44ewb8SxxBWsVNGJJd67GIg3Y3UQbqBQcjEEw",
+              "75x55": "https://61.img.avito.st/image/1/1.lNRuLbawOD1Oj1StdTjNR9iMMjdOj1Q_2A.KW6T31ZULq38zHnO08fmsQqykBwEUse227Nj2knjvLc",
+              "80x60": "https://61.img.avito.st/image/1/1.lNRuLba5OD14j0KtdTjNR9iKMjd4jYI92I48PXiPQj8.-8iAAnhOCT41xzAgHka0rc6ArKuBqaPFQBdXaH1zp8Y"
+            }
+          },
+          "price": "9 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Горки",
+              "after": " 2 км",
+              "afterWithIcon": {
+                "text": "21–30 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Горки, 2 км",
+          "address": "",
+          "coords": {
+            "lat": "55.743694",
+            "lng": "49.180477"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2661808543",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_8_2661808543?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "4.7 дюйм, 128 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2674951819,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676212632,
+          "title": "Телефон iPhone 7 32gb розовый",
+          "images": {
+            "count": 7,
+            "main": {
+              "100x75": "https://30.img.avito.st/image/1/1.T_M25La_4xpIRncZJLFK7_hH5RCI5-KggkfhHoKP4I6BRw.JWjM3xIlfD8l_09BP8Zeo3IMTEiFlAWfMBoSk7onMgI",
+              "1280x960": "https://30.img.avito.st/image/1/1.T_M25Lax4xoAU2EXJLFK7_hH4x6KTekY.gBDff8R6vtaOGhgnZ264OYNLAmfhCtxM5uXRDo1_-jE",
+              "140x105": "https://30.img.avito.st/image/1/1.T_M25La_4xoYRTMZJLFK7_hH5RCI5-KggkfhHoLf48qBRw.CRpIpUJ3GXyymxl6qqsDG2qmyXB0yL8mgxNojDASZK4",
+              "208x156": "https://30.img.avito.st/image/1/1.T_M25La24xogRFkaJLFK7_hH4xCI5-Kggkfh.2W8USXwll_dNSLKNARDJ1u3wG9U38_ZLsCaevZRn2FM",
+              "240x180": "https://30.img.avito.st/image/1/1.T_M25La24xpgRAkaJLFK7_hH4xCIp-Lwgkfh.UmpE33PZ2aBAT49ab7ZVwGaIy-xaVifkmb8GrPdKp3I",
+              "288x216": "https://30.img.avito.st/image/1/1.T_M25La24xpAQ1EbJLFK7_hH4xCIh-Wog0fh.fKLJG0R-VMZHi9wRfKvxj3nL_KH4s910RU6lxLTZe4o",
+              "432x324": "https://30.img.avito.st/image/1/1.T_M25Lau4xpgQWkdJLFK7_hH4Q.JY1doy8PI8TD4EsoCZSwiTFfZSZM0QNR5HSqEwFsnJM",
+              "640x480": "https://30.img.avito.st/image/1/1.T_M25La64xoATSEfJLFK7_hH5R6Cx-vYh0fnEopP4Q.fp97oWymYWKrnF27VMSlc_rhWH0ano1TrAZG1KNLUsw",
+              "75x55": "https://30.img.avito.st/image/1/1.T_M25Law4xoWRo-8duwWYIBF6RAWRo8YgA.tIW6ecI28YTPdzL0XvU5hZI6vdt99GwCP19F_fAmuPo",
+              "80x60": "https://30.img.avito.st/image/1/1.T_M25La54xogRpm8duwWYIBD6RAgRFkagEfnGiBGmRg.QD1paB24tg0wAOpw9dyJb6MXeTobZnPv_dE02M1qbqM"
+            }
+          },
+          "price": "7 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Горки",
+              "after": " 2,8 км",
+              "afterWithIcon": {
+                "text": "от 31 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Горки, 2,8 км",
+          "address": "",
+          "coords": {
+            "lat": "55.78545",
+            "lng": "49.191849"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2674951819",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_7_32gb_rozovyy_2674951819?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "specifications": {
+            "text": "4.7 дюйм, 32 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2719983271,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676211396,
+          "title": "iPhone 4s (айфон 4s)",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://83.img.avito.st/image/1/1.MkSVora_nq3rAAqu_b4CYVkBmKcroZ8XIQGcqSHJnTkiAQ.cKfV1E8rKqXNbILK8aPCPZT-xyfI7wa2TNSV_VQVD_U",
+              "1280x960": "https://83.img.avito.st/image/1/1.MkSVoraxnq2jFRyg_b4CYVkBnqkpC5Sv.WRWwfDalZkLD7CmctOvinrR9p-45KfAYSlrFMFEe7Jo",
+              "140x105": "https://83.img.avito.st/image/1/1.MkSVora_nq27A06u_b4CYVkBmKcroZ8XIQGcqSGZnn0iAQ.3PN6eOP-1elPCSr9tC0lrGRsNcoTt_Lyt0kr_MvMSUk",
+              "208x156": "https://83.img.avito.st/image/1/1.MkSVora2nq2DAiSt_b4CYVkBnqcroZ8XIQGc.fUBqTndd6YnQKoh1ECbWKuxj5N8qrRve6EQkWSHyyV4",
+              "240x180": "https://83.img.avito.st/image/1/1.MkSVora2nq3DAnSt_b4CYVkBnqcr4Z9HIQGc.AgVJBg7hqcKUaaw-KVxMwDVlWnHndQ6Ez600Z-P9904",
+              "288x216": "https://83.img.avito.st/image/1/1.MkSVora2nq3jBSys_b4CYVkBnqcrwZgfIAGc.ZSR4dIPQ8HKSC1YylZ1sKG56lutZHcbX4SwSLI4mmvI",
+              "432x324": "https://83.img.avito.st/image/1/1.MkSVoraunq3DBxSq_b4CYVkBnA.Ir8zPr-ffnakxmR0TdCfZV3EaVyn0lmj-KeeJniXSgc",
+              "640x480": "https://83.img.avito.st/image/1/1.MkSVora6nq2jC1yo_b4CYVkBmKkhgZZvJAGapSkJnA.B-C_tOk2ExdJQxcNgJ4IdxB_jV0X3_mcS4degV6NbMY",
+              "75x55": "https://83.img.avito.st/image/1/1.MkSVorawnq21APJxnJ9S1SMDlKe1APKvIw.0J5GZPtLaGNZy3WNhruUrhjefwALWDut6ivjY6Se1tA",
+              "80x60": "https://83.img.avito.st/image/1/1.MkSVora5nq2DAORxnJ9S1SMFlKeDAiStIwGarYMA5K8.k7LmhCOxfJ9xLHKmcv46EnjmdOXDa7_kcsTjlrGhfc0"
+            }
+          },
+          "price": "1 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Яшьлек",
+              "after": " 700 м",
+              "afterWithIcon": {
+                "text": "6–10 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Яшьлек, 700 м",
+          "address": "",
+          "coords": {
+            "lat": "55.823665618896484",
+            "lng": "49.08700180053711"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2719983271",
+          "uri_mweb": "/kazan/telefony/iphone_4s_ayfon_4s_2719983271?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "specifications": {
+            "text": "3.5 дюйм, 8 ГБ, 512 МБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2839892318,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676211265,
+          "title": "Телефон iPhone Xr 64gb белый",
+          "images": {
+            "count": 10,
+            "main": {
+              "100x75": "https://24.img.avito.st/image/1/1.vdNTy7a_ETotaYU5JYGyvZpoFzDtyBCA52gTPuegEq7kaA.TSN_mofZ1ZmLr5k2JqL9linnRW5VSo-4HjRxuiiVsa0",
+              "1280x960": "https://24.img.avito.st/image/1/1.vdNTy7axETplfJM3JYGyvZpoET7vYhs4.28T6gUQ5-toiwWNR_YVIMJb-n1vVMTRtFTNwzWNzwKg",
+              "140x105": "https://24.img.avito.st/image/1/1.vdNTy7a_ETp9asE5JYGyvZpoFzDtyBCA52gTPufwEerkaA.KTdFKcAAGYbt_QqR1uG4ChpaFVeJWs-JIyuaQAay6lo",
+              "208x156": "https://24.img.avito.st/image/1/1.vdNTy7a2ETpFa6s6JYGyvZpoETDtyBCA52gT.95wqKzVhUuSUHlZRIjy9srMxaP9Q0Cw7oco-mO0l6zM",
+              "240x180": "https://24.img.avito.st/image/1/1.vdNTy7a2EToFa_s6JYGyvZpoETDtiBDQ52gT.l4V6QTWVfqgCHhsLJzjrkMFLlx5iZ4Nf9tinQzcokx0",
+              "288x216": "https://24.img.avito.st/image/1/1.vdNTy7a2ETolbKM7JYGyvZpoETDtqBeI5mgT.jIq_sHyR13_ZkQU4ObwrmHap_EzNsiYj_F_cksh8-V4",
+              "432x324": "https://24.img.avito.st/image/1/1.vdNTy7auEToFbps9JYGyvZpoEw.u0qRJVhELqWuMxTThS3pwHulHZQh9lTBgqnuDaWkmhQ",
+              "640x480": "https://24.img.avito.st/image/1/1.vdNTy7a6ETplYtM_JYGyvZpoFz7n6Bn44mgVMu9gEw.uEO7W4GPkL1FLKzclml7THAOTU1YsxEj5HtDBVOt5QA",
+              "75x55": "https://24.img.avito.st/image/1/1.vdNTy7awETpzaX34DMmWR-VqGzBzaX045Q.gspkXOYhzvfdq7CnFZCiiQqOeknl0lrxxkTXPZPAdzw",
+              "80x60": "https://24.img.avito.st/image/1/1.vdNTy7a5ETpFaWv4DMmWR-VsGzBFa6s65WgVOkVpazg.7c6PMBpHV8MDB8uBClG0S1Bu7WZtQjqWlvqvq0jIUi8"
+            }
+          },
+          "price": "16 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Советский"
+            }
+          ],
+          "location": "р-н Советский",
+          "address": "",
+          "coords": {
+            "lat": "55.784364",
+            "lng": "49.229825"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2839892318",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_xr_64gb_belyy_2839892318?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "6.1 дюйм, 64 ГБ, 3 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2761237013,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676211243,
+          "title": "Apple iPhone 4 8gb",
+          "images": {
+            "count": 7,
+            "main": {
+              "100x75": "https://19.img.avito.st/image/1/1.3m2qCba_coTUq-aHmkbtA2OqdI4UCnM-HqpwgB5icRAdqg.MxsG2G-srApCbQiLkuh7HvXV_vux-K-ugoUUJBmBaWs",
+              "1280x960": "https://19.img.avito.st/image/1/1.3m2qCbaxcoScvvCJmkbtA2OqcoAWoHiG.xB91dPIr31yKHtnxGzeYTsee5KFpz3PZmie569fxcSg",
+              "140x105": "https://19.img.avito.st/image/1/1.3m2qCba_coSEqKKHmkbtA2OqdI4UCnM-HqpwgB4yclQdqg.9mi5b_-6sO_ksFn5llAAFZhxKfQl_q2oAUhqsjEjuA8",
+              "208x156": "https://19.img.avito.st/image/1/1.3m2qCba2coS8qciEmkbtA2Oqco4UCnM-Hqpw.dijr643GP958sqp36FvJcmUVO9TlOmi1TRI_NCbVl8o",
+              "240x180": "https://19.img.avito.st/image/1/1.3m2qCba2coT8qZiEmkbtA2Oqco4USnNuHqpw.r6pOU1zoXtpMN8eELU1fm_70G9FeXmrJZqhSq2iud9I",
+              "288x216": "https://19.img.avito.st/image/1/1.3m2qCba2coTcrsCFmkbtA2Oqco4UanQ2H6pw.ydqTTGdXnLgYos_CjMmMWRflrf8gXrludUBDCqC5zc4",
+              "432x324": "https://19.img.avito.st/image/1/1.3m2qCbaucoT8rPiDmkbtA2OqcA.5eaCDPBm-_WlgKBlAmU-wmdZzIWwXvvRoaTlaC1Bnh0",
+              "640x480": "https://19.img.avito.st/image/1/1.3m2qCba6coScoLCBmkbtA2OqdIAeKnpGG6p2jBaicA.FoCglQX41TO1MXI2pD9Qcqu3OwtGKzG6imYmGJG4DuI",
+              "75x55": "https://19.img.avito.st/image/1/1.3m2qCbawcoSKqx4A8Df1-RyoeI6Kqx6GHA.pDfKDI4z8QWi5_45WZC5PNf1YxIIKVBjkPQxoFySDiw",
+              "80x60": "https://19.img.avito.st/image/1/1.3m2qCba5coS8qwgA8Df1-RyueI68qciEHKp2hLyrCIY.4jmBV3D9DWAMyaffeaOgw3riRRm1OhmBEmWqpbg1RGo"
+            }
+          },
+          "price": "700 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Советский"
+            }
+          ],
+          "location": "р-н Советский",
+          "address": "",
+          "coords": {
+            "lat": "55.8153453541395",
+            "lng": "49.1812892180503"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2761237013",
+          "uri_mweb": "/kazan/telefony/apple_iphone_4_8gb_2761237013?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Цена ниже рыночной",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "3.5 дюйм, 8 ГБ, 512 МБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2759996249,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676210652,
+          "title": "Мобильные телефоны бу iPhone 10",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://56.img.avito.st/image/1/1.PQ76e7a_keeE2QXkjEMWYDPYl-1EeJBdTtiT404QknNN2A.dUKZO15fwumWIdmnjbFCaj6yDYiGNUUkQezGtCHlHQQ",
+              "1280x960": "https://56.img.avito.st/image/1/1.PQ76e7axkefMzBPqjEMWYDPYkeNG0pvl.f-WVLBS-X0OZ3sEKI745OgRnSU28IPr0fzn-6DTmOu4",
+              "140x105": "https://56.img.avito.st/image/1/1.PQ76e7a_kefU2kHkjEMWYDPYl-1EeJBdTtiT405AkTdN2A.eJXiMbKCqnk3d5ea2x9_lwQp16T1wXDCk9xRDQ8OKBw",
+              "208x156": "https://56.img.avito.st/image/1/1.PQ76e7a2kefs2yvnjEMWYDPYke1EeJBdTtiT.9G51QhIpqr0blKy-5q1pSayvwqcTSyfHmMYRFhCQQM4",
+              "240x180": "https://56.img.avito.st/image/1/1.PQ76e7a2kees23vnjEMWYDPYke1EOJANTtiT.6QLrOOmvKGUM-6eVywCS2jhoGoq0lMWGxJdKTYzaqH0",
+              "288x216": "https://56.img.avito.st/image/1/1.PQ76e7a2keeM3CPmjEMWYDPYke1EGJdVT9iT.TffuRHFiHd_S0hYryblvhuSHf0I0oFdS2lGhO16ZGzM",
+              "432x324": "https://56.img.avito.st/image/1/1.PQ76e7aukees3hvgjEMWYDPYkw.u_WNihv-gXu04FhppU7OOKaagwklHkcYLStAMz15yjo",
+              "640x480": "https://56.img.avito.st/image/1/1.PQ76e7a6kefM0lPijEMWYDPYl-NOWJklS9iV70bQkw.h_xVq9MQ3LKKSfa7aAFfiI3r2Hz-7kJAHahrhxPpmjU",
+              "75x55": "https://56.img.avito.st/image/1/1.PQ76e7awkefa2f0l110Wmkzam-3a2f3lTA.jW2_GfQH_ITsaSQnAH3UUkSuVPA-NWpAXTsMKQwzk2s",
+              "80x60": "https://56.img.avito.st/image/1/1.PQ76e7a5kefs2esl110Wmkzcm-3s2yvnTNiV5-zZ6-U.-Mgh8xr7uFGYYZCrKMfkKMqPmQsRkGZulLkWfI93Xgg"
+            }
+          },
+          "price": "16 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Горки",
+              "after": " 2,2 км",
+              "afterWithIcon": {
+                "text": "от 31 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Горки, 2,2 км",
+          "address": "",
+          "coords": {
+            "lat": "55.771652",
+            "lng": "49.218937"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2759996249",
+          "uri_mweb": "/kazan/telefony/mobilnye_telefony_bu_iphone_10_2759996249?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "5.8 дюйм, 64 ГБ, 3 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2805956643,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676210459,
+          "title": "iPhone 11 64gb",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://11.img.avito.st/image/1/1._kOwv7a_UqrOHcapwPDZLXkcVKAOvFMQBBxQrgTUUT4HHA.BXbhfQjyqW4HS26wglUpoAJEfv5ZO5RewgK0gZlUsGE",
+              "1280x960": "https://11.img.avito.st/image/1/1._kOwv7axUqqGCNCnwPDZLXkcUq4MFlio.wTvWioGccgxS7IQ0pFOsP-rrHmj_cmg7QQYHGn6bvbg",
+              "140x105": "https://11.img.avito.st/image/1/1._kOwv7a_UqqeHoKpwPDZLXkcVKAOvFMQBBxQrgSEUnoHHA.4hMdSK164T5KsO1WNOtHpyM2NCiq_5Aiz_u4TPkwRUg",
+              "208x156": "https://11.img.avito.st/image/1/1._kOwv7a2UqqmH-iqwPDZLXkcUqAOvFMQBBxQ.GkDYNmX1BZZ8WRfgCep1-Lrena7KxAMyYWRu8RRPiHk",
+              "240x180": "https://11.img.avito.st/image/1/1._kOwv7a2UqrmH7iqwPDZLXkcUqAO_FNABBxQ.0klC0yZEaqz6EKaTfElTgV0EzXIqKcVX6VtlO3-zzh8",
+              "288x216": "https://11.img.avito.st/image/1/1._kOwv7a2UqrGGOCrwPDZLXkcUqAO3FQYBRxQ.7MfmZuCoNf0bgoX5OeIjfwSOQPgbkn_z1yA2oolXMYA",
+              "432x324": "https://11.img.avito.st/image/1/1._kOwv7auUqrmGtitwPDZLXkcUA.MW0nU6WpxRj9kXF4eF9CyT3nTK3KrcP6AlIgIxTKdzs",
+              "640x480": "https://11.img.avito.st/image/1/1._kOwv7a6UqqGFpCvwPDZLXkcVK4EnFpoARxWogwUUA.f8EElJSTlU2CiydP99NSNkGlyw-lYcKqVPqzoYU0ZEw",
+              "75x55": "https://11.img.avito.st/image/1/1._kOwv7awUqqQHT5u6pXV1wYeWKCQHT6oBg.jrHaQqwY5t7ueZ0V9o92p2MoqDXkaCjhVFjm28bpuL0",
+              "80x60": "https://11.img.avito.st/image/1/1._kOwv7a5UqqmHShu6pXV1wYYWKCmH-iqBhxWqqYdKKg.qlNB6heRXfx7ac39v1J_k9oRyN31ZygXWZgxJOU3qro"
+            }
+          },
+          "price": "17 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Козья Слобода",
+              "after": " 2,5 км",
+              "afterWithIcon": {
+                "text": "от 31 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Козья Слобода, 2,5 км",
+          "address": "",
+          "coords": {
+            "lat": "55.814334869384766",
+            "lng": "49.137088775634766"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2805956643",
+          "uri_mweb": "/kazan/telefony/iphone_11_64gb_2805956643?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Цена ниже рыночной",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "6.1 дюйм, 64 ГБ, 4 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2656083867,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676210308,
+          "title": "iPhone 8",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://22.img.avito.st/image/1/1.k2ofQba_P4Nh46uANSPUP9ziOYmhQj45q-I9h6sqPBeo4g.ijMTP-3KNt1PIXvm5XPV33WvBW5yDkB6IxNwr0-ysh4",
+              "1280x960": "https://22.img.avito.st/image/1/1.k2ofQbaxP4Mp9r2ONSPUP9ziP4ej6DWB.zNUcxOum7xi9YNqX2qneoGbqXhUUeQS3EUlxuif0--s",
+              "140x105": "https://22.img.avito.st/image/1/1.k2ofQba_P4Mx4O-ANSPUP9ziOYmhQj45q-I9h6t6P1Oo4g.BW55PzSNMXSqj98VPq1sQFX8QJzHGCLT_9HJvHnylQA",
+              "208x156": "https://22.img.avito.st/image/1/1.k2ofQba2P4MJ4YWDNSPUP9ziP4mhQj45q-I9.8l9GCljOYl0R2zDQ3Se3hLQgA0-MzqrLk8L5yHYmx2I",
+              "240x180": "https://22.img.avito.st/image/1/1.k2ofQba2P4NJ4dWDNSPUP9ziP4mhAj5pq-I9.wIrDmlzQFlTXU5SXdj72orwf1AwMu4TyAgTew9_3dQc",
+              "288x216": "https://22.img.avito.st/image/1/1.k2ofQba2P4Np5o2CNSPUP9ziP4mhIjkxquI9.kx-zbHpq6SMQw96hw87wY-bybrpjkV3pLUUcrx5BiCg",
+              "432x324": "https://22.img.avito.st/image/1/1.k2ofQbauP4NJ5LWENSPUP9ziPQ.GwpyvI5rk1ynhTX2No_6DhxGr7iBRsFsdnnz6b_LiQ4",
+              "640x480": "https://22.img.avito.st/image/1/1.k2ofQba6P4Mp6P2GNSPUP9ziOYerYjdBruI7i6PqPQ.32thoXVWYkE15ZluXR3BOo9EyQqq9qE6r-3DGhi8mBE",
+              "75x55": "https://22.img.avito.st/image/1/1.k2ofQbawP4M_41MdaAuD9KngNYk_41OBqQ.qFz2jITyw_mJz-TT4GkF8emL_dHILgRXHDXKmTq9Biw",
+              "80x60": "https://22.img.avito.st/image/1/1.k2ofQba5P4MJ40UdaAuD9KnmNYkJ4YWDqeI7gwnjRYE.jw-p1MWsW_QUQ0hSQc3ioGjHz34BlEOIbkA-JJtf18k"
+            }
+          },
+          "price": "9 800 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Северный вокзал",
+              "after": "",
+              "afterWithIcon": {
+                "text": "до 5 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Северный вокзал",
+          "address": "",
+          "coords": {
+            "lat": "55.84189224243164",
+            "lng": "49.08200454711914"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2656083867",
+          "uri_mweb": "/kazan/telefony/iphone_8_2656083867?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "4.7 дюйм, 64 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2780253156,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676208740,
+          "title": "Телефон iPhone 5s",
+          "images": {
+            "count": 4,
+            "main": {
+              "100x75": "https://42.img.avito.st/image/1/1.h6mPw7a_K0DxYb9DjZHhxkZgLUoxwCr6O2ApRDuoKNQ4YA.pQ8zL0dihV6S6lXZwtTvpkL3t3dTXF7n0WpH-RobFPw",
+              "1280x960": "https://42.img.avito.st/image/1/1.h6mPw7axK0C5dKlNjZHhxkZgK0QzaiFC.N8rCCT_0jUyH2g2iywxAjXVBo7lW1hXqsBqj9LO6WL8",
+              "140x105": "https://42.img.avito.st/image/1/1.h6mPw7a_K0ChYvtDjZHhxkZgLUoxwCr6O2ApRDv4K5A4YA.tcrmdiKauA7ID0vs6gOvpwk_1KZHMiKDQNlcwThQ3YQ",
+              "208x156": "https://42.img.avito.st/image/1/1.h6mPw7a2K0CZY5FAjZHhxkZgK0oxwCr6O2Ap.bxTvjr_dmXkAcf2aiTxlnwZMOflnZDFxG5_LfUe0GwU",
+              "240x180": "https://42.img.avito.st/image/1/1.h6mPw7a2K0DZY8FAjZHhxkZgK0oxgCqqO2Ap.FQ9EfeBjG7qmPTWw-Scv7Xh6I3d244FuYykxNOFNuPg",
+              "288x216": "https://42.img.avito.st/image/1/1.h6mPw7a2K0D5ZJlBjZHhxkZgK0oxoC3yOmAp.GbnSPhiTh9Fjuqiqmn8-2P4s3oMB6Q_aEKNX7CYEOeU",
+              "432x324": "https://42.img.avito.st/image/1/1.h6mPw7auK0DZZqFHjZHhxkZgKQ.uA0mzOl-O-9zN6lprJcDqulFQQD_xbMAsFi8dbFSryM",
+              "640x480": "https://42.img.avito.st/image/1/1.h6mPw7a6K0C5aulFjZHhxkZgLUQ74COCPmAvSDNoKQ.8A0OWYRzUPcoXRJVoq9DJAz8bBqBTtM0IWNQugaIpig",
+              "75x55": "https://42.img.avito.st/image/1/1.h6mPw7awK0CvYUf2yKitPTliIUqvYUdCOQ.NUK-dbQa8tvBQCblB_qodOAlsQ00Mlb7mnFqO2q_avw",
+              "80x60": "https://42.img.avito.st/image/1/1.h6mPw7a5K0CZYVH2yKitPTlkIUqZY5FAOWAvQJlhUUI.bvZ4HbOeWFZ8_NWM23aYCHwBpujO3-3K_ASvY-3IZX0"
+            }
+          },
+          "price": "2 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Дубравная",
+              "after": " 700 м",
+              "afterWithIcon": {
+                "text": "6–10 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Дубравная, 700 м",
+          "address": "",
+          "coords": {
+            "lat": "55.74725341796875",
+            "lng": "49.22768783569336"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2780253156",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_5s_2780253156?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "4 дюйм, 16 ГБ, 1 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2721764379,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676208704,
+          "title": "iPhone 7 32Gb",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://60.img.avito.st/image/1/1.ffO6V7a_0RrE9UUZzA5uznD01xAEVNCgDvTTHg480o4N9A.pc4F6wHTbXdi1Obp91ot3vDIGvOwwjF875jz4eoMq4M",
+              "1280x960": "https://60.img.avito.st/image/1/1.ffO6V7ax0RqM4FMXzA5uznD00R4G_tsY.xyxuEA38xxMwxmQCb5oNVeaWMhbzUJTIluhkRX5Z7h8",
+              "140x105": "https://60.img.avito.st/image/1/1.ffO6V7a_0RqU9gEZzA5uznD01xAEVNCgDvTTHg5s0coN9A.f-JqPsEE4hZ7oJhj2fPFikJBrE8wSL9eWlkzREUkYwM",
+              "208x156": "https://60.img.avito.st/image/1/1.ffO6V7a20Rqs92sazA5uznD00RAEVNCgDvTT.Oq1eTnbwiQB5D25_F_bgXgOfdygkRNnZg3PGJbW6IGE",
+              "240x180": "https://60.img.avito.st/image/1/1.ffO6V7a20Rrs9zsazA5uznD00RAEFNDwDvTT.YYkpYWJ5pJq4WK9WAuvYPMApVI3lOKf0u7IT21n2KeA",
+              "288x216": "https://60.img.avito.st/image/1/1.ffO6V7a20RrM8GMbzA5uznD00RAENNeoD_TT.dMCQS1KddwGt3YFSUTbdOiN2uZCyL3Zt85REzvYNOWI",
+              "432x324": "https://60.img.avito.st/image/1/1.ffO6V7au0Rrs8lsdzA5uznD00w.6BzXy8s-014azFnRvVYlIkd7tpEHubSda-QePBof5jc",
+              "640x480": "https://60.img.avito.st/image/1/1.ffO6V7a60RqM_hMfzA5uznD01x4OdNnYC_TVEgb80w.Kf78H5JXfO9OU7w0gBuIKVxqxLGu3khlG_bfNjdULso",
+              "75x55": "https://60.img.avito.st/image/1/1.ffO6V7aw0Rqa9b3Y9kkFZAz22xCa9b0YDA.F3ZXMaUnVwYbbHMQAlL_n3_fj6Btd4ynk2v-LZWKVBg",
+              "80x60": "https://60.img.avito.st/image/1/1.ffO6V7a50Rqs9avY9kkFZAzw2xCs92saDPTVGqz1qxg.lDpqvsb9t8uBp33tGIucv1s51Vjj5XDNiHx1xSlltN4"
+            }
+          },
+          "price": "6 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Площадь Тукая",
+              "after": " 100 м",
+              "afterWithIcon": {
+                "text": "до 5 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Площадь Тукая, 100 м",
+          "address": "",
+          "coords": {
+            "lat": "55.78643",
+            "lng": "49.124332"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2721764379",
+          "uri_mweb": "/kazan/telefony/iphone_7_32gb_2721764379?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "4.7 дюйм, 32 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2721392172,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676208609,
+          "title": "Телефон iPhone 7plus",
+          "images": {
+            "count": 4,
+            "main": {
+              "100x75": "https://48.img.avito.st/image/1/1.3epJnLa_cQM3PuUAf8uFsIQ_dwn3n3C5_T9zB_33cpf-Pw.O_NIOmKWGkw9I0_hrxWncDgPBs6dM9wFP-0dvEdpnOM",
+              "1280x960": "https://48.img.avito.st/image/1/1.3epJnLaxcQN_K_MOf8uFsIQ_cQf1NXsB.p_cXhNUJQ1ecjhWAS6o2GZ1n2BAEmQg65oHm6YoYYQA",
+              "140x105": "https://48.img.avito.st/image/1/1.3epJnLa_cQNnPaEAf8uFsIQ_dwn3n3C5_T9zB_2ncdP-Pw.SwwBTDTlVWpaEyqkHBsvFvs1oGRY--w9ruo1n52cCDc",
+              "208x156": "https://48.img.avito.st/image/1/1.3epJnLa2cQNfPMsDf8uFsIQ_cQn3n3C5_T9z.uZgM2HaXitQ_tWRuDXAEpJaRjBVfSb7_4Fo4cdG2Ybk",
+              "240x180": "https://48.img.avito.st/image/1/1.3epJnLa2cQMfPJsDf8uFsIQ_cQn333Dp_T9z.JuGT5MyS6ZpkMqoW1SWzoS3gstBT5ZSjgaunQM-mIAo",
+              "288x216": "https://48.img.avito.st/image/1/1.3epJnLa2cQM_O8MCf8uFsIQ_cQn3_3ex_D9z.bwiiHvAILEASU-xN33PH7M6OCx0ivt-u8HM4RGlmfhk",
+              "432x324": "https://48.img.avito.st/image/1/1.3epJnLaucQMfOfsEf8uFsIQ_cw.HhzQ76ajbT5IdXeINm6lV16IiCme11Dr5dRUsRdsqmo",
+              "640x480": "https://48.img.avito.st/image/1/1.3epJnLa6cQN_NbMGf8uFsIQ_dwf9v3nB-D91C_U3cw.po9U--SnQZrnEB5BdQT6CNaethOR06A9-u4ztbZsd6I",
+              "75x55": "https://48.img.avito.st/image/1/1.3epJnLawcQNpPh2BC8nCev89ewlpPh0B_w.icoxlkG8EN2uxUHRFqRLQZj84gkxfKUrLUqb0EINf0Q",
+              "80x60": "https://48.img.avito.st/image/1/1.3epJnLa5cQNfPguBC8nCev87ewlfPMsD_z91A18-CwE.rHMbC_xWf9-32kkAetC8Y_D8F76y1BTGqIGVkPzR9G8"
+            }
+          },
+          "price": "8 200 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "55.85019809272531",
+            "lng": "48.89548262890865"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2721392172",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_7plus_2721392172?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "5.5 дюйм, 32 ГБ, 3 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2858170019,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676208412,
+          "title": "iPhone 6S 32GB",
+          "images": {
+            "count": 8,
+            "main": {
+              "100x75": "https://91.img.avito.st/image/1/1.ogl3aLa_DuAJyprjPw60Zr7LCOrJaw9aw8sM5MMDDXTAyw.huvbDM7Q0xs3Cd71CeYCF-w9cZzDDYT3m0Ns8mN8Qw4",
+              "1280x960": "https://91.img.avito.st/image/1/1.ogl3aLaxDuBB34ztPw60Zr7LDuTLwQTi.yOhPksv3pwv-XOE2iBxu2MLxL5nvoO4rFfl8dqXXaUA",
+              "140x105": "https://91.img.avito.st/image/1/1.ogl3aLa_DuBZyd7jPw60Zr7LCOrJaw9aw8sM5MNTDjDAyw.FrGGS3PF1A4Ekpn134E3Xb3xtNjCPnc-353uC8cCLro",
+              "208x156": "https://91.img.avito.st/image/1/1.ogl3aLa2DuBhyLTgPw60Zr7LDurJaw9aw8sM.M9sFHspR8UqgdCX-tRz4hejAR6s8Og3CkmdCASeffUw",
+              "240x180": "https://91.img.avito.st/image/1/1.ogl3aLa2DuAhyOTgPw60Zr7LDurJKw8Kw8sM.mF-RS5t5wFC2KT-qaSi_iltaZVUVlWbFNt2RUVOjGLE",
+              "288x216": "https://91.img.avito.st/image/1/1.ogl3aLa2DuABz7zhPw60Zr7LDurJCwhSwssM.kzl4R5YcLD_ggO0eK4qg7XJqq7O6HUfZqeNVwQIx_e4",
+              "432x324": "https://91.img.avito.st/image/1/1.ogl3aLauDuAhzYTnPw60Zr7LDA.v-7PQYP3vCa-mqHVGqKK58qX6viMq75Vlq1CZHhq9sY",
+              "640x480": "https://91.img.avito.st/image/1/1.ogl3aLa6DuBBwczlPw60Zr7LCOTDSwYixssK6MvDDA.x5m1hlO-G6qrHX4IabyGD8shfxBtpNQlVv2wSeRlI00",
+              "75x55": "https://91.img.avito.st/image/1/1.ogl3aLawDuBXymIcBHOIncHJBOpXymLiwQ.rw_bME4oHx2Lmuj_qTywBVsmVYpTxWPWZ4B44AlrutQ",
+              "80x60": "https://91.img.avito.st/image/1/1.ogl3aLa5DuBhynQcBHOIncHPBOphyLTgwcsK4GHKdOI.bF5ASCdgVH9FpxE5v6aq8VZ3n9Qky5hNliZhSvby3Fw"
+            }
+          },
+          "price": "5 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Козья Слобода",
+              "after": " 3,5 км",
+              "afterWithIcon": {
+                "text": "от 31 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Козья Слобода, 3,5 км",
+          "address": "",
+          "coords": {
+            "lat": "55.83769989013672",
+            "lng": "49.13999938964844"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2858170019",
+          "uri_mweb": "/kazan/telefony/iphone_6s_32gb_2858170019?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "4.7 дюйм, 32 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2839959902,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676208311,
+          "title": "Телефон Apple iPhone 7",
+          "images": {
+            "count": 5,
+            "main": {
+              "100x75": "https://07.img.avito.st/image/1/1.BvcHO7a_qh55mT4dBw9tmM6YrBS5OKuks5ioGrNQqYqwmA.yV4rZ5G94WQcSVQkZjmWsqHTFgM7NbX15ZHXYfcQXcU",
+              "1280x960": "https://07.img.avito.st/image/1/1.BvcHO7axqh4xjCgTBw9tmM6Yqhq7kqAc.adTTXEx6ZnEc_h8GxlvdHuro-FcS715pAUhKoqSyFUE",
+              "140x105": "https://07.img.avito.st/image/1/1.BvcHO7a_qh4pmnodBw9tmM6YrBS5OKuks5ioGrMAqs6wmA.j2WzRwwWmJn2HnmD4ZBoA8b2y0fNsaM45z9dcBU0Xdc",
+              "208x156": "https://07.img.avito.st/image/1/1.BvcHO7a2qh4RmxAeBw9tmM6YqhS5OKuks5io.y5VUvP6VTtB_IQcUhNnQ0xUQ5u0xWrwivkaiietUaas",
+              "240x180": "https://07.img.avito.st/image/1/1.BvcHO7a2qh5Rm0AeBw9tmM6YqhS5eKv0s5io.O4mg982YIl88Q1ENJLI_p0O7XTyARdp8LMXyLTk7nyY",
+              "288x216": "https://07.img.avito.st/image/1/1.BvcHO7a2qh5xnBgfBw9tmM6YqhS5WKysspio.jEAwvtg8w2mSLesy7HJrx8apCwiYa-buPBlpUaHXai0",
+              "432x324": "https://07.img.avito.st/image/1/1.BvcHO7auqh5RniAZBw9tmM6YqA.TSVa54ilXg-3Wp04bB-NhzfQCckrAXOvakiZvvAiSLU",
+              "640x480": "https://07.img.avito.st/image/1/1.BvcHO7a6qh4xkmgbBw9tmM6YrBqzGKLctpiuFruQqA.3vNhOmDTQaEvWybS9VK1G37Yb33gx11TLIdjgTu28bc",
+              "75x55": "https://07.img.avito.st/image/1/1.BvcHO7awqh4nmcaqJl0sY7GaoBQnmcYcsQ.dkP4sQYmGEcV9ZAhcivWVjafENC8YGOz-ahIeo4bsxc",
+              "80x60": "https://07.img.avito.st/image/1/1.BvcHO7a5qh4RmdCqJl0sY7GcoBQRmxAesZiuHhGZ0Bw.houw7xSjCakEETNvxnEUToK0xIW4IOtra4GKpgFqNVM"
+            }
+          },
+          "price": "7 490 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Суконная слобода",
+              "after": " 800 м",
+              "afterWithIcon": {
+                "text": "6–10 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Суконная слобода, 800 м",
+          "address": "",
+          "coords": {
+            "lat": "55.771069",
+            "lng": "49.134927"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2839959902",
+          "uri_mweb": "/kazan/telefony/telefon_apple_iphone_7_2839959902?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "specifications": {
+            "text": "4.7 дюйм, 32 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2747672627,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676208223,
+          "title": "Телефон iPhone SE",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://38.img.avito.st/image/1/1.b5R_Qba_w30B41d-LVAvzrLixXfBQsLHy-LBecsqwOnI4g.cHds6GDMf-DcQrhoPH-kr9NDoxnxH2rtQIEN2lQ57W8",
+              "1280x960": "https://38.img.avito.st/image/1/1.b5R_Qbaxw31J9kFwLVAvzrLiw3nD6Ml_._q4yYHl-CQdkdi9XdqH-6CtKWFhsJhf6Rmrg9hqczqc",
+              "140x105": "https://38.img.avito.st/image/1/1.b5R_Qba_w31R4BN-LVAvzrLixXfBQsLHy-LBect6w63I4g.fVjEV5YLq5SP4825UjVZuX2DJfs263dEZfFD9ChVMd4",
+              "208x156": "https://38.img.avito.st/image/1/1.b5R_Qba2w31p4Xl9LVAvzrLiw3fBQsLHy-LB.5mL6OMYHK1AVXGY8AR5YbdDxRfnlhuNgsJVQjdYAjEo",
+              "240x180": "https://38.img.avito.st/image/1/1.b5R_Qba2w30p4Sl9LVAvzrLiw3fBAsKXy-LB.WYSu4XI-9f5EqTt0zJVgUPZo1p8cuImEesjvOYL5XdQ",
+              "288x216": "https://38.img.avito.st/image/1/1.b5R_Qba2w30J5nF8LVAvzrLiw3fBIsXPyuLB.Dffnuo-jSybVhfsXadbZRn2R47Me_mjVupiJaFThBGk",
+              "432x324": "https://38.img.avito.st/image/1/1.b5R_Qbauw30p5El6LVAvzrLiwQ.7uD1udqDTxb-1_DCF7qhZub_5Nim2SgvKhdVmEPfay4",
+              "640x480": "https://38.img.avito.st/image/1/1.b5R_Qba6w31J6AF4LVAvzrLixXnLYsu_zuLHdcPqwQ.lmdCpHAyXCEf0dLuy_CyYwpStyRp80UlwJy6XiBD07k",
+              "75x55": "https://38.img.avito.st/image/1/1.b5R_Qbaww31f46-bewxwBMngyXdf469_yQ.DPiSpzFwdbp3VOh6XjXHYrYIgvSXgG_9viiS33EOIno",
+              "80x60": "https://38.img.avito.st/image/1/1.b5R_Qba5w31p47mbewxwBMnmyXdp4Xl9yeLHfWnjuX8.r9PUfQp2FfSqZaFO4LHf-0GyCH8aTQQXJNfW4rF4Fi8"
+            }
+          },
+          "price": "5 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Аметьево",
+              "after": " 600 м",
+              "afterWithIcon": {
+                "text": "6–10 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Аметьево, 600 м",
+          "address": "",
+          "coords": {
+            "lat": "55.7706077992321",
+            "lng": "49.1675514076102"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2747672627",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_se_2747672627?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "specifications": {
+            "text": "4 дюйм, 32 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2797224588,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676207630,
+          "title": "Телефон iPhone se 64gb 2016",
+          "images": {
+            "count": 6,
+            "main": {
+              "100x75": "https://85.img.avito.st/image/1/1.RL_EULa_6Fa68nxVwFFF0A3z7lx6U-nscPPqUnA768Jz8w.1QAXhsJSrNbbr6X03wX2iHzZGBAyPpeMGBshJdW1Q8c",
+              "1280x960": "https://85.img.avito.st/image/1/1.RL_EULax6Fby52pbwFFF0A3z6FJ4-eJU.Rn2bWyH5lh6mNXzC-nOtqld0o81kdP41rvjtjogIW9U",
+              "140x105": "https://85.img.avito.st/image/1/1.RL_EULa_6Fbq8ThVwFFF0A3z7lx6U-nscPPqUnBr6IZz8w.cBavSu_JU7iQ_iaLCer8tf204fTdy8o_n91B7NkaJug",
+              "208x156": "https://85.img.avito.st/image/1/1.RL_EULa26FbS8FJWwFFF0A3z6Fx6U-nscPPq.vtjJjxtMWJ64wxDx_eTv6hjUNqmxTyDXwOA6PBr_4dI",
+              "240x180": "https://85.img.avito.st/image/1/1.RL_EULa26FaS8AJWwFFF0A3z6Fx6E-m8cPPq.ES1W99j-jKlfZ0FvjTTdbkAd5L29fl2zxIXoAXJp0UE",
+              "288x216": "https://85.img.avito.st/image/1/1.RL_EULa26Fay91pXwFFF0A3z6Fx6M-7kcfPq.on6qWUzTLhMasvRBOFpc5Q-vgFm_l2eQZH_wP3zpSrw",
+              "432x324": "https://85.img.avito.st/image/1/1.RL_EULau6FaS9WJRwFFF0A3z6g.Tu_FZcB15ncy_HnUONuIGPUeqSMRNTaYvEzcnOpzqIU",
+              "640x480": "https://85.img.avito.st/image/1/1.RL_EULa66Fby-SpTwFFF0A3z7lJwc-CUdfPsXnj76g.1P9OotKDoBoojhPPdPvmVlldaw383VCCyjjFI_ne92s",
+              "75x55": "https://85.img.avito.st/image/1/1.RL_EULaw6Fbk8oTm0FxuK3Lx4lzk8oRUcg.PfHii4SJYv0L_4MFFek83rxXRc19j1OGnXw9J8HLn_E",
+              "80x60": "https://85.img.avito.st/image/1/1.RL_EULa56FbS8pLm0FxuK3L34lzS8FJWcvPsVtLyklQ.sH6xq61UcnN9ypYvIRhMm05_LUnA4sx-0qqU9vEtn9A"
+            }
+          },
+          "price": "4 850 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Горки",
+              "after": " 100 м",
+              "afterWithIcon": {
+                "text": "до 5 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Горки, 100 м",
+          "address": "",
+          "coords": {
+            "lat": "55.7597823868471",
+            "lng": "49.1908101792912"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2797224588",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_se_64gb_2016_2797224588?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "specifications": {
+            "text": "3.1 дюйм, 64 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2139637734,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676206329,
+          "title": "Телефон iPhone 4",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://35.img.avito.st/image/1/1.Ch2FQra_pvT74DL3nWodCmPhoP47QadOMeGk8DEppWAy4Q.GMQLMu7IUf0jllF8sX4LL5T70IE7gVk0rUCfVtEhCuU",
+              "1280x960": "https://35.img.avito.st/image/1/1.Ch2FQraxpvSz9ST5nWodCmPhpvA566z2.hL1udqfQtJ3DNwq8M60essI6JQZNqUeIZCcNtGSHEXs",
+              "140x105": "https://35.img.avito.st/image/1/1.Ch2FQra_pvSr43b3nWodCmPhoP47QadOMeGk8DF5piQy4Q.U61dp5DIpcUnpjv9y9K5wvwVv2ZRDZLmtMc9wLNCUXg",
+              "208x156": "https://35.img.avito.st/image/1/1.Ch2FQra2pvST4hz0nWodCmPhpv47QadOMeGk.A8o9cohHXQ2TpppRrPI3hmI_sq8VhRCrnSCe6I5Ubuc",
+              "240x180": "https://35.img.avito.st/image/1/1.Ch2FQra2pvTT4kz0nWodCmPhpv47AaceMeGk.91kuBcwQyN_oulnWZO5W9DAKs_nBe5lRzR7smBWNglo",
+              "288x216": "https://35.img.avito.st/image/1/1.Ch2FQra2pvTz5RT1nWodCmPhpv47IaBGMOGk.Onnoq4tXCWWR8mxExiKbAQGSq8ScHAAS0waW0MNXup0",
+              "432x324": "https://35.img.avito.st/image/1/1.Ch2FQraupvTT5yzznWodCmPhpA.0u8F9DRdei3iAzgEvk68fLcImW1jcWHuMdVhqVaLnR0",
+              "640x480": "https://35.img.avito.st/image/1/1.Ch2FQra6pvSz62TxnWodCmPhoPAxYa42NOGi_DnppA.ilm5HrRHt4awUmaVxkhwC65KPNJQWEcrZZzGw5-UhUw",
+              "75x55": "https://35.img.avito.st/image/1/1.Ch2FQrawpvSl4MpYuFhYpjPjrP6l4Mr2Mw.2IZ5NL5JWVoaH3Qtrulo7J1Re5byrt_Giwt7NkOhsB0",
+              "80x60": "https://35.img.avito.st/image/1/1.Ch2FQra5pvST4NxYuFhYpjPlrP6T4hz0M-Gi9JPg3PY.mnMtYlwg892kMrJVGGPPsN3jIMfTY8wNg4PFspkpADk"
+            }
+          },
+          "price": "3 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Козья Слобода",
+              "after": " 1,3 км",
+              "afterWithIcon": {
+                "text": "16–20 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Козья Слобода, 1,3 км",
+          "address": "",
+          "coords": {
+            "lat": "55.826279",
+            "lng": "49.111057"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2139637734",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_4_2139637734?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "specifications": {
+            "text": "3.5 дюйм, 8 ГБ, 512 МБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2631829845,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676206102,
+          "title": "Телефон iPhone 7 plus",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://72.img.avito.st/image/1/1.yUlBBLa_ZaA_pvGjX2-BGYKnY6r_B2Qa9adnpPVvZjT2pw.3YTQs_vCbIzDs6QunzLSAQwd-g4zssnxWnZzRpxBXIM",
+              "1280x960": "https://72.img.avito.st/image/1/1.yUlBBLaxZaB3s-etX2-BGYKnZaT9rW-i._r5560v3BA_6eJrgKep1qgaDCX_Iszx9uBq6QvWH-3I",
+              "140x105": "https://72.img.avito.st/image/1/1.yUlBBLa_ZaBvpbWjX2-BGYKnY6r_B2Qa9adnpPU_ZXD2pw._NRaWgZXtKpeiQ9aIttyEFBycpa98r0GjAv29XV1mcM",
+              "208x156": "https://72.img.avito.st/image/1/1.yUlBBLa2ZaBXpN-gX2-BGYKnZar_B2Qa9adn.WLoEKPw0wZp-H0DS38z3RP3XuIsq-L05vHbviOqyuNo",
+              "240x180": "https://72.img.avito.st/image/1/1.yUlBBLa2ZaAXpI-gX2-BGYKnZar_R2RK9adn.sL2C2-gHbynWTyv0CYn3ZLUPjE4-7_DvMJZpX64oKi0",
+              "288x216": "https://72.img.avito.st/image/1/1.yUlBBLa2ZaA3o9ehX2-BGYKnZar_Z2MS9Kdn.EG9b3kfrkfGugsMAW7Auuiwt06eT-9JvaPS_Yj2fnVU",
+              "432x324": "https://72.img.avito.st/image/1/1.yUlBBLauZaAXoe-nX2-BGYKnZw.gwgOtMjZZeSWu_wCL0e0kRUUenploqALPY1jdSZJtd0",
+              "640x480": "https://72.img.avito.st/image/1/1.yUlBBLa6ZaB3raelX2-BGYKnY6T1J21i8KdhqP2vZw.QuZtNewgf4hHKDq3n6R_XX-o39bX5uCTiJwtoy5XAQ8",
+              "75x55": "https://72.img.avito.st/image/1/1.yUlBBLawZaBhpgkKP0Hc1_elb6phpgmi9w.faWSi5sxiJDaJrQI-n9mdb1nGbsJAR6G9M2z_KbRofs",
+              "80x60": "https://72.img.avito.st/image/1/1.yUlBBLa5ZaBXph8KP0Hc1_ejb6pXpN-g96dhoFemH6I.htIDPF4lA3XMzyFvYredTpzCuxi1TQjbstADkI6ONhA"
+            }
+          },
+          "price": "6 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Яшьлек",
+              "after": " 100 м",
+              "afterWithIcon": {
+                "text": "до 5 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Яшьлек, 100 м",
+          "address": "",
+          "coords": {
+            "lat": "55.828125",
+            "lng": "49.082611"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2631829845",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_7_plus_2631829845?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Цена ниже рыночной",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "5.5 дюйм, 128 ГБ, 3 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2735039587,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676205896,
+          "title": "Телефон iPhone X",
+          "images": {
+            "count": 9,
+            "main": {
+              "100x75": "https://52.img.avito.st/image/1/1.GYo4y7a_tWNGaSFgBpN44_Fos2mGyLTZjGi3Z4ygtvePaA.lwomc5vYTnponsKiRSumn5vE8fVylYUoAATU_nOQlN4",
+              "1280x960": "https://52.img.avito.st/image/1/1.GYo4y7axtWMOfDduBpN44_FotWeEYr9h.N_jZLp07uqyv31uOMi-kpdY4KTWof6bmzx0IL08km0A",
+              "140x105": "https://52.img.avito.st/image/1/1.GYo4y7a_tWMWamVgBpN44_Fos2mGyLTZjGi3Z4zwtbOPaA.o-5OWxBP2eEBw69LyeWd3rfIHZqzhupogUHrs85ijL8",
+              "208x156": "https://52.img.avito.st/image/1/1.GYo4y7a2tWMuaw9jBpN44_FotWmGyLTZjGi3.0ltmKTbFck4A6CDd72eFa_QFjCxqPFwrHMrBOj4qVa0",
+              "240x180": "https://52.img.avito.st/image/1/1.GYo4y7a2tWNua19jBpN44_FotWmGiLSJjGi3.qMVErq604amMshTm2QeNYLUF30XN8CyLcUdZVeAlfkU",
+              "288x216": "https://52.img.avito.st/image/1/1.GYo4y7a2tWNObAdiBpN44_FotWmGqLPRjWi3.trEqs3ANX2YR-U_249FJOOhheTA0eZkb4jhbk1MUu2U",
+              "432x324": "https://52.img.avito.st/image/1/1.GYo4y7autWNubj9kBpN44_Fotw.B7CBZvxzz1pmedTp1b31jWcrftrT5L9FLcaXVg9WnyQ",
+              "640x480": "https://52.img.avito.st/image/1/1.GYo4y7a6tWMOYndmBpN44_Fos2eM6L2hiWixa4Rgtw.kLgfy56HbwLmlRpkh-DxisjYA6D4TX1EeDv3S2UCB6w",
+              "75x55": "https://52.img.avito.st/image/1/1.GYo4y7awtWMYadnpdac1Ho5qv2kYadlhjg.oNRAQ1zDZ2blgCd_Z4AcWZU6ZmvOBenFrzEZvcb4upw",
+              "80x60": "https://52.img.avito.st/image/1/1.GYo4y7a5tWMuac_pdac1Ho5sv2kuaw9jjmixYy5pz2E.ug9a2llqdLsHXGWlt-MyFoUkVKAoeIgEV1nenycuTPE"
+            }
+          },
+          "price": "15 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Проспект Победы",
+              "after": " 2,5 км",
+              "afterWithIcon": {
+                "text": "от 31 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Проспект Победы, 2,5 км",
+          "address": "",
+          "coords": {
+            "lat": "55.733597028031575",
+            "lng": "49.18009387465179"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2735039587",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_x_2735039587?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "5.8 дюйм, 64 ГБ, 3 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2811615705,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676205513,
+          "title": "iPhone se",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://01.img.avito.st/image/1/1.sNteZLa_HDIgxogxMj7Ks5fHGjjgZx2I6sceNuoPH6bpxw.51r7i6bWiqnrD3BS-BswWGiOQD2_Dxata_CWtYUGX58",
+              "1280x960": "https://01.img.avito.st/image/1/1.sNteZLaxHDJo054_Mj7Ks5fHHDbizRYw.eAUazpJLSB5E0y1pYB-Az6XUv4lRqR2N2oo7K-VTtMw",
+              "140x105": "https://01.img.avito.st/image/1/1.sNteZLa_HDJwxcwxMj7Ks5fHGjjgZx2I6sceNupfHOLpxw.ncNU0DVfzKzXkZ4FIFMIk0LSIAAeVL38DNFGb_mo1Uo",
+              "208x156": "https://01.img.avito.st/image/1/1.sNteZLa2HDJIxKYyMj7Ks5fHHDjgZx2I6sce.fP0SFQ5haswduOpyjRDEYJuNqHt1P884sOSELiNkwJ8",
+              "240x180": "https://01.img.avito.st/image/1/1.sNteZLa2HDIIxPYyMj7Ks5fHHDjgJx3Y6sce.Jod_3QnbKDOsr7PiOQqj7yUhE28yaZifT_Xqgnjv4Co",
+              "288x216": "https://01.img.avito.st/image/1/1.sNteZLa2HDIow64zMj7Ks5fHHDjgBxqA68ce.R-h--UxbdxtxHr9FSujf7_p3RTchrSQeBbweBuRfsWw",
+              "432x324": "https://01.img.avito.st/image/1/1.sNteZLauHDIIwZY1Mj7Ks5fHHg.3Qo_sbr5EG6lQkdKYSGnmdja0jgDNKViF9YLqoKpJB4",
+              "640x480": "https://01.img.avito.st/image/1/1.sNteZLa6HDJozd43Mj7Ks5fHGjbqRxTw78cYOuLPHg.QiDyL9OGRBlACbtBtWyzc-NkIzCG9CARVj0NmQMIG94",
+              "75x55": "https://01.img.avito.st/image/1/1.sNteZLawHDJ-xnDqEROdT-jFFjh-xnAw6A.tU39NRimxkWl0owDjMtnceuuNnn2g1nC1VA01Hg8UWY",
+              "80x60": "https://01.img.avito.st/image/1/1.sNteZLa5HDJIxmbqEROdT-jDFjhIxKYy6McYMkjGZjA.WcMbo54kU2X7mpIVpFuisPIBLhsZ_zncIN331AMfMvI"
+            }
+          },
+          "price": "4 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Проспект Победы",
+              "after": " 1,2 км",
+              "afterWithIcon": {
+                "text": "11–15 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Проспект Победы, 1,2 км",
+          "address": "",
+          "coords": {
+            "lat": "55.74371540110974",
+            "lng": "49.192547198124345"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2811615705",
+          "uri_mweb": "/kazan/telefony/iphone_se_2811615705?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "3.1 дюйм, 32 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2777624085,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676205287,
+          "title": "Телефон iPhone 6s",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://47.img.avito.st/image/1/1.limrv7a_OsDVHa7Di53hQWIcPMoVvDt6Hxw4xB_UOVQcHA.yxHyrSifruX1WmSMuMgH3jwSuW2yOfy_OfMpfUZkSAY",
+              "1280x960": "https://47.img.avito.st/image/1/1.limrv7axOsCdCLjNi53hQWIcOsQXFjDC.fyrY4uuO2hOQKgSCT8dsaHX8LAVl7TDRSMCJxXgjHsY",
+              "140x105": "https://47.img.avito.st/image/1/1.limrv7a_OsCFHurDi53hQWIcPMoVvDt6Hxw4xB-EOhAcHA.-e4UpsDscFEY5jtZ1O7URo_wkAp-6CwPfV9_0CA974o",
+              "208x156": "https://47.img.avito.st/image/1/1.limrv7a2OsC9H4DAi53hQWIcOsoVvDt6Hxw4.5ee25QN3HgPKTrsSLGneaG1ehlUCEzHkLtoCk-JwVr0",
+              "240x180": "https://47.img.avito.st/image/1/1.limrv7a2OsD9H9DAi53hQWIcOsoV_DsqHxw4.zys0fFLRMk6unug0cAvwyhGeP4LoI-ofIXB_HHBZ5OY",
+              "288x216": "https://47.img.avito.st/image/1/1.limrv7a2OsDdGIjBi53hQWIcOsoV3DxyHhw4.Rvi6KYJ-0yAorlbTWt17sv7OCAPQm8smJIk2kIkzEoQ",
+              "432x324": "https://47.img.avito.st/image/1/1.limrv7auOsD9GrDHi53hQWIcOA.vcqHAdFVRXUmLbG2SGT0BMcKW_LfIYs-zombeD90VW4",
+              "640x480": "https://47.img.avito.st/image/1/1.limrv7a6OsCdFvjFi53hQWIcPMQfnDICGhw-yBcUOA.si-wtGGBVEdPj787mqexKVXNJ__cB3xqRb6CnyqLMT4",
+              "75x55": "https://47.img.avito.st/image/1/1.limrv7awOsCLHVZUnMW7vR0eMMqLHVbCHQ.PluXtTaPp1HauWi1ot_fzBTVoN_DmYr9xs9fjsXpZI8",
+              "80x60": "https://47.img.avito.st/image/1/1.limrv7a5OsC9HUBUnMW7vR0YMMq9H4DAHRw-wL0dQMI.1tnpTfwqprl0IgF3D07zLD8CvhnrxkJIdZlmejjM2k8"
+            }
+          },
+          "price": "5 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Кремлёвская",
+              "after": " 1,3 км",
+              "afterWithIcon": {
+                "text": "16–20 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Кремлёвская, 1,3 км",
+          "address": "",
+          "coords": {
+            "lat": "55.798508",
+            "lng": "49.124874"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2777624085",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_6s_2777624085?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Цена ниже рыночной",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "4.7 дюйм, 64 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2881801866,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676205281,
+          "title": "iPhone se",
+          "images": {
+            "count": 4,
+            "main": {
+              "100x75": "https://32.img.avito.st/image/1/1.mYoULba_NWNqj6FgKm_k4t2OM2mqLjTZoI43Z6BGNvejjg.RvyXJhCI9TehgZw9AFcfwb4Gtty9ZlYr_U4Ztdbiy0I",
+              "1280x960": "https://32.img.avito.st/image/1/1.mYoULbaxNWMimrduKm_k4t2ONWeohD9h.y1WC7CfWe-QubWT8DlK4hmuCKWHMDFs4lvTbSxjxq_A",
+              "140x105": "https://32.img.avito.st/image/1/1.mYoULba_NWM6jOVgKm_k4t2OM2mqLjTZoI43Z6AWNbOjjg._H1M8FyGg6LEhpO0wMGfzMLPDKuh60SOvlk4CSJnLOc",
+              "208x156": "https://32.img.avito.st/image/1/1.mYoULba2NWMCjY9jKm_k4t2ONWmqLjTZoI43.55IjxL-elqYcNaWDKJDV42XLONb3e38XvzQY-N4PWCA",
+              "240x180": "https://32.img.avito.st/image/1/1.mYoULba2NWNCjd9jKm_k4t2ONWmqbjSJoI43.0x_uPGxGFwmTgp166UxLY59jGK9VH1iBbpsNz5fL5uU",
+              "288x216": "https://32.img.avito.st/image/1/1.mYoULba2NWNiiodiKm_k4t2ONWmqTjPRoY43.DsEraDqjL670WEws4wCFswpcKHOInhUs6-BA6TCYv7g",
+              "432x324": "https://32.img.avito.st/image/1/1.mYoULbauNWNCiL9kKm_k4t2ONw.w2bbEvnFb7xr7kh_TgwbmDGYV2lPw9pFNPq9kL8QsN0",
+              "640x480": "https://32.img.avito.st/image/1/1.mYoULba6NWMihPdmKm_k4t2OM2egDj2hpY4xa6iGNw.B0CvPBFYAT91h3PehNliNyaHJZGDnWJ6-gCtg-WbEmM",
+              "75x55": "https://32.img.avito.st/image/1/1.mYoULbawNWM0j1npQ120HqKMP2k0j1lhog.gsoaAkEa00RqVg_ny69ZgXg0OCjYuXkPH9kGiiOSTI8",
+              "80x60": "https://32.img.avito.st/image/1/1.mYoULba5NWMCj0_pQ120HqKKP2kCjY9joo4xYwKPT2E.jFzVfy2cwyjdoypYNijUoyTDTIwbsPxmLev78ix-edY"
+            }
+          },
+          "price": "2 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "55.819828033447266",
+            "lng": "48.883934020996094"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2881801866",
+          "uri_mweb": "/kazan/telefony/iphone_se_2881801866?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "specifications": {
+            "text": "3.1 дюйм, 32 ГБ, 2 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2611967434,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676205223,
+          "title": "Телефон iPhone xr",
+          "images": {
+            "count": 6,
+            "main": {
+              "100x75": "https://51.img.avito.st/image/1/1.KmMxxLa_hopPZhKJabAJIPVngICPx4cwhWeEjoWvhR6GZw.-kNb6pmUAdurMzakovMqKAnPxkucx8OPEfRIneSdFnY",
+              "1280x960": "https://51.img.avito.st/image/1/1.KmMxxLaxhooHcwSHabAJIPVnho6NbYyI.QhhHesDJ7lZpQMxqES1jiYoFPbC8rHvMx3nvzl8RUFE",
+              "140x105": "https://51.img.avito.st/image/1/1.KmMxxLa_hoofZVaJabAJIPVngICPx4cwhWeEjoX_hlqGZw.dx4X-jcyFnR9cJz_2qF_W5jPq_W0goFp8MxCzHRpAHY",
+              "208x156": "https://51.img.avito.st/image/1/1.KmMxxLa2hoonZDyKabAJIPVnhoCPx4cwhWeE.DWsoquDZK1mX88XOEu1I4gFvpFrZtrzy3WcDEoZwJHY",
+              "240x180": "https://51.img.avito.st/image/1/1.KmMxxLa2hopnZGyKabAJIPVnhoCPh4dghWeE.WOzEL173I-TnIelYTf8UtLDN2F_14yfDcLOFe03ToDI",
+              "288x216": "https://51.img.avito.st/image/1/1.KmMxxLa2hopHYzSLabAJIPVnhoCPp4A4hGeE.fBZMK6wNlMPuELlaZvpxVOBr4YZlfEtD6NE357KD_6k",
+              "432x324": "https://51.img.avito.st/image/1/1.KmMxxLauhopnYQyNabAJIPVnhA.M2FTUsyUCFVPVOCoaXr6zC70JY581fT8odJAeRwQ65Q",
+              "640x480": "https://51.img.avito.st/image/1/1.KmMxxLa6hooHbUSPabAJIPVngI6F545IgGeCgo1vhA.y52JjusqJ6LAqWzAvnCh6knM3sb39to2WCBxpw-2dkY",
+              "75x55": "https://51.img.avito.st/image/1/1.KmMxxLawhooRZupmUOos-odljIARZuqIhw.LbBdlAFuvjVjJIL5-TvEW-q6ZuvN0Ctkwm5PEK5dPZo",
+              "80x60": "https://51.img.avito.st/image/1/1.KmMxxLa5hoonZvxmUOos-odjjIAnZDyKh2eCiidm_Ig.Lp761J-1T5CmlSMfhsN_8KyW4HE1t_DCTlATbJTvZ_4"
+            }
+          },
+          "price": "15 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Советский"
+            }
+          ],
+          "location": "р-н Советский",
+          "address": "",
+          "coords": {
+            "lat": "55.8418926726671",
+            "lng": "49.240281978114"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2611967434",
+          "uri_mweb": "/kazan/telefony/telefon_iphone_xr_2611967434?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "6.1 дюйм, 64 ГБ, 3 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2731119988,
+          "category": {
+            "id": 84,
+            "name": "Телефоны"
+          },
+          "time": 1676205196,
+          "title": "Apple iPhone Xr 64gb",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://33.img.avito.st/image/1/1.PKy6h7a_kEXEJQRGzvdDlHIklk8EhJH_DiSSQQ7sk9ENJA.28xfBtmgRF7MKTd1HNFRYY9QEOvaVz0YTlxZDEZHKTU",
+              "1280x960": "https://33.img.avito.st/image/1/1.PKy6h7axkEWMMBJIzvdDlHIkkEEGLppH.iA8m2QmpJT3JXgzwTzp13VlPdTMsTToGG0mDxcfCF5Q",
+              "140x105": "https://33.img.avito.st/image/1/1.PKy6h7a_kEWUJkBGzvdDlHIklk8EhJH_DiSSQQ68kJUNJA.Cjjclpbj2rmcIQOJa2HoyzVRA8KmmNuRfXnCarPNU7w",
+              "208x156": "https://33.img.avito.st/image/1/1.PKy6h7a2kEWsJypFzvdDlHIkkE8EhJH_DiSS.HP0U3n_xm545d01yqEOtRrU9YdrML5i4CSQshYNlyhM",
+              "240x180": "https://33.img.avito.st/image/1/1.PKy6h7a2kEXsJ3pFzvdDlHIkkE8ExJGvDiSS.feJXu2wCmk5uTHyUOZba81spMnArJ06K7GEIN9ptayM",
+              "288x216": "https://33.img.avito.st/image/1/1.PKy6h7a2kEXMICJEzvdDlHIkkE8E5Jb3DySS.h4n1mgkcOm0QsLkHDwwh9aJAfW6Tn1vreWp4xp1NnSc",
+              "432x324": "https://33.img.avito.st/image/1/1.PKy6h7aukEXsIhpCzvdDlHIkkg.ZVc5vCexgObjD9fK0N3p6V_Bz7N83_O67xVtKIoS_9M",
+              "640x480": "https://33.img.avito.st/image/1/1.PKy6h7a6kEWMLlJAzvdDlHIklkEOpJiHCySUTQYskg.7dsDlMCUVnCJfurPRpilteaJwDfGOZIO04STJN6Y0V8",
+              "75x55": "https://33.img.avito.st/image/1/1.PKy6h7awkEWaJfyF3_VBOQwmmk-aJfxHDA.i8ZBFGF6aWKGPzQAktXvdbQTpi-zbyKjdb1SbddYjtA",
+              "80x60": "https://33.img.avito.st/image/1/1.PKy6h7a5kEWsJeqF3_VBOQwgmk-sJypFDCSURawl6kc.r7ZJJ6n8MOo5VsLBtDBC-07YaM5GDRG5vQ0YbsU3ikM"
+            }
+          },
+          "price": "15 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "colors": [
+                "#CD0505"
+              ],
+              "content": "Дубравная",
+              "after": "",
+              "afterWithIcon": {
+                "text": "до 5 мин.",
+                "iconName": "walkingRoute16"
+              }
+            }
+          ],
+          "location": "Дубравная",
+          "address": "",
+          "coords": {
+            "lat": "55.743568420410156",
+            "lng": "49.219215393066406"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA&itemId=2731119988",
+          "uri_mweb": "/kazan/telefony/apple_iphone_xr_64gb_2731119988?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyNLJSKk4sS02JL05NLErOAItZKVWAaGNDK6XSvLRki6zSwsSivFyDDMuiPHMDI_P8vKTMlJyyUpM0JetaQAAAAP__CoA6W1gAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2328,
+                "title": "Цена ниже рыночной",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "specifications": {
+            "text": "6.1 дюйм, 64 ГБ, 3 ГБ"
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      }
+    ],
+    "searchHint": "Поиск на Авито",
+    "seo": {
+      "title": "Купить 📱 телефон, смартфон Apple по доступной цене в Казани с доставкой | Недорогие мобильные телефоны | Авито",
+      "description": "📱 3 083 объявления о продаже смартфонов и телефонов Apple по доступным ценам в Казани с доставкой. ✅На Авито вы можете недорого купить новый или б/у мобильный телефон или смартфон Apple подходящей модели. ✔Выбирайте среди предложений магазинов и частных объявлений о продаже телефонов на Авито.",
+      "h1": "Мобильные телефоны Apple в Казани",
+      "schemaOrg": {
+        "payload": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@context\":\"https://schema.org\",\"@type\":\"Product\",\"name\":\"Купить 📱 телефон, смартфон Apple по доступной цене в Казани с доставкой | Недорогие мобильные телефоны | Авито\",\"description\":\"📱 3 083 объявления о продаже смартфонов и телефонов Apple по доступным ценам в Казани с доставкой. ✅На Авито вы можете недорого купить новый или б/у мобильный телефон или смартфон Apple подходящей модели. ✔Выбирайте среди предложений магазинов и частных объявлений о продаже телефонов на Авито.\",\"offers\":{\"@type\":\"AggregateOffer\",\"priceCurrency\":\"RUB\",\"lowPrice\":2000,\"highPrice\":114986},\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":4.645691851,\"ratingCount\":18848,\"bestRating\":5}}]}"
+      }
+    },
+    "seoNavigation": {
+      "breadcrumbs": [
+        {
+          "name": "Казань",
+          "title": "Все объявления в Казани",
+          "url": "/kazan"
+        },
+        {
+          "name": "Бытовая электроника",
+          "title": "Бытовая электроника в Казани",
+          "url": "/kazan/bytovaya_elektronika"
+        },
+        {
+          "name": "Телефоны",
+          "title": "Телефоны в Казани",
+          "url": "/kazan/telefony"
+        },
+        {
+          "name": "Мобильные телефоны",
+          "title": "Мобильные телефоны",
+          "url": "/kazan/telefony/mobile-ASgBAgICAUSwwQ2I_Dc"
+        },
+        {
+          "name": "Apple",
+          "title": "Apple",
+          "url": "/kazan/telefony/mobilnye_telefony/apple-ASgBAgICAkS0wA3OqzmwwQ2I_Dc"
+        }
+      ]
+    },
+    "applyButton": {
+      "enabled": true,
+      "title": "Показать 3 тыс. объявлений",
+      "presentationType": "serp"
+    },
+    "nextPageId": "H4sIAAAAAAAA_0q0MrSqLrYyNLRSKskvScyJT8svzUtRss60MjawMLauBQQAAP__zuqxByAAAAA",
+    "searchSubscriptionAction": "ru.avito://1/searchSubscription/new/byParams?description=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C+%D0%A2%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D1%8B%2C+%D0%9C%D0%BE%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5+%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D1%8B%2C+Apple%2C+%D0%A6%D0%B5%D0%BD%D0%B0+500%C2%A0%E2%80%94%C2%A017%C2%A0000%C2%A0%E2%82%BD&filter%5BcategoryId%5D=84&filter%5BlocationId%5D=650400&filter%5Bparams%5D%5B110618%5D=469735&filter%5Bparams%5D%5B110680%5D=458500&filter%5BpriceMax%5D=17000&filter%5BpriceMin%5D=500&pushFrequency=3&pushFrequencyOptions%5B0%5D%5Bid%5D=1&pushFrequencyOptions%5B0%5D%5Btitle%5D=%D0%A1%D1%80%D0%B0%D0%B7%D1%83&pushFrequencyOptions%5B1%5D%5Bid%5D=2&pushFrequencyOptions%5B1%5D%5Btitle%5D=%D0%A3%D1%82%D1%80%D0%BE%D0%BC&pushFrequencyOptions%5B2%5D%5Bid%5D=3&pushFrequencyOptions%5B2%5D%5Btitle%5D=%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%BE%D0%BC&pushFrequencyOptions%5B3%5D%5Bid%5D=0&pushFrequencyOptions%5B3%5D%5Btitle%5D=%D0%9D%D0%B5+%D0%BF%D1%80%D0%B8%D1%81%D1%8B%D0%BB%D0%B0%D1%82%D1%8C&title=%D0%9F%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%BF%D0%BE%D0%B8%D1%81%D0%BA",
+    "saveToHistoryDescription": {
+      "title": "Телефоны",
+      "description": "Казань, Мобильные телефоны, Apple, Цена 500 — 17 000 ₽",
+      "deeplink": "ru.avito://1/items/search?categoryId=84&context=H4sIAAAAAAAA_0q0MrSqLraysFJKK8rPDUhMT1WyLrYys1IqSk1OzStRsq4FBAAA___svPlPIgAAAA&locationId=650400&params%5B110618%5D=469735&params%5B110680%5D=458500&presentationType=serp&priceMax=17000&priceMin=500&searchRadius=0&sort=date",
+      "rootCategoryId": 6,
+      "verticalCategoryId": 4
+    },
+    "xHash": "unfc8juqarnm0h9rn7027onbidlvu4f",
+    "verticalId": 4
+  }
+}
