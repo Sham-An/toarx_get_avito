@@ -19,6 +19,7 @@ headers = { 'Host': 'm.avito.ru',
             'accept-language': 'ru-RU,ru;q=0.9',}
 
 
+
 response = requests.get("http://httpbin.org/get?name=max&height=178")
 #print(response.json())
 
@@ -50,16 +51,18 @@ params1 = {
 
 
 params2 = (
-    ('key', 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'),
-    ('categoryId', '9'),
-    ('params[201]', '1060'),
-    ('locationId', '107620'),
-    ('params[504]', '5256'),
-    ('owner[]', 'private'),
-    ('sort', 'date'),
-    ('page', '1'),
-    ('display', 'list'),
-    ('limit', '30'),
+        ('key', 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'),
+        ('categoryId', '9'),
+        ('params[201]', '1060'),
+        ('locationId', '652000'),
+        ('priceMin', priceMin),
+        ('priceMax', priceMax),
+        ('params[504]', '5256'),
+        ('owner[]', 'private'),
+        ('sort', 'date'),
+        ('page', '1'),
+        ('display', 'list'),
+        ('limit', '30'),
 )
 
 # params = {

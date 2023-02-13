@@ -1,0 +1,104 @@
+python3 avito_parser_cli.py 'audi tt' -u 'auditt_byprice_january.csv' -s 'price' -w 'company' -d '2019-01-01' -e '2019-01-31' -a
+
+Поиск по нескольким моделям телефонов. Для этого просто в строке запроса перечисляем нужные варианты через символ |.
+№№№№№№№ f=ASgCAQICAUDyig4UpIKUAQ 4 звезды =1
+
+                                    ЦЕНА
+                                      от              до
+        f=ASgCAgECAUXGmgwReyJmcm9tIjo x     LCJ0byI6M H0     от 1 до пусто
+        f=ASgCAgECAUXGmgwReyJmcm9tIjo y     LCJ0byI6M H0     от 2 до пусто
+        f=ASgCAgECAUXGmgwReyJmcm9tIjo z     LCJ0byI6M H0     от 3 до пусто
+        f=ASgCAgECAUXGmgwUeyJmcm9tIjo zMzMz LCJ0byI6M H0     от 3333 до пусто
+        f=ASgCAgECAUXGmgwUeyJmcm9tIjo x     LCJ0byI6M zMzM30 от 1 до 3333
+        f=ASgCAgECAUXGmgwReyJmcm9tIjo x     LCJ0byI6M n0     от 1 до 2
+        f=ASgCAgECAUXGmgwXeyJmcm9tIjo zMzMy LCJ0byI6M zMzM30 от 3332 до 3333
+
+                                     Состояние
+        f=ASg CAgE CAUXGmgwReyJmcm9tIjo x     LCJ0byI6M n0     от 1 до 2
+        f=ASgBAgICAUTQtw3ShTM  новые
+        f=ASgBAgICAUTQtw3QhTM бу
+
+
+
+"saveToHistoryDescription":{"title":"Ремонт и строительство","description":"Ростов‑на‑Дону, Частные, Цена 5 000 — 15 000 ₽","deeplink":"ru.avito://1/items/search?categoryId=19&context=H4sIAAAAAAAA_0q0MrSqLraysFJKK8rPDUhMT1WyLrYys1IqSk1OzStRsq4FBAAA___svPlPIgAAAA&locationId=652000&params%5B201%5D=1060&params%5B504%5D=5256&presentationType=serp&priceMax=15000&priceMin=5000&privateOnly=1&searchRadius=0&sort=date","rootCategoryId":2,"verticalCategoryId":4},"xHash":"qjxc78e7h8ty4dr44f6nxeqw0l48nrz","verticalId":4}}
+1/items/search?categoryId=19&context=H4sIAAAAAAAA_0q0MrSqLraysFJKK8rPDUhMT1WyLrYys1IqSk1OzStRsq4FBAAA___svPlPIgAAAA&locationId=652000&params%5B201%5D=1060&params%5B504%5D=5256&presentationType=serp&priceMax=15000&priceMin=5000&privateOnly=1&searchRadius=0&sort=date","rootCategoryId":2,"verticalCategoryId":4
+
+cd=1&q=скутер&radius=50&pmin=3000&pmax=5000&
+
+?cd=1 начало строки параметров cd=1 ???
+
+q=скутер
+bt=2 не только в названиях *bt=1 только в названиях
+
+radius=50
+
+pmin=3000 минимальная цена
+pmax=5000 максимальная цена
+s=1 сортировка от дешевого к дорогому 's': 104 от свежих к старым
+
+localPriority=0 приоритет по локации сначала регин
+&user=1 предпочтительно Частные продавцы &user=2 Компании &user=0 *все (owner[])
+d=1 с доставкой d=0 пусто
+
+p=2 номер текущей страницы
+view=gallety выводить большие фото таблицей. Если пусто по умолчанию = выводить списком одну колонку
+
+!!!!!!!!!!!!!!!! ОБЛАСТЬ ПОИСКА ПО КАРТЕ ЯНДЕКСА
+&drawId=b53e6cb32c3737cd3cd0706646bae52c ОБЛАСТЬ
+КАРТА
+&map=eyJzZWFyY2hBcmVhIjp7ImxhdEJvdHRvbSI6NDcuMTAxOTc4ODY5MTk1MzE0LCJsYXRUb3AiOjQ3LjUwMjQyMzAxODcwNDEzLCJsb25MZWZ0IjozOS44MTUyNDQyNTM3MzkwNywibG9uUmlnaHQiOjQwLjI1Njc1NzMxNTI2MjUyNn0sInpvb20iOjExfQ%3D%3D
+&map=eyJzZWFyY2hBcmVhIjp7ImxhdEJvdHRvbSI6NDUuMDgwOTQzMTc2ODQ5MzEsImxhdFRvcCI6NDguMzE5NDE4MTQzNjU0NzMsImxvbkxlZnQiOjM4LjU5MTY0MTk1ODgxNzIwNiwibG9uUmlnaHQiOjQyLjEyMzc0NjQ1MTAwNDY5fSwiem9vbSI6OH0%3D
+params[201]=1060 ???
+
+params[115385](1212562) снято рейтинг продавца 4 звезды и выше params[115385]=1212561
+
+params[110056]=() ВСЕ /  params[110056]=(418152)  = 'состояние Б.у' / params[110056]=(418153)
+
+
+
+#Web parameters:
+#'bt': 1 (или 'bt': 0) — 1- поиск с учетом включения запроса в название (0 — без учета запроса в названии)
+#'pmax': max_price и 'pmin': min_price — это верхняя и нижняя граница диапазона цен, переменные max_price и min_price принимаются от пользователя.
+#'q': search — основной параметр запроса, то что мы вводив в поиск
+#'s': 2 ('s': 1', 's': 101, 's': 104) — сортировка выданных результатов поиска:
+    #'s': 2 - сортировка по цене (от дорогого к дешевому),
+    #'s': 1— сортировка по цене (от дешевого к дорогому),
+    #'s': 101- сортировка по умолчанию,
+    #'s': 104 — сортировка по дате объявления (от свежих к старым)
+#'view': 'gallety' (либо не указывать) — показывает как будет распологаться выдача
+owner[] {private,company} = &user=1
+
+python3 avito_parser_cli.py -h
+usage: avito_parser_cli.py [-h] [-u OUTPUT] [-s {date,price,price_desc}] [-t]
+                           [-f] [-w {private,company}] [-m MINPRICE]
+                           [-M MAXPRICE] [-d STARTDATE] [-e ENDDATE] [-a]
+                           query
+
+positional arguments:
+  query                 Поисковый запрос
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -u OUTPUT, --output OUTPUT
+                        Название cvs файла для вывода (например output.csv)
+  -s {date,price,price_desc}, --sortby {date,price,price_desc}
+                        date -- сортировка по дате; price -- сортировка по
+                        цене; price_desc -- сортировка по убыванию цены
+  -t, --bytitle         Поиск только в названиях объявлений
+  -f, --withimages      Только объявления с картинками
+  -w {private,company}, --owner {private,company}
+                        private -- только частные объявления; company –-
+                        только объявления принадлежащие компаниям
+  -m MINPRICE, --minprice MINPRICE
+                        Минимальная цена
+  -M MAXPRICE, --maxprice MAXPRICE
+                        Максимальная цена
+  -d STARTDATE, --startdate STARTDATE
+                        Только объявления новее этой даты; Формат – 2019-01-10
+                        или 2019-01-10 15:29
+  -e ENDDATE, --enddate ENDDATE
+                        Только объявления созданные до этой даты; Формат –
+                        2019-01-10 или 2019-01-10 15:29
+  -a, --statistics      Выводить топ 5 объявлений и общее количество
+
+  

@@ -87,16 +87,29 @@ def get_json():
     headers = {
         'user-agent': ua_str,
     }
-    #    ('priceMin', priceMin)
-    priceMin = 5000
-    #'priceMax': priceMax,
-    priceMax = 15000
 
+    # Web parameters:
+    # 'bt': 1 (или 'bt': 0) — 1- поиск с учетом включения запроса в название (0 — без учета запроса в названии)
+    # 'pmax': max_price и 'pmin': min_price — это верхняя и нижняя граница диапазона цен, переменные max_price и min_price принимаются от пользователя.
+    # 'q': search — основной параметр запроса, то что мы вводив в поиск
+    # 's': 2 ('s': 1', 's': 101, 's': 104) — сортировка выданных результатов поиска:
+    # 's': 2 - сортировка по цене (от дорогого к дешевому),
+    # 's': 1— сортировка по цене (от дешевого к дорогому),
+    # 's': 101- сортировка по умолчанию,
+    # 's': 104 — сортировка по дате объявления (от свежих к старым)
+    # 'view': 'gallety' (либо не указывать) — показывает как будет распологаться выдача
+
+    #    ('priceMin', priceMin)
+    priceMin = 200000
+    #'priceMax': priceMax,
+    priceMax = 350000
+    search = 'suzuki+gsx-r'
     params = (
         ('key', 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'),
-        ('categoryId', '9'),
+        ('categoryId', '14'),
         ('params[201]', '1060'),
         ('locationId', '652000'),
+        ('q', search),
         ('priceMin', priceMin),
         ('priceMax', priceMax),
         ('params[504]', '5256'),
