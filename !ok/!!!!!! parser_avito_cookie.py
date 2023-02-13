@@ -15,6 +15,7 @@ from realty import check_database
 
 import ssl
 import requests
+from fake_useragent import UserAgent
 
 
 
@@ -80,8 +81,11 @@ def get_offers(data):
 
 def get_json():
 
+    ua = UserAgent(browsers=['edge', 'chrome'])
+    ua_str = ua.random
+#'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1'
     headers = {
-        'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+        'user-agent': ua_str,
     }
     #    ('priceMin', priceMin)
     priceMin = 5000
@@ -90,7 +94,7 @@ def get_json():
 
     params = (
         ('key', 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'),
-        ('categoryId', '19'),
+        ('categoryId', '9'),
         ('params[201]', '1060'),
         ('locationId', '652000'),
         ('priceMin', priceMin),
@@ -115,6 +119,10 @@ def get_json():
         response = session.request('GET', url, headers=headers, params=params)
         #r = session.request('GET', 'https://www.avito.ru')
         #resp = open('items_api_21.json').read()
+        ress = response.json()
+        with open('res_cookies_9.json', 'w', encoding='utf-8') as file:
+            json.dump(ress, file, indent=2, ensure_ascii=False)
+
         print(f'response {response.status_code}, {response.url}')#.text)[1000]
     except Exception as exception:
         print(exception)

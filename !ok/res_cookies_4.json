@@ -1,0 +1,1609 @@
+{
+  "status": "ok",
+  "result": {
+    "displayType": "list",
+    "shouldShowSaveSearch": true,
+    "showSearchCounter": true,
+    "count": 7507,
+    "totalCount": 7507,
+    "mainCount": 7507,
+    "expanded_count": 0,
+    "witchersCount": 0,
+    "lastStamp": 1676292000,
+    "items": [
+      {
+        "type": "item",
+        "value": {
+          "id": 2484776578,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676289774,
+          "title": "Таль ручная цепная",
+          "price": "5 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Советский"
+            }
+          ],
+          "location": "р-н Советский",
+          "address": "",
+          "coords": {
+            "lat": "47.208563",
+            "lng": "39.612758"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2484776578",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/tal_ruchnaya_tsepnaya_2484776578?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://49.img.avito.st/image/1/1.2IF2ALa5dGhYoe5oSmOrlamjcmLIO3TywqN2bMqpfmo.e0fFMv9p6fGZc-XqH2Kq5yUko4ZEDeNWw6aKuQKZQY8",
+                "278x278": "https://49.img.avito.st/image/1/1.2IF2ALa5dGhsp9puSmOrlamjcmLID3LGxKN2bMqpfmo.rZrai_IOLPAOUQPvBaHEs5JDRBFFEo218DC6STSxsxw",
+                "339x339": "https://49.img.avito.st/image/1/1.2IF2ALa5dGhmptBvSmOrlamjcmLIBXPMxaN2bMqpfmo.mhfTJrSHexHqRMWItSsqGAsZifF5S4SGmZZTmDxeLUA",
+                "372x372": "https://49.img.avito.st/image/1/1.2IF2ALa5dGgopp5vSmOrlamjcmLIS3OCxaN2bMqpfmo.wpHUQDRyLOcgalHvYEa3ZcUiplHaPosm6s9iFUEhqvc",
+                "507x507": "https://49.img.avito.st/image/1/1.2IF2ALa5dGg2pIBtSmOrlamjcmLIVXGcx6N2bMqpfmo.oYMCxUn9jbVcWFlvl9zuNb9-Bjedd_tmtxhIaroNrJo",
+                "558x558": "https://49.img.avito.st/image/1/1.2IF2ALa5dGgcq6piSmOrlamjcmLIf362yKN2bMqpfmo.0zMfZXjEkyRUvEb2z98c797riaBt12Qe9WwnJ98-GRI",
+                "678x678": "https://49.img.avito.st/image/1/1.2IF2ALa5dGgMqbpgSmOrlamjcmLIb3ymyqN2bMqpfmo.pNtOheDadfNgFqJr_APDmW9Spn8HJ8wQslFGqxtjtgw"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2806151028,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676289634,
+          "title": "Гайковерт аккумуляторный profipower",
+          "price": "6 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Советский"
+            }
+          ],
+          "location": "р-н Советский",
+          "address": "",
+          "coords": {
+            "lat": "47.23938341802774",
+            "lng": "39.572042570312476"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2806151028",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/gaykovert_akkumulyatornyy_profipower_2806151028?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://35.img.avito.st/image/1/1.Kl4He7a5hrcp2hy3X0MXIs7YgL25QIYts9iEs7vSjLU.Jl3fROTqisbCujzDE-pXgt9SGIWYp9lwYRJ51y2BS7E",
+                "278x278": "https://35.img.avito.st/image/1/1.Kl4He7a5hrcd3CixX0MXIs7YgL25dIAZtdiEs7vSjLU.0LorND0cIRh8rWtheSQWKwxhYFLTxCpoQswxQbKO3ng",
+                "339x339": "https://35.img.avito.st/image/1/1.Kl4He7a5hrcX3SKwX0MXIs7YgL25foETtNiEs7vSjLU.NcJq6XycmARJTXqpBMq2N15SzZS6UHmWKJEr48hqeHA",
+                "372x372": "https://35.img.avito.st/image/1/1.Kl4He7a5hrdZ3WywX0MXIs7YgL25MIFdtNiEs7vSjLU.EbrDMXP1j0N4a1KCr6OTlFs1cIxBADpQIEB-NtWCneE",
+                "507x507": "https://35.img.avito.st/image/1/1.Kl4He7a5hrdH33KyX0MXIs7YgL25LoNDttiEs7vSjLU.8RUNHtvFsNDrYe84X4iAtXHwSwLShpKWm9Y-DWpnBHc",
+                "558x558": "https://35.img.avito.st/image/1/1.Kl4He7a5hrdt0Fi9X0MXIs7YgL25BIxpudiEs7vSjLU.f5wBZZaj1tZT4vbPPLTeTq9YH2nbOUlnUK_Y5X80tLc",
+                "678x678": "https://35.img.avito.st/image/1/1.Kl4He7a5hrd90ki_X0MXIs7YgL25FI55u9iEs7vSjLU.Q6LT56K3n-m2zMU47cHatzJGUPVOqxsXbrjJ3Bu6LEo"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2572465876,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676289590,
+          "title": "Деревянные 3d панели (дуб массив)",
+          "price": "6 800 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.2278061444062",
+            "lng": "39.729121469245"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2572465876",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/derevyannye_3d_paneli_dub_massiv_2572465876?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://42.img.avito.st/image/1/1.d99JhLa52zZnJUE2K51s3JAn3Tz3v9us_SfZMvUt0TQ.ht62MWfU5a4ZKuJ9DMlwO5IBDt8XT8dg996z0xYBUIs",
+                "278x278": "https://42.img.avito.st/image/1/1.d99JhLa52zZTI3UwK51s3JAn3Tz3i92Y-yfZMvUt0TQ.Xd3jc-wNLzWQo-6zstTnwAIJrSuB6JG8zFtuba2kTdg",
+                "339x339": "https://42.img.avito.st/image/1/1.d99JhLa52zZZIn8xK51s3JAn3Tz3gdyS-ifZMvUt0TQ.ArqQSh3YmjYqqz4csMMxh5npu_8I9Xo-vPsXYcs_mk0",
+                "372x372": "https://42.img.avito.st/image/1/1.d99JhLa52zYXIjExK51s3JAn3Tz3z9zc-ifZMvUt0TQ.8vdXlzukAn4Ha1HeqmOKUWNT8qLmO1o_y1Ef1vMr7hE",
+                "507x507": "https://42.img.avito.st/image/1/1.d99JhLa52zYJIC8zK51s3JAn3Tz30d7C-CfZMvUt0TQ.yNGf9I7Z9YHbVPggUYjgoJUkZP2NZn8Wdpu9JLFHS2Y",
+                "558x558": "https://42.img.avito.st/image/1/1.d99JhLa52zYjLwU8K51s3JAn3Tz3-9Ho9yfZMvUt0TQ.1Whko2oF-tAMl-7iKh_Ymq87HPNrW8Ii5Zo3_2QCQ-U",
+                "678x678": "https://42.img.avito.st/image/1/1.d99JhLa52zYzLRU-K51s3JAn3Tz369P49SfZMvUt0TQ.fzPNukeYSOSm56q81wpZ8UI68ZuUXljon_0A53JnOR0"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2677421181,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676289565,
+          "title": "Дрель алмазного сверления",
+          "price": "7 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Советский"
+            }
+          ],
+          "location": "р-н Советский",
+          "address": "",
+          "coords": {
+            "lat": "47.237547",
+            "lng": "39.613521"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2677421181",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/drel_almaznogo_sverleniya_2677421181?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://94.img.avito.st/image/1/1.Q84u5La57ycARXUnJNU1puFH6S2Q3--9mkftI5JN5SU.JoBAA1PdYNdsDAshTzYG5rmoDRa5T10TcDzJxJLIsvM",
+                "278x278": "https://94.img.avito.st/image/1/1.Q84u5La57yc0Q0EhJNU1puFH6S2Q6-mJnEftI5JN5SU.YjdLFa624BSbCiPYnJHg2DhxEmZFRjDDyEE34s1ssLY",
+                "339x339": "https://94.img.avito.st/image/1/1.Q84u5La57yc-QksgJNU1puFH6S2Q4eiDnUftI5JN5SU.fyR5RWAopVcpcAM9iQtNgZfezlJW-8V8k_yCEIi9LwQ",
+                "372x372": "https://94.img.avito.st/image/1/1.Q84u5La57ydwQgUgJNU1puFH6S2Qr-jNnUftI5JN5SU.ebJcwKjtvlqm_SyUEaBq8n_qSf9yIoQTz60nfJX9_f0",
+                "507x507": "https://94.img.avito.st/image/1/1.Q84u5La57yduQBsiJNU1puFH6S2QserTn0ftI5JN5SU.wW3ImHdlTkfGYoUjK3zm2-yNP0DxayXV7LAjNt28ubg",
+                "558x558": "https://94.img.avito.st/image/1/1.Q84u5La57ydETzEtJNU1puFH6S2Qm-X5kEftI5JN5SU.AoChI1sV7izwzBSoItR3kVk-zi4kQdnkbEVHmFLXAH4",
+                "678x678": "https://94.img.avito.st/image/1/1.Q84u5La57ydUTSEvJNU1puFH6S2Qi-fpkkftI5JN5SU._kfg6CAO2d3m3G6GJr5zarPgdX4HE7N_rayksUpOi_M"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2783610074,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676289405,
+          "title": "Ворота роллетные (рольворота)",
+          "price": "13 300 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.222071",
+            "lng": "39.720354"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2783610074",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/vorota_rolletnye_rolvorota_2783610074?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://19.img.avito.st/image/1/1.vharNba5Ev-FlIj_2xfua2KWFPUVDhJlH5YQ-xecGP0.8zXPnpU7ufbAA5NepDkJAJKA6gKcn4ur8Fsp1R0V1Pc",
+                "278x278": "https://19.img.avito.st/image/1/1.vharNba5Ev-xkrz52xfua2KWFPUVOhRRGZYQ-xecGP0.R1-H8LlXREcmyXq4LmUiusEyF_mhioHxnHJy34bc2Vs",
+                "339x339": "https://19.img.avito.st/image/1/1.vharNba5Ev-7k7b42xfua2KWFPUVMBVbGJYQ-xecGP0.VM19OIDeeW4JJ7cdWKluDTmrAf9fV3KXeKlbsUN28M8",
+                "372x372": "https://19.img.avito.st/image/1/1.vharNba5Ev_1k_j42xfua2KWFPUVfhUVGJYQ-xecGP0.TeUeJBUVdft4NnbF0D9k-WC66siFYprcMzsL7h7r1Hw",
+                "507x507": "https://19.img.avito.st/image/1/1.vharNba5Ev_rkeb62xfua2KWFPUVYBcLGpYQ-xecGP0.c7v90Y811HPV6kV75jU4a7h7q07WSrgpSFt8LwKJ5Ow",
+                "558x558": "https://19.img.avito.st/image/1/1.vharNba5Ev_Bnsz12xfua2KWFPUVShghFZYQ-xecGP0.ELSME8_vC8NpHXL4KncJY8wZA3wGO1jJxqcig7QAQW8",
+                "678x678": "https://19.img.avito.st/image/1/1.vharNba5Ev_RnNz32xfua2KWFPUVWhoxF5YQ-xecGP0.brwtihaH6e6tacHKaruFm01V6atxPz9Sv9fTJ_22UV8"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2507056215,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676289397,
+          "title": "Пиломатериалы Брус Доска",
+          "price": "9 500 ₽ за м²",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.222078",
+            "lng": "39.720358"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2507056215",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/pilomaterialy_brus_doska_2507056215?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://95.img.avito.st/image/1/1.jsO3NLa5IiqZlbgqp2aplW-XJCAJDyKwA5cgLgudKCg.jsfk-XHI7ukW2SSkAYGvGHckUjJa8Jk72kdJGPcMBrY",
+                "278x278": "https://95.img.avito.st/image/1/1.jsO3NLa5Iiqtk4wsp2aplW-XJCAJOySEBZcgLgudKCg.uzXBe5NkxJIe9c_GUs4BqBhwnA7EcsCX5VgXSWbPK4A",
+                "339x339": "https://95.img.avito.st/image/1/1.jsO3NLa5IiqnkoYtp2aplW-XJCAJMSWOBJcgLgudKCg.XCCcgatSPh2mJ63SLuYku9nHtuj10hOtQdvMS9ZWLq4",
+                "372x372": "https://95.img.avito.st/image/1/1.jsO3NLa5Iirpksgtp2aplW-XJCAJfyXABJcgLgudKCg.wvb2xUSNJbi7X7qk34O1yY0mKLZ850ELZDWJRo-wTaY",
+                "507x507": "https://95.img.avito.st/image/1/1.jsO3NLa5Iir3kNYvp2aplW-XJCAJYSfeBpcgLgudKCg.82jehsiRFvjCk7ogz4rPQWOCI1P5P17GiRAjCk-4Dj8",
+                "558x558": "https://95.img.avito.st/image/1/1.jsO3NLa5Iirdn_wgp2aplW-XJCAJSyj0CZcgLgudKCg.CIbrEGAY5N3-ydVWhiMbEsKWdBnDShrO4zwAozP26lg",
+                "678x678": "https://95.img.avito.st/image/1/1.jsO3NLa5IirNnewip2aplW-XJCAJWyrkC5cgLgudKCg.bkQDhcKG_trG-LqvH1GaY3d-0ci_e6HLO_mTGtqZItQ"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 1938949549,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676289017,
+          "title": "Плита перекрытия",
+          "price": "5 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Ворошиловский"
+            }
+          ],
+          "location": "р-н Ворошиловский",
+          "address": "",
+          "coords": {
+            "lat": "47.28716",
+            "lng": "39.715363"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=1938949549",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/plita_perekrytiya_1938949549?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://90.img.avito.st/image/1/1.5y2UhLa5S8S6JdHE1p-IOGInTc4qv0teICdJwCgtQcY.DySUo3avowHZjnqQbRh_yDm5EJoyQrWSza4PLNvwgDM",
+                "278x278": "https://90.img.avito.st/image/1/1.5y2UhLa5S8SOI-XC1p-IOGInTc4qi01qJidJwCgtQcY.CBucbepg-4FS9P1aGLJwS8mgA5SWLd4NXBuH9w6YEJA",
+                "339x339": "https://90.img.avito.st/image/1/1.5y2UhLa5S8SEIu_D1p-IOGInTc4qgUxgJydJwCgtQcY.jwd8_O9wRR-eOrcTegQ-EPqQLdaGa10HaGcaOs5IPY4",
+                "372x372": "https://90.img.avito.st/image/1/1.5y2UhLa5S8TKIqHD1p-IOGInTc4qz0wuJydJwCgtQcY.blu7YfNzpkS5jbIzev-EGln7L5loQExGdXk-k0W68H0",
+                "507x507": "https://90.img.avito.st/image/1/1.5y2UhLa5S8TUIL_B1p-IOGInTc4q0U4wJSdJwCgtQcY.DwLgOPF_uMLykfrKOLXIQHuKBMDdwETq-BB0bLV_AAk",
+                "558x558": "https://90.img.avito.st/image/1/1.5y2UhLa5S8T-L5XO1p-IOGInTc4q-0EaKidJwCgtQcY.OzskpVuctPNPLIvekN2h24diDT9GCwpGPSiyMVcw698",
+                "678x678": "https://90.img.avito.st/image/1/1.5y2UhLa5S8TuLYXM1p-IOGInTc4q60MKKCdJwCgtQcY.ih6lQywAIanbx3gIBhom-RqgcCbEDBuIpvn4BJT2etk"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2769609999,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676288908,
+          "title": "Рубильник abb OT160G03",
+          "price": "8 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Первомайский"
+            }
+          ],
+          "location": "р-н Первомайский",
+          "address": "",
+          "coords": {
+            "lat": "47.28248977661133",
+            "lng": "39.75830841064453"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2769609999",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/rubilnik_abb_ot160g03_2769609999?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://15.img.avito.st/image/1/1.ksHnera5PijJ26QozzjgvC7ZOCJZQT6yU9k8LFvTNCo.DhmKYPJ3WUqvzXKgS1ushmQLuXM_4tfKJLL-97hD9m4",
+                "278x278": "https://15.img.avito.st/image/1/1.ksHnera5Pij93ZAuzzjgvC7ZOCJZdTiGVdk8LFvTNCo.OE-ykcPApZF7fNbdkDLadFIlAUJXLfpr4Tc-QWkTGOY",
+                "339x339": "https://15.img.avito.st/image/1/1.ksHnera5Pij33JovzzjgvC7ZOCJZfzmMVNk8LFvTNCo.vHa1UWOMyJoKdmzXMJipa719Gbskjni34EExoJhuilQ",
+                "372x372": "https://15.img.avito.st/image/1/1.ksHnera5Pii53NQvzzjgvC7ZOCJZMTnCVNk8LFvTNCo.42W0luFackqL0vnLdtecsFPYyOV6c5Jcz3KOmLYQzaY",
+                "507x507": "https://15.img.avito.st/image/1/1.ksHnera5Piin3sotzzjgvC7ZOCJZLzvcVtk8LFvTNCo.0PwHdGjlfqV3RWhjEZAUb1ZN3xq8MEROw7Rcx1FRCNY",
+                "558x558": "https://15.img.avito.st/image/1/1.ksHnera5PiiN0eAizzjgvC7ZOCJZBTT2Wdk8LFvTNCo.wZGXpYVLZn0nZWXZUSVtXV8HhF79vP8zhJzaw61M084",
+                "678x678": "https://15.img.avito.st/image/1/1.ksHnera5Piid0_AgzzjgvC7ZOCJZFTbmW9k8LFvTNCo.N04aGwQjDfGsLIsNGXccoefNCRcW6rCKRx08t9YEAm0"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2672240887,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676288709,
+          "title": "Терморегулятор",
+          "price": "14 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.222078",
+            "lng": "39.720358"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2672240887",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/termoregulyator_2672240887?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://76.img.avito.st/image/1/1._fp84La5URNSQcsTCtOL2L9DVxnC21GJyENTF8BJWxE.7iAlJFUdlF-iMG4_vS2ON9BebMVC3U2pMUr6WwLQA7s",
+                "278x278": "https://76.img.avito.st/image/1/1._fp84La5URNmR_8VCtOL2L9DVxnC71e9zkNTF8BJWxE.NIkpAS5G0IYSjQZvRu7TDRBghSzxQGnvxbZIk0tLnOs",
+                "339x339": "https://76.img.avito.st/image/1/1._fp84La5URNsRvUUCtOL2L9DVxnC5Va3z0NTF8BJWxE.QptmlCpe9-IZXS38VIwe4-01ZaltvjR3fxpqfRl8H9k",
+                "372x372": "https://76.img.avito.st/image/1/1._fp84La5URMiRrsUCtOL2L9DVxnCq1b5z0NTF8BJWxE.3t1-Ok0O4EzQ-_3HXG-LoZ-v3U3uFKZM48-xq7qz5iQ",
+                "507x507": "https://76.img.avito.st/image/1/1._fp84La5URM8RKUWCtOL2L9DVxnCtVTnzUNTF8BJWxE.dfjWJ8vLvA-dmMDcz8mBAHazsu6Ze3t8qvrcp8Mei64",
+                "558x558": "https://76.img.avito.st/image/1/1._fp84La5URMWS48ZCtOL2L9DVxnCn1vNwkNTF8BJWxE.g3AhVZZOtWIFSE34MpkPVYeoMuEtY_iGRb_NA93pgTs",
+                "678x678": "https://76.img.avito.st/image/1/1._fp84La5URMGSZ8bCtOL2L9DVxnCj1ndwENTF8BJWxE.Hbom3Ya-JDpqP4AkQmmgWuZeMfsiUFay4fdczdv3TLo"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2745874677,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676288690,
+          "title": "Слэб Карагач",
+          "price": "6 900 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Железнодорожный"
+            }
+          ],
+          "location": "р-н Железнодорожный",
+          "address": "",
+          "coords": {
+            "lat": "47.209674",
+            "lng": "39.685646"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2745874677",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/sleb_karagach_2745874677?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://22.img.avito.st/image/1/1.m_HVZba5Nxj7xK0Y70vk2BnGMRJrXjeCYcY1HGnMPRo.6ARhiVbb9Ta0uFkWKoJmItfqj8lLYKxO08nzRJUkviU",
+                "278x278": "https://22.img.avito.st/image/1/1.m_HVZba5NxjPwpke70vk2BnGMRJrajG2Z8Y1HGnMPRo.x5SQwxdWFflDP1X7TLs3CSnG0MFlrpRqQfeFp2npZmw",
+                "339x339": "https://22.img.avito.st/image/1/1.m_HVZba5NxjFw5Mf70vk2BnGMRJrYDC8ZsY1HGnMPRo.-iivwa6ZhwlbSVDEv5gZuzeDbM1DhmUOfVtyNulbzMw",
+                "372x372": "https://22.img.avito.st/image/1/1.m_HVZba5NxiLw90f70vk2BnGMRJrLjDyZsY1HGnMPRo.m_xV1fEFgObSC2rEBzqC-6xfv6qvN9ZZN4ihlkhRmE0",
+                "507x507": "https://22.img.avito.st/image/1/1.m_HVZba5NxiVwcMd70vk2BnGMRJrMDLsZMY1HGnMPRo.blSWxo9t3FsR2JpPkV4OJbMyGKN0A8ruL04RaqPfRYM",
+                "558x558": "https://22.img.avito.st/image/1/1.m_HVZba5Nxi_zukS70vk2BnGMRJrGj3Ga8Y1HGnMPRo.VOsNbive2oYoJIXvk3a_JYAd86PJhiKUBD-mXHt8rlA",
+                "678x678": "https://22.img.avito.st/image/1/1.m_HVZba5NxivzPkQ70vk2BnGMRJrCj_WacY1HGnMPRo._OPoKBOE34xQGX0FPTjShIcQ7m38nZF2QhMrXN8sZKI"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2804043718,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676288654,
+          "title": "Балконная дверь",
+          "price": "8 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Советский"
+            }
+          ],
+          "location": "р-н Советский",
+          "address": "",
+          "coords": {
+            "lat": "47.231765",
+            "lng": "39.582736"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2804043718",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/balkonnaya_dver_2804043718?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://43.img.avito.st/image/1/1.HqSwnLa5sk2ePShNgNAB9H0_tEcOp7LXBD-wSQw1uE8.yQXLoio2K24TYz3MTyIfOmUGVTDBbG2mDAik5V_iNOs",
+                "278x278": "https://43.img.avito.st/image/1/1.HqSwnLa5sk2qOxxLgNAB9H0_tEcOk7TjAj-wSQw1uE8.RdRbhFI_elOwMR4msEirxM8Ts18WsFz4kSAFL9gNB7Y",
+                "339x339": "https://43.img.avito.st/image/1/1.HqSwnLa5sk2gOhZKgNAB9H0_tEcOmbXpAz-wSQw1uE8.PHH6VWibwfXZWtsgJ46l5BpthR5V367oA0xKrmHZKd0",
+                "372x372": "https://43.img.avito.st/image/1/1.HqSwnLa5sk3uOlhKgNAB9H0_tEcO17WnAz-wSQw1uE8.6WBbHmiXPMAoqWoE6zxACVdMfGlycTYgUAhgLh9XAiQ",
+                "507x507": "https://43.img.avito.st/image/1/1.HqSwnLa5sk3wOEZIgNAB9H0_tEcOybe5AT-wSQw1uE8.NK69dyLe-CvN3-UGWsjjdopyb9Pu3ReTqX31poxHopg",
+                "558x558": "https://43.img.avito.st/image/1/1.HqSwnLa5sk3aN2xHgNAB9H0_tEcO47iTDj-wSQw1uE8.e-xswHdS6BdKNmW-gL3EPu4d4lejw24Jc_TmDtcCbtI",
+                "678x678": "https://43.img.avito.st/image/1/1.HqSwnLa5sk3KNXxFgNAB9H0_tEcO87qDDD-wSQw1uE8.Qey1BPsnNXIPFOiihORldbfWWep_xAqq7HuC4mploE0"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2806300625,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676288384,
+          "title": "Перфоратор partnertool",
+          "price": "5 190 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Первомайский"
+            }
+          ],
+          "location": "р-н Первомайский",
+          "address": "",
+          "coords": {
+            "lat": "47.28615589232569",
+            "lng": "39.76806455036631"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2806300625",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/perforator_partnertool_2806300625?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://12.img.avito.st/image/1/1.dQdXe7a52e552kPuMUJzep7Y3-TpQNl049jb6uvS0-w.6RwjLEiLsr-4iE2DBMwi0OK7JHJfGnO9TJmFuJPCCMU",
+                "278x278": "https://12.img.avito.st/image/1/1.dQdXe7a52e5N3HfoMUJzep7Y3-TpdN9A5djb6uvS0-w.DTVl1KYCKi2XMhqHBpXQPL1643FB7apS_0UXX0o3hJs",
+                "339x339": "https://12.img.avito.st/image/1/1.dQdXe7a52e5H3X3pMUJzep7Y3-Tpft5K5Njb6uvS0-w.f0Cp4tLveCUITJq4H7HaE1wDBATkFyG2pzenlR4JILA",
+                "372x372": "https://12.img.avito.st/image/1/1.dQdXe7a52e4J3TPpMUJzep7Y3-TpMN4E5Njb6uvS0-w.NScDtD_rXequNCpbRfYWcCdO0eLHEbEEPMjO_Qy84AU",
+                "507x507": "https://12.img.avito.st/image/1/1.dQdXe7a52e4X3y3rMUJzep7Y3-TpLtwa5tjb6uvS0-w.KqqahyDXOi0OkiRs-bMy0Eo52MlswNKzavXucQeKAbw",
+                "558x558": "https://12.img.avito.st/image/1/1.dQdXe7a52e490AfkMUJzep7Y3-TpBNMw6djb6uvS0-w.QoLPvGT9MO_YuA8Mxr4jjmUMtoFXrGr8hQa_DbHJR-M",
+                "678x678": "https://12.img.avito.st/image/1/1.dQdXe7a52e4t0hfmMUJzep7Y3-TpFNEg69jb6uvS0-w.5xtd-BU8Ar0OldHfjYgQV6pjUhP4tTSr-srlppfcA7k"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2731235496,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676287694,
+          "title": "Биде",
+          "price": "5 000 ₽",
+          "isFavorite": false,
+          "location": "",
+          "address": "хутор Красный Крым, Изумрудная ул., 51",
+          "coords": {
+            "lat": "47.33054",
+            "lng": "39.645386"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2731235496",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/bide_2731235496?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://20.img.avito.st/image/1/1.RdNacba56Tp00HM6XDhwrpPS7zDkSumg7tLrPubY4zg.Pa0iLSnVrg13hDx-7ZxiuKL7oNU6qFWar5JnRMx7mDs",
+                "278x278": "https://20.img.avito.st/image/1/1.RdNacba56TpA1kc8XDhwrpPS7zDkfu-U6NLrPubY4zg.MXMHQwmfime-fawxlH67Bnmez-4D_JwHY3LF0id_Jc0",
+                "339x339": "https://20.img.avito.st/image/1/1.RdNacba56TpK1009XDhwrpPS7zDkdO6e6dLrPubY4zg.WjYkOZlAnx3Z7KewR8mRxhsm3QU50GljyEVWyTYcEJY",
+                "372x372": "https://20.img.avito.st/image/1/1.RdNacba56ToE1wM9XDhwrpPS7zDkOu7Q6dLrPubY4zg.wcWZzimoAGjCYXJ54UMxanOl3cmKYjra55IfP3frZ-o",
+                "507x507": "https://20.img.avito.st/image/1/1.RdNacba56Toa1R0_XDhwrpPS7zDkJOzO69LrPubY4zg.7qfChpTajzaYEWJvFRddhVRkQXnDCD2JZi61x-_GvX0",
+                "558x558": "https://20.img.avito.st/image/1/1.RdNacba56Tow2jcwXDhwrpPS7zDkDuPk5NLrPubY4zg.AyIp6VhyxCAhW1wyw_wDBj3VF7jgfKtC0cV4G-J_e4k",
+                "678x678": "https://20.img.avito.st/image/1/1.RdNacba56Tog2CcyXDhwrpPS7zDkHuH05tLrPubY4zg.8xMFIULs73ZIRRG0f9N9KZVx9cmCS-wlQjDf6jcsTEc"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2806125580,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676287631,
+          "title": "Дверь металлопластиковая, комплект",
+          "price": "5 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Ворошиловский"
+            }
+          ],
+          "location": "р-н Ворошиловский",
+          "address": "",
+          "coords": {
+            "lat": "47.290981328421296",
+            "lng": "39.711538803618"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2806125580",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/dver_metalloplastikovaya_komplekt_2806125580?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://92.img.avito.st/image/1/1.gWV7Pba5LYxVnLeMdR-_GLKeK4bFBi0Wz54viMeUJ44.QNAfPM4itw9RooJZufLR8jFmFw-kdsuLk8ildO4hPfo",
+                "278x278": "https://92.img.avito.st/image/1/1.gWV7Pba5LYxhmoOKdR-_GLKeK4bFMisiyZ4viMeUJ44.dKMfC_Db_Sy8nibXPSNSLdDImlCI7uKc0sND0xMILwA",
+                "339x339": "https://92.img.avito.st/image/1/1.gWV7Pba5LYxrm4mLdR-_GLKeK4bFOCooyJ4viMeUJ44.HH0IIBfweO7WkUJbJVh96vTulLpfaFmXNTjbTooTDfE",
+                "372x372": "https://92.img.avito.st/image/1/1.gWV7Pba5LYwlm8eLdR-_GLKeK4bFdipmyJ4viMeUJ44.6Ue5XcKQRqXnt_CMrUGyUvz2hpVvsIDGg5tvmd_3UjU",
+                "507x507": "https://92.img.avito.st/image/1/1.gWV7Pba5LYw7mdmJdR-_GLKeK4bFaCh4yp4viMeUJ44.3uY_wVk-g8Wba19ktSkjZENvPeW2xJGCQRsAdsRKpDs",
+                "558x558": "https://92.img.avito.st/image/1/1.gWV7Pba5LYwRlvOGdR-_GLKeK4bFQidSxZ4viMeUJ44.Cfm3iTXQHGpm1Zqt59wsiw377A7SQE5cFk5SbJPpHH8",
+                "678x678": "https://92.img.avito.st/image/1/1.gWV7Pba5LYwBlOOEdR-_GLKeK4bFUiVCx54viMeUJ44.D2F1ZQQDZBa5WkvpsXzNKJb8jMvgqcmlxhIU0c_HR9c"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2815787829,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676287609,
+          "title": "Кованые перила",
+          "price": "11 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.218421",
+            "lng": "39.719233"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2815787829",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/kovanye_perila_2815787829?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://93.img.avito.st/image/1/1.0I2sZLa5fGSCxeZkgB_08GXHem4SX3z-GMd-YBDNdmY.ZwKERNnOizuthKvU9dML3G_UnzR_MSEXu6LvdSM0Eso",
+                "278x278": "https://93.img.avito.st/image/1/1.0I2sZLa5fGS2w9JigB_08GXHem4Sa3rKHsd-YBDNdmY.MwoOe2N98PuaIrN_vO1B5ik7O-u7gY9vooRNTAnS9BE",
+                "339x339": "https://93.img.avito.st/image/1/1.0I2sZLa5fGS8wthjgB_08GXHem4SYXvAH8d-YBDNdmY.Q_sV4wEvJcEdEoHi9xrPNAMWmRHwSjyObOUip9k-bkw",
+                "372x372": "https://93.img.avito.st/image/1/1.0I2sZLa5fGTywpZjgB_08GXHem4SL3uOH8d-YBDNdmY.VlYGFg7d9c6yF2U1-ZA-xzZj75mhOIP-4NB0ISCFUuw",
+                "507x507": "https://93.img.avito.st/image/1/1.0I2sZLa5fGTswIhhgB_08GXHem4SMXmQHcd-YBDNdmY.cAnN8y8zAwkX8EC1zcqU1MOgMfK39rKB1Xja2s7APtQ",
+                "558x558": "https://93.img.avito.st/image/1/1.0I2sZLa5fGTGz6JugB_08GXHem4SG3a6Esd-YBDNdmY.0ARyp3UQxwwUPp0J9HJP6XbmlK9ead3aMmjgxXKRTe4",
+                "678x678": "https://93.img.avito.st/image/1/1.0I2sZLa5fGTWzbJsgB_08GXHem4SC3SqEMd-YBDNdmY.FaoYLFtvH2bI4envZaWcFqUaQFPg-M-pW36urSH97Xo"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2774875068,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676287306,
+          "title": "Двери межкомнатные со склада",
+          "price": "9 249 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.228056",
+            "lng": "39.73274"
+          },
+          "userType": "private",
+          "hasVideo": true,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2774875068",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/dveri_mezhkomnatnye_so_sklada_2774875068?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://31.img.avito.st/image/1/1.OjInIra5ltsJgwzbXxYVT-6BkNGZGZZBk4GU35uLnNk.dAtFWYBKZwcXEfPrhMrfrUZnE_B_jVCpnuBW34i0Lgg",
+                "278x278": "https://31.img.avito.st/image/1/1.OjInIra5lts9hTjdXxYVT-6BkNGZLZB1lYGU35uLnNk.QthrVU6SNajNyd4sdmwIsYtOJp8XgERbTK1BQ9q9NsQ",
+                "339x339": "https://31.img.avito.st/image/1/1.OjInIra5lts3hDLcXxYVT-6BkNGZJ5F_lIGU35uLnNk.g47nd95-BE0WdZ50ILG4UT4yO_OT3SMwhPc_oUHeoz8",
+                "372x372": "https://31.img.avito.st/image/1/1.OjInIra5ltt5hHzcXxYVT-6BkNGZaZExlIGU35uLnNk.ceVnUixOwBVoQHFusq9btEPAhBNG6LcV_bIHvCuBUrU",
+                "507x507": "https://31.img.avito.st/image/1/1.OjInIra5lttnhmLeXxYVT-6BkNGZd5MvloGU35uLnNk.tiOTc_wpgdhlV3Xr_OcWEq1hBF8e_anXhM_FMIywRGo",
+                "558x558": "https://31.img.avito.st/image/1/1.OjInIra5lttNiUjRXxYVT-6BkNGZXZwFmYGU35uLnNk.l_itTzQiCmIpMbBaMP2QPixST7_jatfx8vMyii87FkY",
+                "678x678": "https://31.img.avito.st/image/1/1.OjInIra5lttdi1jTXxYVT-6BkNGZTZ4Vm4GU35uLnNk.A--JeyG6TtqoJ12iPGK_duD0tU5k5U3abWaBcFaGmYc"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2760893340,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676286554,
+          "title": "Плуг для мотоблок б/у",
+          "price": "8 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Советский"
+            }
+          ],
+          "location": "р-н Советский",
+          "address": "",
+          "coords": {
+            "lat": "47.225205",
+            "lng": "39.566207"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2760893340",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/plug_dlya_motoblok_bu_2760893340?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://21.img.avito.st/image/1/1._GmG1ba5UICodMqA8rKfF092Voo47lAaMnZShDp8WoI.Uy83rzBHcuYA6TE_UD4sfMZU1iRCqJgl03ViU6Gd0-k",
+                "278x278": "https://21.img.avito.st/image/1/1._GmG1ba5UICccv6G8rKfF092Voo42lYuNHZShDp8WoI.qc3KxE59dYqlq3QTlDCW9dA_r6PnplXnTHn5fyT-zhU",
+                "339x339": "https://21.img.avito.st/image/1/1._GmG1ba5UICWc_SH8rKfF092Voo40FckNXZShDp8WoI.y3iC092iFGpwIat8-yBN_rwEaW1gfwhM3nEyvBvml_g",
+                "372x372": "https://21.img.avito.st/image/1/1._GmG1ba5UIDYc7qH8rKfF092Voo4nldqNXZShDp8WoI.m86zXIMuSUrc5tsnhhfM9jFil6g_HPnb2LJNW--MZcc",
+                "507x507": "https://21.img.avito.st/image/1/1._GmG1ba5UIDGcaSF8rKfF092Voo4gFV0N3ZShDp8WoI.0d6tDzz1Q2A4CJpKAR2TXSOx8U84Dcgo-rS0Uk_6Sbc",
+                "558x558": "https://21.img.avito.st/image/1/1._GmG1ba5UIDsfo6K8rKfF092Voo4qlpeOHZShDp8WoI.ec78gTGAz0ykI7A28mTMW49xB3QRJQvsmngMXcI8oC4",
+                "678x678": "https://21.img.avito.st/image/1/1._GmG1ba5UID8fJ6I8rKfF092Voo4ulhOOnZShDp8WoI.ClNzaGQy7fSf9K8RYf85PwUJwYUaojwHeTE53dFBBic"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2742054369,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676286432,
+          "title": "Сварочный аппарат",
+          "price": "7 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.222078",
+            "lng": "39.720358"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2742054369",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/svarochnyy_apparat_2742054369?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://73.img.avito.st/image/1/1.4Ln2rLa5TFDYDdZQuvvPyTsPSlpIl0zKQg9OVEoFRlI.vB-TxIpL-DePacGbBQI3KMGN9jST_sUFYHSdkKZkQyY",
+                "278x278": "https://73.img.avito.st/image/1/1.4Ln2rLa5TFDsC-JWuvvPyTsPSlpIo0r-RA9OVEoFRlI.IcvGPRy4-LKGJb_wgjSP0I0vJahWf6mBnnoa2Z2VgLg",
+                "339x339": "https://73.img.avito.st/image/1/1.4Ln2rLa5TFDmCuhXuvvPyTsPSlpIqUv0RQ9OVEoFRlI.H6O8mxH0ihwZUCz-WWeNmsc9JGkwUtdaDgBJLjzhZiQ",
+                "372x372": "https://73.img.avito.st/image/1/1.4Ln2rLa5TFCoCqZXuvvPyTsPSlpI50u6RQ9OVEoFRlI.SFwzfLEcBc-lQOfMHnhmQ3LHfSjDZPtF22PuDlI8svg",
+                "507x507": "https://73.img.avito.st/image/1/1.4Ln2rLa5TFC2CLhVuvvPyTsPSlpI-UmkRw9OVEoFRlI.thc0qdgU7ru_VAuEkXZb-jRfbwVC1kwe84PHQvYEAD4",
+                "558x558": "https://73.img.avito.st/image/1/1.4Ln2rLa5TFCcB5JauvvPyTsPSlpI00aOSA9OVEoFRlI.5Gs27xHdVA-v7KTAUmC6RreAP6WXQVod4S0n4Iig0gA",
+                "678x678": "https://73.img.avito.st/image/1/1.4Ln2rLa5TFCMBYJYuvvPyTsPSlpIw0SeSg9OVEoFRlI.yketPqtEuUKY0gfpXclCiUuflR5vMlCwQzjyUZqEGBA"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2757037872,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676286168,
+          "title": "Двери межкомнатные из массива",
+          "price": "8 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Первомайский"
+            }
+          ],
+          "location": "р-н Первомайский",
+          "address": "",
+          "coords": {
+            "lat": "47.252171",
+            "lng": "39.782757"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2757037872",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/dveri_mezhkomnatnye_iz_massiva_2757037872?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://32.img.avito.st/image/1/1._drOTra5UTPg78szuCWrpAftVzlwdVGpeu1TN3LnWzE.5x8DF8tD3DYO97R14zgVs6SOQRKJV_E5oGLh9SG0pGw",
+                "278x278": "https://32.img.avito.st/image/1/1._drOTra5UTPU6f81uCWrpAftVzlwQVedfO1TN3LnWzE.4T15c2AOnCnmCJDZv_pQGVK5_YSqjg00EETUNUIwUgg",
+                "339x339": "https://32.img.avito.st/image/1/1._drOTra5UTPe6PU0uCWrpAftVzlwS1aXfe1TN3LnWzE.Av0hzbqtD-NW43krFFXhC3FNBkCFaE6P5hShGxk25As",
+                "372x372": "https://32.img.avito.st/image/1/1._drOTra5UTOQ6Ls0uCWrpAftVzlwBVbZfe1TN3LnWzE.wcVtkk0pzfbPlLdILbDybKoXu1z3WxrVwZYDpx_YtAY",
+                "507x507": "https://32.img.avito.st/image/1/1._drOTra5UTOO6qU2uCWrpAftVzlwG1THf-1TN3LnWzE.lGlLkP7_vcevCsaVE4NPYHUubqIYTBmX77ZO6jJKIyY",
+                "558x558": "https://32.img.avito.st/image/1/1._drOTra5UTOk5Y85uCWrpAftVzlwMVvtcO1TN3LnWzE.CMTQ_mhC7WFYF4ZDg5_ll6qxqTzAWEhn-FK3qBkcOH4",
+                "678x678": "https://32.img.avito.st/image/1/1._drOTra5UTO05587uCWrpAftVzlwIVn9cu1TN3LnWzE.FLx-9SfxROULnGZbIUpvuZXV8LUDlmwGMgmCK8g1dbc"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2783035372,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676286092,
+          "title": "Ворота. Автоматические ворота",
+          "price": "13 300 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.222081",
+            "lng": "39.720346"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2783035372",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/vorota._avtomaticheskie_vorota_2783035372?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://76.img.avito.st/image/1/1.UXu4cra5_ZKW02eSlicvBXHR-5gGSf0IDNH_lgTb95A.0OrE_ZZyYjGgniaLg6eWynby6GiuCyLyqVl9efuwhv4",
+                "278x278": "https://76.img.avito.st/image/1/1.UXu4cra5_ZKi1VOUlicvBXHR-5gGffs8CtH_lgTb95A.REg5RufsQhRLWNTU_lFIbqdhuGSLvN5MQLoLowu-7eM",
+                "339x339": "https://76.img.avito.st/image/1/1.UXu4cra5_ZKo1FmVlicvBXHR-5gGd_o2C9H_lgTb95A.NJULillzAX2Txr6VIxv2JHH-dfTQ8FHxRCehsOmzrM0",
+                "372x372": "https://76.img.avito.st/image/1/1.UXu4cra5_ZLm1BeVlicvBXHR-5gGOfp4C9H_lgTb95A.Rmol-8cu-yXm2drXEI0Ap7wLD6fcBcWCQrLYTghesmQ",
+                "507x507": "https://76.img.avito.st/image/1/1.UXu4cra5_ZL41gmXlicvBXHR-5gGJ_hmCdH_lgTb95A.aLF0V9QQKKkfXmt2xnBEKk_bjTghuw6zLRzVqakQkKs",
+                "558x558": "https://76.img.avito.st/image/1/1.UXu4cra5_ZLS2SOYlicvBXHR-5gGDfdMBtH_lgTb95A.CCuNhk5rH12fOJKmkJJhIzib02pvOeGisW6C0G_Hrx4",
+                "678x678": "https://76.img.avito.st/image/1/1.UXu4cra5_ZLC2zOalicvBXHR-5gGHfVcBNH_lgTb95A.2Dtg7xJC_BytLKxUh2TMFIJs2zJ1WeW_vw3I9pcaiFw"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 359874098,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676286072,
+          "title": "Кран Danfoss JiP-FF, Ду 40, фланцевый",
+          "price": "8 850 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Ворошиловский"
+            }
+          ],
+          "location": "р-н Ворошиловский",
+          "address": "",
+          "coords": {
+            "lat": "47.282138",
+            "lng": "39.716223"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=359874098",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/kran_danfoss_jip-ff_du_40_flantsevyy_359874098?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://30.img.avito.st/image/1/1.C9GEhLa5pziqJT04nrRl7DQnoTI6v6eiMCelPDgtrTo.aAYVuqYKP7Rkobbj0xRP0GQIFoKuftZ2siWRQlvLoF4",
+                "278x278": "https://30.img.avito.st/image/1/1.C9GEhLa5pzieIwk-nrRl7DQnoTI6i6GWNielPDgtrTo.yvJjjrQKiq5CD94oOb64z7s0lPlx_miHAkkavXNNfpI",
+                "339x339": "https://30.img.avito.st/image/1/1.C9GEhLa5pziUIgM_nrRl7DQnoTI6gaCcNyelPDgtrTo.EtucwhGgmlg2pu_C7GP5ddXdV-Y5RfS6zhIYpy1ySMs",
+                "372x372": "https://30.img.avito.st/image/1/1.C9GEhLa5pzjaIk0_nrRl7DQnoTI6z6DSNyelPDgtrTo.oKhzFeP2jWm38Cc91wla5QgWo2zoYVswCQoOTWuA0lM",
+                "507x507": "https://30.img.avito.st/image/1/1.C9GEhLa5pzjEIFM9nrRl7DQnoTI60aLMNSelPDgtrTo.O5suMPfGPOLB29E_syrP3DHAcdweGVfRm5EurZsdaD8",
+                "558x558": "https://30.img.avito.st/image/1/1.C9GEhLa5pzjuL3kynrRl7DQnoTI6-63mOielPDgtrTo.QLYBl1E0ffNu0hPNV90kFr_0smp3slvHOLWGMek58kM",
+                "678x678": "https://30.img.avito.st/image/1/1.C9GEhLa5pzj-LWkwnrRl7DQnoTI666_2OCelPDgtrTo.EHcOq9PBYvMDpA-Uc1ECWXJX05erCt9_GOmuBbYgFXM"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2631048965,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676286024,
+          "title": "Смеситель для ванной комнаты Gappo G3248",
+          "price": "8 884 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Первомайский"
+            }
+          ],
+          "location": "р-н Первомайский",
+          "address": "",
+          "coords": {
+            "lat": "47.271058",
+            "lng": "39.773143"
+          },
+          "userType": "private",
+          "hasVideo": true,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2631048965",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/smesitel_dlya_vannoy_komnaty_gappo_g3248_2631048965?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://43.img.avito.st/image/1/1.zq4Wrba5Ykc4DPhHBsKp0NQOZE2olmLdog5gQ6oEaEU.kVrKmbsfvhen1gSR8U9blfaLbSvRsbOA5No6bS-1yPQ",
+                "278x278": "https://43.img.avito.st/image/1/1.zq4Wrba5YkcMCsxBBsKp0NQOZE2oomTppA5gQ6oEaEU.QSIMnPhfqvI3gDeWwIbVYz_6ROzTNoUk6WjFhB2JeJ8",
+                "339x339": "https://43.img.avito.st/image/1/1.zq4Wrba5YkcGC8ZABsKp0NQOZE2oqGXjpQ5gQ6oEaEU.jPzcRG-tK0t-ZuqwgyK1LKdph6rQgyWBk9psMtjYzOo",
+                "372x372": "https://43.img.avito.st/image/1/1.zq4Wrba5YkdIC4hABsKp0NQOZE2o5mWtpQ5gQ6oEaEU.hC8_ElAX1MMD0zUlb5RLxWDQ8Iy8Mx9qDwa4QwNworc",
+                "507x507": "https://43.img.avito.st/image/1/1.zq4Wrba5YkdWCZZCBsKp0NQOZE2o-Gezpw5gQ6oEaEU.1jPmcQ0ocJzWY2tf-hsK9tx9HfIvifGRDuHpOlIdD4w",
+                "558x558": "https://43.img.avito.st/image/1/1.zq4Wrba5Ykd8BrxNBsKp0NQOZE2o0miZqA5gQ6oEaEU.sbk9Yz8RsxqMIqJR0EKZSSnnnBr4BLDQJbaPef6lK7Q",
+                "678x678": "https://43.img.avito.st/image/1/1.zq4Wrba5YkdsBKxPBsKp0NQOZE2owmqJqg5gQ6oEaEU.Dsr5vSFF4ou1xFBC83etYX7j6DrGi9VeMf24D9KMcRM"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2761085185,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676285938,
+          "title": "Люк невидимка в подвал 500*700",
+          "price": "8 700 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.222078",
+            "lng": "39.720358"
+          },
+          "userType": "private",
+          "hasVideo": true,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2761085185",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/lyuk_nevidimka_v_podval_500700_2761085185?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://96.img.avito.st/image/1/1.QeVnBba57QxJpHcMaWA8m66m6wbZPu2W06bvCNus5w4.k2pQv7kaow4Gi3Qca5tY3HW6eTPeKmdE2F2rMGX4JsQ",
+                "278x278": "https://96.img.avito.st/image/1/1.QeVnBba57Qx9okMKaWA8m66m6wbZCuui1abvCNus5w4.vY0CMa_3vSlfaFTkMfLfFPgc6A42nELUxx9GAYwwME4",
+                "339x339": "https://96.img.avito.st/image/1/1.QeVnBba57Qx3o0kLaWA8m66m6wbZAOqo1KbvCNus5w4.yIy6w122qfY47V4JfYZf0qYi1xetGksffNhGiJXvfbg",
+                "372x372": "https://96.img.avito.st/image/1/1.QeVnBba57Qw5owcLaWA8m66m6wbZTurm1KbvCNus5w4.ihKopjjiG2V4wd2eBky23-okryFHDUa-Qse0UJuNMYU",
+                "507x507": "https://96.img.avito.st/image/1/1.QeVnBba57QwnoRkJaWA8m66m6wbZUOj41qbvCNus5w4.9NWhOcg1BXsolugFBmdgPZ4EKaWXzjYLDCrR0vlBEoA",
+                "558x558": "https://96.img.avito.st/image/1/1.QeVnBba57QwNrjMGaWA8m66m6wbZeufS2abvCNus5w4.9uW3eyUUnUc34Yi0nNe7b3SelQu7PzB3Ht8CwcftX1E",
+                "678x678": "https://96.img.avito.st/image/1/1.QeVnBba57QwdrCMEaWA8m66m6wbZauXC26bvCNus5w4.I5CML2sChaWY6oShE3nRniD1tsEthQLlnUiUkOMZAYw"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2803502107,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676285863,
+          "title": "Двери межкомнатные из шпона",
+          "price": "14 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Железнодорожный"
+            }
+          ],
+          "location": "р-н Железнодорожный",
+          "address": "",
+          "coords": {
+            "lat": "47.227413177490234",
+            "lng": "39.64722442626953"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2803502107",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/dveri_mezhkomnatnye_iz_shpona_2803502107?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://61.img.avito.st/image/1/1.mIP9pLa5NGrTBa5qwcL2_TQHMmBDnzTwSQc2bkENPmg.Vc7Jv8U0mdVhiPPcAHn0QglPtPtqCGKNNrSYa4-3ERo",
+                "278x278": "https://61.img.avito.st/image/1/1.mIP9pLa5NGrnA5pswcL2_TQHMmBDqzLETwc2bkENPmg.a5ZR7OnITsGty3b_tfUROhAZc4riF7WLiqR7pJqLg8o",
+                "339x339": "https://61.img.avito.st/image/1/1.mIP9pLa5NGrtApBtwcL2_TQHMmBDoTPOTgc2bkENPmg.Dz3hZEPV_P5TfRyxGEXKrbL_NLHxPitk_SQnMJBgJFo",
+                "372x372": "https://61.img.avito.st/image/1/1.mIP9pLa5NGqjAt5twcL2_TQHMmBD7zOATgc2bkENPmg.V_MEJCMgU51O6q7cZnWDIvUcGWE2b158NHvk7StyrT8",
+                "507x507": "https://61.img.avito.st/image/1/1.mIP9pLa5NGq9AMBvwcL2_TQHMmBD8TGeTAc2bkENPmg.XQWvhUYWgWNtdhsuHKPepQprfXQ5wkZh3u7MmSe4_VU",
+                "558x558": "https://61.img.avito.st/image/1/1.mIP9pLa5NGqXD-pgwcL2_TQHMmBD2z60Qwc2bkENPmg.kRH1vRfTv1UUyla2ddna-9zzyPuLeXphCP6lbrBj06s",
+                "678x678": "https://61.img.avito.st/image/1/1.mIP9pLa5NGqHDfpiwcL2_TQHMmBDyzykQQc2bkENPmg._3tJu4hsTSirZws5UKifzc3L9vcsEQN67DqHzynf5Qw"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2817827663,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676285525,
+          "title": "Пленочный теплый пол",
+          "price": "5 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Пролетарский"
+            }
+          ],
+          "location": "р-н Пролетарский",
+          "address": "",
+          "coords": {
+            "lat": "47.244056",
+            "lng": "39.806596"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2817827663",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/plenochnyy_teplyy_pol_2817827663?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://54.img.avito.st/image/1/1.oy_xSba5D8bf6JXGuxf1fjzqCcxPcg9cReoNwk3gBcQ.2vpE6xmYM12z_P1Iqmi9oNGgdIAPkPoY0YbUU7RxIMs",
+                "278x278": "https://54.img.avito.st/image/1/1.oy_xSba5D8br7qHAuxf1fjzqCcxPRgloQ-oNwk3gBcQ.v-Z1xGnodyYnhtz3KJJiOoO65kMKkclqejI3LRw8hfo",
+                "339x339": "https://54.img.avito.st/image/1/1.oy_xSba5D8bh76vBuxf1fjzqCcxPTAhiQuoNwk3gBcQ.Im2K0Q4T6ml8bTPStShgg6IHYUnTHrqe9Uh5XIcJFyc",
+                "372x372": "https://54.img.avito.st/image/1/1.oy_xSba5D8av7-XBuxf1fjzqCcxPAggsQuoNwk3gBcQ.4aVSFg0Mtids-HewLJzVjV84hUDYTKyTUI2MKdW8U5w",
+                "507x507": "https://54.img.avito.st/image/1/1.oy_xSba5D8ax7fvDuxf1fjzqCcxPHAoyQOoNwk3gBcQ.HJGXJCpTVrO4xGeWyzt4B8hYFpt2cKF3I-sn6_gyF7E",
+                "558x558": "https://54.img.avito.st/image/1/1.oy_xSba5D8ab4tHMuxf1fjzqCcxPNgUYT-oNwk3gBcQ.f5jc6Q-rwmidD5QFlorDGbRRTgUlNZJnIRQHHn_6ET8",
+                "678x678": "https://54.img.avito.st/image/1/1.oy_xSba5D8aL4MHOuxf1fjzqCcxPJgcITeoNwk3gBcQ.iRm3SEXmPbzRgDbwH2KJR8Ov8s25Xz3V9vqP43S0AE8"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2775653456,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676285432,
+          "title": "Двери межкомнатные со склада",
+          "price": "9 430 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Ворошиловский"
+            }
+          ],
+          "location": "р-н Ворошиловский",
+          "address": "",
+          "coords": {
+            "lat": "47.288923",
+            "lng": "39.709377"
+          },
+          "userType": "private",
+          "hasVideo": true,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2775653456",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/dveri_mezhkomnatnye_so_sklada_2775653456?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://61.img.avito.st/image/1/1.BJ0EN7a5qHQqljJ0AHcG482Urn66DKjusJSqcLieonY.gZ_3JGa3WXS_v9gAVgs1MgThSAl2sJoayUQgtu_LeC8",
+                "278x278": "https://61.img.avito.st/image/1/1.BJ0EN7a5qHQekAZyAHcG482Urn66OK7atpSqcLieonY.vhBxrurSpgRVo5cSS36ouAzFM7czNFJ1Nzs1T4HTQMA",
+                "339x339": "https://61.img.avito.st/image/1/1.BJ0EN7a5qHQUkQxzAHcG482Urn66Mq_Qt5SqcLieonY.cd5p49DG5mib2wqYcbQXwc9lg2e8_vQBh1Wr3P1zFtE",
+                "372x372": "https://61.img.avito.st/image/1/1.BJ0EN7a5qHRakUJzAHcG482Urn66fK-et5SqcLieonY.MAQPAdgD0b077BeiwQAqfy55QMOh5SveHxWCBhII5hQ",
+                "507x507": "https://61.img.avito.st/image/1/1.BJ0EN7a5qHREk1xxAHcG482Urn66Yq2AtZSqcLieonY.9U_bRKwT_JXF0UAyECX7A319RGP-AJC9y5yXJzBbcK4",
+                "558x558": "https://61.img.avito.st/image/1/1.BJ0EN7a5qHRunHZ-AHcG482Urn66SKKqupSqcLieonY.qmMUq_9ccbe5-1HoUHF3QZLd85AlGKIhc4HF9ldG1dQ",
+                "678x678": "https://61.img.avito.st/image/1/1.BJ0EN7a5qHR-nmZ8AHcG482Urn66WKC6uJSqcLieonY.LwLbFOB9OjnxEj4_cJsQE31QKhSR7-t3SNlEYQeO0uA"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2783592452,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676285379,
+          "title": "Ворота роллетные (рольворота)",
+          "price": "13 300 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.222071",
+            "lng": "39.720358"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2783592452",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/vorota_rolletnye_rolvorota_2783592452?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://44.img.avito.st/image/1/1.ibA4dba5JVkW1L9ZJn-LzvHWI1OGTiXDjNYnXYTcL1s.1zgV_od3gY8AfxY00ds-wYbFHAUYba4Ouci_qUg9YVM",
+                "278x278": "https://44.img.avito.st/image/1/1.ibA4dba5JVki0otfJn-LzvHWI1OGeiP3itYnXYTcL1s.yU6u0JUxV0n_4xamOZJhZYvQ9FEknM-RiLarPwBo8hg",
+                "339x339": "https://44.img.avito.st/image/1/1.ibA4dba5JVko04FeJn-LzvHWI1OGcCL9i9YnXYTcL1s.5x9IoBn8qE8FHKAUOAkpMuUI-YmlgK2i_povxD8ownE",
+                "372x372": "https://44.img.avito.st/image/1/1.ibA4dba5JVlm089eJn-LzvHWI1OGPiKzi9YnXYTcL1s.VxftX5Sb4OMdt1qhCmfMLzXa_pryyVpxyz_3QK3P1i0",
+                "507x507": "https://44.img.avito.st/image/1/1.ibA4dba5JVl40dFcJn-LzvHWI1OGICCtidYnXYTcL1s.9IUdW2t2Z74lBZqxRUtZJAn4lB5Fq0rK1ywglRyUTQk",
+                "558x558": "https://44.img.avito.st/image/1/1.ibA4dba5JVlS3vtTJn-LzvHWI1OGCi-HhtYnXYTcL1s.FaXYB1-CAHvi6HSijrEGY1fSdRGJ0MwzWmZMtlF7aPU",
+                "678x678": "https://44.img.avito.st/image/1/1.ibA4dba5JVlC3OtRJn-LzvHWI1OGGi2XhNYnXYTcL1s.NuRi3cumOmdtEyjIInzRZHsbrc3GAAZcXGpiqJdSEuw"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2790218893,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676285369,
+          "title": "Плиты дорожные пдн 6,0м*2,0м",
+          "price": "5 070 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Кировский"
+            }
+          ],
+          "location": "р-н Кировский",
+          "address": "",
+          "coords": {
+            "lat": "47.222081",
+            "lng": "39.720366"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2790218893",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/plity_dorozhnye_pdn_60m20m_2790218893?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://84.img.avito.st/image/1/1.1QbUq7a5ee_6CuPv8vjQeB0If-VqkHl1YAh762gCc-0.nHvnN1wxBvG5w1v33XbPm_rdtbq1UAW44dV0jvJSx1M",
+                "278x278": "https://84.img.avito.st/image/1/1.1QbUq7a5ee_ODNfp8vjQeB0If-VqpH9BZgh762gCc-0.op6m7kBfha5XAGUR06j9OZ_IUqI2glMfn-dyNCSL_wA",
+                "339x339": "https://84.img.avito.st/image/1/1.1QbUq7a5ee_EDd3o8vjQeB0If-Vqrn5LZwh762gCc-0._7jqK1SYatwJCTTQrGuGRgF63rlBW2wsWSfGMjGA8-g",
+                "372x372": "https://84.img.avito.st/image/1/1.1QbUq7a5ee-KDZPo8vjQeB0If-Vq4H4FZwh762gCc-0.sAfdFsClPXdVcyUurpONTQQ8aX8Ioug3Yn3842fW_xA",
+                "507x507": "https://84.img.avito.st/image/1/1.1QbUq7a5ee-UD43q8vjQeB0If-Vq_nwbZQh762gCc-0.RuPd0_xaCv1vRoya3tq0cNIoiA_LSO2ItLQLO0YSFgg",
+                "558x558": "https://84.img.avito.st/image/1/1.1QbUq7a5ee--AKfl8vjQeB0If-Vq1HMxagh762gCc-0.pD1DYMmd8EU3u2FApBbfF5gKIJLm0xSozi-OhQfQbRg",
+                "678x678": "https://84.img.avito.st/image/1/1.1QbUq7a5ee-uArfn8vjQeB0If-VqxHEhaAh762gCc-0.st01dFxb5dGs9f43oVcSHPkhBLIvHkr1glWMT8bKPCU"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2760885417,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676285313,
+          "title": "Буржуйка на отработке + масло + дымоход",
+          "price": "7 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Советский"
+            }
+          ],
+          "location": "р-н Советский",
+          "address": "",
+          "coords": {
+            "lat": "47.212193",
+            "lng": "39.647585"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2760885417",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/burzhuyka_na_otrabotke_maslo_dymohod_2760885417?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://75.img.avito.st/image/1/1.SuA3eba55gkZ2HwJL0wonv7a4AOJQuaTg9rkDYvQ7As.6mX_WesqGLOupKIv8VYJFJBid0D2bIpwkT3sMBzk18k",
+                "278x278": "https://75.img.avito.st/image/1/1.SuA3eba55gkt3kgPL0wonv7a4AOJduCnhdrkDYvQ7As.5b05KY69eZmsLDj9cCnQHDpajA7fEfRf8GpSLo9CS60",
+                "339x339": "https://75.img.avito.st/image/1/1.SuA3eba55gkn30IOL0wonv7a4AOJfOGthNrkDYvQ7As.DVNkcdIaiz3ocGuFxFgqaO1EXGhuOz7oyzjdDfDpEh0",
+                "372x372": "https://75.img.avito.st/image/1/1.SuA3eba55glp3wwOL0wonv7a4AOJMuHjhNrkDYvQ7As.e_uOMKezAiW4P9WulU5HEykcS9YJIP1fFkmu_PdeTDY",
+                "507x507": "https://75.img.avito.st/image/1/1.SuA3eba55gl33RIML0wonv7a4AOJLOP9htrkDYvQ7As.8AGQWuv4xVaI36v3wkI7rUQLW11AiGhBV0wMikc-W0I",
+                "558x558": "https://75.img.avito.st/image/1/1.SuA3eba55gld0jgDL0wonv7a4AOJBuzXidrkDYvQ7As.FdeupYsk3vZxf30kfeAVmqYpZmhWS5uZD9Xr1x08Gzo",
+                "678x678": "https://75.img.avito.st/image/1/1.SuA3eba55glN0CgBL0wonv7a4AOJFu7Hi9rkDYvQ7As.0fsmvr0pWp1H6pdOvkewYplHJNvIg6qZCL_Hkroxtro"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2805878056,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676285120,
+          "title": "Строительный пылесос вихрь",
+          "price": "6 600 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "р-н Железнодорожный"
+            }
+          ],
+          "location": "р-н Железнодорожный",
+          "address": "",
+          "coords": {
+            "lat": "47.207457508501456",
+            "lng": "39.677957639892554"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "deliveryTerms": {
+            "text": "Доставка от 1 дня"
+          },
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA&itemId=2805878056",
+          "uri_mweb": "/rostov-na-donu/remont_i_stroitelstvo/stroitelnyy_pylesos_vihr_2805878056?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKNzRMKUjMNyozNUixMCgzyk41TckuSTFIKTMqKTTIUrKuBQQAAP__BQuC2jUAAAA",
+          "galleryItems": [
+            {
+              "type": "image",
+              "value": {
+                "140x140": "https://51.img.avito.st/image/1/1.OjFj8ra5lthNUwzYG_I3T6pRkNLdyZZC11GU3N9bnNo.pbBPObKVr70rI0CUPg5J4yjrVLoaAovF-TgdT-4wLPs",
+                "278x278": "https://51.img.avito.st/image/1/1.OjFj8ra5lth5VTjeG_I3T6pRkNLd_ZB20VGU3N9bnNo.gAMV4r90aKvO4CeFJgMGz20omx6oGpjo1EN3-oKXQI4",
+                "339x339": "https://51.img.avito.st/image/1/1.OjFj8ra5lthzVDLfG_I3T6pRkNLd95F80FGU3N9bnNo.h7JHtjBQu43_6a-Z6J1zXUIuLQAnpFQGaNCZNo4m6o4",
+                "372x372": "https://51.img.avito.st/image/1/1.OjFj8ra5ltg9VHzfG_I3T6pRkNLduZEy0FGU3N9bnNo.8FZR51q-yYt7AL8eydlT3qGmAb5p5BuuIFdLseEOmBM",
+                "507x507": "https://51.img.avito.st/image/1/1.OjFj8ra5ltgjVmLdG_I3T6pRkNLdp5Ms0lGU3N9bnNo.veXVNUv0fue0hghZOXhwwuRivzMJN5RmtRuleXRoXuA",
+                "558x558": "https://51.img.avito.st/image/1/1.OjFj8ra5ltgJWUjSG_I3T6pRkNLdjZwG3VGU3N9bnNo.Wp9s7XHht9E_CRPmvfNcUx7WvjAvAgN1XlYoq17Dw5Y",
+                "678x678": "https://51.img.avito.st/image/1/1.OjFj8ra5ltgZW1jQG_I3T6pRkNLdnZ4W31GU3N9bnNo.h_GEfbaPmblcrAw5nTSrIqzCcDtJ8cYT5PJyYbn-Thk"
+              }
+            }
+          ],
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      }
+    ],
+    "searchHint": "Поиск на Авито",
+    "seo": {
+      "title": "Купить товары для ремонта и строительства в Ростове-на-Дону | Недорогие товары для дома и дачи | Авито",
+      "description": "7 507 объявлений о продаже товаров для ремонта и строительства по доступным ценам в Ростове-на-Дону. На Авито вы можете недорого купить межкомнатные и входные двери, пластиковые окна, смесители, унитазы, ванны, стройматериалы, обогреватели, радиаторы и многое другое. Выбирайте среди предложений магазинов и частных объявлений о продаже недорогих новых и б/у товаров для дома и дачи на Авито.",
+      "h1": "Товары для ремонта и строительства в Ростове-на-Дону",
+      "schemaOrg": {
+        "payload": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@context\":\"https://schema.org\",\"@type\":\"Product\",\"name\":\"Купить товары для ремонта и строительства в Ростове-на-Дону | Недорогие товары для дома и дачи | Авито\",\"description\":\"7 507 объявлений о продаже товаров для ремонта и строительства по доступным ценам в Ростове-на-Дону. На Авито вы можете недорого купить межкомнатные и входные двери, пластиковые окна, смесители, унитазы, ванны, стройматериалы, обогреватели, радиаторы и многое другое. Выбирайте среди предложений магазинов и частных объявлений о продаже недорогих новых и б/у товаров для дома и дачи на Авито.\",\"offers\":{\"@type\":\"AggregateOffer\",\"priceCurrency\":\"RUB\",\"lowPrice\":5000,\"highPrice\":14000}}]}"
+      }
+    },
+    "seoNavigation": {
+      "breadcrumbs": [
+        {
+          "name": "Ростов-на-Дону",
+          "title": "Все объявления в Ростове-на-Дону",
+          "url": "/rostov-na-donu"
+        },
+        {
+          "name": "Для дома и дачи",
+          "title": "Для дома и дачи в Ростове-на-Дону",
+          "url": "/rostov-na-donu/dlya_doma_i_dachi"
+        },
+        {
+          "name": "Ремонт и строительство",
+          "title": "Ремонт и строительство в Ростове-на-Дону",
+          "url": "/rostov-na-donu/remont_i_stroitelstvo"
+        }
+      ]
+    },
+    "applyButton": {
+      "enabled": true,
+      "title": "Показать 8 тыс. объявлений",
+      "presentationType": "serp"
+    },
+    "nextPageId": "H4sIAAAAAAAA_0q0MrSqLrYyNLRSKskvScyJT8svzUtRss60Mjc1MLeuBQQAAP__m6d9liAAAAA",
+    "searchSubscriptionAction": "ru.avito://1/searchSubscription/new/byParams?description=%D0%A0%D0%BE%D1%81%D1%82%D0%BE%D0%B2%E2%80%91%D0%BD%D0%B0%E2%80%91%D0%94%D0%BE%D0%BD%D1%83%2C+%D0%A0%D0%B5%D0%BC%D0%BE%D0%BD%D1%82+%D0%B8+%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE%2C+%D0%A7%D0%B0%D1%81%D1%82%D0%BD%D1%8B%D0%B5%2C+%D0%A6%D0%B5%D0%BD%D0%B0+5%C2%A0000%C2%A0%E2%80%94%C2%A015%C2%A0000%C2%A0%E2%82%BD&filter%5BcategoryId%5D=19&filter%5BlocationId%5D=652000&filter%5Bparams%5D%5B201%5D=1060&filter%5Bparams%5D%5B504%5D=5256&filter%5BpriceMax%5D=15000&filter%5BpriceMin%5D=5000&filter%5BprivateOnly%5D=1&pushFrequency=3&pushFrequencyOptions%5B0%5D%5Bid%5D=1&pushFrequencyOptions%5B0%5D%5Btitle%5D=%D0%A1%D1%80%D0%B0%D0%B7%D1%83&pushFrequencyOptions%5B1%5D%5Bid%5D=2&pushFrequencyOptions%5B1%5D%5Btitle%5D=%D0%A3%D1%82%D1%80%D0%BE%D0%BC&pushFrequencyOptions%5B2%5D%5Bid%5D=3&pushFrequencyOptions%5B2%5D%5Btitle%5D=%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%BE%D0%BC&pushFrequencyOptions%5B3%5D%5Bid%5D=0&pushFrequencyOptions%5B3%5D%5Btitle%5D=%D0%9D%D0%B5+%D0%BF%D1%80%D0%B8%D1%81%D1%8B%D0%BB%D0%B0%D1%82%D1%8C&title=%D0%9F%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%BF%D0%BE%D0%B8%D1%81%D0%BA",
+    "saveToHistoryDescription": {
+      "title": "Ремонт и строительство",
+      "description": "Ростов‑на‑Дону, Частные, Цена 5 000 — 15 000 ₽",
+      "deeplink": "ru.avito://1/items/search?categoryId=19&context=H4sIAAAAAAAA_0q0MrSqLraysFJKK8rPDUhMT1WyLrYys1IqSk1OzStRsq4FBAAA___svPlPIgAAAA&locationId=652000&params%5B201%5D=1060&params%5B504%5D=5256&presentationType=serp&priceMax=15000&priceMin=5000&privateOnly=1&searchRadius=0&sort=date",
+      "rootCategoryId": 2,
+      "verticalCategoryId": 4
+    },
+    "xHash": "o11dpao2v50d80v2ke5dktd0dv2tq0j",
+    "verticalId": 4
+  }
+}

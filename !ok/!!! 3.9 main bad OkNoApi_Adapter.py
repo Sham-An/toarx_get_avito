@@ -127,8 +127,8 @@ url_api_9 = 'https://m.avito.ru/api/9/items'    # Урл первого API, п�
 
 #!!!!!!!!!!!!!!!!!!!!!    "categories": 14,
 #https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categories=14&locationId=621590&searchRadius=10&priceMin=1000&priceMax=20000&sort=priceDesc&withImagesOnly=true&lastStamp=1670975970&display=list&limit=50&query=suzuki%2Bgsx-r&page=1
-
-params = {
+#'lastStamp': 1670975970,
+params_bad = {
     'key': 'f1cfe913d6f44732a4b1601444eccb74',
     'categoryId': '14',
     'locationId': locationId,
@@ -137,19 +137,36 @@ params = {
     'priceMax': priceMax,
     'sort': sort,
     'withImagesOnly': withImagesOnly,
-    'lastStamp': 1670975970,
     'display': 'list',
     'limit': limit_page,
-    'query': search }
+    'query': search,
+}
+
+params = (
+        ('key', 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'),
+        ('categoryId', '19'),
+        ('params[201]', '1060'),
+        ('locationId', '652000'),
+        ('priceMin', priceMin),
+        ('priceMax', priceMax),
+        ('params[504]', '5256'),
+        ('owner[]', 'private'),
+        ('sort', 'date'),
+        ('page', '1'),
+        ('display', 'list'),
+        ('limit', '30'),
+)
+
+
+
 cicle_stop = True       # Переменная для остановки цикла
 cikle = 0               # Переменная для перебора страниц с объявлениями
 items = []              # Список, куда складываем объявления
 #params['key'] = key
-while cicle_stop:
-    cikle += 1          # Так как страницы начинаются с 1, то сразу же итерируем
-    params['page'] = cikle
-    #print(params)
 
+while cicle_stop:
+    # cikle += 1          # Так как страницы начинаются с 1, то сразу же итерируем
+    #params['page'] = cikle
     res = s.get(url_api_9, params=params, proxies=proxiess) #, useragent = UA) #, useragent = str(UA))
     res2 = s2.get(url_api_9, params=params, proxies=proxiess)  # , useragent = UA) #, useragent = str(UA))
     res3 = s3.get(url_api_9, params=params, proxies=proxiess)  # , useragent = UA) #, useragent = str(UA))
@@ -204,6 +221,8 @@ while cicle_stop:
                 items.append(item)
         if items_page < limit_page:
             cicle_stop = False
+        cicle_stop = True
+
 ####################################################################
 #key = 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'
 #params = {'key': key}
