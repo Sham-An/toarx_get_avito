@@ -1,0 +1,2571 @@
+{
+  "status": "ok",
+  "result": {
+    "options": {
+      "isLocationVisible": true,
+      "isMetroVisible": false,
+      "display": "grid"
+    },
+    "count": 23281,
+    "totalCount": 23281,
+    "mainCount": 23281,
+    "expanded_count": 0,
+    "witchersCount": 0,
+    "lastStamp": 1676263200,
+    "items": [
+      {
+        "type": "item",
+        "value": {
+          "id": 2565632812,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676262489,
+          "title": "ЗАЗ 968 Запорожец 1.2 МТ, 1985, 39 800 км",
+          "images": {
+            "count": 7,
+            "main": {
+              "140x140": "https://93.img.avito.st/image/1/1.IPYXhLa5jB85JRYfW6BjutMnihWpv4yFoyeOG6sthh0.DiJa83ilrBvrjv_5R7o-RA7TW7uAHnt0HY8Kp0q2hT0",
+              "278x278": "https://93.img.avito.st/image/1/1.IPYXhLa5jB8NIyIZW6BjutMnihWpi4qxpSeOG6sthh0.mjTT_6GWAYD8zWLGIglv-Wppj-CAOGR1oSqtT5Xi4ig",
+              "339x339": "https://93.img.avito.st/image/1/1.IPYXhLa5jB8HIigYW6BjutMnihWpgYu7pCeOG6sthh0.w7fpIGQH7QzFMVZAF_xSyc47Afo-dNYFePzzH4tdddY",
+              "372x372": "https://93.img.avito.st/image/1/1.IPYXhLa5jB9JImYYW6BjutMnihWpz4v1pCeOG6sthh0.v9SkmLn7_kpVDtY97dte-L5EQuFd8-TDayaIFX5rBOk",
+              "507x507": "https://93.img.avito.st/image/1/1.IPYXhLa5jB9XIHgaW6BjutMnihWp0YnrpieOG6sthh0.4P7QbvfjoiUs37GjsqTE7FOsCel83pZXSOTAwgi_-iY",
+              "558x558": "https://93.img.avito.st/image/1/1.IPYXhLa5jB99L1IVW6BjutMnihWp-4bBqSeOG6sthh0.dh6LKAhl4YicTv5ucRHZowaNXQ638t_fZMfMUxUNDbc",
+              "678x678": "https://93.img.avito.st/image/1/1.IPYXhLa5jB9tLUIXW6BjutMnihWp64TRqyeOG6sthh0.4jbB1UFIWMCkO-TV6CjmPu7INE91VhmRw58aWk76ha0"
+            }
+          },
+          "price": "120 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Черкесск"
+            }
+          ],
+          "location": "Черкесск",
+          "address": "",
+          "coords": {
+            "lat": "44.228374",
+            "lng": "42.048275"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2565632812",
+          "uri_mweb": "/cherkessk/avtomobili/zaz_968_zaporozhets_1985_2565632812?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2565632812"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2565632812&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2797778933,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676262425,
+          "title": "Honda Fit 1.5 AMT, 2018, 58 291 км",
+          "images": {
+            "count": 37,
+            "main": {
+              "140x140": "https://26.img.avito.st/image/1/1.d9Pxl7a52zrfNkE6k6oMtTg03TBPrNugRTTZPk0-0Tg.xBgeakOAL8iYtr7RevCwWFGpKKqVw9jKAjtrQ_NasLE",
+              "278x278": "https://26.img.avito.st/image/1/1.d9Pxl7a52zrrMHU8k6oMtTg03TBPmN2UQzTZPk0-0Tg.oBjh32A9yE3jXRjvAKFgh8VGvlkn70vkTUDFI4xVi5E",
+              "339x339": "https://26.img.avito.st/image/1/1.d9Pxl7a52zrhMX89k6oMtTg03TBPktyeQjTZPk0-0Tg.oIsLWdLFilGnPcR3HWwma3LGuSLdOmYIQYsR30kRRA0",
+              "372x372": "https://26.img.avito.st/image/1/1.d9Pxl7a52zqvMTE9k6oMtTg03TBP3NzQQjTZPk0-0Tg.Wz5hyXKPwvGGbXJWnqQ7tuCGw6xGLy3U0sJ5GCKDYAA",
+              "507x507": "https://26.img.avito.st/image/1/1.d9Pxl7a52zqxMy8_k6oMtTg03TBPwt7OQDTZPk0-0Tg.GEsQcOFRNQWw4Uj_mXMaUNKhGqjO4ATK8rWgECFQWj4",
+              "558x558": "https://26.img.avito.st/image/1/1.d9Pxl7a52zqbPAUwk6oMtTg03TBP6NHkTzTZPk0-0Tg.1zOShrUvZ0o8umF7seo_0H8juEWzb9WiSVbejMCO8Fc",
+              "678x678": "https://26.img.avito.st/image/1/1.d9Pxl7a52zqLPhUyk6oMtTg03TBP-NP0TTTZPk0-0Tg.gZp0HfWYt_P9kj1H_36Y5NGeLaQIYNtWpDNqv8tnKEY"
+            }
+          },
+          "price": "700 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.106249",
+            "lng": "131.8713"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2797778933",
+          "uri_mweb": "/vladivostok/avtomobili/honda_fit_2018_2797778933?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2797778933"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2797778933&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2796917882,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261890,
+          "title": "Mitsubishi Minicab MiEV AT, 2019, 21 000 км",
+          "images": {
+            "count": 28,
+            "main": {
+              "140x140": "https://43.img.avito.st/image/1/1.Isp0Aba5jiNaoBQjPF0UrL2iiCnKOo65wKKMJ8iohCE.QHyZoqqcQQyOcDgZTPGgrB5hj32fx5LNQdhMQKG5f10",
+              "278x278": "https://43.img.avito.st/image/1/1.Isp0Aba5jiNupiAlPF0UrL2iiCnKDoiNxqKMJ8iohCE.aOz3GDA0fBzWhTQT-81_s9T8sP_X2XBYGHJXjaeNpUs",
+              "339x339": "https://43.img.avito.st/image/1/1.Isp0Aba5jiNkpyokPF0UrL2iiCnKBImHx6KMJ8iohCE.2YLB6DLNpZI6nVnpRXoV8P8hE19a6vBZVMSXAs7n5PQ",
+              "372x372": "https://43.img.avito.st/image/1/1.Isp0Aba5jiMqp2QkPF0UrL2iiCnKSonJx6KMJ8iohCE.tNigrkTYhdNLijRqkxwT5ED8AlFsKlwEanhA7w9Q9fM",
+              "507x507": "https://43.img.avito.st/image/1/1.Isp0Aba5jiM0pXomPF0UrL2iiCnKVIvXxaKMJ8iohCE.2yZAO45bjbzcBVugAETGjHS955RIJumMsWuszrA8gXg",
+              "558x558": "https://43.img.avito.st/image/1/1.Isp0Aba5jiMeqlApPF0UrL2iiCnKfoT9yqKMJ8iohCE.AzL1NyslD2N2CDeSWmHDwUQse8pFZMmhgQJDdkrnYS8",
+              "678x678": "https://43.img.avito.st/image/1/1.Isp0Aba5jiMOqEArPF0UrL2iiCnKbobtyKKMJ8iohCE.Zu06YXkcMwK2kn2Va_IqUXqhj82_8Cgyp1pTpThP98E"
+            }
+          },
+          "price": "550 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.166051",
+            "lng": "131.927759"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2796917882",
+          "uri_mweb": "/vladivostok/avtomobili/mitsubishi_minicab_miev_2019_2796917882?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2796917882"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2796917882&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2773383366,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261849,
+          "title": "Hyundai i30 1.4 МТ, 2009, 200 000 км",
+          "images": {
+            "count": 3,
+            "main": {
+              "140x140": "https://12.img.avito.st/image/1/1.Afumrba5rRKIDDcSqPlnnW8OqxgYlq2IEg6vFhoEpxA.rVIDKu6IwBYTw6Ro324iKPgf0pizPNjCtxk5OyPAq9c",
+              "278x278": "https://12.img.avito.st/image/1/1.Afumrba5rRK8CgMUqPlnnW8OqxgYoqu8FA6vFhoEpxA.khEsQMISTxPpPU7GZyg8BVbfwK8htDaHi3wMEk4htOg",
+              "339x339": "https://12.img.avito.st/image/1/1.Afumrba5rRK2CwkVqPlnnW8OqxgYqKq2FQ6vFhoEpxA.OUoQn4CQx_kFq5f2aJlCfkOWp0griUZcHAIKbBq_qig",
+              "372x372": "https://12.img.avito.st/image/1/1.Afumrba5rRL4C0cVqPlnnW8OqxgY5qr4FQ6vFhoEpxA.9PKVhVUWW3Vl0_JfaO3WfdYb4U3tUwduXfsQh9--dcE",
+              "507x507": "https://12.img.avito.st/image/1/1.Afumrba5rRLmCVkXqPlnnW8OqxgY-KjmFw6vFhoEpxA.AeoaMbiJRAKUwihJBjkrQkGGm1EtZ1NO_rjSPR6QJAA",
+              "558x558": "https://12.img.avito.st/image/1/1.Afumrba5rRLMBnMYqPlnnW8OqxgY0qfMGA6vFhoEpxA.5HM0Kb5lDjP7JlTakFCjVMTBst049SfsMWU-AXj7dgk",
+              "678x678": "https://12.img.avito.st/image/1/1.Afumrba5rRLcBGMaqPlnnW8OqxgYwqXcGg6vFhoEpxA.0X0a9Mc6zr0WDXRAMjrTU7zExCUzswLqbzHk7iBBGFw"
+            }
+          },
+          "price": "500 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Краснодар"
+            }
+          ],
+          "location": "Краснодар",
+          "address": "",
+          "coords": {
+            "lat": "45.080167",
+            "lng": "38.891752"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2773383366",
+          "uri_mweb": "/krasnodar/avtomobili/hyundai_i30_2009_2773383366?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2773383366"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2773383366&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2798570365,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261810,
+          "title": "Honda N-WGN 0.7 CVT, 2019, 39 000 км",
+          "images": {
+            "count": 19,
+            "main": {
+              "140x140": "https://07.img.avito.st/image/1/1.nveVK7a5Mh67iqgepV3lkVyINBQrEDKEIYgwGimCOBw.X1QkdIQmFBVz7-6dYFTZLW3wOfkbS-JomYSAbnXILnc",
+              "278x278": "https://07.img.avito.st/image/1/1.nveVK7a5Mh6PjJwYpV3lkVyINBQrJDSwJ4gwGimCOBw.m5d239kyKfHHADoqGNv__XMbaoeoXYOri3N85euFcI0",
+              "339x339": "https://07.img.avito.st/image/1/1.nveVK7a5Mh6FjZYZpV3lkVyINBQrLjW6JogwGimCOBw.rjWPt_I8MJywDMcISkdvTi-5P19_7_vuJZu5lsMvkLU",
+              "372x372": "https://07.img.avito.st/image/1/1.nveVK7a5Mh7LjdgZpV3lkVyINBQrYDX0JogwGimCOBw.tVjQwA2Ki39J3u4eKrW35UlFRMc_kq4007iykyXfiNQ",
+              "507x507": "https://07.img.avito.st/image/1/1.nveVK7a5Mh7Vj8YbpV3lkVyINBQrfjfqJIgwGimCOBw._xL5MzIfaxbodPqJxMzIYBTXdWgUCP7uUrPtXOVsaa8",
+              "558x558": "https://07.img.avito.st/image/1/1.nveVK7a5Mh7_gOwUpV3lkVyINBQrVDjAK4gwGimCOBw.XUw3nrDWNZDxarFi5PQAwge9L0TA414YGBlrx2XABDM",
+              "678x678": "https://07.img.avito.st/image/1/1.nveVK7a5Mh7vgvwWpV3lkVyINBQrRDrQKYgwGimCOBw.8s4q-zJxl-BdEsx713gpmvj43YXX8NLphdp-3JjACpE"
+            }
+          },
+          "price": "640 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.117497",
+            "lng": "131.89383"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798570365",
+          "uri_mweb": "/vladivostok/avtomobili/honda_n-wgn_2019_2798570365?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798570365"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798570365&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2828389589,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261760,
+          "title": "Toyota Allex 1.5 AT, 2001, 250 000 км",
+          "images": {
+            "count": 20,
+            "main": {
+              "140x140": "https://17.img.avito.st/image/1/1.SIp0LLa55GNajX5jaGVDjb-P4mnKF-T5wI_mZ8iF7mE.QmQUYl6C5SuyfFlzkKeFS40kvDBki1n3UMmS7Dct9Ec",
+              "278x278": "https://17.img.avito.st/image/1/1.SIp0LLa55GNui0plaGVDjb-P4mnKI-LNxo_mZ8iF7mE.4lhcXcRTR0x1TXqV6Xjz68yAA1OQiPLikhwiBd5ENng",
+              "339x339": "https://17.img.avito.st/image/1/1.SIp0LLa55GNkikBkaGVDjb-P4mnKKePHx4_mZ8iF7mE.xmrMRv9q4toGeo1_4B6IKpkZS9U6kGoTSlAy0W4nXHI",
+              "372x372": "https://17.img.avito.st/image/1/1.SIp0LLa55GMqig5kaGVDjb-P4mnKZ-OJx4_mZ8iF7mE.NWtwAZAciP72kEv0yXpZyx5boTHNnBjc1lypLXCi5Uc",
+              "507x507": "https://17.img.avito.st/image/1/1.SIp0LLa55GM0iBBmaGVDjb-P4mnKeeGXxY_mZ8iF7mE.JhW1pg54M472djAoxqdweJ_ynGoGv3LnyBLFxoBvMb4",
+              "558x558": "https://17.img.avito.st/image/1/1.SIp0LLa55GMehzppaGVDjb-P4mnKU-69yo_mZ8iF7mE.2ftnnW1ND1tog9fR70nB4RcTN2hkVj_zn5-3J1PHtLg",
+              "678x678": "https://17.img.avito.st/image/1/1.SIp0LLa55GMOhSpraGVDjb-P4mnKQ-ytyI_mZ8iF7mE.Z69TTZ-FGT_eC5sn3jXwJfQ5nuT0NYYCZjgha33KOKU"
+            }
+          },
+          "price": "495 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Краснодар"
+            }
+          ],
+          "location": "Краснодар",
+          "address": "",
+          "coords": {
+            "lat": "45.0636389011777",
+            "lng": "38.9330670336323"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2828389589",
+          "uri_mweb": "/krasnodar/avtomobili/toyota_allex_2001_2828389589?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 103,
+                "title": "Только на Авито",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2828389589"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2828389589&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2660295073,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261580,
+          "title": "Toyota Avensis 1.8 МТ, 2006, битый, 200 000 км",
+          "images": {
+            "count": 7,
+            "main": {
+              "140x140": "https://02.img.avito.st/image/1/1.o0Dc87a5D6nyUpWplsnuTBxQCaNiyA8zaFANrWBaBas.PhjrfUHE9a9LSi8zZ1xlIn6aEAAyh4pZ1HoHk53mhcY",
+              "278x278": "https://02.img.avito.st/image/1/1.o0Dc87a5D6nGVKGvlsnuTBxQCaNi_AkHblANrWBaBas.lcvZxuIV5jJ0ASZkFfg68zDGy2-tVOgDI9Qo3Lw1Lu8",
+              "339x339": "https://02.img.avito.st/image/1/1.o0Dc87a5D6nMVauulsnuTBxQCaNi9ggNb1ANrWBaBas.EaOeqvF6hB-0MbkgasCpyP1JPkrqDU-2_9wJh7cjC8Q",
+              "372x372": "https://02.img.avito.st/image/1/1.o0Dc87a5D6mCVeWulsnuTBxQCaNiuAhDb1ANrWBaBas.XSoK42GUlB8QKtEZ8nXK9B_LjNzhhVzJLBlwYiVuNtY",
+              "507x507": "https://02.img.avito.st/image/1/1.o0Dc87a5D6mcV_uslsnuTBxQCaNipgpdbVANrWBaBas.maXieHQTGz5gXH3MCO4ok3gonwytFNmk6Rgv6OD4PKU",
+              "558x558": "https://02.img.avito.st/image/1/1.o0Dc87a5D6m2WNGjlsnuTBxQCaNijAV3YlANrWBaBas.QufuJC673fNY7vD5O0qCEzgZJJAPxi2ccLA23sf0ffc",
+              "678x678": "https://02.img.avito.st/image/1/1.o0Dc87a5D6mmWsGhlsnuTBxQCaNinAdnYFANrWBaBas.Eq9M6UXdhC-nIMDwnbp5XmIiWZ1DpeC5x17VTk-7ppg"
+            }
+          },
+          "price": "495 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Майкоп"
+            }
+          ],
+          "location": "Майкоп",
+          "address": "",
+          "coords": {
+            "lat": "44.6240338000639",
+            "lng": "40.0610719324651"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2660295073",
+          "uri_mweb": "/maykop/avtomobili/toyota_avensis_2006_2660295073?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2660295073"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2565434478,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261295,
+          "title": "Ford Focus 1.6 МТ, 2005, 150 000 км",
+          "images": {
+            "count": 5,
+            "main": {
+              "140x140": "https://41.img.avito.st/image/1/1.WN2d_7a59DSzXm40oZ569Flc8j4jxPSuKVz2MCFW_jY.2TE6dHTEaUl4n-aVQTPKztP5CqXv_sZvAst3Vi-v-w4",
+              "278x278": "https://41.img.avito.st/image/1/1.WN2d_7a59DSHWFoyoZ569Flc8j4j8PKaL1z2MCFW_jY.Cy4xsDtFrjaxanC6io-NSxxxGq-KRZhDslxxDj6PWHI",
+              "339x339": "https://41.img.avito.st/image/1/1.WN2d_7a59DSNWVAzoZ569Flc8j4j-vOQLlz2MCFW_jY.vMSEx9j_wAPc7pxgS2p1nYgfD5sEMOceh3DpWvHGLZA",
+              "372x372": "https://41.img.avito.st/image/1/1.WN2d_7a59DTDWR4zoZ569Flc8j4jtPPeLlz2MCFW_jY.U0WWPXKHM7L6OCQPiSPc9oRC5LuuXlpW3szFbPABwpw",
+              "507x507": "https://41.img.avito.st/image/1/1.WN2d_7a59DTdWwAxoZ569Flc8j4jqvHALFz2MCFW_jY.-yBUjwTpl3fVaaYB3grAKr_6td1enlTuMuzMOdYOtCY",
+              "558x558": "https://41.img.avito.st/image/1/1.WN2d_7a59DT3VCo-oZ569Flc8j4jgP7qI1z2MCFW_jY.7Ls-Rjc62xd9BihNo7SRgD7uRiRAjberWaRphBMbWQ0",
+              "678x678": "https://41.img.avito.st/image/1/1.WN2d_7a59DTnVjo8oZ569Flc8j4jkPz6IVz2MCFW_jY.1DaxJKPRFLdmVVaJcz7LdwN_ZtmjzBFRI-Yx8TX3jmM"
+            }
+          },
+          "price": "315 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Кардоникская"
+            }
+          ],
+          "location": "Кардоникская",
+          "address": "",
+          "coords": {
+            "lat": "43.770947",
+            "lng": "41.753928"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2565434478",
+          "uri_mweb": "/kardonikskaya/avtomobili/ford_focus_2005_2565434478?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 6,
+                "title": "Собственник",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              },
+              {
+                "id": 103,
+                "title": "Только на Авито",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2565434478"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2565434478&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2584410027,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261247,
+          "title": "Kia Carens 1.6 МТ, 2006, 261 000 км",
+          "images": {
+            "count": 10,
+            "main": {
+              "140x140": "https://79.img.avito.st/image/1/1.RiYta7a56s8DynDPLQpnPvTI7MWTUOpVmcjoy5HC4M0.ZILcskZZYMNID1AcruTCzA6Br-Wncy5NAG-5Vz4wFcU",
+              "278x278": "https://79.img.avito.st/image/1/1.RiYta7a56s83zETJLQpnPvTI7MWTZOxhn8joy5HC4M0.PD_pD1QliZBHFzQBg5yIl-phzVN11IJXFbCOxH4Be1Y",
+              "339x339": "https://79.img.avito.st/image/1/1.RiYta7a56s89zU7ILQpnPvTI7MWTbu1rnsjoy5HC4M0.ZVFyN0XlU35zPXfZmX7XJ9QwYLu27qIkKRQtkJD5Bnw",
+              "372x372": "https://79.img.avito.st/image/1/1.RiYta7a56s9zzQDILQpnPvTI7MWTIO0lnsjoy5HC4M0.rQMByhNP5IA1kuFYD57o44n__ZH4xLacx-bPU5kWJfg",
+              "507x507": "https://79.img.avito.st/image/1/1.RiYta7a56s9tzx7KLQpnPvTI7MWTPu87nMjoy5HC4M0.R6fjKSDTwzBqYJcaMC6KLEy_NvZ4gwLjktogbzZLMYc",
+              "558x558": "https://79.img.avito.st/image/1/1.RiYta7a56s9HwDTFLQpnPvTI7MWTFOARk8joy5HC4M0.VayTK59prZvb0CmwpcLNsq1wLmubq6Hqp25bXSP23Cw",
+              "678x678": "https://79.img.avito.st/image/1/1.RiYta7a56s9XwiTHLQpnPvTI7MWTBOIBkcjoy5HC4M0.EVIzetrHh6MCw2JCALr8oJQOEBbAmRaY653mMm2Zll8"
+            }
+          },
+          "price": "500 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Туапсе"
+            }
+          ],
+          "location": "Туапсе",
+          "address": "",
+          "coords": {
+            "lat": "44.095245",
+            "lng": "39.073382"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2584410027",
+          "uri_mweb": "/tuapse/avtomobili/kia_carens_2006_2584410027?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 103,
+                "title": "Только на Авито",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2584410027"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2584410027&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2715770257,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261247,
+          "title": "LADA 4x4 (Нива) 1.7 МТ, 2011, 98 000 км",
+          "images": {
+            "count": 6,
+            "main": {
+              "140x140": "https://03.img.avito.st/image/1/1.wg4EM7a5bucqkvTnDAjXOsuQaO26CG59sJBs47iaZOU.y7_aH_OGXyxi15Xdwj0kfN93hDsg963BE6e7MzRbOl8",
+              "278x278": "https://03.img.avito.st/image/1/1.wg4EM7a5bucelMDhDAjXOsuQaO26PGhJtpBs47iaZOU.JuYEfs2Et_Bd0oUSPW5C_Ze4LLrRfqsV2QS0N_3btP0",
+              "339x339": "https://03.img.avito.st/image/1/1.wg4EM7a5bucUlcrgDAjXOsuQaO26NmlDt5Bs47iaZOU.rDFRTDhL3aP1YhtWwD7beCHjFW_ipHKRw_bYx-5J7qw",
+              "372x372": "https://03.img.avito.st/image/1/1.wg4EM7a5budalYTgDAjXOsuQaO26eGkNt5Bs47iaZOU.Coov75a2sIucfyHudbtOpbYJoXObRX_YlLYaBsHCnd8",
+              "507x507": "https://03.img.avito.st/image/1/1.wg4EM7a5budEl5riDAjXOsuQaO26ZmsTtZBs47iaZOU.ONTN6Hcm47D2xIGQVXu_pwqNZmBY2V_Ixd7rRCf5yDk",
+              "558x558": "https://03.img.avito.st/image/1/1.wg4EM7a5budumLDtDAjXOsuQaO26TGQ5upBs47iaZOU.9wnRWgVSVMSU_tEVhAcWfF9W19xUQEBzbbv9R9zlR1o",
+              "678x678": "https://03.img.avito.st/image/1/1.wg4EM7a5bud-mqDvDAjXOsuQaO26XGYpuJBs47iaZOU.dY3W3BeaLZ60JHhKabG5K2HhW3Jz2GlXDngWDFAwKh0"
+            }
+          },
+          "price": "420 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Ессентуки"
+            }
+          ],
+          "location": "Ессентуки",
+          "address": "",
+          "coords": {
+            "lat": "44.05383",
+            "lng": "42.895911"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2715770257",
+          "uri_mweb": "/essentuki/avtomobili/vaz_lada_4x4_niva_2011_2715770257?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2715770257"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2715770257&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2806426519,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261062,
+          "title": "Nissan Serena 2.0 CVT, 2012, 90 000 км",
+          "images": {
+            "count": 11,
+            "main": {
+              "140x140": "https://54.img.avito.st/image/1/1.L6gym7a5g0EcOhlBYMdGzvs4hUuMoIPbhjiBRY4yiUM.w_WmDS9aFvUGnpeEJvEiF_p3EGs7pLNK6gVxdQPajjE",
+              "278x278": "https://54.img.avito.st/image/1/1.L6gym7a5g0EoPC1HYMdGzvs4hUuMlIXvgDiBRY4yiUM.O4baDalouHCm2d8YTLaqa-phnOiykc6EQAU7LmtuYNM",
+              "339x339": "https://54.img.avito.st/image/1/1.L6gym7a5g0EiPSdGYMdGzvs4hUuMnoTlgTiBRY4yiUM.1_PffCm4cpSiA_WGAaFftSuAu6inppb1N6g9BPFXUvU",
+              "372x372": "https://54.img.avito.st/image/1/1.L6gym7a5g0FsPWlGYMdGzvs4hUuM0ISrgTiBRY4yiUM.6zti6VL08O_FA1UUIjaeqjpEDCfO89NehXJRJMd4IcY",
+              "507x507": "https://54.img.avito.st/image/1/1.L6gym7a5g0FyP3dEYMdGzvs4hUuMzoa1gziBRY4yiUM.7BXAHCQeLw79_ZvrKQH-TncIprY1Me59xxGLIoV12uo",
+              "558x558": "https://54.img.avito.st/image/1/1.L6gym7a5g0FYMF1LYMdGzvs4hUuM5ImfjDiBRY4yiUM.vpjZChVy9E_LyLKH18vH3_6uetM1yetVpHyfvjilqeE",
+              "678x678": "https://54.img.avito.st/image/1/1.L6gym7a5g0FIMk1JYMdGzvs4hUuM9IuPjjiBRY4yiUM.NbLoBKKd01e_T8p0ot6p5Wuu7AUK8IpzgPqaZNkRrBM"
+            }
+          },
+          "price": "540 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.115542",
+            "lng": "131.885494"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2806426519",
+          "uri_mweb": "/vladivostok/avtomobili/nissan_serena_2012_2806426519?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2806426519"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2806426519&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2798425747,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676261045,
+          "title": "Honda Insight 1.3 CVT, 2012, 37 000 км",
+          "images": {
+            "count": 18,
+            "main": {
+              "140x140": "https://23.img.avito.st/image/1/1._sufv7a5UiKxHsgi78yYrVYcVCghhFK4KxxQJiMWWCA.1SU63uvKcylMFpZp9use09o24D34F7GK8TDCsbUhbf4",
+              "278x278": "https://23.img.avito.st/image/1/1._sufv7a5UiKFGPwk78yYrVYcVCghsFSMLRxQJiMWWCA.4x0MppwJkxHcCstul8zCKd-buNLw8AoStq0GSssL9Z0",
+              "339x339": "https://23.img.avito.st/image/1/1._sufv7a5UiKPGfYl78yYrVYcVCghulWGLBxQJiMWWCA.LIhrELrgsAZn8FV-10-4gYlDo9xEC3NxAVf-yBZa1js",
+              "372x372": "https://23.img.avito.st/image/1/1._sufv7a5UiLBGbgl78yYrVYcVCgh9FXILBxQJiMWWCA.Xg6gR9_vtA4P_L_Lix00DIVZhkBSFAU13Z4uhbqcxhM",
+              "507x507": "https://23.img.avito.st/image/1/1._sufv7a5UiLfG6Yn78yYrVYcVCgh6lfWLhxQJiMWWCA.pFwFCi3X6jRUrho9us_DmWi4l1gIP16JioepjhzljKM",
+              "558x558": "https://23.img.avito.st/image/1/1._sufv7a5UiL1FIwo78yYrVYcVCghwFj8IRxQJiMWWCA.s-2eCg6yWHQ7oXJyugjB3i3nAD-_g4kdXiY3DiVPwzk",
+              "678x678": "https://23.img.avito.st/image/1/1._sufv7a5UiLlFpwq78yYrVYcVCgh0FrsIxxQJiMWWCA.JwCzgdpYc_3MyGo0wkaLtVrr9pOIxGoxiymP0ChfaE0"
+            }
+          },
+          "price": "600 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.117497",
+            "lng": "131.89383"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798425747",
+          "uri_mweb": "/vladivostok/avtomobili/honda_insight_2012_2798425747?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798425747"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798425747&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2601162861,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676260864,
+          "title": "LADA Kalina 1.6 МТ, 2014, 115 000 км",
+          "images": {
+            "count": 31,
+            "main": {
+              "140x140": "https://55.img.avito.st/image/1/1.gir5hba5LsPXJLTD8eP2QTEmKMlHvi5ZTSYsx0UsJME.FnlqC0yGGvk8y2KV18xa6WtTrKWWnmiJrYj61TqB0Hc",
+              "278x278": "https://55.img.avito.st/image/1/1.gir5hba5LsPjIoDF8eP2QTEmKMlHiihtSyYsx0UsJME.eLfvjtd6Os0-oCq4giWAlHOE8E8QMXGRNSPUyhfOXkA",
+              "339x339": "https://55.img.avito.st/image/1/1.gir5hba5LsPpI4rE8eP2QTEmKMlHgClnSiYsx0UsJME._e_6sn5tlY78UaUt0zibHcdb48bGoiSK8IEiUxdRBYw",
+              "372x372": "https://55.img.avito.st/image/1/1.gir5hba5LsOnI8TE8eP2QTEmKMlHzikpSiYsx0UsJME.ZZE7fYmBDwPlfGMWFHPDKmWZPAcEQRpJOpMeKv8Rub8",
+              "507x507": "https://55.img.avito.st/image/1/1.gir5hba5LsO5IdrG8eP2QTEmKMlH0Cs3SCYsx0UsJME.PObC3zsHe0SWoOfmdACCBaFXDgb2UiQTVoj7ca_WFr8",
+              "558x558": "https://55.img.avito.st/image/1/1.gir5hba5LsOTLvDJ8eP2QTEmKMlH-iQdRyYsx0UsJME.Au3BUGI_MFlweORSyrUNsouRimCX0lyePe7ysoC3kgI",
+              "678x678": "https://55.img.avito.st/image/1/1.gir5hba5LsODLODL8eP2QTEmKMlH6iYNRSYsx0UsJME.xTMC3MESTcboN5GsfDJjQyMrgCOMG7lBsDEX61hiI2Q"
+            }
+          },
+          "price": "365 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Белореченск"
+            }
+          ],
+          "location": "Белореченск",
+          "address": "",
+          "coords": {
+            "lat": "44.776303625283525",
+            "lng": "39.856411178689854"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2601162861",
+          "uri_mweb": "/belorechensk/avtomobili/vaz_lada_kalina_2014_2601162861?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 94,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2601162861"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2601162861&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2764639431,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676260680,
+          "title": "ГАЗ ГАЗель 2705 2.9 МТ, 2015, 150 621 км",
+          "images": {
+            "count": 14,
+            "main": {
+              "140x140": "https://50.img.avito.st/image/1/1.t-qqCba5GwOEqIEDyAuixmCqHQkUMhuZHqoZBxagEQE.rnY2YpEfAc4ZneX_qb7E-5AeT8ORK0AjC_oDQ-Waj_o",
+              "278x278": "https://50.img.avito.st/image/1/1.t-qqCba5GwOwrrUFyAuixmCqHQkUBh2tGKoZBxagEQE.oRJG_MpnUIGMq1HuF5TB_pmHUHG3oqaZCimDawikXGs",
+              "339x339": "https://50.img.avito.st/image/1/1.t-qqCba5GwO6r78EyAuixmCqHQkUDBynGaoZBxagEQE.eii6A9H9MBFO65bEKk1rmFbTkpbonkN0tLg8v-KahEI",
+              "372x372": "https://50.img.avito.st/image/1/1.t-qqCba5GwP0r_EEyAuixmCqHQkUQhzpGaoZBxagEQE.G19So3KZFJ-vb_4_B6MuzxAXOPmUz8aB53iJvUqhz0Y",
+              "507x507": "https://50.img.avito.st/image/1/1.t-qqCba5GwPqre8GyAuixmCqHQkUXB73G6oZBxagEQE.7mOwI2lVqCKs10VfGnBYF_wDEeO0cID6peXPSN6dahI",
+              "558x558": "https://50.img.avito.st/image/1/1.t-qqCba5GwPAosUJyAuixmCqHQkUdhHdFKoZBxagEQE.qMrUQVfeiR3czi10vseV313dIr9BkgLFfDlROJGHTU0",
+              "678x678": "https://50.img.avito.st/image/1/1.t-qqCba5GwPQoNULyAuixmCqHQkUZhPNFqoZBxagEQE.PXtgNUIvQd7Bk4nKgiPovi0UgdIFWDeqYvIlJAv9Kso"
+            }
+          },
+          "price": "365 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Челябинск"
+            }
+          ],
+          "location": "Челябинск",
+          "address": "",
+          "coords": {
+            "lat": "55.170979",
+            "lng": "61.30461"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2764639431",
+          "uri_mweb": "/chelyabinsk/avtomobili/gaz_gazel_2705_2015_2764639431?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 103,
+                "title": "Только на Авито",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2764639431"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2764639431&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2696841874,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676260598,
+          "title": "Chevrolet Niva 1.7 МТ, 2007, 200 000 км",
+          "images": {
+            "count": 5,
+            "main": {
+              "140x140": "https://35.img.avito.st/image/1/1.huakZLa5Kg-KxbAPpAbZ7mzHLAUaXyqVEMcoCxjNIA0.FFbYwsMbDiS4_XfLyYc10OJdDdKhJDEkef6bnfCAM0s",
+              "278x278": "https://35.img.avito.st/image/1/1.huakZLa5Kg--w4QJpAbZ7mzHLAUaayyhFscoCxjNIA0.Yh3yAYDk6A14bbTL_xhQ9lGo9b4dVMNRqVRBDvF-KIw",
+              "339x339": "https://35.img.avito.st/image/1/1.huakZLa5Kg-0wo4IpAbZ7mzHLAUaYS2rF8coCxjNIA0.zHHAi7utmgUaxwVMfrjxbkh4d1-Z9iM1BPg0rsSQaOc",
+              "372x372": "https://35.img.avito.st/image/1/1.huakZLa5Kg_6wsAIpAbZ7mzHLAUaLy3lF8coCxjNIA0.PsbXgOatr9go_9DPhFZuQJdMUlqIfzQTaHQzshYgsY0",
+              "507x507": "https://35.img.avito.st/image/1/1.huakZLa5Kg_kwN4KpAbZ7mzHLAUaMS_7FccoCxjNIA0.86ZVnPFSPiI_wlxPZ5Rfm5rmAzg6Xjspocg01gFKdvQ",
+              "558x558": "https://35.img.avito.st/image/1/1.huakZLa5Kg_Oz_QFpAbZ7mzHLAUaGyDRGscoCxjNIA0.83mZFMMbweUp3Nv1ue_XTVDTRADh-ArCfy62LWR8KnI",
+              "678x678": "https://35.img.avito.st/image/1/1.huakZLa5Kg_ezeQHpAbZ7mzHLAUaCyLBGMcoCxjNIA0.Txiqufi_vs0uqaOdtBqjLcp_TEPtYM4_1-aa6_evs5Y"
+            }
+          },
+          "price": "370 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Зеленчукская"
+            }
+          ],
+          "location": "Зеленчукская",
+          "address": "",
+          "coords": {
+            "lat": "43.860901",
+            "lng": "41.582835"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2696841874",
+          "uri_mweb": "/zelenchukskaya/avtomobili/chevrolet_niva_2007_2696841874?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2696841874"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2696841874&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2670184080,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676260053,
+          "title": "Nissan Leaf AT, 2011, 41 000 км",
+          "images": {
+            "count": 22,
+            "main": {
+              "140x140": "https://30.img.avito.st/image/1/1.z6n9l7a5Y0DTNvlA76iEnzM0ZUpDrGPaSTRhREE-aUI.UdlxNBUVaP9rx24zyEWpsnVumFW3zN8Pknnm6R0wFsQ",
+              "278x278": "https://30.img.avito.st/image/1/1.z6n9l7a5Y0DnMM1G76iEnzM0ZUpDmGXuTzRhREE-aUI.vkqy46UVbsXDGZID7HcPmbzEjFmbKLNZfwyLKNrrkYU",
+              "339x339": "https://30.img.avito.st/image/1/1.z6n9l7a5Y0DtMcdH76iEnzM0ZUpDkmTkTjRhREE-aUI.3lEKq18WW-UovEgGQXU1AmNJjuYESFz4Ogb3y5eaM5U",
+              "372x372": "https://30.img.avito.st/image/1/1.z6n9l7a5Y0CjMYlH76iEnzM0ZUpD3GSqTjRhREE-aUI.dkbUdzPbX3JIczX-s5R1lmzYqD9AjehCVUJBpYniZrk",
+              "507x507": "https://30.img.avito.st/image/1/1.z6n9l7a5Y0C9M5dF76iEnzM0ZUpDwma0TDRhREE-aUI.nE_w77tit91XUIuGidadl3JMiimVpU8LkbV_veUXBB4",
+              "558x558": "https://30.img.avito.st/image/1/1.z6n9l7a5Y0CXPL1K76iEnzM0ZUpD6GmeQzRhREE-aUI.dyc4ErsFrN02S8NdARSJlugpc94b8Orfkvvmd8w-eqQ",
+              "678x678": "https://30.img.avito.st/image/1/1.z6n9l7a5Y0CHPq1I76iEnzM0ZUpD-GuOQTRhREE-aUI.iXRakoUNmE1O4PLO0lkld-KOjoUwkdwwkyCBrt7N-xM"
+            }
+          },
+          "price": "360 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.117497",
+            "lng": "131.89383"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2670184080",
+          "uri_mweb": "/vladivostok/avtomobili/nissan_leaf_2011_2670184080?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2670184080"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2670184080&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2670572840,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676260053,
+          "title": "Toyota Passo 1.0 CVT, 2019, 39 000 км",
+          "images": {
+            "count": 20,
+            "main": {
+              "140x140": "https://17.img.avito.st/image/1/1.FG8yMLa5uIYckSKGFmBUWfyTvoyMC7gchpO6go6ZsoQ.ZHCIwyClHEZvesqNrhf6axYDnXi529ZctY-66dLvf38",
+              "278x278": "https://17.img.avito.st/image/1/1.FG8yMLa5uIYolxaAFmBUWfyTvoyMP74ogJO6go6ZsoQ.C_diBpWpeOts1yxQcDznterbMO3gTFd5SWfvxbnWgWc",
+              "339x339": "https://17.img.avito.st/image/1/1.FG8yMLa5uIYilhyBFmBUWfyTvoyMNb8igZO6go6ZsoQ.d7asQ2eWgGEgVzemzr8JoTyV3piMnqrfgkSoY5TnYzU",
+              "372x372": "https://17.img.avito.st/image/1/1.FG8yMLa5uIZsllKBFmBUWfyTvoyMe79sgZO6go6ZsoQ.BjidL74wf69K_t9XXi_f4X-wEjFll6Wde9Js34CzZCk",
+              "507x507": "https://17.img.avito.st/image/1/1.FG8yMLa5uIZylEyDFmBUWfyTvoyMZb1yg5O6go6ZsoQ.qZYP1HXtMEPYWwyMtNPQ4C6p3Rvqv3mlli0y2bt2ons",
+              "558x558": "https://17.img.avito.st/image/1/1.FG8yMLa5uIZYm2aMFmBUWfyTvoyMT7JYjJO6go6ZsoQ.fbzPNWFaQRz6spFYHdAwIDtYEsinfhc3xrv0PHe0aNg",
+              "678x678": "https://17.img.avito.st/image/1/1.FG8yMLa5uIZImXaOFmBUWfyTvoyMX7BIjpO6go6ZsoQ.gH7WHYUdxDi2RLKf26tWgs3XjhVSgS_shpPpDyWs-v8"
+            }
+          },
+          "price": "570 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.117497",
+            "lng": "131.89383"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2670572840",
+          "uri_mweb": "/vladivostok/avtomobili/toyota_passo_2019_2670572840?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2670572840"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2670572840&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2661218514,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676259795,
+          "title": "Nissan March 1.2 CVT, 2018, 32 500 км",
+          "images": {
+            "count": 10,
+            "main": {
+              "140x140": "https://54.img.avito.st/image/1/1.YyYzQra5z88d41XPeSd3cvzhycWNec9Vh-HNy4_rxc0.77Pm8ybxthkfEaqnr_CNwwkvm5qg7OPxqc8GyzQMvLU",
+              "278x278": "https://54.img.avito.st/image/1/1.YyYzQra5z88p5WHJeSd3cvzhycWNTclhgeHNy4_rxc0.7Fovzmf9uwMPwCtmeeA5tGZ7kUW-Yi91LXSNsGx1DE8",
+              "339x339": "https://54.img.avito.st/image/1/1.YyYzQra5z88j5GvIeSd3cvzhycWNR8hrgOHNy4_rxc0.huIHX0YnFpVuy8YFMjnX1SynICurhDaXblCEaxhuMec",
+              "372x372": "https://54.img.avito.st/image/1/1.YyYzQra5z89t5CXIeSd3cvzhycWNCcglgOHNy4_rxc0.vvMNQcyYcf4pV5CoOIttqDoL4zMW4PMSxUsUNBU8h8k",
+              "507x507": "https://54.img.avito.st/image/1/1.YyYzQra5z89z5jvKeSd3cvzhycWNF8o7guHNy4_rxc0.FGStUS2NwaKE6nkhNNqXSMiA6RnZ91Mc6Jrh6MaHjko",
+              "558x558": "https://54.img.avito.st/image/1/1.YyYzQra5z89Z6RHFeSd3cvzhycWNPcURjeHNy4_rxc0.SnMWy2mNn0z3MsSoktj9uA5DlqHUbZ1ixB6NjylU_QY",
+              "678x678": "https://54.img.avito.st/image/1/1.YyYzQra5z89J6wHHeSd3cvzhycWNLccBj-HNy4_rxc0.XEDP41wECbtdu85ToKEVJUSdKce80H4WJs6yxlcRyEs"
+            }
+          },
+          "price": "695 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Красноярск"
+            }
+          ],
+          "location": "Красноярск",
+          "address": "",
+          "coords": {
+            "lat": "56.02101",
+            "lng": "92.73067"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2661218514",
+          "uri_mweb": "/krasnoyarsk/avtomobili/nissan_march_2018_2661218514?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2661218514"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2661218514&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2661366786,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676259795,
+          "title": "Nissan Cube 1.5 CVT, 2018, 35 000 км",
+          "images": {
+            "count": 9,
+            "main": {
+              "140x140": "https://26.img.avito.st/image/1/1.wxDTX7a5b_n9_vX52WSaShz8afNtZG9jZ_xt_W_2Zfs.tFDDz6siSUgqBUxIbA56tzJAMI34R0iCJNEyuoUKwzg",
+              "278x278": "https://26.img.avito.st/image/1/1.wxDTX7a5b_nJ-MH_2WSaShz8afNtUGlXYfxt_W_2Zfs.a-fm0sFEXAI069Q0-ylxMyqxnaob8Oa-wvw6X9BQZD0",
+              "339x339": "https://26.img.avito.st/image/1/1.wxDTX7a5b_nD-cv-2WSaShz8afNtWmhdYPxt_W_2Zfs.9P7WRa4JEOBQXXi-_oUs30oQWI1ki_X4zq9XCSuNvsw",
+              "372x372": "https://26.img.avito.st/image/1/1.wxDTX7a5b_mN-YX-2WSaShz8afNtFGgTYPxt_W_2Zfs.yYBMGfPzgF5-HTxxJSvfwakW_gbbE5C8FGz4Uzzu2Fg",
+              "507x507": "https://26.img.avito.st/image/1/1.wxDTX7a5b_mT-5v82WSaShz8afNtCmoNYvxt_W_2Zfs.60NssnXrx-bXEaKIf0ASH__8KSf0br4KvBJzHj5739Q",
+              "558x558": "https://26.img.avito.st/image/1/1.wxDTX7a5b_m59LHz2WSaShz8afNtIGUnbfxt_W_2Zfs.vinhpsmMHgE2x4jCrAC6GpanVzWn2lIDzotZ7eLrXhQ",
+              "678x678": "https://26.img.avito.st/image/1/1.wxDTX7a5b_mp9qHx2WSaShz8afNtMGc3b_xt_W_2Zfs.RpsuH2PwR4k00L7qRvpJ0AAAoE7FXMvzl_pQ4bvSic4"
+            }
+          },
+          "price": "690 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Красноярск"
+            }
+          ],
+          "location": "Красноярск",
+          "address": "",
+          "coords": {
+            "lat": "56.02101",
+            "lng": "92.73067"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2661366786",
+          "uri_mweb": "/krasnoyarsk/avtomobili/nissan_cube_2018_2661366786?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2661366786"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2661366786&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2679395032,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676259757,
+          "title": "Opel Astra 1.6 МТ, 2011, 185 500 км",
+          "images": {
+            "count": 14,
+            "main": {
+              "140x140": "https://75.img.avito.st/image/1/1.krzUbba5PlX6zKRV_GPe1hvOOF9qVj7PYM48UWjENFc.a9ok6visbOKmL3yMscT-AE4OnbBDwO9XY1hTfQ6CEVU",
+              "278x278": "https://75.img.avito.st/image/1/1.krzUbba5PlXOypBT_GPe1hvOOF9qYjj7Zs48UWjENFc.ZT4WrftN3ydIHFLKQf2sSmmApteApcWKJZPqGJ0JMrI",
+              "339x339": "https://75.img.avito.st/image/1/1.krzUbba5PlXEy5pS_GPe1hvOOF9qaDnxZ848UWjENFc.WfV0AAVA-F31RnLcZmQZOc1UWlzV6XhBDdWFj4iEimM",
+              "372x372": "https://75.img.avito.st/image/1/1.krzUbba5PlWKy9RS_GPe1hvOOF9qJjm_Z848UWjENFc.VW-jRnCr17c7Z35Vz7n6Vr86a87EaYd6U5MPTFcgn4I",
+              "507x507": "https://75.img.avito.st/image/1/1.krzUbba5PlWUycpQ_GPe1hvOOF9qODuhZc48UWjENFc.Lg-Pq5ney9UOMVsxqnt1WHQ-WNw1s1U3GfmpaAzax9c",
+              "558x558": "https://75.img.avito.st/image/1/1.krzUbba5PlW-xuBf_GPe1hvOOF9qEjSLas48UWjENFc.JdNAC6B93jRKeHV5atY1GjqAeZ8mJWPU-diEBVXgOw4",
+              "678x678": "https://75.img.avito.st/image/1/1.krzUbba5PlWuxPBd_GPe1hvOOF9qAjabaM48UWjENFc.qD5gdNsBRPp1u1VLuBq6qF4ysJDxS_ZH7HaFqlBD-ew"
+            }
+          },
+          "price": "525 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Новотроицк"
+            }
+          ],
+          "location": "Новотроицк",
+          "address": "",
+          "coords": {
+            "lat": "51.199561",
+            "lng": "58.323569"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2679395032",
+          "uri_mweb": "/novotroitsk/avtomobili/opel_astra_2011_2679395032?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 103,
+                "title": "Только на Авито",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2679395032"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2679395032&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2555685036,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676259078,
+          "title": "ГАЗ Соболь 2217 2.9 МТ, 2010, 100 000 км",
+          "images": {
+            "count": 10,
+            "main": {
+              "140x140": "https://83.img.avito.st/image/1/1.ykjKera5ZqHk2_yh0hmTTxPZYKt0QWY7ftlkpXbTbKM.RwQxizvzVhyS038kjYfOHHfx_ua7JfrT0UfJdcFEjs8",
+              "278x278": "https://83.img.avito.st/image/1/1.ykjKera5ZqHQ3cin0hmTTxPZYKt0dWAPeNlkpXbTbKM.bQcY3sgrzCpmwpSIC9rqZcHJzsH7oP7EdbvumCJsN-4",
+              "339x339": "https://83.img.avito.st/image/1/1.ykjKera5ZqHa3MKm0hmTTxPZYKt0f2EFedlkpXbTbKM.U7SFR9FoubwOFg4CZYHCSj8jzVAWp6IeaFA1Moo0yYs",
+              "372x372": "https://83.img.avito.st/image/1/1.ykjKera5ZqGU3Iym0hmTTxPZYKt0MWFLedlkpXbTbKM.oqKpVnFFxkuIu8Vc-UTuzd9aMdajP0u6rQ6CTZqdGfA",
+              "507x507": "https://83.img.avito.st/image/1/1.ykjKera5ZqGK3pKk0hmTTxPZYKt0L2NVe9lkpXbTbKM.xa-uPVwIEcHu5jsXw9KMt-MB9Crt3qUaU0ZyzyzP94U",
+              "558x558": "https://83.img.avito.st/image/1/1.ykjKera5ZqGg0bir0hmTTxPZYKt0BWx_dNlkpXbTbKM.FL4VAFlVLqVnghMhEsO-6iwag1DumyOACcR2KB0OoA4",
+              "678x678": "https://83.img.avito.st/image/1/1.ykjKera5ZqGw06ip0hmTTxPZYKt0FW5vdtlkpXbTbKM.q8GtYYVFaYkfYOH25-U6t7vLBHNHEkWG_bq680hnEvU"
+            }
+          },
+          "price": "580 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Сочи"
+            }
+          ],
+          "location": "Сочи",
+          "address": "",
+          "coords": {
+            "lat": "43.438171",
+            "lng": "39.911179"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2555685036",
+          "uri_mweb": "/sochi/avtomobili/gaz_sobol_2217_2010_2555685036?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 103,
+                "title": "Только на Авито",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2555685036"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2586654268,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676258905,
+          "title": "Subaru Impreza 2.0 AT, 2006, 178 000 км",
+          "images": {
+            "count": 8,
+            "main": {
+              "140x140": "https://50.img.avito.st/image/1/1.KypS1ra5h8N8dx3DCL48NJx1gcns7YdZ5nWFx-5_jcE.kJ0N_NfIXRdYc6uWqCpVBGzjn9FCF_6m4daNpH6hsYs",
+              "278x278": "https://50.img.avito.st/image/1/1.KypS1ra5h8NIcSnFCL48NJx1gcns2YFt4HWFx-5_jcE.fHhwUmAuRFRgD5bTZeKJ50AMCO56P532j3f-09fH0Ug",
+              "339x339": "https://50.img.avito.st/image/1/1.KypS1ra5h8NCcCPECL48NJx1gcns04Bn4XWFx-5_jcE.UxPYqGhXuIrsPbZkTfhEjW9z4eB5yb1U_C00GC4dXH4",
+              "372x372": "https://50.img.avito.st/image/1/1.KypS1ra5h8MMcG3ECL48NJx1gcnsnYAp4XWFx-5_jcE.Xcn4RUM6Hx8SruLSzzYnj4z_7h4jhAHnQIezvu3vBH0",
+              "507x507": "https://50.img.avito.st/image/1/1.KypS1ra5h8MScnPGCL48NJx1gcnsg4I343WFx-5_jcE.Q1bxkicdWKXjrhUcoQr2rr5s0qPNHWj13FTYbtC2pJ0",
+              "558x558": "https://50.img.avito.st/image/1/1.KypS1ra5h8M4fVnJCL48NJx1gcnsqY0d7HWFx-5_jcE.QNeBhfVvNwEnay4AADUFCmDG4y2y9sph9TpY3GlGrys",
+              "678x678": "https://50.img.avito.st/image/1/1.KypS1ra5h8Mof0nLCL48NJx1gcnsuY8N7nWFx-5_jcE.OTnDu4eHL5axje3QPrfeJh_ckJX_Iv3zmnAKK6gDAss"
+            }
+          },
+          "price": "571 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Краснодар"
+            }
+          ],
+          "location": "Краснодар",
+          "address": "",
+          "coords": {
+            "lat": "45.12478629713997",
+            "lng": "38.97056055868765"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2586654268",
+          "uri_mweb": "/krasnodar/avtomobili/subaru_impreza_2006_2586654268?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 94,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              },
+              {
+                "id": 6,
+                "title": "Собственник",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              },
+              {
+                "id": 103,
+                "title": "Только на Авито",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2586654268"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2586654268&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2746063410,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676258760,
+          "title": "LADA Granta 1.6 МТ, 2014, 1 400 км",
+          "images": {
+            "count": 7,
+            "main": {
+              "140x140": "https://92.img.avito.st/image/1/1.uWWtaLa5FYyDyY-M02LiAmTLE4YTUxUWGcsXiBHBH44.6kRkjfVU09OPybu6ZkKW8QzY4xueXWxod64truTXEKg",
+              "278x278": "https://92.img.avito.st/image/1/1.uWWtaLa5FYy3z7uK02LiAmTLE4YTZxMiH8sXiBHBH44.LBqUApcGwvH7jplt-8niCybjby9k2MIKimZfSWqucnA",
+              "339x339": "https://92.img.avito.st/image/1/1.uWWtaLa5FYy9zrGL02LiAmTLE4YTbRIoHssXiBHBH44.lvEnLBvm2IrlMs4uuPZXYBKpSNWqlpS8Ccn7l76Rw1Y",
+              "372x372": "https://92.img.avito.st/image/1/1.uWWtaLa5FYzzzv-L02LiAmTLE4YTIxJmHssXiBHBH44.TL5LBl3Xq33fmE1-UUVqT6Tm1HvNf5w_a1E1duasHxc",
+              "507x507": "https://92.img.avito.st/image/1/1.uWWtaLa5FYztzOGJ02LiAmTLE4YTPRB4HMsXiBHBH44.JClr2AT6EuLZ13O9D7jyyijXLbTdG0dBiWdgVnRjJoE",
+              "558x558": "https://92.img.avito.st/image/1/1.uWWtaLa5FYzHw8uG02LiAmTLE4YTFx9SE8sXiBHBH44.6ye61Y2ArBZn1rPPTQiVuJ7ZtVgnZ1tzjS4CtMhTcSM",
+              "678x678": "https://92.img.avito.st/image/1/1.uWWtaLa5FYzXwduE02LiAmTLE4YTBx1CEcsXiBHBH44._C_BSLWp5XDMBCzcG3wfLAyWWRQVWITk4e8Y7d2yQ9I"
+            }
+          },
+          "price": "485 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Кропоткин"
+            }
+          ],
+          "location": "Кропоткин",
+          "address": "",
+          "coords": {
+            "lat": "45.43258726164953",
+            "lng": "40.56995154616209"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2746063410",
+          "uri_mweb": "/kropotkin/avtomobili/vaz_lada_granta_2014_2746063410?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2746063410"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2798000759,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676258692,
+          "title": "Daihatsu Tanto 0.7 CVT, 2020, 20 000 км",
+          "images": {
+            "count": 32,
+            "main": {
+              "140x140": "https://24.img.avito.st/image/1/1.HYAOQra5sWkg4ytpOEoR5sfht2OwebHzuuGzbbLru2s.riC2vbLoD9rhclg723USl9P0o08KUSsHbwnH-PX4pLQ",
+              "278x278": "https://24.img.avito.st/image/1/1.HYAOQra5sWkU5R9vOEoR5sfht2OwTbfHvOGzbbLru2s.NRLtLztBbFO9ZA_BnvScwEUid0HRfXrE6RIcRwItzXM",
+              "339x339": "https://24.img.avito.st/image/1/1.HYAOQra5sWke5BVuOEoR5sfht2OwR7bNveGzbbLru2s.RYsALxt0HLTJTGA0GII9JEij63zR4eLoBe98d0cqUm0",
+              "372x372": "https://24.img.avito.st/image/1/1.HYAOQra5sWlQ5FtuOEoR5sfht2OwCbaDveGzbbLru2s.cUk0NC2yfDOdZ1G-nS1kh8uZBDK68NWCjY7rXC5nEbQ",
+              "507x507": "https://24.img.avito.st/image/1/1.HYAOQra5sWlO5kVsOEoR5sfht2OwF7Sdv-GzbbLru2s.cbf3iJYwfwtyEAxK-6UhIgFz9s9XYxXCLEFbFrDiWyc",
+              "558x558": "https://24.img.avito.st/image/1/1.HYAOQra5sWlk6W9jOEoR5sfht2OwPbu3sOGzbbLru2s.ixA55O-5933skALTSzaOhdmJ1iOnayRhR7xFbxVHh5E",
+              "678x678": "https://24.img.avito.st/image/1/1.HYAOQra5sWl0639hOEoR5sfht2OwLbmnsuGzbbLru2s.mdy3Qhka9H655ikXEpd1oobjFLjqn4_ptjUp8vX17DE"
+            }
+          },
+          "price": "690 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.123215",
+            "lng": "131.88137"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798000759",
+          "uri_mweb": "/vladivostok/avtomobili/daihatsu_tanto_2020_2798000759?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798000759"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798000759&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2508104037,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676258318,
+          "title": "ИЖ 2715 1.5 МТ, 1993, 120 000 км",
+          "images": {
+            "count": 9,
+            "main": {
+              "140x140": "https://27.img.avito.st/image/1/1.NjMmFLa5mtoItQDaRgAVavq3nNCYL5pAkreY3pq9kNg.zdmblCbn575ZBiUIhhJqy-orSEh35UgOErX6QAhsZX8",
+              "278x278": "https://27.img.avito.st/image/1/1.NjMmFLa5mto8szTcRgAVavq3nNCYG5x0lLeY3pq9kNg.yIxxYLIp6_X5KosnskcopLmE3M7xYU4nGm1Xwx125lE",
+              "339x339": "https://27.img.avito.st/image/1/1.NjMmFLa5mto2sj7dRgAVavq3nNCYEZ1-lbeY3pq9kNg.s413dB-r77efCLVR1o9IZudju-X1W-d8e0ieeJv6pr0",
+              "372x372": "https://27.img.avito.st/image/1/1.NjMmFLa5mtp4snDdRgAVavq3nNCYX50wlbeY3pq9kNg.KHwgFQjjr8mcYQNOCx2i98vPwnglpKDMCJnN4B0WcoM",
+              "507x507": "https://27.img.avito.st/image/1/1.NjMmFLa5mtpmsG7fRgAVavq3nNCYQZ8ul7eY3pq9kNg.oN_P7gTgs0xboiY5aQCVC9y2aZz8rp_7jdRD4piu2rg",
+              "558x558": "https://27.img.avito.st/image/1/1.NjMmFLa5mtpMv0TQRgAVavq3nNCYa5AEmLeY3pq9kNg.VC0CKJTvhwD6ID-6fIif_ECMsmkIWelP7DMqnfQuYes",
+              "678x678": "https://27.img.avito.st/image/1/1.NjMmFLa5mtpcvVTSRgAVavq3nNCYe5IUmreY3pq9kNg.yBecoispyrdKGNekw0h8jRHLQin5V4VQSIM9Q6siXAo"
+            }
+          },
+          "price": "65 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Кисловодск"
+            }
+          ],
+          "location": "Кисловодск",
+          "address": "",
+          "coords": {
+            "lat": "43.905518",
+            "lng": "42.715718"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2508104037",
+          "uri_mweb": "/kislovodsk/avtomobili/izh_2715_1993_2508104037?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 103,
+                "title": "Только на Авито",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2508104037"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2508104037&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2798012764,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676258203,
+          "title": "Daihatsu Mira e:S 0.7 CVT, 2020, 13 000 км",
+          "images": {
+            "count": 21,
+            "main": {
+              "140x140": "https://78.img.avito.st/image/1/1.M6N1Jra5n0pbhwVKH2oGxbyFmUDLHZ_QwYWdTsmPlUg.iHM0O3vLCCiqVvieTMgikr_7PzenbURx1oAIVNtPzN4",
+              "278x278": "https://78.img.avito.st/image/1/1.M6N1Jra5n0pvgTFMH2oGxbyFmUDLKZnkx4WdTsmPlUg.k_JLdhWKHfIYoS08qpitgnnNLH6fjaAKddHiXKaLp8E",
+              "339x339": "https://78.img.avito.st/image/1/1.M6N1Jra5n0plgDtNH2oGxbyFmUDLI5juxoWdTsmPlUg.ZXsOwcN9c4bFUjq_8DqpN8DT_KA7LhBdq9PIUTEUQSw",
+              "372x372": "https://78.img.avito.st/image/1/1.M6N1Jra5n0orgHVNH2oGxbyFmUDLbZigxoWdTsmPlUg.1Lz5jEWbF4RyJhOaW7Qay9yx0W4tdrKEHnNanj-hZhY",
+              "507x507": "https://78.img.avito.st/image/1/1.M6N1Jra5n0o1gmtPH2oGxbyFmUDLc5q-xIWdTsmPlUg.hMbXX669xgYBueSSK_g0mf-1f9n3HiinDq6KEyOX1QU",
+              "558x558": "https://78.img.avito.st/image/1/1.M6N1Jra5n0ofjUFAH2oGxbyFmUDLWZWUy4WdTsmPlUg.Tm-Q5alexC-zVPuAs4hD0XFw010qiNtW1mDpKEkGpdM",
+              "678x678": "https://78.img.avito.st/image/1/1.M6N1Jra5n0oPj1FCH2oGxbyFmUDLSZeEyYWdTsmPlUg.6-aYLvvtjh9nD-03iu2nvyXOXqdaWUxM5Gc8YoZAu1U"
+            }
+          },
+          "price": "649 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.123215",
+            "lng": "131.88137"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798012764",
+          "uri_mweb": "/vladivostok/avtomobili/daihatsu_mira_es_2020_2798012764?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798012764"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798012764&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2563722891,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676258177,
+          "title": "Nissan Almera 1.6 МТ, 2016, 330 000 км",
+          "images": {
+            "count": 8,
+            "main": {
+              "140x140": "https://26.img.avito.st/image/1/1.zwpozba5Y-NGbPnjesbRIKxuZenW9mN53G5h59RkaeE.-dnjEoWPC2BUA99tW6ExP2qcoFAWgQZQVRHOR3QoJrc",
+              "278x278": "https://26.img.avito.st/image/1/1.zwpozba5Y-Nyas3lesbRIKxuZenWwmVN2m5h59RkaeE.VZqnOeXKseia5SIlKlZ7ZXRtK0WllwQE1FBdg6I3iAI",
+              "339x339": "https://26.img.avito.st/image/1/1.zwpozba5Y-N4a8fkesbRIKxuZenWyGRH225h59RkaeE.7iE8PqdNJxYAavSxo0c06XVWjFJZMOzEcS0BIWX1WSs",
+              "372x372": "https://26.img.avito.st/image/1/1.zwpozba5Y-M2a4nkesbRIKxuZenWhmQJ225h59RkaeE.ZhxS4LVMCddVZA9rWP7zY0At21oOf1HSvIjnJrvUeNw",
+              "507x507": "https://26.img.avito.st/image/1/1.zwpozba5Y-MoaZfmesbRIKxuZenWmGYX2W5h59RkaeE.9IS4c62JaeaQ821tn-6kUpN_JTn007wH6hL5TCB0U98",
+              "558x558": "https://26.img.avito.st/image/1/1.zwpozba5Y-MCZr3pesbRIKxuZenWsmk91m5h59RkaeE.zmW_RwlMAmn1ubc49DC5MPB9qpH0l_L4Byx97y5x72A",
+              "678x678": "https://26.img.avito.st/image/1/1.zwpozba5Y-MSZK3resbRIKxuZenWomst1G5h59RkaeE.bugT-RchNVFRJOtE7HSIrc-cw1eMxL6CuXVs_zUmEto"
+            }
+          },
+          "price": "315 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "пос. городского типа Правокубанский, садоводческое общество Гидростроитель"
+            }
+          ],
+          "location": "пос. городского типа Правокубанский, садоводческое общество Гидростроитель",
+          "address": "",
+          "coords": {
+            "lat": "43.91154733583311",
+            "lng": "41.88712151638617"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2563722891",
+          "uri_mweb": "/sary-tyuz/avtomobili/nissan_almera_2016_2563722891?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 94,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              },
+              {
+                "id": 103,
+                "title": "Только на Авито",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2563722891"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2563722891&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2798033873,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676258030,
+          "title": "Daihatsu Mira 0.7 AT, 2018, 12 000 км",
+          "images": {
+            "count": 20,
+            "main": {
+              "140x140": "https://29.img.avito.st/image/1/1.JBfGDLa5iP7orRL-giQccQ-vjvR4N4hkcq-K-nqlgvw.NqnYr0t-YRk7wJrNVaDT24UD95hNqxCkRyI5u4_iQ1A",
+              "278x278": "https://29.img.avito.st/image/1/1.JBfGDLa5iP7cqyb4giQccQ-vjvR4A45QdK-K-nqlgvw.MsNOgZlMc5mEGySqvKDSDDHLGSzmrQtxORb1KnTCnlY",
+              "339x339": "https://29.img.avito.st/image/1/1.JBfGDLa5iP7Wqiz5giQccQ-vjvR4CY9ada-K-nqlgvw.X7Z42Oinc19HsWu_adk2vTIbsKYH6n5scpdxqMiTeyQ",
+              "372x372": "https://29.img.avito.st/image/1/1.JBfGDLa5iP6YqmL5giQccQ-vjvR4R48Uda-K-nqlgvw.W39Ad0FrFzH3G0DfRFj9c_RFb4xCFxvFGNeETELfK9g",
+              "507x507": "https://29.img.avito.st/image/1/1.JBfGDLa5iP6GqHz7giQccQ-vjvR4WY0Kd6-K-nqlgvw.KszFCIyxkN-tDhj1hYZeCv7BVDfhCbxCxGwU1MIMt-Y",
+              "558x558": "https://29.img.avito.st/image/1/1.JBfGDLa5iP6sp1b0giQccQ-vjvR4c4IgeK-K-nqlgvw.o2Pv8gpS_vPAaxt4a8H-Y9UdqxEyhm7VGCXqFClALnI",
+              "678x678": "https://29.img.avito.st/image/1/1.JBfGDLa5iP68pUb2giQccQ-vjvR4Y4Aweq-K-nqlgvw.2uql5tfBMj2oyoaO8I30zVTejAqB99TsrS0udh3y3jw"
+            }
+          },
+          "price": "590 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.123215",
+            "lng": "131.88137"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798033873",
+          "uri_mweb": "/vladivostok/avtomobili/daihatsu_mira_2018_2798033873?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798033873"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2798033873&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2755484373,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676257657,
+          "title": "Suzuki Solio 1.2 CVT, 2021, 11 230 км",
+          "images": {
+            "count": 18,
+            "main": {
+              "140x140": "https://74.img.avito.st/image/1/1.i-l1Jra5JwBbh70Abyisj7yFIQrLHSeawYUlBMmPLQI.94Ct9Tgbwhm6qUKZ1lsO-5YZLcXWBz4QX1ijd9csHDs",
+              "278x278": "https://74.img.avito.st/image/1/1.i-l1Jra5JwBvgYkGbyisj7yFIQrLKSGux4UlBMmPLQI.xcacYFk76M0ljznbhhqDoID_pRLYEzHMpvrku8jjNI0",
+              "339x339": "https://74.img.avito.st/image/1/1.i-l1Jra5JwBlgIMHbyisj7yFIQrLIyCkxoUlBMmPLQI.mGh_IWo9yMevOB0-3cAY7mx8Rchi6-VA9zQNXoAJhPQ",
+              "372x372": "https://74.img.avito.st/image/1/1.i-l1Jra5JwArgM0Hbyisj7yFIQrLbSDqxoUlBMmPLQI.BFJ52I7GPNezGCKxzbehZECttoSdAUTURogrTUmtqOI",
+              "507x507": "https://74.img.avito.st/image/1/1.i-l1Jra5JwA1gtMFbyisj7yFIQrLcyL0xIUlBMmPLQI.VjBkVhB6D1m5TaN9La_rCUuAvEMCInYSr01rEPL6zqo",
+              "558x558": "https://74.img.avito.st/image/1/1.i-l1Jra5JwAfjfkKbyisj7yFIQrLWS3ey4UlBMmPLQI.s-n8MxP6uxo3YbRrXlx-Qjx6XwoiHhnld5fAElFnB0s",
+              "678x678": "https://74.img.avito.st/image/1/1.i-l1Jra5JwAPj-kIbyisj7yFIQrLSS_OyYUlBMmPLQI.wzE5AaGmHkZskJmhtBFonMzCScgP2fVLZ4ce1csXGZk"
+            }
+          },
+          "price": "687 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Владивосток"
+            }
+          ],
+          "location": "Владивосток",
+          "address": "",
+          "coords": {
+            "lat": "43.115457",
+            "lng": "131.902526"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2755484373",
+          "uri_mweb": "/vladivostok/avtomobili/suzuki_solio_2021_2755484373?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2232,
+                "title": "Под заказ",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#EBEBEB",
+                    "valueDark": "#2E2E2E"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2755484373"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2755484373&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2672416160,
+          "category": {
+            "id": 9,
+            "name": "Автомобили"
+          },
+          "time": 1676257197,
+          "title": "ВАЗ 2121 (4x4) Urban 1.7 МТ, 2018, 100 000 км",
+          "images": {
+            "count": 12,
+            "main": {
+              "140x140": "https://14.img.avito.st/image/1/1.75scDba5Q3IyrNlyTjqx6tyuRXiiNkPoqK5BdqCkSXA.u1y7jCXAicB1X7QTXyTeB1uIpzlg-vjq7yQTZuds4gI",
+              "278x278": "https://14.img.avito.st/image/1/1.75scDba5Q3IGqu10Tjqx6tyuRXiiAkXcrq5BdqCkSXA.ravm5QiBI7ErxqGBNkcHK8fs1n-up5ODMC3lLo7oIzU",
+              "339x339": "https://14.img.avito.st/image/1/1.75scDba5Q3IMq-d1Tjqx6tyuRXiiCETWr65BdqCkSXA.lUzpH9w00NxcVxvD4n9pwZ1IxO3LWh2wFzii9NK4c-A",
+              "372x372": "https://14.img.avito.st/image/1/1.75scDba5Q3JCq6l1Tjqx6tyuRXiiRkSYr65BdqCkSXA.e4CUW_o7Ykmuv282n62RYrJr-iCy5O_VCefUTzoFgbU",
+              "507x507": "https://14.img.avito.st/image/1/1.75scDba5Q3Jcqbd3Tjqx6tyuRXiiWEaGra5BdqCkSXA.KKSDQ2UhDrcwlhAGdGoydXAgqFDUNdfrJSQhTeS4qZI",
+              "558x558": "https://14.img.avito.st/image/1/1.75scDba5Q3J2pp14Tjqx6tyuRXiickmsoq5BdqCkSXA.kpyPRQ_jGyaym_SK4X2tvc2kfH67kftGE6S3_XQD12Q",
+              "678x678": "https://14.img.avito.st/image/1/1.75scDba5Q3JmpI16Tjqx6tyuRXiiYku8oK5BdqCkSXA.h3u2ymDTiFA-LnKjYkxY8q6c7egXLuLAwJKOOBXxk5c"
+            }
+          },
+          "price": "600 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Краснодар"
+            }
+          ],
+          "location": "Краснодар",
+          "address": "",
+          "coords": {
+            "lat": "45.0315156009055",
+            "lng": "39.0630509261222"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2672416160",
+          "uri_mweb": "/krasnodar/avtomobili/vaz_lada_2121_4x4_urban_2018_2672416160?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA",
+          "vehicleType": "used",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 94,
+                "title": "Рыночная цена",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+          "contacts": {
+            "list": [
+              {
+                "type": "phone",
+                "value": {
+                  "title": "Позвонить",
+                  "uri": "ru.avito://1/phone/get?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2672416160"
+                }
+              },
+              {
+                "type": "messenger",
+                "value": {
+                  "title": "Написать",
+                  "uri": "ru.avito://1/item/channel/create?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKTsoorExMKTEpyzFKM05Nz8lJzMs3TS3JTM1LNTU2ULKuBQQAAP__6RbirDUAAAA&itemId=2672416160&source=serp-item"
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      }
+    ],
+    "searchHint": "Поиск на Авито",
+    "seo": {
+      "title": "Купить авто 🚗 до 700 тысяч рублей в Лабинске: 23 281 объявление | Продажа новых и б/у автомобилей | Авито",
+      "description": "🚗 23 281 объявление о продаже авто до 700 000 ₽ в Лабинске: новые и подержанные автомобили по низким ценам. ✔️ На Авито вы можете купить авто дешевле 700 тысяч рублей. Проверка истории б/у автомобилей по VIN. Оформление заявки на кредит. Большой выбор марок и моделей машин в Лабинске: частные и дилерские предложения с фото и характеристиками.",
+      "h1": "Автомобили до 700 000 ₽ в Лабинске"
+    },
+    "seoNavigation": {
+      "breadcrumbs": [
+        {
+          "name": "Лабинск",
+          "title": "Все объявления в Лабинске",
+          "url": "/labinsk"
+        },
+        {
+          "name": "Транспорт",
+          "title": "Транспорт в Лабинске",
+          "url": "/labinsk/transport"
+        },
+        {
+          "name": "Автомобили",
+          "title": "Автомобили в Лабинске",
+          "url": "/labinsk/avtomobili"
+        }
+      ]
+    },
+    "applyButton": {
+      "enabled": true,
+      "title": "Показать 23 тыс. объявлений",
+      "presentationType": "serp"
+    },
+    "nextPageId": "H4sIAAAAAAAA_0q0MrSqLrYyNLRSKskvScyJT8svzUtRss60MjI2sjC0rgUEAAD__743i5YhAAAA",
+    "searchSubscriptionAction": "ru.avito://1/searchSubscription/new/byParams?description=%D0%9B%D0%B0%D0%B1%D0%B8%D0%BD%D1%81%D0%BA%2C+%D0%9E%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C+%D0%BD%D0%B0+%D0%BA%D0%B0%D1%80%D1%82%D0%B5%2C+%D0%90%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D0%B8%2C+%D0%A6%D0%B5%D0%BD%D0%B0+%D0%B4%D0%BE%C2%A0700%C2%A0000%C2%A0%E2%82%BD&filter%5BcategoryId%5D=9&filter%5BlocationId%5D=633650&filter%5BpriceMax%5D=700000&filter%5BsearchRadius%5D=200&pushFrequency=3&pushFrequencyOptions%5B0%5D%5Bid%5D=1&pushFrequencyOptions%5B0%5D%5Btitle%5D=%D0%A1%D1%80%D0%B0%D0%B7%D1%83&pushFrequencyOptions%5B1%5D%5Bid%5D=2&pushFrequencyOptions%5B1%5D%5Btitle%5D=%D0%A3%D1%82%D1%80%D0%BE%D0%BC&pushFrequencyOptions%5B2%5D%5Bid%5D=3&pushFrequencyOptions%5B2%5D%5Btitle%5D=%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%BE%D0%BC&pushFrequencyOptions%5B3%5D%5Bid%5D=0&pushFrequencyOptions%5B3%5D%5Btitle%5D=%D0%9D%D0%B5+%D0%BF%D1%80%D0%B8%D1%81%D1%8B%D0%BB%D0%B0%D1%82%D1%8C&title=%D0%9F%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%BF%D0%BE%D0%B8%D1%81%D0%BA",
+    "xHash": "kbhqyadt4vl2f3egllano5etiene530",
+    "verticalId": 0
+  }
+}

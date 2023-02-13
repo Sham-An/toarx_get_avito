@@ -1,0 +1,725 @@
+
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Как создавать пользовательские команды управления Django</title>
+    <meta name="description"
+          content=""/>
+
+
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/agate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+
+</head>
+<body>
+<header class="header-inner">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4">
+            <div class="navbar-brand site-branding">
+                <p class="site-title"><a href="/">Tretyakov.net</a></p>
+                <p class="site-description">О веб разработке и IT</p>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li><a href="/page/about/">О сайте</a></li>
+                    <li><a href="/page/feedback/">Обратная связь</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Содержание страницы -->
+<div class="container mt-5">
+    <div class="row">
+        <!-- Blog content-->
+        <div class="col-lg-8">
+
+            
+
+            
+    <!-- Post content-->
+    <article>
+        <!-- Post header-->
+        <header class="mb-4">
+            <!-- Post categories-->
+            <span class="post-category"><a href="/cat/python/">Python</a></span>
+            <!-- Post title-->
+            <h1 class="fw-bolder mb-1">Как создавать пользовательские команды управления Django</h1>
+            <!-- Post meta content-->
+            <div class="entry-meta">
+                <span class="posted-on"><i class="bi bi-calendar3"></i><time
+                        class="entry-date published">02 мая 2022</time></span>
+                
+            </div>
+        </header>
+        
+            <!-- Preview image figure-->
+            <figure class="mb-4"><img class="img-fluid rounded" src="/media/blog/post/2022/05/django-commands.png" alt="Как создавать пользовательские команды управления Django"/>
+            </figure>
+        
+        <!-- Post content-->
+        <section class="mb-5">
+            <p>В Django есть удобный инструмент командной строки manage.py, который помогаем выполнять различные действия например создание приложения Джанго,&nbsp; создание и выполнение миграций БД, запуск встроенного сервера и т.п. Приятной особенностью этого инструмента является то, что вы можете добавить в него свои собственные команды. Эти команды помогут взаимодействовать вам с вашим приложением из терминала или вы можете настроить выполнение этих команд по крону.</p>
+
+<p>Ниже я покажу как добавить в manage.py собственные команды.</p>
+
+<p>Давайте сначала посмотрим какие команды вы можете использовать, для этого в терминале выполните команду:</p>
+
+<p><code>python manage.py help</code></p>
+
+<p>Вы получите список команд разделенный на разделы. Чтобы получить помощь по конкретной команде, например runserver, выполните в терминале:</p>
+
+<p><code>python manage.py help runserver</code></p>
+
+<h2>Создание собственных команд в manage.py</h2>
+
+<p>Команды создаются в ваших приложениях в подпапке /management/commands. Например я хочу добавить собственные команды в приложение <a href="/post/drevovidnye-kategorii-v-django/">блог</a>, для этого я создаю management/commands/my_command.py</p>
+
+<p><img alt="Создания файла с собственными командами для manage.py Django" class="img-fluid" src="/media/uploads/2022/05/02/1.png" /></p>
+
+<p>Имя файла это и есть имя команды, которое используется для ее вызова. Например чтобы вызвать команду из файла добавленного выше, в командной строке напишем:</p>
+
+<p><code>python manage.py my_command</code></p>
+
+<h2>Основы. Базовый пример</h2>
+
+<p>Для демонстрации и тренировки создадим очень простую команду, которая возвращает нам текущее время.</p>
+
+<p>Для этого создадим файлmanagement/commands/what_time_is_it.py:</p>
+
+<pre>
+<code class="language-python">from django.core.management.base import BaseCommand
+from django.utils import timezone
+
+
+class Command(BaseCommand):
+    help = 'Отображает текущее время'
+    def handle(self, *args, **kwargs):
+        time = timezone.now().strftime('%X')
+        self.stdout.write(f"Текущее время: {time}")
+</code></pre>
+
+<p>Весь файл состоит из одного класса <strong>Command</strong>, который наследуется от базового класса <strong>BaseCommand</strong>. В переменную help мы добавляем строку, которая выводится когда пользователь запрашивает справку с помощью manage.py help</p>
+
+<p>Сам код команды определен внутри метода <strong>handle()</strong>.</p>
+
+<p>Теперь выполним нашу собственную команду добавленную нами в manage.py:</p>
+
+<p><code>python manage.py what_time_is_it</code></p>
+
+<p>И мы получим в выводе текущее время. Напомню, что имя команды совпадает с именем файла без окончания <strong>py</strong>.</p>
+
+<blockquote>
+<p>А для чего вообще нужно так заморачиваться, почему бы не просто набросать нужные инструкции в пайтон скрипте и выполнить его? Используя такой подход с созданием собственных команд manage.py, мы можем импортировать модели Джанго и работать с базой данных с помощью ORM Django.</p>
+</blockquote>
+
+<h2>Обработка аргументов в командах</h2>
+
+<p>Django использует argparse, который является частью стандартной библиотеки Python. Для обработки аргументов в нашей пользовательской команде, мы должны определить метод с именем <strong>add_arguments</strong>.</p>
+
+<h3>Позиционные Аргументы</h3>
+
+<p>Создадим команду, которая создает случайно сгенерированных пльзователей. Эта команда будет принимать обязательный аргумент total, который определяет количество создаваемых пользователей.</p>
+
+<p>Создадим файл management/commands/create_users.py:</p>
+
+<pre>
+<code class="language-python">from django.contrib.auth.models import User
+from django.core.management.base import BaseCommand
+from django.utils.crypto import get_random_string
+
+
+class Command(BaseCommand):
+    help = 'Создает случайных пользователей'
+
+    def add_arguments(self, parser):
+        parser.add_argument('total', type=int, help='Указывает сколько пользователей необходимо создать')
+
+    def handle(self, *args, **kwargs):
+        total = kwargs['total']
+        for i in range(total):
+            User.objects.create_user(username=get_random_string(7), email='', password='1234567890')</code></pre>
+
+<p>Теперь давайте создадим 5 пользователей, выполним команду:</p>
+
+<p><code>python manage.py create_users 5</code></p>
+
+<p>Если сейчас проверить таблицу <em>auth_user</em>, мы увидим 5 новых пользователей со случайно сгенерированными <em>username</em>.</p>
+
+<blockquote>
+<p>Во всех создаваемых нами командах, мы добавляем параметр help. Он содержит подсказку по команде, ее можно вызвать <em>manage.py help имя команды</em>, например:</p>
+
+<p><code>python manage.py help create_users</code></p>
+</blockquote>
+
+<h3>Именованные аргументы</h3>
+
+<p>Именованные аргументы, в отличии от позиционных, могут передаваться в любом порядке. Для примера добавим к нашей команде создания случайных пользователей возможность добавление префикса к <em>username</em>. Префикс будем передавать именованным агруметом с именем <em>prefix</em>.</p>
+
+<p>Вернемся к нашему файлу management/commands/create_users.py:</p>
+
+<pre>
+<code class="language-python">class Command(BaseCommand):
+    help = 'Создает случайных пользователей'
+
+    def add_arguments(self, parser):
+        parser.add_argument('total', type=int, help='Указывает сколько пользователей необходимо создать')
+
+        # Опциональный аргумент
+        parser.add_argument('-P', '--prefix', type=str, help='Префикс имени пользователя', )
+
+    def handle(self, *args, **kwargs):
+        total = kwargs['total']
+        prefix = kwargs['prefix']
+
+        for i in range(total):
+            if prefix:
+                username = f'{prefix}_{get_random_string(7)}'
+            else:
+                username = get_random_string(7)
+            User.objects.create_user(username=username, email='', password='1234567890')</code></pre>
+
+<p>Создадим еще 5 пользователей в имени которых будет префикс <em>custom_user</em></p>
+
+<p><code>python manage.py create_users 5 --prefix custom_user</code></p>
+
+<p>Так же эту команду можно записать так</p>
+
+<p><code>python manage.py create_users 5 -P custom_user</code></p>
+
+<p>Проверим базу и увидим 5 случайно сгенерированных пользователей без префикса (их мы получили раньше) в имени и 5 с префиксом</p>
+
+<p><img alt="Созданные с помощью собственной команды manage.py пользователи" class="img-fluid" src="/media/uploads/2022/05/03/2.png" /></p>
+
+<h3>Флаги</h3>
+
+<p>Это необязательные аргументы команды, которые используются для обработки логических значений. Допустим, мы хотим добавить флаг <em>--admin</em>, чтобы указать нашей команде создать суперпользователя или создать обычного пользователя, если флаг отсутствует.</p>
+
+<p>Продолжим дорабатывать файл management/commands/create_users.py:</p>
+
+<pre>
+<code class="language-python">from django.contrib.auth.models import User
+from django.core.management.base import BaseCommand
+from django.utils.crypto import get_random_string
+
+
+class Command(BaseCommand):
+    help = 'Создает случайных пользователей'
+
+    def add_arguments(self, parser):
+        parser.add_argument('total', type=int, help='Указывает сколько пользователей необходимо создать')
+
+        # Опциональный аргумент
+        parser.add_argument('-P', '--prefix', type=str, help='Префикс имени пользователя', )
+
+        # Флаг
+        parser.add_argument('-A', '--admin', action='store_true', help='Дать пользователю права администратора')
+
+    def handle(self, *args, **kwargs):
+        total = kwargs['total']
+        prefix = kwargs['prefix']
+        admin = kwargs['admin']
+
+        for i in range(total):
+            if prefix:
+                username = f'{prefix}_{get_random_string(7)}'
+            else:
+                username = get_random_string(7)
+
+            if admin:
+                User.objects.create_superuser(username=username, email='', password='1234567890')
+            else:
+                User.objects.create_user(username=username, email='', password='1234567890')</code></pre>
+
+<p>Создадим 2 администраторов:</p>
+
+<p><code>python manage.py create_users 2 --admin</code></p>
+
+<p>Проверим базу и увидим что создалось 2 пользователя с правами суперпользователя.</p>
+
+<p>Кстати, обратите внимания, что имена пользователей сгенерировались без префиска, поскольку в команде мы не указали опциональный аргумент <em>--prefix</em></p>
+
+<p><img alt="Использование флагов в собственных командах manage.py" class="img-fluid" src="/media/uploads/2022/05/03/3.png" /></p>
+
+<h3>Произвольный список аргументов</h3>
+
+<p>Теперь создадим команду, которая бы удаляла пользователей по переданному списку их ID.</p>
+
+<p>Создаем файл management/commands/delete_users.py:</p>
+
+<pre>
+<code class="language-python">from django.contrib.auth.models import User
+from django.core.management.base import BaseCommand
+
+
+class Command(BaseCommand):
+    help = 'Удаляет пользователей'
+
+    def add_arguments(self, parser):
+        parser.add_argument('user_id', nargs='+', type=int, help='ID пользователя')
+
+    def handle(self, *args, **kwargs):
+        users_ids = kwargs['user_id']
+
+        for user_id in users_ids:
+            try:
+                user = User.objects.get(pk=user_id)
+                user.delete()
+                self.stdout.write(f'Пользователь {user.username} c ID {user_id} был удален!')
+            except User.DoesNotExist:
+                self.stdout.write(f'Пользователь с ID {user_id} не существует.')</code></pre>
+
+<p>Для начала попробуем удалить одного пользователя с id, например, 5</p>
+
+<p><code>python manage.py delete_users 5</code></p>
+
+<p>У нас в базе был такой пользователь, поэтому получаем ответ что пользователь удален:</p>
+
+<p><img alt="Удаление пользователя с использованием собственной команды manage.py" class="img-fluid" src="/media/uploads/2022/05/03/4.png" /></p>
+
+<p>Теперь попробуем опять удалить пользователя с ID 5 и пользователей которых мы создали ранее с правами администратора (ID 13 и 14).</p>
+
+<p>Достаточно передать в команду delete_users наши id разделенные пробелами</p>
+
+<p><code>python manage.py delete_users 5 13 14</code></p>
+
+<p>Получим ответ о том что пользователя 5 уже не существует, а 13 и 14 успешно удалены:</p>
+
+<p><img alt="Собственные команды manage.py с произвольным списком аргументов" class="img-fluid" src="/media/uploads/2022/05/03/5.png" /></p>
+
+<h2>Добавляем красоту</h2>
+
+<p>Вывод результатов выполнения команд можно стилизовать, чтобы выделить предупреждения или ошибки.</p>
+
+<p>Добавим выделение в предыдущий пример с удалением пользователей:</p>
+
+<pre>
+<code class="language-python">class Command(BaseCommand):
+    help = 'Удаляет пользователей'
+
+    def add_arguments(self, parser):
+        parser.add_argument('user_id', nargs='+', type=int, help='ID пользователя')
+
+    def handle(self, *args, **kwargs):
+        users_ids = kwargs['user_id']
+
+        for user_id in users_ids:
+            try:
+                user = User.objects.get(pk=user_id)
+                user.delete()
+                self.stdout.write(self.style.SUCCESS(f'Пользователь {user.username} c ID {user_id} был удален!'))
+            except User.DoesNotExist:
+                self.stdout.write(self.style.WARNING(f'Пользователь с ID {user_id} не существует.'))</code></pre>
+
+<p>Выполним</p>
+
+<p><code>python manage.py delete_users 6 7 13</code></p>
+
+<p>Теперь вывод выглядит немного наглядней:</p>
+
+<p><img alt="Кастомизация вывода команд manage.py" class="img-fluid" src="/media/uploads/2022/05/03/6.png" /></p>
+
+<p>Подробнее о добавлении пользовательских командах и стилизации их вывода читайте в <a href="https://docs.djangoproject.com/en/4.0/howto/custom-management-commands/">официальной документации</a>.</p>
+
+<h2>Выполнение команд по крону</h2>
+
+<p>Если у вас есть задача, которая должна выполняться периодически, например, создание отчета каждый понедельник. Или, допустим, у вас есть веб-скраппер, который собирает данные с какого-то веб-сайта каждые 10 минут. Вы можете определить этот код как команду управления и просто добавить его в crontab вашего сервера следующим образом: Как то так:</p>
+
+<p><code>0 4 * * * /home/mysite/venv/bin/python /home/mysite/mysite/manage.py my_custom_command</code></p>
+            <p>
+                
+                    <span class="post-tags">
+                    <i class="bi bi-tags-fill"></i>
+                        
+                            <a
+                                    href="/tag/django/">Django</a>
+                        
+                    </span>
+                
+            </p>
+        </section>
+    </article>
+
+    
+    <section id="isso-thread"></section>
+
+    <section>
+        <div class="row mb-4">
+            
+                <div class="col-md-6 post-pn rounded-3">
+                    
+                        <hr/>
+                        <!-- Previous post -->
+                        <a href="/post/kak-uvelichit-skorost-prokrutki-kolyosika-myshi-v-kubuntu/">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p><i class="bi bi-arrow-left"></i> Как увеличить скорость прокрутки колёсика мыши в Kubuntu</p>
+                                </div>
+                            </div>
+                        </a>
+                    
+                </div>
+            
+            
+                <div class="col-md-6 post-pn rounded-3">
+                    
+                        <hr/>
+                        <!-- Next post -->
+                        <a href="/post/perenos-sertifikata-lets-encrypt-na-drugoj-server/">
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>Перенос сертификата Let’s Encrypt на другой сервер <i class="bi bi-arrow-right"></i></p>
+                                </div>
+                            </div>
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </section>
+
+    <section class="mt-3 mb-2">
+        <a href="https://beget.com/?id=1014883" target="_blank"><img class="img-fluid"
+                                                                           src="/static/images/static970x90_1.png"
+                                                                           alt="Хостинг для ваших проектов"/></a>
+    </section>
+
+    
+<section class="bg-light pt-4 pb-2 shadow-sm mb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="border-bottom mb-4">Возможно, вас заинтересует</h3>
+            </div>
+        </div>
+        <div class="row">
+            
+                <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                    <div class="card">
+                        
+                            <div class="card-body d-flex flex-column">
+                                <a href="/post/ustanovka-python-na-linux/"><h5 class="card-title">Установка Python на Linux</h5></a>
+                                <p class="card-text mb-4">В этой заметке я покажу как собрать из исходников и установить Python …</p>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                    <div class="card">
+                        
+                            <a href="/post/drevovidnye-kategorii-v-django/"><img src="/media/blog/post/2021/12/django-mptt.gif" class="card-img-top" alt="Древовидные категории в Django"></a>
+                            <div class="card-body d-flex flex-column">
+                                <a href="/post/drevovidnye-kategorii-v-django/"><h5 class="card-title">Древовидные категории в Django</h5></a>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+                <div class="col-lg-4 mb-3 d-flex align-items-stretch">
+                    <div class="card">
+                        
+                            <div class="card-body d-flex flex-column">
+                                <a href="/post/ispolzovanie-abstraktnyh-modelej-v-django/"><h5 class="card-title">Использование абстрактных моделей в Django‎</h5></a>
+                                <p class="card-text mb-4">Одним из принципов Python является DRY (Don’t Repeat Yourself) - «Не повторяйся». …</p>
+                            </div>
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+        </div>
+        <!-- Сайдбар -->
+        <div class="col-lg-4">
+
+            <!-- Категории-->
+            <section class="sidebar-widget">
+                
+<h2 class="sidebar-widget-title">Категории</h2>
+<ul>
+    
+        <li>
+            
+                <a href="/cat/python/">Python</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/bitrix/">Битрикс</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/wordpress/">Wordpress</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/web-development/">Веб-разработка</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/laravel/">Laravel</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/utilities/">Полезности</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/other/">Разное</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                Статьи
+            
+
+            
+                <ul class="children">
+                    
+        <li>
+            
+                <a href="/cat/linux/">Linux</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/windows/">Windows</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/makeup/">Верстка</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/internet/">Интересное в интернете</a>
+            
+
+            
+        </li>
+    
+        <li>
+            
+                <a href="/cat/error-correction/">Ошибки</a>
+            
+
+            
+        </li>
+    
+                </ul>
+            
+        </li>
+    
+</ul>
+            </section>
+
+
+            
+                <!-- Свежие записи-->
+                <section class="sidebar-widget">
+                    <h2 class="sidebar-widget-title">Свежие записи</h2>
+<ul>
+    
+            <li><a href="/post/neskolko-konfiguracij-dlya-proekta-django/">Несколько конфигураций для проекта Django</a></li>
+        
+            <li><a href="/post/django-inclusion_tag-s-raznymi-shablonami/">Django inclusion_tag с разными шаблонами</a></li>
+        
+            <li><a href="/post/dekorator-property-v-modelyah-django/">Декоратор @property в моделях Django</a></li>
+        
+            <li><a href="/post/otkat-migracij-v-django/">Откат миграций в Django</a></li>
+        
+            <li><a href="/post/kak-zapustit-lokalnyj-server-razrabotki-django-po-protokolu-https/">Как запустить локальный сервер разработки Django по протоколу HTTPS</a></li>
+        
+</ul>
+                </section>
+
+            
+
+            <!-- Теги-->
+            <section class="sidebar-widget">
+                <h2 class="sidebar-widget-title">Метки</h2>
+<div class="tags">
+    
+        <a href="/tag/javascript/">JavaScript</a>
+    
+        <a href="/tag/php/">PHP</a>
+    
+        <a href="/tag/jquery/">jQuery</a>
+    
+        <a href="/tag/shpargalka/">Шпаргалка</a>
+    
+        <a href="/tag/ide/">IDE</a>
+    
+        <a href="/tag/form/">form</a>
+    
+        <a href="/tag/mail/">mail</a>
+    
+        <a href="/tag/service/">service</a>
+    
+        <a href="/tag/git/">Git</a>
+    
+        <a href="/tag/linux-mint/">Linux Mint</a>
+    
+        <a href="/tag/adminka/">админка</a>
+    
+        <a href="/tag/css/">CSS</a>
+    
+        <a href="/tag/json/">json</a>
+    
+        <a href="/tag/database/">DataBase</a>
+    
+        <a href="/tag/sql/">SQL</a>
+    
+        <a href="/tag/image/">image</a>
+    
+        <a href="/tag/wsl/">WSL</a>
+    
+        <a href="/tag/docker/">Docker</a>
+    
+        <a href="/tag/vue/">Vue</a>
+    
+        <a href="/tag/programmy/">программы</a>
+    
+        <a href="/tag/woocommerce/">Woocommerce</a>
+    
+        <a href="/tag/bootstrap/">bootstrap</a>
+    
+        <a href="/tag/django/">Django</a>
+    
+        <a href="/tag/postgresql/">PostgreSQL</a>
+    
+        <a href="/tag/linux/">linux</a>
+    
+        <a href="/tag/kubuntu/">Kubuntu</a>
+    
+        <a href="/tag/kde/">KDE</a>
+    
+</div>
+            </section>
+
+
+            <!-- Реклама -->
+            <section class="sidebar-widget">
+                <div class="mb-3">
+                    <!-- Yandex.RTB R-A-1298954-1 -->
+                    <div id="yandex_rtb_R-A-1298954-1"></div>
+                    <script>window.yaContextCb.push(()=>{
+                    Ya.Context.AdvManager.render({
+                        renderTo: 'yandex_rtb_R-A-1298954-1',
+                        blockId: 'R-A-1298954-1'
+                    })
+                    })</script>
+                </div>
+                <h2 class="sidebar-widget-title">Задонатить</h2>
+                <div class="mb-3">
+                    <iframe src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9D%D0%B0%20%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5%20%D0%B1%D0%BB%D0%BE%D0%B3%D0%B0&default-sum=99&button-text=11&successURL=https%3A%2F%2Ftretyakov.net%2F&quickpay=shop&account=410011578599952&" width="423" height="222" frameborder="0" allowtransparency="true" scrolling="no"></iframe>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<!-- Футер-->
+<footer class="py-3 bg-dark">
+    <div class="container"><p class="m-0 text-center text-white">&copy; Александр Третьяков 2009 - 2023</p>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="/static/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("article").find("a:has(img)").addClass('fancyboxImg');
+            $("a.fancyboxImg").fancybox({
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic',
+                'speedIn': 600,
+                'speedOut': 200,
+                'overlayShow': false
+            });
+        });
+    </script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script data-isso="/comments" src="/comments/js/embed.min.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(57448822, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/57448822" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
