@@ -2,6 +2,22 @@ python3 avito_parser_cli.py 'audi tt' -u 'auditt_byprice_january.csv' -s 'price'
 
 Поиск по нескольким моделям телефонов. Для этого просто в строке запроса перечисляем нужные варианты через символ |.
 №№№№№№№ f=ASgCAQICAUDyig4UpIKUAQ 4 звезды =1
+????https://www.avito.ru/js/catalog?_=
+&categoryId=9
+&locationId=652000
+&radius=0&cd=1
+&s=101
+&p=1
+&params[188][from]=893
+&params[188][to]=896
+&params[110000]=329199
+&verticalCategoryId=0
+&rootCategoryId=1
+&localPriority=0
+&sellerId=
+&proprofile=1
+&proProfileDomain=
+&countOnly=1
 
                                     ЦЕНА
                                       от              до

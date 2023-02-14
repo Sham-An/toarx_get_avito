@@ -41,18 +41,6 @@
 import datetime
 import json
 
-from lxml import html
-#from bs4 import BeautifulSoup
-#######################################
-import ssl
-import requests
-##########################################
-from requests.adapters import HTTPAdapter
-#from requests.packages.urllib3.poolmanager import PoolManager
-from urllib3.poolmanager import PoolManager
-#from requests.packages.urllib3.util import ssl_
-from urllib3.util import ssl_
-# from bs4 import BeautifulSoup
 #######################################
 import ssl
 
@@ -275,9 +263,19 @@ def main():
 
         #url_av = 'https://m.avito.ru/api/9/items'
         #https://www.avito.ru
+        #r = session.request('GET', url_av)
         r = session.request('GET', url_av)
+        r_js = session2.request('GET', url_av)
+        res_js = json.loads(r_js.content)
+        print(res_js)
         #session2.get('https://m.avito.ru/')
-        #res = session2.get(url_av).json()
+        # try:
+        #     res_js = json.loads(r_js.content)
+        #     print(res_js)
+        # except json.decoder.JSONDecodeError:
+        #     print('######_____________________________________________BANANA JSON')
+        #     #print(r.content)
+
         print(f'################################################################## res2.url = {r.url}')
 
         #res = r.json()

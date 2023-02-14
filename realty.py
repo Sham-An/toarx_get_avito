@@ -1,7 +1,69 @@
+import json
 import sqlite3
 import time
 import requests
 from config import token, chat_id
+
+def realty_ok():
+    str = "realty_ok"
+    return str
+def create_category(cat_dict):
+    '''Создаем базу категории и в неё загружаем словарь'''
+    # "id": 9,
+    # "name": "Товары",
+    # "parentId": 1,
+    # "showMap": false
+
+    connection = sqlite3.connect('db.sqlite')
+    cursor = connection.cursor()
+    cursor.execute('Create Table if not exists categories (name Text, course Text, roll Integer)')
+
+    traffic = json.load(open('json_file.json'))
+    columns = ['name', 'course', 'roll']
+    for row in traffic:
+        keys = tuple(row[c] for c in columns)
+        cursor.execute('insert into Student values(?,?,?)', keys)
+        print(f'{row["name"]} data inserted Succefully')
+
+    connection.commit()
+    connection.close()
+
+
+def check_categories(cat):
+    cat = cat
+    cat_id = cat["id"]
+    print(cat_id)
+    print('check_category\n')
+    #print(cat)
+    with sqlite3.connect('realty.dbold') as connection:
+        cursor = connection.cursor()
+        # #это может быть кортеж с информацией о пользователе.
+        # user = ('00002', 'Lois', 'Lane', 'Female')
+
+        # #Если его нужно загрузить в базу данных, тогда подойдет следующий формат:
+        #
+        # cur3.execute("INSERT INTO users VALUES(?, ?, ?, ?);", user)
+        # conn.commit()
+        cursor.execute("""
+              SELECT offer_id FROM categories WHERE offer_id = (?)
+          """, (cat_id,))
+        result = cursor.fetchone()
+        print(f'result cursor.fetchone() = {result}')
+        user = ('00003', 'Lois2', 'Lane2', 'Female2', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5',
+                '5', '6')
+
+        if result is None:
+            with sqlite3.connect('realty.dbold') as connection:
+                cursor = connection.cursor()
+                cursor.execute("""
+                    INSERT INTO categories 
+                    VALUES (NULL, :id_item, :category_name, :category_kod, 
+                    :date, :time, :title_desk, :title_full, :img, :price,
+                    :address, :coords, :url, :uri, :uri_mweb, :offer_id, :area,
+                    :rooms, :floor, :total_floor)
+                    """, cat)
+                connection.commit()
+        print(f'Объявление {cat_id} добавлено в базу данных')
 
 
 def check_database(offer):
@@ -35,7 +97,7 @@ def check_database(offer):
 
     offer_id = offer["offer_id"]
     print(type(offer))
-    with sqlite3.connect('realty.db') as connection:
+    with sqlite3.connect('realty.dbold') as connection:
         cursor = connection.cursor()
         # #это может быть кортеж с информацией о пользователе.
         #user = ('00002', 'Lois', 'Lane', 'Female')
@@ -102,7 +164,7 @@ def check_database_old(offer):
     print('check_database')
     offer_id = offer["offer_id"]
     # print(offer_id)
-    with sqlite3.connect('realty.db') as connection:
+    with sqlite3.connect('realty.dbold') as connection:
         cursor = connection.cursor()
         cursor.execute("""
             SELECT offer_id FROM offers WHERE offer_id = (?)

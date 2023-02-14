@@ -1,76 +1,136 @@
+import json
 import sqlite3
 import time
 import requests
 from config import token, chat_id
 
 
+def realty_ok():
+    str = "realty_ok"
+
+    return str
+
+
+def create_category_tab():
+    '''Создаем базу категории и в неё загружаем словарь'''
+    # "id": 9,
+    # "name": "Товары",
+    # "parentId": 1,
+    # "showMap": false
+    # connection = sqlite3.connect('db.sqlite')
+    connection = sqlite3.connect('realty.db')
+    cursor = connection.cursor()
+    # id INTEGER PRIMARY KEY AUTOINCREMENT,
+    # Create Table if not exists categories (id Text, name Text, parentId Text, showMap Text)
+    cursor.execute("""
+        Create Table if not exists categories(
+            id INTEGER PRIMARY KEY, 
+            name Text,
+            parentId Text, 
+            showMap Text,
+            url_name text
+            )     
+    """)
+    connection.commit()
+    connection.close()
+
+
+def check_categories(cat):
+    # cat1 = cat
+    # cat = {'id': 116, 'name': 'Готовый бизнес', 'parentId': 8, 'showMap': False}
+    cat_id = cat["id"]
+    print(cat_id)
+    print('check_category\n')
+    # print(cat)
+    with sqlite3.connect('realty.db') as connection:
+        cursor = connection.cursor()
+        # cur3.execute("INSERT INTO users VALUES(?, ?, ?, ?);", user) conn.commit()
+        cursor.execute("""
+              SELECT id FROM categories WHERE id = (?)
+          """, (cat_id,))
+        result = cursor.fetchone()
+        print(f'result cursor.fetchone() = {result}')
+
+        if result is None:
+            with sqlite3.connect('realty.db') as connection:
+                cursor = connection.cursor()
+                cursor.execute("""
+                    INSERT INTO categories 
+                    VALUES (:id, :name, :parentId, :showMap, :url_name
+                    )
+                    """, cat)
+                connection.commit()
+
+        print(f'Объявление {cat_id} добавлено в базу данных')
+    connection.close()
+
+def get_cat_from_file():
+    with open("avito_category.json", encoding='utf-8') as file:
+        data = json.load(file)
+        # list_dict(data)
+        # list_category(data)
+        # print(f'children === {children}')
+
+    name = "no name"
+    all_id = []
+    add_cat = {'url_name': 'Null', }
+    for dataitems in data['categories']:
+        # print(dataitems['id'], dataitems['name'])
+
+        dataitems_copy = dataitems.copy()
+        if 'children' in dataitems_copy:
+            #dataitems_copy.setdefault('name_dir_en')  # , value)
+            dataitems_copy.setdefault('url_name')  # , value)
+            dataitems_copy.setdefault('parentId', 0)  # , value)
+            dataitems_copy.pop('children')
+            print(f'dataitems PARENT {dataitems_copy}')
+            check_categories(dataitems_copy)
+
+        all_id.append(dataitems['id'])
+        if dataitems['id'] > 0:
+            for datainfo in dataitems['children']:
+                if datainfo['id'] in all_id:
+                    print(f'IIIIDDDD Поймали ДУБЛЯЖ {datainfo}')
+                    name = datainfo['name']
+                    # break
+                    continue
+                all_id.append(datainfo['id'])
+                # if name in datainfo['name']:
+                #     print(f'Поймали {name}')
+                #     continue
+                #     break
+                datainfo.update(add_cat)
+                print(f'CHILDREN {datainfo}')
+                check_categories(datainfo)
+    all_id.sort()
+    print(all_id)
+    # print(datainfo['id'], datainfo['name'], datainfo['parentId'])
+    print(datainfo)
+    return 1  # cat
+
+
 def check_database(offer):
     print('check_database\n')
     print(offer)
-    # offer = {'offer_id': 2465411376, 'id_item': 2465411375, 'category_name': 'category_name',
-    #          'category_kod': 'category_kod',
-    #          'date': '2022-09-06 15:37:49', 'time': '1662467869', 'title_desk': 'Error title',
-    #          'title_full': 'Error title',
-    #          'img': 'img', 'price': 3000000, 'address': 'Москва', 'coords': 'coords',
-    #          'url': 'url',
-    #          'uri': 'uri',
-    #          'uri_mweb': 'uri_mweb',
-    #          'area': 100,
-    #          'rooms': 'E',
-    #          'floor': 5,
-    #          'total_floor': 'r',
-    #          }
-
-    # offer2 = {'offer_id': 2465411376, 'id_item': 1, 'category_name': '2', 'category_kod': '3',
-    #           'date': '4', 'time': "5", 'title_desk': '6', 'title_full': '7',
-    #           'img': '8', 'price': '9', 'address': '10', 'coords': '11',
-    #           'url': '12',
-    #           'uri': '13',
-    #           'uri_mweb': '14',
-    #           'area': '15',
-    #           'rooms': '16',
-    #           'floor': '17',
-    #           'total_floor': '18',
-    #           }
 
     offer_id = offer["offer_id"]
     print(type(offer))
     with sqlite3.connect('realty.db') as connection:
         cursor = connection.cursor()
-        # #это может быть кортеж с информацией о пользователе.
-        #user = ('00002', 'Lois', 'Lane', 'Female')
-
-        # #Если его нужно загрузить в базу данных, тогда подойдет следующий формат:
-        #
         # cur3.execute("INSERT INTO users VALUES(?, ?, ?, ?);", user)
         # conn.commit()
-
         cursor.execute("""
             SELECT offer_id FROM offers WHERE offer_id = (?)
-        """, (offer_id,))
+        """, (offer_id))
         result = cursor.fetchone()
         print(f'result cursor.fetchone() = {result}')
-        user = ('00003', 'Lois2', 'Lane2', 'Female2', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5', '5',
-                '5', '6')
-
 
         if result is None:
-
             # send_telegram(offer)
-            #ok cursor.execute("INSERT INTO offers VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", user)
-            #""" #: id_item,: category_name,: category_kod) """, offer)
-            #ok connection.commit()
-
-            #
-            #     : date,: time,: title_desk,: title_full,: img,: price,
-            #     : address,: coords,: url,: uri_mweb,: offer_id,: area,
-            #     : rooms,: floor,: total_floor)
-            # """, offer)
-
-            #user1 = {"id": 100, "name": "Rumpelstiltskin", "dob": "12/12/12"}
-            #c.execute("INSERT INTO users VALUES (:id, :name, :dob)", user1)
-            #or
-            #c.execute("INSERT INTO stocks VALUES (?,?,?)", [dict["id"], dict["name"], dict["dob"]])
+            # ok cursor.execute("INSERT INTO offers VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);", user)
+            # """ #: id_item,: category_name,: category_kod) """, offer)
+            # ok connection.commit()
+            # c.execute("INSERT INTO stocks VALUES (?,?,?)", [dict["id"], dict["name"], dict["dob"]])
 
             cursor.execute("""
                 INSERT INTO offers 
@@ -81,22 +141,6 @@ def check_database(offer):
                 """, offer)
             connection.commit()
             print(f'Объявление {offer_id} добавлено в базу данных')
-
-
-        # cursor.execute("""INSERT INTO offers VALUES (NULL,: id_item,: category_name,: category_kod,{date},
-        # : " ", : title_desk,: title_full,: img,: price, : address,: coords,: url,"",: uri_mweb,: offer_id,: area,
-        # : rooms,: floor,: total_floor)""", offer2)
-
-        # VALUES(NULL,: url,:offer_id,: date,:price,
-        # : address,:area,: rooms,:floor,: total_floor)
-
-        # (NULL,: url,:offer_id,: date,:price,: address,: area,: rooms,:floor,: total_floor) id, id_item,
-        # : category_name,: category_kod,: date,: time,: title_desk,: title_full,: img,: price,: address,
-        # : coords,: url,: uri_mweb,: offer_id,: area,: rooms floor,: total_floor
-
-        # connection.commit()
-        #    print(f'Объявление {offer_id} добавлено в базу данных')
-
 
 def check_database_old(offer):
     print('check_database')
@@ -159,4 +203,11 @@ def main():
 
 
 if __name__ == '__main__':
+    add_cat = {'name_dir_en': 'Null', 'name_url_en': 'Null', }
+    cat = {'id': 91, 'name': 'Птицы', 'parentId': 35, 'showMap': False}
+    cat.update(add_cat)
+    # print(cat)
+    # check_categories(cat)
+    #create_category_tab()
+    get_cat_from_file()
     main()

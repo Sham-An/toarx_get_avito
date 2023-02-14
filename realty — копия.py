@@ -35,7 +35,7 @@ def check_database(offer):
 
     offer_id = offer["offer_id"]
     print(type(offer))
-    with sqlite3.connect('realty.db') as connection:
+    with sqlite3.connect('realty.dbold') as connection:
         cursor = connection.cursor()
         # #это может быть кортеж с информацией о пользователе.
         #user = ('00002', 'Lois', 'Lane', 'Female')
@@ -102,7 +102,7 @@ def check_database_old(offer):
     print('check_database')
     offer_id = offer["offer_id"]
     # print(offer_id)
-    with sqlite3.connect('realty.db') as connection:
+    with sqlite3.connect('realty.dbold') as connection:
         cursor = connection.cursor()
         cursor.execute("""
             SELECT offer_id FROM offers WHERE offer_id = (?)

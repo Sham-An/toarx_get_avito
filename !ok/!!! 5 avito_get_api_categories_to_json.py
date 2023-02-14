@@ -128,7 +128,7 @@ class HttpParser:
         # !!!! Categories from location https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=650400'
         time = floor(datetime.timestamp(datetime.now().replace(second=0, microsecond=0)))
 #       resp = session.get(url_api_9, params=params)  # , proxies = proxiess)
-        url_json = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&'
+        url_json_items = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&'
         url_json = 'https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId = 650400'
         url_json = 'https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&location' #Id = 650400
         url_json_param = f'lastStamp={time}&locationId={region_id}&categoryId={category_id}&page=1&display=list&limit=1'
@@ -137,9 +137,9 @@ class HttpParser:
             json_content = json.load(file)
             # list_dict(data)
             #list_category(data)
-            print(f'region_id === {region_id}')
+            #print(f'region_id === {region_id}')
             print(f'category_id === {category_id}')
-            print(f'json_content === {json_content}')
+            #print(f'json_content === {json_content}')
 
 
         # json_content = HttpParser.get_json_by_request(
@@ -195,7 +195,8 @@ class HttpParser:
             yield sub_category_name, sub_category_link
 
     @staticmethod
-    def get_all_categories_by_region_id(region_id):
+    def get_all_categories_by_region_id(reg_id):
+        region_id=reg_id
         #?https://m.avito.ru/api/4/items/search/header?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&regiononId=650400&categoryId=9
         print(f'!!! OK HttpParser.avito_urls[HttpParser.CATEGORIES_INFO] == {HttpParser.avito_urls[HttpParser.CATEGORIES_INFO]}{region_id}')
         json_content = HttpParser.get_json_by_request(f'{HttpParser.avito_urls[HttpParser.CATEGORIES_INFO]}{region_id}')
@@ -239,6 +240,7 @@ class HttpParser:
 
     @staticmethod
     def get_add_json_info_by_id(add_id):
+        #add_id = "2778802474"
         json_content = HttpParser.get_json_by_request(
             f'https://m.avito.ru/api/14/items/{add_id}?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'
         )
@@ -315,12 +317,14 @@ session.mount("https://", adapter)
 
 #region_id = HttpParser.get_region_id_by_name('Казань')
 region_id = HttpParser.get_region_id_by_name('Тарасовский')
+print(region_id)
+
 all_categories = HttpParser.get_all_categories_by_region_id(region_id)
-all_adds = HttpParser.get_adds_list('Мотоциклы и мототехника', region_id, all_categories, limit_shows=50)
-example_add = HttpParser.get_add_info_by_id(1861843197)
+    #all_adds = HttpParser.get_adds_list('Мотоциклы и мототехника', region_id, all_categories, limit_shows=50)
+#example_add = HttpParser.get_add_info_by_id('2778802474')
 
 print(f'all_categories')
-print(f'all_adds')
-print(f'example_add')
+# print(f'all_adds')
+#print(f'example_add')
 
 # Telegram: @xmm_0

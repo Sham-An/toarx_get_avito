@@ -38,10 +38,11 @@ def delete_records_category():
 # "id":4,"name":"Недвижимость","children"
 def create_tab_category():
     # При подключении к базе, автоматически создается realty.db
-    connection = sqlite3.connect('category.db')
+    connection = sqlite3.connect('realty.db')
+    #connection = sqlite3.connect('category.db')
     cursor = connection.cursor()
     cursor.execute("""
-        CREATE TABLE category(
+        CREATE TABLE categories(
             id INTEGER PRIMARY KEY AUTOINCREMENT, 
             id_category integer,
             name_category_ru text,

@@ -11,7 +11,7 @@ from urllib3.poolmanager import PoolManager
 #from requests.packages.urllib3.util import ssl_
 from urllib3.util import ssl_
 from datetime import datetime
-from realty import check_database
+from realty import realty_ok
 
 import ssl
 import requests

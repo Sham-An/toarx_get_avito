@@ -1,0 +1,88 @@
+Создание пустого словаря:
+dict_sample = {}
+
+Cловарь, где ключи являются целыми числами:
+dict_sample = {1: 'mango', 2: 'pawpaw'}
+
+Можно также создать словарь, явно вызвав метод dict():
+dict_sample = dict({1:'mango', 2:'pawpaw'})
+
+Словарь можно создать с помощью последовательности, как в примере внизу:
+dict_sample = dict([(1,'mango'), (2,'pawpaw')])
+
+Чтобы получить доступ к элементам словаря, нужно передать ключ в квадратных скобках []. Например:
+dict_sample = {"Company": "Toyota", "model": "Premio", "year": 2012}
+x = dict_sample["model"]
+>>> print(x)
+>>> Premio
+
+dict_sample = {"Company": "Toyota", "model": "Premio", "year": 2012}
+x = dict_sample.get("model")
+>>> print(x)
+>>> Premio
+
+########### Добавление элементов
+Можно использовать новый ключ и присвоить ему значение. Например:
+
+dict_sample = {"Company": "Toyota", "model": "Premio", "year": 2012}
+dict_sample["Capacity"] = "1800CC"
+>>> print(dict_sample)
+>>> {'Capacity': '1800CC', 'year': 2012, 'Company': 'Toyota', 'model': 'Premio'}
+
+ЕЩЕ Для начала нужно создать пустой словарь:
+
+MyDictionary = {}
+
+MyDictionary[0] = 'Apples'
+MyDictionary[2] = 'Mangoes'
+MyDictionary[3] = 20
+print("\n3 elements have been added: ")
+print(MyDictionary)
+3 elements have been added: {0: 'Apples', 2: 'Mangoes', 3: 20}
+
+############## Удаление элементов
+1/ dict_sample = {"Company": "Toyota", "model": "Premio", "year": 2012}
+del dict_sample["year"]
+print(dict_sample)
+
+2/ dict_sample = {"Company": "Toyota", "model": "Premio", "year": 2012}
+dict_sample.pop("year")
+print(dict_sample)
+
+3/ popitem() удаляет последний элемент в словаре
+
+############ Метод copy()
+dict_sample = {"Company": "Toyota", "model": "Premio", "year": 2012}
+x = dict_sample.copy()
+print(x)
+
+############## Метод items()
+dict_sample = {"Company": "Toyota", "model": "Premio", "year": 2012}
+
+for k, v in dict_sample.items():
+>>> print(k, v)
+>>>('Company', 'Toyota')
+>>>('model', 'Premio')
+>>>('year', 2012)
+
+######### Метод fromkeys()
+Этот метод возвращает словарь с указанными ключами и значениями. У него следующий синтаксис:
+dictionary.fromkeys(keys, value)
+name = ('John', 'Nicholas', 'Mercy')
+age = 25
+dict_sample = dict.fromkeys(name, age)
+>>>print(dict_sample)
+>>>{'John': 25, 'Mercy': 25, 'Nicholas': 25}
+
+############ Метод setdefault()
+dictionary.setdefault(keyname, value)
+
+############# Метод keys()
+возвращает итерируемый объект является списком всех ключей в словаре.
+dictionary.keys()
+>>> dict_keys(['model', 'Company', 'year'])
+Часто этот метод используется, чтобы перебрать все ключи в словаре:
+for k in dict_sample.keys():
+    print(k)
+
+
