@@ -23,10 +23,14 @@ def search_city(name):
         #SELECT * FROM cityes WHERE name LIKE 'Тар%'
         #SELECT name FROM cityes WHERE id = (?)
         #SELECT name FROM regions WHERE name LIKE 'Тарас%' ORDER BY name;
-
-        cursor.execute("""
+        query_str ="""
         SELECT name FROM regions WHERE name LIKE ? ORDER BY name
-          """, (reg1,))
+          """
+        cursor.execute(query_str, (reg1,))
+
+        # cursor.execute("""
+        # SELECT name FROM regions WHERE name LIKE ? ORDER BY name
+        #   """, (reg1,))
         result = cursor.fetchone()
         print(f'result cursor.fetchone() = {result}')
 
