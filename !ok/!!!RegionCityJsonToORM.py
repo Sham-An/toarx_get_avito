@@ -14,7 +14,7 @@ import sqlite3
 
 logger = getLogger(__name__)
 def search_city(name):
-    reg1 = name
+    reg1 = name+'%'
 
     print(f'ПОИСК {reg1}')
 
@@ -22,9 +22,11 @@ def search_city(name):
         cursor = connection.cursor()
         #SELECT * FROM cityes WHERE name LIKE 'Тар%'
         #SELECT name FROM cityes WHERE id = (?)
+        #SELECT name FROM regions WHERE name LIKE 'Тарас%' ORDER BY name;
+
         cursor.execute("""
-        SELECT * FROM cityes WHERE name LIKE 'Тар%'
-          """)#, (reg1,))
+        SELECT name FROM regions WHERE name LIKE ? ORDER BY name
+          """, (reg1,))
         result = cursor.fetchone()
         print(f'result cursor.fetchone() = {result}')
 
@@ -42,7 +44,7 @@ def create_city_tab():
             url_name text,
             index_post text
             )     
-    """)
+    """)#,(reg_id,))
     connection.commit()
     connection.close()
 
@@ -145,6 +147,7 @@ def list_region(data):
             print('IIIIDDDD Поймали ДУБЛЯЖ!!!!!!!!!!!!!!!!!!!!!')
             break
         all_id.append(dataitems['id'])
+        # Добавляем количество полей для корректного запроса заполнения SQL
         dataitems.setdefault('url_name', 'None')  # , value)
         dataitems.setdefault('index_post', 'None')  # , value)
         check_region(dataitems)
@@ -188,13 +191,11 @@ def Open_json_city():
 
 
 if __name__ == '__main__':
-
     name = "Тарасов"
     search_city(name)
     #create_city_tab()
     #create_regions_tab()
     #Open_json_region()
-    #reg = {'id': '621550', 'name': 'Крым', 'url_name': 'None', 'index_post': 'None'}
-    #print(len(reg))
+    #reg = {'id': '777777', 'name': 'ЁЁЁЁ', 'parent_Id': '777776', 'url_name': 'None', 'index_post': 'None'}
     #check_region(reg)
     #Open_json_city()
