@@ -31,16 +31,20 @@ def search_city(name):
     print(f"list_str {list_str}")
 
     dict_str = dict()
-    #values = ['val_1', 'val_2', 'val_3']
-    #param_names = [f"p{i}"
-    #for i in range(len(values))]
-    #in_str = ", ".join(":" + p for p in param_names))
-    #params = dict(zip(param_names, values))
+    values = [reg1, reg2]
+
+    param_names = [f"reg{i+1}" for i in range(len(values))]
+    in_str = ", ".join(":" + p for p in param_names)
+    params = dict(zip(param_names, values))
+
+    sql = f"""SELECT name, id FROM regions
+             WHERE name in ({in_str})"""
+    print(f'params {params} , in_str {in_str}, sql {sql}')
     dict_str.setdefault("reg1", reg1)  # append("reg1",reg1) # + reg2
     dict_str.setdefault("reg2", reg2)  # append("reg1",reg1) # + reg2
     # val.append("reg2", reg2)
-    #val = f'({reg1}, {reg2})'
-    #val = list(val)
+    #for key, value in values:
+    #    countries_hdi[key] = value
 
     print(f'ПОИСК dict_str {dict_str["reg1"]} и {dict_str["reg2"]} ')
 
@@ -84,9 +88,9 @@ def search_city(name):
         #str32 trupl_str OK!!!!
         #cursor.execute((query_str_3), (trupl_str))
         #str4 OK dict_str!!!!
-        cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
-        #str5
-        #cursor.execute((query_str_5), (list_str))#[0], val[1]))
+        #cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
+        #str5 OK sql динамически сформирован весь запрос!!!!
+        cursor.execute(sql, (params))#[0], val[1]))
 
         # cursor.execute("""
         # SELECT name FROM regions WHERE name LIKE ? ORDER BY name
