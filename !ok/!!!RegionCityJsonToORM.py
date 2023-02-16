@@ -31,7 +31,11 @@ def search_city(name):
     print(f"list_str {list_str}")
 
     dict_str = dict()
-    #val = dict({"reg1":reg1,"reg2":reg2,})
+    #values = ['val_1', 'val_2', 'val_3']
+    #param_names = [f"p{i}"
+    #for i in range(len(values))]
+    #in_str = ", ".join(":" + p for p in param_names))
+    #params = dict(zip(param_names, values))
     dict_str.setdefault("reg1", reg1)  # append("reg1",reg1) # + reg2
     dict_str.setdefault("reg2", reg2)  # append("reg1",reg1) # + reg2
     # val.append("reg2", reg2)
