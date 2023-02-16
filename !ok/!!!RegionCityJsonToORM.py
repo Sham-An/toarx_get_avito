@@ -31,6 +31,77 @@ import psycopg2
 # from django.core.management.base import CommandError
 
 logger = getLogger(__name__)
+
+def search_region_city(name):
+    reg_in = name
+    reg1 = reg_in + "%"
+    reg2 = "%" + reg_in.lower() + "%"
+
+    trupl_str = (reg1, reg2)
+    print(f'trupl_str {trupl_str}')
+
+    list_str = []
+    list_str.append(reg1)
+    list_str.append(reg2)
+    print(f"list_str {list_str}")
+
+    dict_str = dict()
+    values = [reg1, reg2]
+
+    param_names = [f"reg{i+1}" for i in range(len(values))]
+    in_str = ", ".join(":" + p for p in param_names) #print(",".join("Python")) >>>P,y,t,h,o,n
+    params = dict(zip(param_names, values))
+
+    sql = f"""SELECT name, id FROM regions
+             WHERE name in ({in_str})"""
+    print(f'params {params} , in_str {in_str}, sql {sql}')
+    dict_str.setdefault("reg1", reg1)  # append("reg1",reg1) # + reg2
+    dict_str.setdefault("reg2", reg2)  # append("reg1",reg1) # + reg2
+
+    print(f'ПОИСК dict_str {dict_str["reg1"]} и {dict_str["reg2"]} ')
+
+    with sqlite3.connect('realty.db') as connection:
+        cursor = connection.cursor()
+        query_str ="""
+        SELECT name, id FROM regions WHERE name LIKE ? ORDER BY name
+          """
+        #Для исключения символов: where column regexp '^[A-Za-z0-9]+$'
+        #where lover(column_name) regexp '^[a-zа-яё]+$';
+        #SELECT *FROM [table] WHERE ([table].[column] like <parameter>) OR (<parameter> = '%')
+        query_str_2_ERR ="""
+        SELECT name, id FROM regions WHERE (lower(name) LIKE {reg1} ORDER BY name) OR (lower(name) LIKE {reg2} ORDER BY name)
+        """
+
+        query_str_3 ="""
+        SELECT name, id FROM regions WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
+          """
+
+        query_str_4 ="""
+        SELECT name, id FROM regions WHERE (lower(name) LIKE :reg1) OR (lower(name) LIKE :reg2) ORDER BY name 
+          """
+
+        query_str_5 = """
+         SELECT name, id FROM regions WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
+           """
+
+        #str переменные
+        #cursor.execute((query_str),(reg1,))
+        #str2 ERR
+        #cursor.execute(query_str_2_ERR) #НЕ РАБОТАЕТ {}
+        #str30 OK!!!!
+        #cursor.execute((query_str_3), (reg1, reg2))
+        #str31 list_str OK!!!!
+        #cursor.execute((query_str_3), (list_str))
+        #str32 trupl_str OK!!!!
+        #cursor.execute((query_str_3), (trupl_str))
+        #str4 OK dict_str!!!!
+        #cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
+        #str5 OK sql динамически сформирован весь запрос!!!!
+        cursor.execute(sql, (params))#[0], val[1]))
+        #result = cursor.fetchone()
+        result = cursor.fetchall()
+        print(f'result cursor.fetchall() = {len(result)} {result}')
+
 def search_city(name):
     #reg_in = '%'+name+'%'
 
@@ -54,7 +125,7 @@ def search_city(name):
     in_str = ", ".join(":" + p for p in param_names) #print(",".join("Python")) >>>P,y,t,h,o,n
     params = dict(zip(param_names, values))
 
-    sql = f"""SELECT name, id FROM regions
+    sql = f"""SELECT name, id FROM cityes
              WHERE name in ({in_str})"""
     print(f'params {params} , in_str {in_str}, sql {sql}')
     dict_str.setdefault("reg1", reg1)  # append("reg1",reg1) # + reg2
@@ -71,27 +142,27 @@ def search_city(name):
         #SELECT * FROM cityes WHERE name LIKE 'Тар%'
         #SELECT name FROM regions WHERE name LIKE 'Тарас%' ORDER BY name;
         query_str ="""
-        SELECT name, id FROM regions WHERE name LIKE ? ORDER BY name
+        SELECT name, id FROM cityes WHERE name LIKE ? ORDER BY name
           """
         #Без регистра: like lower('%value%');
         #Для исключения символов: where column regexp '^[A-Za-z0-9]+$'
         #where lover(column_name) regexp '^[a-zа-яё]+$';
         #SELECT *FROM [table] WHERE ([table].[column] like <parameter>) OR (<parameter> = '%')
         query_str_2 ="""
-        SELECT name, id FROM regions WHERE (lower(name) LIKE {reg1} ORDER BY name) OR (lower(name) LIKE {reg2} ORDER BY name)
+        SELECT name, id FROM cityes WHERE (lower(name) LIKE {reg1} ORDER BY name) OR (lower(name) LIKE {reg2} ORDER BY name)
         """
 
         query_str_3 ="""
-        SELECT name, id FROM regions WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
+        SELECT name, id FROM cityes WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
           """
 
 
         query_str_4 ="""
-        SELECT name, id FROM regions WHERE (lower(name) LIKE :reg1) OR (lower(name) LIKE :reg2) ORDER BY name 
+        SELECT name, id FROM cityes WHERE (lower(name) LIKE :reg1) OR (lower(name) LIKE :reg2) ORDER BY name 
           """
 
         query_str_5 = """
-         SELECT name, id FROM regions WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
+         SELECT name, id FROM cityes WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
            """
 
         #str переменные
@@ -103,11 +174,11 @@ def search_city(name):
         #str31 list_str OK!!!!
         #cursor.execute((query_str_3), (list_str))
         #str32 trupl_str OK!!!!
-        #cursor.execute((query_str_3), (trupl_str))
+        cursor.execute((query_str_3), (trupl_str))
         #str4 OK dict_str!!!!
         #cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
         #str5 OK sql динамически сформирован весь запрос!!!!
-        cursor.execute(sql, (params))#[0], val[1]))
+        #cursor.execute(sql, (params))#[0], val[1]))
 
         # cursor.execute("""
         # SELECT name FROM regions WHERE name LIKE ? ORDER BY name
@@ -186,8 +257,8 @@ def check_city(reg):
             with sqlite3.connect('realty.db') as connection:
                 cursor = connection.cursor()
                 cursor.execute("""
-                    INSERT INTO regions VALUES (
-                     :id, :name, :parent_id, :url_name, :index_post 
+                    INSERT INTO cityes VALUES (
+                     :id, :name, :parent_Id, :url_name, :index_post 
                     )
                     """, reg1)
                 connection.commit()
@@ -253,7 +324,7 @@ def list_city(data):
         all_id.append(dataitems['id'])
         dataitems.setdefault('url_name', 'None')  # , value)
         dataitems.setdefault('index_post', 'None')  # , value)
-        check_region(dataitems)
+        check_city(dataitems)
 
     all_id.sort()
     print(all_id)
