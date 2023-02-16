@@ -1,3 +1,20 @@
+"""
+функцию join() можно использовать, чтобы разбить строку по определенному разделителю.
+>>> print(",".join("Python"))
+P,y,t,h,o,n
+
+Обратное преобразование строки в список
+Помимо join() есть и функция split(), которая используется для разбития строки. Она работает похожим образом.
+
+names = ['Java', 'Python', 'Go']
+delimiter = ','
+single_str = delimiter.join(names)
+print('Строка: {0}'.format(single_str))
+
+split = single_str.split(delimiter)
+print('Список: {0}'.format(split))
+"""
+
 import json
 from pathlib import Path
 from logging import getLogger
@@ -34,7 +51,7 @@ def search_city(name):
     values = [reg1, reg2]
 
     param_names = [f"reg{i+1}" for i in range(len(values))]
-    in_str = ", ".join(":" + p for p in param_names)
+    in_str = ", ".join(":" + p for p in param_names) #print(",".join("Python")) >>>P,y,t,h,o,n
     params = dict(zip(param_names, values))
 
     sql = f"""SELECT name, id FROM regions
