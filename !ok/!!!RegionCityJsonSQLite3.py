@@ -42,14 +42,15 @@ logger = getLogger(__name__)
 
 
 def search_city_region(name):
-    #name = "Тарас"
-    # reg_in = (name)
+    #name = "рское"
+    reg_in = name.lower().capitalize()
+
     # reg1 = reg_in + "%"
     # reg2 = "%" + reg_in.lower() + "%"
 
-    reg_in = name
+    #reg_in = name
     reg1 = reg_in + "%"
-    reg2 = "%" + reg_in + "%"
+    reg2 = "%" + reg_in.lower() + "%"
 
 
     trupl_str = (reg1, reg2)
@@ -88,7 +89,7 @@ def search_city_region(name):
         #ORDER BY name
         #SELECT name, id, games.score FROM games JOIN users ON games.user_id = users.rowid
         query_str_ok = """
-        SELECT name, id, regions.name FROM cityes WHERE name LIKE ? JOIN regions ON sityes.parent_id = regions.id  
+        SELECT name, id, regions.name,regions.id FROM cityes WHERE name LIKE ? JOIN regions ON sityes.parent_id = regions.id  
           """
         query_str = """
             SELECT cityes.name, cityes.id, regions.name 
@@ -107,7 +108,7 @@ def search_city_region(name):
         # """
 
         query_str_3 = """
-        SELECT cityes.name, cityes.id, regions.name 
+        SELECT cityes.name, cityes.id, regions.name, regions.id 
         FROM cityes 
         LEFT JOIN regions 
         ON cityes.parent_id = regions.id 
@@ -138,9 +139,9 @@ def search_city_region(name):
         # str31 list_str OK!!!!
         #cursor.execute((query_str_3), (list_str))
         # str32 trupl_str OK!!!!
-        #cursor.execute((query_str_3), (trupl_str))
+        cursor.execute((query_str_3), (trupl_str))
         # str4 OK dict_str!!!!
-        cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
+        #cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
         # str5 OK sql динамически сформирован весь запрос!!!!
         #cursor.execute(sql, (params))  # [0], val[1]))
         # result = cursor.fetchone()
@@ -400,7 +401,7 @@ def Open_json_city():
 
 
 if __name__ == '__main__':
-    name = "Тарас"
+    name = "Новоч"
     search_city_region(name)
     #search_city(name)
     # create_city_tab()
