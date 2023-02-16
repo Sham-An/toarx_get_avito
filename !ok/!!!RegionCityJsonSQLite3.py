@@ -42,9 +42,15 @@ logger = getLogger(__name__)
 
 
 def search_city_region(name):
+    #name = "Тарас"
+    # reg_in = (name)
+    # reg1 = reg_in + "%"
+    # reg2 = "%" + reg_in.lower() + "%"
+
     reg_in = name
     reg1 = reg_in + "%"
-    reg2 = "%" + reg_in.lower() + "%"
+    reg2 = "%" + reg_in + "%"
+
 
     trupl_str = (reg1, reg2)
     print(f'trupl_str {trupl_str}')
@@ -61,8 +67,7 @@ def search_city_region(name):
     in_str = ", ".join(":" + p for p in param_names)  # print(",".join("Python")) >>>P,y,t,h,o,n
     params = dict(zip(param_names, values))
 
-    sql = f"""SELECT name, id FROM regions
-             WHERE name in ({in_str})"""
+    sql = f"""SELECT name, id FROM regions WHERE name in ({in_str})"""
     print(f'params {params} , in_str {in_str}, sql {sql}')
     dict_str.setdefault("reg1", reg1)  # append("reg1",reg1) # + reg2
     dict_str.setdefault("reg2", reg2)  # append("reg1",reg1) # + reg2
@@ -83,45 +88,59 @@ def search_city_region(name):
         #ORDER BY name
         #SELECT name, id, games.score FROM games JOIN users ON games.user_id = users.rowid
         query_str_ok = """
-        SELECT name, id, regions.name FROM cityes WHERE name LIKE ? JOIN regions ON sityes.id_parent = regions.id  
+        SELECT name, id, regions.name FROM cityes WHERE name LIKE ? JOIN regions ON sityes.parent_id = regions.id  
           """
         query_str = """
-            SELECT cityes.name, cityes.id, regions.name FROM cityes LEFT JOIN regions ON cityes.parent_id = regions.id WHERE cityes.name LIKE ?  
-              """
-
+            SELECT cityes.name, cityes.id, regions.name 
+            FROM cityes 
+            LEFT JOIN regions 
+            ON cityes.parent_id = regions.id 
+            WHERE cityes.name 
+            LIKE ? ORDER BY cityes.name
+            """
+        #WHERE cityes.name LIKE ?
         # Для исключения символов: where column regexp '^[A-Za-z0-9]+$'
         # where lover(column_name) regexp '^[a-zа-яё]+$';
         # SELECT *FROM [table] WHERE ([table].[column] like <parameter>) OR (<parameter> = '%')
-        query_str_2_ERR = """
-        SELECT name, id FROM regions WHERE (lower(name) LIKE {reg1} ORDER BY name) OR (lower(name) LIKE {reg2} ORDER BY name)
-        """
+        # query_str_2_ERR = """
+        # SELECT cityes.name, cityes.id, regions.name FROM regions WHERE (lower(name) LIKE {reg1} ORDER BY name) OR (lower(name) LIKE {reg2} ORDER BY name)
+        # """
 
         query_str_3 = """
-        SELECT name, id FROM regions WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
+        SELECT cityes.name, cityes.id, regions.name 
+        FROM cityes 
+        LEFT JOIN regions 
+        ON cityes.parent_id = regions.id 
+        WHERE (cityes.name LIKE ?) OR (cityes.name LIKE ?) ORDER BY cityes.name 
           """
 
         query_str_4 = """
-        SELECT name, id FROM regions WHERE (lower(name) LIKE :reg1) OR (lower(name) LIKE :reg2) ORDER BY name 
+        SELECT cityes.name, cityes.id, regions.name 
+        FROM cityes 
+        LEFT JOIN regions 
+        ON cityes.parent_id = regions.id 
+        WHERE (cityes.name LIKE :reg1) OR (cityes.name LIKE :reg2) 
+        ORDER BY cityes.name 
           """
 
         query_str_5 = """
          SELECT name, id FROM regions WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
            """
 
-        #reg1 ='name'
+        #reg1 = 'Тарас'
         # str переменные
         #cursor.execute(query_str)
-        cursor.execute((query_str), (reg1,))
+        #cursor.execute((query_str), (reg1,))
         # str2 ERR
         # cursor.execute(query_str_2_ERR) #НЕ РАБОТАЕТ {}
         # str30 OK!!!!
-        # cursor.execute((query_str_3), (reg1, reg2))
+        #cursor.execute((query_str_3), (reg1, reg2))
         # str31 list_str OK!!!!
-        # cursor.execute((query_str_3), (list_str))
+        #cursor.execute((query_str_3), (list_str))
         # str32 trupl_str OK!!!!
-        # cursor.execute((query_str_3), (trupl_str))
+        #cursor.execute((query_str_3), (trupl_str))
         # str4 OK dict_str!!!!
-        # cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
+        cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
         # str5 OK sql динамически сформирован весь запрос!!!!
         #cursor.execute(sql, (params))  # [0], val[1]))
         # result = cursor.fetchone()
@@ -192,7 +211,7 @@ def search_city(name):
            """
 
         # str переменные
-        # cursor.execute((query_str),(reg1,))
+        #cursor.execute((query_str),(reg1,))
         # str2 ERR
         # cursor.execute(query_str_2) #НЕ РАБОТАЕТ {}
         # str30 OK!!!!
@@ -202,7 +221,7 @@ def search_city(name):
         # str32 trupl_str OK!!!!
         # cursor.execute((query_str_3), (trupl_str))
         # str4 OK dict_str!!!!
-        cursor.execute((query_str_4), (dict_str))  # [0], val[1]))
+        #cursor.execute((query_str_4), (dict_str))  # [0], val[1]))
         # str5 OK sql динамически сформирован весь запрос!!!!
         # cursor.execute(sql, (params))#[0], val[1]))
 
@@ -381,7 +400,7 @@ def Open_json_city():
 
 
 if __name__ == '__main__':
-    name = "Яш"
+    name = "Тарас"
     search_city_region(name)
     #search_city(name)
     # create_city_tab()
