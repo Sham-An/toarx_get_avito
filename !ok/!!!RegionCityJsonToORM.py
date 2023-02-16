@@ -3,6 +3,7 @@ from pathlib import Path
 from logging import getLogger
 import json
 import sqlite3
+import psycopg2
 
 #from aparser.models import Category
 #from aparser.models import Category
@@ -14,26 +15,82 @@ import sqlite3
 
 logger = getLogger(__name__)
 def search_city(name):
-    reg1 = name+'%'
+    #reg_in = '%'+name+'%'
 
-    print(f'ПОИСК {reg1}')
+    reg_in = name
+    reg1 = reg_in + "%"
+    reg2 = "%" + reg_in.lower() + "%"
+    #reg1 = reg_in.lower()+"%"
+
+    trupl_str = (reg1, reg2)
+    print(f'trupl_str {trupl_str}')
+
+    list_str = []
+    list_str.append(reg1)
+    list_str.append(reg2)
+    print(f"list_str {list_str}")
+
+    dict_str = dict()
+    #val = dict({"reg1":reg1,"reg2":reg2,})
+    dict_str.setdefault("reg1", reg1)  # append("reg1",reg1) # + reg2
+    dict_str.setdefault("reg2", reg2)  # append("reg1",reg1) # + reg2
+    # val.append("reg2", reg2)
+    #val = f'({reg1}, {reg2})'
+    #val = list(val)
+
+    print(f'ПОИСК dict_str {dict_str["reg1"]} и {dict_str["reg2"]} ')
 
     with sqlite3.connect('realty.db') as connection:
         cursor = connection.cursor()
+        #sql = ("CREATE INDEX index_my_table ON my_table (Field1, field2)")
         #SELECT * FROM cityes WHERE name LIKE 'Тар%'
-        #SELECT name FROM cityes WHERE id = (?)
         #SELECT name FROM regions WHERE name LIKE 'Тарас%' ORDER BY name;
         query_str ="""
-        SELECT name FROM regions WHERE name LIKE ? ORDER BY name
+        SELECT name, id FROM regions WHERE name LIKE ? ORDER BY name
           """
-        cursor.execute(query_str, (reg1,))
+        #Без регистра: like lower('%value%');
+        #Для исключения символов: where column regexp '^[A-Za-z0-9]+$'
+        #where lover(column_name) regexp '^[a-zа-яё]+$';
+        #SELECT *FROM [table] WHERE ([table].[column] like <parameter>) OR (<parameter> = '%')
+        query_str_2 ="""
+        SELECT name, id FROM regions WHERE (lower(name) LIKE {reg1} ORDER BY name) OR (lower(name) LIKE {reg2} ORDER BY name)
+        """
+
+        query_str_3 ="""
+        SELECT name, id FROM regions WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
+          """
+
+
+        query_str_4 ="""
+        SELECT name, id FROM regions WHERE (lower(name) LIKE :reg1) OR (lower(name) LIKE :reg2) ORDER BY name 
+          """
+
+        query_str_5 = """
+         SELECT name, id FROM regions WHERE (lower(name) LIKE ?) OR (lower(name) LIKE ?) ORDER BY name 
+           """
+
+        #str переменные
+        #cursor.execute((query_str),(reg1,))
+        #str2 ERR
+        #cursor.execute(query_str_2) #НЕ РАБОТАЕТ {}
+        #str30 OK!!!!
+        #cursor.execute((query_str_3), (reg1, reg2))
+        #str31 list_str OK!!!!
+        #cursor.execute((query_str_3), (list_str))
+        #str32 trupl_str OK!!!!
+        #cursor.execute((query_str_3), (trupl_str))
+        #str4 OK dict_str!!!!
+        cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
+        #str5
+        #cursor.execute((query_str_5), (list_str))#[0], val[1]))
 
         # cursor.execute("""
         # SELECT name FROM regions WHERE name LIKE ? ORDER BY name
         #   """, (reg1,))
-        result = cursor.fetchone()
-        print(f'result cursor.fetchone() = {result}')
-
+        #result = cursor.fetchone()
+        result = cursor.fetchall()
+        print(f'result cursor.fetchall() = {len(result)} {result}')
+        #print(result[0])
 def create_city_tab():
     '''Создаем базу населенных пунктов'''
     connection = sqlite3.connect('realty.db')
@@ -195,7 +252,7 @@ def Open_json_city():
 
 
 if __name__ == '__main__':
-    name = "Тарасов"
+    name = "Новоч"
     search_city(name)
     #create_city_tab()
     #create_regions_tab()
