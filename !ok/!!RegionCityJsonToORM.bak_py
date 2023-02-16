@@ -174,9 +174,9 @@ def search_city(name):
         #str31 list_str OK!!!!
         #cursor.execute((query_str_3), (list_str))
         #str32 trupl_str OK!!!!
-        cursor.execute((query_str_3), (trupl_str))
+        #cursor.execute((query_str_3), (trupl_str))
         #str4 OK dict_str!!!!
-        #cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
+        cursor.execute((query_str_4), (dict_str)) #[0], val[1]))
         #str5 OK sql динамически сформирован весь запрос!!!!
         #cursor.execute(sql, (params))#[0], val[1]))
 
@@ -348,7 +348,8 @@ def Open_json_city():
 
 
 if __name__ == '__main__':
-    name = "Новоч"
+
+    name = "Тарас"
     search_city(name)
     #create_city_tab()
     #create_regions_tab()
