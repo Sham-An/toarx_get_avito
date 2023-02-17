@@ -54,7 +54,7 @@ def get_offer(item):
     area = ('m2')  # float(title[1].replace(' м²', '').replace(',', '.'))
     rooms = title[0]
 
-    floor_info = title[2].replace(' эт.', '').split('/')
+    floor_info = ""# title[2].replace(' эт.', '').split('/')
     floor = floor_info[0]
     total_floor = floor_info[-1]
 
@@ -91,7 +91,7 @@ def get_json():
     # Web parameters: смотри внизу файла
     priceMin = 10000
     priceMax = 45000
-    search = 'Урал !имз !Мопед !альфа -альфа -Дельта'  # OK!!!  'suzuki+gsx-r'
+    search = 'скутер !имз !Мопед !альфа -альфа -Дельта'  # OK!!!  'suzuki+gsx-r'
     # API
     params = (
         ('key', 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'),
@@ -139,6 +139,8 @@ def get_json():
     adapter_web = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
     session.mount("https://", adapter)
     session_web.mount("https://", adapter)
+    response = session.request('GET', "https://m.avito.ru/", headers=headers, params=params)
+    time.sleep(3)
 
     try:
         response = session.request('GET', url, headers=headers, params=params)

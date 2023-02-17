@@ -401,7 +401,7 @@ def Open_json_city():
 
 
 if __name__ == '__main__':
-    name = "Новоч"
+    name = "Черке"
     search_city_region(name)
     #search_city(name)
     # create_city_tab()
@@ -410,3 +410,17 @@ if __name__ == '__main__':
     # reg = {'id': '777777', 'name': 'ЁЁЁЁ', 'parent_Id': '777776', 'url_name': 'None', 'index_post': 'None'}
     # check_region(reg)
     # Open_json_city()
+
+#         //*[@id="app"]//div[@data-category-id]
+#WebXPATH //*[@id="app"]//div[@data-category-id]
+"""
+data-map-type="dynamic" data-item-id="2565632812" data-location-id="631060" data-category-id="9">
+"""
+#//*[@id="app"]//a[@itemprop="url"]
+#
+#file:///C:/Users/miladmin/Downloads/%D0%9F%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3/%D0%9F%D0%B0%D1%80%D1%81%20%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D0%B5%D0%B9%20_%20%D0%90%D0%B2%D0%B8%D1%82%D0%BE.mhtml
+#//*[@id="app"]/div/div[2]/div[2]/span/div
+#//*[@id="app"]/div/div[2]/div[2]/span  //div[@data-marker="more-popup"]
+#//*[@id="app"]/div//div[@data-marker="more-popup"] //a[substring(@class,1,9) ="link-link"]
+#//*[@id="app"]/div//div[@data-marker="more-popup"] //a[substring(@class,1,9) ="link-link"]//
+#////*[@id="app"]/div//div[@data-marker="more-popup"] //a[substring(@class,1,9) ="link-link"]//text()
