@@ -54,7 +54,92 @@ class TlsAdapter(HTTPAdapter):
         self.poolmanager = PoolManager(*pool_args, ssl_context=ctx, **pool_kwargs)
 
 
-def parse_xml(resp_text):
+def parse_xml_new(resp_text):
+    html_txt = resp_text  # response.text
+    #print(html_txt)
+
+    path = './/div//div//div//ul[@data-marker="rubricator/list"]' #
+    #.//div//div//div[@data-marker='rubricator']//i//a[substring(@class,1,25) ="rubricator-list-item-link"]
+    #.//div//div//div[@data-marker="rubricator"]//a[substring(@class,1,25) ="rubricator-list-item-link"]
+    #a[substring(@href,1,21) ="https://www.avito.ru/"]
+    #Исключить data-category-mc-id="3838"  data-marker="category[1003838]/link"
+    #          data-category-mc-id="354"   data-marker="category[1000354]/link"
+    path_name_cat = './/text()'
+    path_url = '//a[@href]'
+    path_pages = './/div//div[@data-marker="more-popup"] //a[substring(@class,1,9) ="link-link"]//text()'
+    path_url = './/div//div[@data-marker="more-popup"] //a[substring(@class,1,9) ="link-link"]//text()'
+    var = 'Автомобили'
+    # .//div//div[@data-marker="more-popup"]//a[text()='Автомобили']
+    path_use_var = (f'.//div//div[@data-marker="more-popup"]//a[text()={var}')
+
+    ##!!!!!!!####!!!!!!###!!!!#БОМБА ## БОМБА ## БОМБА ## БОМБА ## БОМБА ## БОМБА ## БОМБА ## БОМБА
+    # substring(@class,1,13) ="iva-item-text"
+    # starts-with(string, string) https://habr.com/ru/company/otus/blog/533354/
+    # Поиск по тексту:
+    # //h1[contains(text(),’ Log in to’)]
+    # //h1[contains(text(),’ in to Twitter’)]
+    # path_pages = '//div[contains(@class, "pagination-root")]/span[last()-1]/text()'
+    # !Не наша деревня поиска OK! path_location = './/span[contains(@class, "geo-addr")]/span/text()'
+
+    path_pages = path+path_name_cat
+    tree = html.fromstring(html_txt)
+    #count_page = tree.xpath(path_pages)
+    count_page = tree.xpath(path)
+    print(count_page)
+
+    tree = html.fromstring(html_txt)
+
+#    path_url = '//a[@href]'
+    path_name_cat = './/text()'
+    path_url = './/@href'
+    path_cat_id = './/data-category-id'
+
+    for item in tree.xpath(path): #html.fromstring(html_txt):
+        #print(item)
+    #if count_page:
+        name = item.xpath(path_name_cat)
+        cat_id = item.xpath(path_cat_id)
+        url = item.xpath(path_url)#[0]
+        #!!! GET url все категории
+        # https://www.avito.ru/tarasovskiy?q=а
+        #!!!! И его уже парсим по категориям
+        print(f'Pages names = {name}  url = {url}')
+        print(cat_id)
+    # ! В HTML карточке объявления путь к ID City
+    # https://www.avito.ru/bryansk/zapchasti_i_aksessuary/dvigatel_na_skuter_150_kubov_157qmj_2332435829
+    # //*[@id="app"]/div/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div/div[3]
+    # XPATH = .//div//div//div[@data-map-type='dynamic']
+
+    # data-item-id="2332435829" ID объявления
+    # data-location-id="623880" ID City
+    # data-category-id="10" ID Kategory
+
+
+    #tree = html.fromstring(html_txt)
+    #index = 0
+
+    # for item in tree.xpath(path_item):  # .getall():
+    #     # for item in tree.xpath(path_location):  # .getall():
+    #     item_id = item.xpath(path_id)
+    #     print(f'ITEM_ID {item.xpath(path_id)[0]} type{type(item_id)} {item.xpath(path_id)[0]}')
+    #     name = item.xpath(path_name)[0]
+    #     price = item.xpath(path_price)
+    #     location = item.xpath(path_location)
+    #     location_free = item.xpath(path_location_free)
+    #     print(location_free)
+    #     print(f'!!!!!!!!!!!!NAME {name} @@@@ ЦЕНА {price} Location {location}')
+    #     index += 1
+    #     title = item.xpath(path_title)[0]
+    #     print(f' {index} title = {title}')
+    #     print(datetime.datetime.now())
+
+    # list_lxml = tree.xpath(path)[0]
+    # for item_lxml in items_lxml:
+    #     desript = item_lxml.xpath('//meta[@itemprop="description"]')
+    #     # getting movie id
+    #     movie_link = item_lxml.xpath('.//div[@class = "nameRus"]/a/@href')[0]
+
+def parse_xml_old(resp_text):
     html_txt = resp_text  # response.text
     #print(html_txt)
 
@@ -137,17 +222,26 @@ def parse_xml(resp_text):
 
 
 ################################################################################################
-def get_file():
+def get_file_new():
+    #with open("Data/get_categories1.html", 'r', encoding='utf-8') as file:
+    with open("Data/get_categories2.html", 'r', encoding='utf-8') as file:
+        r = file.read()
+     #   print(r)
+    parse_xml_new(r)
+    # print(r.text)
+
+def get_file_old():
     #with open("Data/get_categories1.html", 'r', encoding='utf-8') as file:
     with open("Data/get_categories1.html", 'r', encoding='utf-8') as file:
         r = file.read()
      #   print(r)
-    parse_xml(r)
+    parse_xml_old(r)
     # print(r.text)
 
 
 def main():
-    get_file()
+    #get_file_old()
+    get_file_new()
     # CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
     # session = requests.session()
     # session2 = requests.session()
