@@ -1,7 +1,16 @@
 import datetime
 import json
-
+#https://wordstat.yandex.ru/#!/?words=%D0%BA%D0%BE%D0%BC%D0%BF
+#https://tools.pixelplus.ru/news/podskazki-avito
 #######################################
+#!!!!!DIR TO LIST !!!!!!
+#parts = urlparse(url)
+#print(parts)
+#directories = parts.path.strip('/').split('/')
+#print(directories)
+
+
+import os
 import ssl
 
 import requests
@@ -15,6 +24,7 @@ from urllib3.poolmanager import PoolManager
 # from requests.packages.urllib3.util import ssl_
 from urllib3.util import ssl_
 from fake_useragent import UserAgent
+from urllib.parse import urlparse
 
 # ua = UserAgent()
 
@@ -58,13 +68,17 @@ def parse_xml_new(resp_text):
     html_txt = resp_text  # response.text
     #print(html_txt)
 
-    path = './/div//div//div//ul[@data-marker="rubricator/list"]' #
+    #Blok
+    #path = './/div//div//div//ul[@data-marker="rubricator/list"]'
+    #path = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[substring(@class,1,25) ="rubricator-list-item-link"]'
+    #path_items = './/a[substring(@class,1,25) ="rubricator-list-item-link"]'
+    #path_items_full = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[substring(@class,1,25) ="rubricator-list-item-link"]'
     #.//div//div//div[@data-marker='rubricator']//i//a[substring(@class,1,25) ="rubricator-list-item-link"]
     #.//div//div//div[@data-marker="rubricator"]//a[substring(@class,1,25) ="rubricator-list-item-link"]
     #a[substring(@href,1,21) ="https://www.avito.ru/"]
     #Исключить data-category-mc-id="3838"  data-marker="category[1003838]/link"
     #          data-category-mc-id="354"   data-marker="category[1000354]/link"
-    path_name_cat = './/text()'
+    #path_name_cat = './/text()'
     path_url = '//a[@href]'
     path_pages = './/div//div[@data-marker="more-popup"] //a[substring(@class,1,9) ="link-link"]//text()'
     path_url = './/div//div[@data-marker="more-popup"] //a[substring(@class,1,9) ="link-link"]//text()'
@@ -80,31 +94,42 @@ def parse_xml_new(resp_text):
     # //h1[contains(text(),’ in to Twitter’)]
     # path_pages = '//div[contains(@class, "pagination-root")]/span[last()-1]/text()'
     # !Не наша деревня поиска OK! path_location = './/span[contains(@class, "geo-addr")]/span/text()'
-
-    path_pages = path+path_name_cat
-    tree = html.fromstring(html_txt)
-    #count_page = tree.xpath(path_pages)
-    count_page = tree.xpath(path)
-    print(count_page)
-
-    tree = html.fromstring(html_txt)
-
-#    path_url = '//a[@href]'
+    path = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[substring(@class,1,25) ="rubricator-list-item-link"]'
+    #path_items_full = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[substring(@class,1,25) ="rubricator-list-item-link"]'
+    path_items_full = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[@data-category-id>"0"]'
+    path_name_cat = './/text()'
+    #    path_url = '//a[@href]'
     path_name_cat = './/text()'
     path_url = './/@href'
-    path_cat_id = './/data-category-id'
+    path_cat_id = './/@data-category-id'
+    stop1 = 'evaluation'
+    stop2 = 'catalog '
 
-    for item in tree.xpath(path): #html.fromstring(html_txt):
-        #print(item)
-    #if count_page:
+    # path_pages = path+path_name_cat
+    # tree = html.fromstring(html_txt)
+    # count_page = tree.xpath(path)
+    # print(count_page)
+
+    tree = html.fromstring(html_txt)
+
+
+    for item in tree.xpath(path_items_full): #html.fromstring(html_txt):
+
         name = item.xpath(path_name_cat)
         cat_id = item.xpath(path_cat_id)
         url = item.xpath(path_url)#[0]
-        #!!! GET url все категории
-        # https://www.avito.ru/tarasovskiy?q=а
-        #!!!! И его уже парсим по категориям
-        print(f'Pages names = {name}  url = {url}')
-        print(cat_id)
+        url_pars1 = urlparse(url[-1])
+        path_url1 = url_pars1[2]
+        dirLst = path_url1.split("/")
+        dirname_city1 = dirLst[1]
+        dirname_cat1 = dirLst[2]
+        if (stop1 in dirname_city1) or ((stop2 in dirname_city1)) or (len(dirLst) < 3):
+            return
+
+        print(f'dirLst {len(dirLst)} = {dirLst}  url = {url}')
+        print(f'  name {name} @@@@@@@@ Cat_id = {cat_id}      dirname_cat = {dirname_cat1} \n')
+
+        #print(f'dirname = {dirname1}')
     # ! В HTML карточке объявления путь к ID City
     # https://www.avito.ru/bryansk/zapchasti_i_aksessuary/dvigatel_na_skuter_150_kubov_157qmj_2332435829
     # //*[@id="app"]/div/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div/div[3]
