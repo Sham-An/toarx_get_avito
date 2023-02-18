@@ -31,16 +31,19 @@ def check_category_path(id_find, url_str):
     SELECT name, id FROM categories WHERE (lower(id) LIKE ?) OR (lower(id) LIKE ?) ORDER BY id 
       """
 
+    with sqlite3.connect('realty.db') as connection:
+        cursor = connection.cursor()
+        # cursor.execute((query_str),(reg1,))
+        cursor.execute((query_str), (reg_in,))
+        # str30 OK!!!!
+        # cursor.execute((query_str_3), (reg1, reg2))
+        # str31 list_str OK!!!!
+        # cursor.execute((query_str_3), (list_str))
+        # str32 trupl_str OK!!!!
+        # cursor.execute((query_str_3), (trupl_str))
 
-    # cursor.execute((query_str),(reg1,))
-    cursor.execute((query_str), (reg_in,))
-    # str30 OK!!!!
-    # cursor.execute((query_str_3), (reg1, reg2))
-    # str31 list_str OK!!!!
-    # cursor.execute((query_str_3), (list_str))
-    # str32 trupl_str OK!!!!
-    # cursor.execute((query_str_3), (trupl_str))
-
+    connection.commit()
+    ##connection.close()
 
 '''
 # (UPDATE table1 SET url_name = ? WHERE id = ), (url_str, id_find) ;
