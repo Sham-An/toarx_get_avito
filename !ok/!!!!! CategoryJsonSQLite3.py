@@ -1,7 +1,58 @@
 import sqlite3
 
+def check_category_path(id_find, url_str):
+
+    id_find = id_find
+    url_str = url_str
+
+    reg_in = id_find
+    reg1 = reg_in + "%"
+    reg2 = "%" + reg_in.lower() + "%"
+    trupl_str = (reg1, reg2)
+    print(f'trupl_str {trupl_str}')
+
+    list_str = []
+    list_str.append(reg1)
+    list_str.append(reg2)
+    print(f"list_str {list_str}")
+
+    dict_str = dict()
+    values = [reg1, reg2]
+
+    param_names = [f"reg{i + 1}" for i in range(len(values))]
+    in_str = ", ".join(":" + p for p in param_names)  # print(",".join("Python")) >>>P,y,t,h,o,n
+    params = dict(zip(param_names, values))
+
+    query_str = """
+    SELECT name, id FROM categories WHERE id LIKE ? ORDER BY id
+      """
+
+    query_str_3 = """
+    SELECT name, id FROM categories WHERE (lower(id) LIKE ?) OR (lower(id) LIKE ?) ORDER BY id 
+      """
+
+
+    # cursor.execute((query_str),(reg1,))
+    cursor.execute((query_str), (reg_in,))
+    # str30 OK!!!!
+    # cursor.execute((query_str_3), (reg1, reg2))
+    # str31 list_str OK!!!!
+    # cursor.execute((query_str_3), (list_str))
+    # str32 trupl_str OK!!!!
+    # cursor.execute((query_str_3), (trupl_str))
+
+
+'''
+# (UPDATE table1 SET url_name = ? WHERE id = ), (url_str, id_find) ;
+# UPDATE table1 SET name = ‘Людмила Иванова’ WHERE id = 2;
+#
+# Убедимся, что модификация данных прошла успешно, выполнив команду SELECT:
+# sqlite> SELECT * FROM table1;
+# 2|Людмила Иванова|21|Бухгалтер|35232.2
+'''
 
 def search_category_id(id):
+
         reg_in = id
         reg1 = reg_in + "%"
         reg2 = "%" + reg_in.lower() + "%"
