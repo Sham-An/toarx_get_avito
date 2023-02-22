@@ -41,8 +41,10 @@ def main():
     print(query) ##.decode('utf8')  text.encode('cp1251')
     url_city = directories[0]
     url_path = directories[1]
-    url_from_dict = (f'{scheme}://{netloc}/{url_city}/{url_path}?{query_str_decode}')
-    print(url_from_dict)
+
+    url_task_from_dict = (f'{scheme}://{netloc}/{url_city}/{url_path}?{query_str_decode}')
+    url_follower_from_dict = (f'{scheme}://{netloc}{path}{query_str_decode}')
+    print(f'{url_task_from_dict} \n {url_follower_from_dict}')
     print(pars_dump)
 
 
