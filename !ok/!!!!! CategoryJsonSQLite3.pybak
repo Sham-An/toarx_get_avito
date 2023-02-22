@@ -2,7 +2,6 @@ import json
 import sqlite3
 from contextlib import closing
 from pprint import pprint
-import realty
 
 import ssl
 import requests
@@ -35,38 +34,120 @@ class TlsAdapter(HTTPAdapter):
         ctx = ssl_.create_urllib3_context(ciphers=CIPHERS, cert_reqs=ssl.CERT_REQUIRED, options=self.ssl_options)
         self.poolmanager = PoolManager(*pool_args, ssl_context=ctx, **pool_kwargs)
 
-def create_category_tab():
-    '''Создаем базу категории и в неё загружаем словарь'''
-    connection = sqlite3.connect('realty.db')
-    cursor = connection.cursor()
-    # id INTEGER PRIMARY KEY AUTOINCREMENT,
-    # Create Table if not exists categories (id Text, name Text, parentId Text, showMap Text)
-    cursor.execute("""
-        Create Table if not exists categories(
-            id INTEGER PRIMARY KEY, 
-            name Text,
-            parentId Text, 
-            showMap Text,
-            url_path text,
-            url_name text
-            )     
-    """)
-    connection.commit()
-    connection.close()
+
+def parse_xml_new(id_kod, name_rus=""):
+
+    with open("Data/get_categories2.html", 'r', encoding='utf-8') as file:
+        r = file.read()
+        html_txt = r  # resp_text  # response.text
+
+    # Blok
+    # path_blok = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[substring(@class,1,25) ="rubricator-list-item-link"]'
+    # path_items = './/a[substring(@class,1,25) ="rubricator-list-item-link"]'
+    # path_items_full = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[@data-category-id>"0"]'
+    # a[substring(@href,1,21) ="https://www.avito.ru/"]
+    path_url = '//a[@href]'
+    path_pages = './/div//div[@data-marker="more-popup"] //a[substring(@class,1,9) ="link-link"]//text()'
+    # substring(@class,1,13) ="iva-item-text"
+    # starts-with(string, string) https://habr.com/ru/company/otus/blog/533354/
+    # Поиск по тексту: # //h1[contains(text(),’ Log in to’)]
+    # path_pages = '//div[contains(@class, "pagination-root")]/span[last()-1]/text()'
+    # !Не наша деревня поиска OK! path_location = './/span[contains(@class, "geo-addr")]/span/text()'
+    # path_items_full = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[substring(@class,1,25) ="rubricator-list-item-link"]'
+    path_items_full = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[@data-category-id>"0"]'
+    path_items_find_id = f'.//div//div//div//ul[@data-marker="rubricator/list"]//ul//a[@data-category-id={id_kod}]'
+    str_name=str("'"+name_rus+"'")
+    path_items_find_name = f".//div//div//div//ul[@data-marker='rubricator/list']//ul//a[text()={str_name}]"
+                            #.//div//div//div//ul[@data-marker="rubricator/list"]//ul//a[@data-category-id=14]
+        #f'.//div//div//div//ul[@data-marker="rubricator/list"]//ul//a[text={name_rus}]'
+
+    path_name_cat = './/text()'
+    path_url = './/@href'
+    path_cat_id = './/@data-category-id'
+    stop1 = 'evaluation'
+    stop2 = 'catalog '
+
+    tree = html.fromstring(html_txt)
+    print(f'name_rus {name_rus} ========================= path_items_find {path_items_find_id}')
+    print(f'path_items_find_name == {path_items_find_name}')
+    # tree.xpath(path_items_find)
+    f = 1
+
+    if f == 1:
+
+        # for item in tree.xpath(path_items_full): #html.fromstring(html_txt):
+        #item = tree.xpath(path_items_find_id)[0]
+        item = tree.xpath(path_items_find_name)[0]
+
+        name = item.xpath(path_name_cat)
+        cat_id = item.xpath(path_cat_id)
+        url = item.xpath(path_url)  # [0]
+        url_pars1 = urlparse(url[-1])
+        path_url1 = url_pars1[2]
+        dirLst = path_url1.split("/")
+        dirname_city1 = dirLst[1]
+        dirname_cat1 = dirLst[2]
+        if (stop1 in dirname_city1) or ((stop2 in dirname_city1)) or (len(dirLst) < 3):
+            return
+
+        print(f'dirLst {len(dirLst)} = {dirLst}  url = {url}')
+        print(f'  name {name} @@@@@@@@ Cat_id = {cat_id}  dirname_cat = {dirname_cat1} \n')
+
+        # print(f'dirname = {dirname1}')
+    # ! В HTML карточке объявления путь к ID City
+    # https://www.avito.ru/bryansk/zapchasti_i_aksessuary/dvigatel_na_skuter_150_kubov_157qmj_2332435829
+    # //*[@id="app"]/div/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div/div[3]
+    # XPATH = .//div//div//div[@data-map-type='dynamic']
+
+    # data-item-id="2332435829" ID объявления
+    # data-location-id="623880" ID City
+    # data-category-id="10" ID Kategory
+
+    # tree = html.fromstring(html_txt)
+    # index = 0
+
+    # for item in tree.xpath(path_item):  # .getall():
+    #     # for item in tree.xpath(path_location):  # .getall():
+    #     item_id = item.xpath(path_id)
+    #     print(f'ITEM_ID {item.xpath(path_id)[0]} type{type(item_id)} {item.xpath(path_id)[0]}')
+    #     name = item.xpath(path_name)[0]
+    #     price = item.xpath(path_price)
+    #     location = item.xpath(path_location)
+    #     location_free = item.xpath(path_location_free)
+    #     print(location_free)
+    #     print(f'!!!!!!!!!!!!NAME {name} @@@@ ЦЕНА {price} Location {location}')
+    #     index += 1
+    #     title = item.xpath(path_title)[0]
+    #     print(f' {index} title = {title}')
+    #     print(datetime.datetime.now())
+
+    # list_lxml = tree.xpath(path)[0]
+    # for item_lxml in items_lxml:
+    #     desript = item_lxml.xpath('//meta[@itemprop="description"]')
+    #     # getting movie id
+    #     movie_link = item_lxml.xpath('.//div[@class = "nameRus"]/a/@href')[0]
+
+
+def get_file_new():
+    # with open("Data/get_categories1.html", 'r', encoding='utf-8') as file:
+    with open("Data/get_categories2.html", 'r', encoding='utf-8') as file:
+        r = file.read()
+        #   print(r)
+        parse_xml_new(r)
+        # print(r)
+        return r
+
 
 #####################################################
-def check_category_path(id_dict, url_str, url_name_dict):
-    url_name = url_name_dict[0]
-    id = id_dict[0]
-
+def check_category_path(id, url_str):
     # Узнать сколько строк было изменено через запрос cursor.rowcount
     # метод total_changes() показывает число строк было изменено во всей базе с момента подключения
-    print(f' \n \n\n Function check_category_path {id} {url_str} {url_name}')
+    print(' \n \n\n Function check_category_path')
     id_find = id
     url_str = url_str
 
     reg_in = id_find
-    reg1 = reg_in  + "%"
+    reg1 = reg_in + "%"
     reg2 = "%" + reg_in.lower() + "%"
     trupl_str = (reg1, reg2)
     # print(f'trupl_str {trupl_str}')
@@ -90,7 +171,7 @@ def check_category_path(id_dict, url_str, url_name_dict):
     #          WHERE id in ({in_str}) ORDER BY id
     #          """
     sql = f"""UPDATE categories 
-    SET url_path = ({url_str}) 
+    SET url_name = ({url_str}) 
     WHERE id = ({in_str}) 
     """
     # ORDER BY id
@@ -107,7 +188,7 @@ def check_category_path(id_dict, url_str, url_name_dict):
 
     # OK!!!!!!
     query_str = f"""UPDATE categories 
-        SET url_path = ?, url_name = ? 
+        SET url_name = ? 
         WHERE id = ?
         """
 
@@ -123,7 +204,7 @@ def check_category_path(id_dict, url_str, url_name_dict):
     with sqlite3.connect('realty.db', timeout=5) as connection:
         cursor = connection.cursor()
 
-        cursor.execute((query_str), (url_str, url_name, id_find))  # !!!!OK
+        cursor.execute((query_str), (url_str, id_find,))  # !!!!OK
         print('Update ', connection.total_changes)  # rowcount())#total_changes total_changes() )
 
         # cursor.execute((query_str))#, (reg1,))
@@ -147,99 +228,6 @@ def check_category_path(id_dict, url_str, url_name_dict):
         # print(f'result cursor.fetchall() = {len(result)} {result}')
         connection.commit()
     ##connection.close()
-
-
-def parse_cat_xml(dict_cat): #(id_kod, name_rus=""):
-
-    with open("Data/get_categories2.html", 'r', encoding='utf-8') as file:
-        r = file.read()
-        html_txt = r  # resp_text  # response.text
-    # Blok
-    # path_blok = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[substring(@class,1,25) ="rubricator-list-item-link"]'
-    # path_items = './/a[substring(@class,1,25) ="rubricator-list-item-link"]'
-    # path_items_full = './/div//div//div//ul[@data-marker="rubricator/list"]//ul//a[@data-category-id>"0"]'
-    # substring(@class,1,13) ="iva-item-text"
-    #str_name=str("'"+name_rus+"'")
-
-    path_name_cat = './/text()'
-    path_url = './/@href'
-    path_cat_id = './/@data-category-id'
-    stop1 = 'evaluation'
-    stop2 = 'catalog '
-
-    tree = html.fromstring(html_txt)
-
-    for cat_item in dict_cat:
-        name_rus = cat_item['name']
-        id_kod = cat_item['id']
-        print(name_rus)
-
-        str_name = str("'" + name_rus + "'")
-        path_items_find_name = f".//div//div//div//ul[@data-marker='rubricator/list']//ul//a[text()={str_name}]"
-        path_items_find_id = f'.//div//div//div//ul[@data-marker="rubricator/list"]//ul//a[@data-category-id={id_kod}]'
-
-        print(f'name_rus {name_rus} ========================= path_items_find {path_items_find_id}')
-        print(f'path_items_find_name == {path_items_find_name}')
-        # tree.xpath(path_items_find)
-        f = 1
-
-#        if f == 1:
-
-        # for item in tree.xpath(path_items_full): #html.fromstring(html_txt):
-        try:
-            item = tree.xpath(path_items_find_id)[0]
-            #item = tree.xpath(path_items_find_name)[0]
-            #print(item)
-        except:
-            continue
-        #item = tree.xpath(path_items_find_name)[0]
-        print(item)
-        name = item.xpath(path_name_cat)
-        cat_id = item.xpath(path_cat_id)
-        url = item.xpath(path_url)  # [0]
-        url_pars1 = urlparse(url[-1])
-        path_url1 = url_pars1[2]
-        dirLst = path_url1.split("/")
-        dirname_city1 = dirLst[1]
-        dirname_cat1 = dirLst[2]
-        print(f'xpath_name {name} , cat_id {cat_id}, url {url}, dirname_cat1 {dirname_cat1}')
-        if (stop1 in dirname_city1) or ((stop2 in dirname_city1)) or (len(dirLst) < 3):
-            return
-        check_category_path(cat_id, dirname_cat1, name)
-        #
-        # print(f'dirLst {len(dirLst)} = {dirLst}  url = {url}')
-        # print(f'  name {name} @@@@@@@@ Cat_id = {cat_id}  dirname_cat = {dirname_cat1} \n')
-
-        # print(f'dirname = {dirname1}')
-    # ! В HTML карточке объявления путь к ID City
-    # https://www.avito.ru/bryansk/zapchasti_i_aksessuary/dvigatel_na_skuter_150_kubov_157qmj_2332435829
-    # //*[@id="app"]/div/div[2]/div[1]/div[2]/div[3]/div[1]/div[2]/div[1]/div[2]/div/div[3]
-    # XPATH = .//div//div//div[@data-map-type='dynamic']
-
-    # data-item-id="2332435829" ID объявления
-    # data-location-id="623880" ID City
-    # data-category-id="10" ID Kategory
-
-    # tree = html.fromstring(html_txt)
-    # index = 0
-
-    # items_lxml = tree.xpath(path)[0]
-    # for item_lxml in items_lxml:
-    #     desript = item_lxml.xpath('//meta[@itemprop="description"]')
-    #     # getting movie id
-    #     movie_link = item_lxml.xpath('.//div[@class = "nameRus"]/a/@href')[0]
-
-
-def get_file_new():
-    # with open("Data/get_categories1.html", 'r', encoding='utf-8') as file:
-    with open("Data/get_categories2.html", 'r', encoding='utf-8') as file:
-        r = file.read()
-        #   print(r)
-        #parse_cat_xml(r)
-        # print(r)
-        return r
-
-
 
 
 '''
@@ -326,9 +314,9 @@ def search_category_id(id):
         # cursor.execute("""
         # SELECT name FROM regions WHERE name LIKE ? ORDER BY name
         #   """, (reg1,))
-        result = cursor.fetchone()
-        #result = cursor.fetchall()
-        print(f'result cursor.fetchone() = {len(result)} {result}')
+        # result = cursor.fetchone()
+        result = cursor.fetchall()
+        print(f'result cursor.fetchall() = {len(result)} {result}')
         # print(result[0])
 
 
@@ -406,99 +394,17 @@ def search_category_name(name):
         # print(result[0])
 
 
-def find_id_cat_from_dict(dict_list):
-
-    print('find_id_cat_from_dict')
-    reg_in = id
-    reg1 = reg_in + "%"
-    reg2 = "%" + reg_in.lower() + "%"
-    trupl_str = (reg1, reg2)
-    print(f'trupl_str {trupl_str}')
-
-    list_str = []
-    list_str.append(reg1)
-    list_str.append(reg2)
-    print(f"list_str {list_str}")
-
-    dict_str = dict()
-
-    values = [reg1, reg2]
-    values = [reg_in, reg_in]
-
-    param_names = [f"reg{i + 1}" for i in range(len(values))]
-    in_str = ", ".join(":" + p for p in param_names)  # print(",".join("Python")) >>>P,y,t,h,o,n
-    params = dict(zip(param_names, values))
-
-    sql = f"""SELECT name, id FROM categories
-                 WHERE id in ({in_str}) ORDER BY id"""
-    print(f'params {params} , in_str {in_str},\n sql= {sql}')
-    dict_str.setdefault("reg1", reg1)  # append("reg1",reg1) # + reg2
-    dict_str.setdefault("reg2", reg2)  # append("reg1",reg1) # + reg2
-    # val.append("reg2", reg2)
-    # for key, value in values:
-    #    countries_hdi[key] = value
-    print(f'ПОИСК dict_str {dict_str["reg1"]} и {dict_str["reg2"]} ')
-
-    with sqlite3.connect('realty.db') as connection:
-        cursor = connection.cursor()
-        # sql = ("CREATE INDEX index_my_table ON my_table (Field1, field2)")
-        query_str = """
-            SELECT name, id FROM categories WHERE id LIKE ? ORDER BY id
-              """
-        # Без регистра: like lower('%value%');
-        # Для исключения символов: where column regexp '^[A-Za-z0-9]+$'
-        # where lover(column_name) regexp '^[a-zа-яё]+$';
-        # SELECT *FROM [table] WHERE ([table].[column] like <parameter>) OR (<parameter> = '%')
-
-        query_str_3 = """
-            SELECT name, id FROM categories WHERE (lower(id) LIKE ?) OR (lower(id) LIKE ?) ORDER BY id 
-              """
-
-        query_str_4 = """
-            SELECT name, id FROM categories WHERE (lower(id) LIKE :reg1) OR (lower(id) LIKE :reg2) ORDER BY id 
-              """
-
-        query_str_5 = sql
-        # """
-        # SELECT name, id FROM categories WHERE (lower(id) LIKE ?) OR (lower(id) LIKE ?) ORDER BY id
-        #   """
-
-        # str переменные
-        # cursor.execute((query_str),(reg1,))
-        # cursor.execute((query_str), (reg_in,))
-        # str30 OK!!!!
-        # cursor.execute((query_str_3), (reg1, reg2))
-        # str31 list_str OK!!!!
-        # cursor.execute((query_str_3), (list_str))
-        # str32 trupl_str OK!!!!
-        # cursor.execute((query_str_3), (trupl_str))
-        # str4 OK dict_str!!!!
-        # cursor.execute((query_str_4), (dict_str))  # [0], val[1]))
-        # str5 OK sql динамически сформирован весь запрос!!!!
-        # cursor.execute((query_str_5), (params))
-        cursor.execute((query_str_5), (params))
-        # [0], val[1]))
-        # cursor.execute("""
-        # SELECT name FROM regions WHERE name LIKE ? ORDER BY name
-        #   """, (reg1,))
-        # result = cursor.fetchone()
-        result = cursor.fetchall()
-        print(f'result cursor.fetchall() = {len(result)} {result}')
-        # print(result[0])
-    #print(id_kod)
+def find_id_cat_from_xpath(id_kod):
+    print(id_kod)
 
 
-def list_id_to_db(dict_list):
-    dict_list = dict_list
+def list_id(dict_list):
+    # print(dict_list)
     pprint(dict_list)  # , depth=0)
-
-    find_id_cat_from_dict(dict_list)
-    # for i in dict_list:
-    #     id_kod = i["id"]
-    #
-    #     find_id_cat_from_dict(id_kod, dict_list)
-    #
-    #     print(f' {id_kod} , {i["name"]}, {i["url_name"]}')  # получаем значения по ключу
+    for i in dict_list:
+        id_kod = i["id"]
+        find_id_cat_from_xpath(id_kod)
+        # print(f' {id_kod} , {i["name"]}, {i["url_name"]}')  # получаем значения по ключу
 
 
 def dict_factory(cursor, row):
@@ -518,15 +424,12 @@ def get_data_to_json():
     conn.row_factory = dict_factory
     c = conn.cursor()
     temp = c.execute("SELECT * FROM categories")
+    # result = [{k: item[k] for k in item.keys()} for item in temp] #print(f'!!!!!!!!!!!!!! result = {result}')
     rst = c.fetchall()  # rst is a list of dict
-    return rst #jsonify(rst)
-
-def main():
-
-    dict_cat = get_data_to_json()
-    #pprint(dict_cat)
-    list_id_to_db(dict_cat)
-    parse_cat_xml(dict_cat) #id_kod, name_rus="")
+    # pprint(rst)#, depth=0) #print(json.dumps(rst, sort_keys=False, indent=4))
+    list_id(rst)
+    conn.close()
+    # return rst #jsonify(rst)
 
 
 def bad_categories_to_dict():
@@ -573,7 +476,6 @@ if __name__ == '__main__':
     # search_category_id(id)
     # check_category_path(id, url_str)
     # bad_categories_to_dict() #не берет первый элемент
-    #get_data_to_json()
-    #get_file_new()
+    get_data_to_json()
+    get_file_new()
     #parse_xml_new(id, name)
-    main()

@@ -53,8 +53,21 @@ def dict_factory(cursor, row):
     # fields = [column[0] for column in cursor.description]
     # return {key: value for key, value in zip(fields, row)}
 
+def get_data_region_to_json():
+    database = 'realty.db'
+    conn = sqlite3.connect(database)  # conn.row_factory = sqlite3.Row
+    conn.row_factory = dict_factory
+    c = conn.cursor()
+    temp = c.execute("SELECT * FROM regions WHERE regions.url_path = 'None' AND regions.id > 661900")
+    # result = [{k: item[k] for k in item.keys()} for item in temp] #print(f'!!!!!!!!!!!!!! result = {result}')
+    rst = c.fetchall()  # rst is a list of dict
+    # pprint(rst)#, depth=0) #print(json.dumps(rst, sort_keys=False, indent=4))
+    #list_id(rst)
+    #conn.close()
+    return rst #jsonify(rst)
 
-def get_data_to_json():
+
+def get_data_city_to_json():
     database = 'realty.db'
     conn = sqlite3.connect(database)  # conn.row_factory = sqlite3.Row
     conn.row_factory = dict_factory
@@ -275,41 +288,67 @@ def get_json_items():
     return data
 
 
-def main():
+def get_region():
 
-    cityes_dmp = get_data_to_json()
-
-
+    region_dmp = get_data_region_to_json()
+    #print(region_dmp)
     with sqlite3.connect('realty.db', timeout=300) as connection:
         cursor = connection.cursor()
+        query_str = f"""UPDATE regions
+            SET kod_region = '1' WHERE id = ?
+            """
 
+        for cit in region_dmp:
+            cit_name = cit['name']
+            cit_id = int(cit['id'])
+            data_get = get_json_cat_for_city(cit_id)
+            # print(f'##################################### {data_get.kod}')
+            print(f"cit_name = {cit_name}, cit_id = {cit_id}")
+            #            cursor.execute((query_str), (cit_id,))  # !!!!OK
+            #            connection.commit()
+            print('Update ', connection.total_changes)  # rowcount())#total_changes total_changes() )
+            connection.commit()
+            tim = randint(5, 15)
+            time.sleep(2)
+        print(f'\n\n {data_get}')
+
+
+def get_city():
+
+    cityes_dmp = get_data_city_to_json()
+    with sqlite3.connect('realty.db', timeout=300) as connection:
+        cursor = connection.cursor()
         query_str = f"""UPDATE cityes 
-        SET index_post = '1' WHERE id = ?
-        """
+            SET index_post = '1' WHERE id = ?
+            """
 
         for cit in cityes_dmp:
             cit_name = cit['name']
             cit_id = int(cit['id'])
             data_get = get_json_cat_for_city(cit_id)
-            #print(f'##################################### {data_get.kod}')
+            # print(f'##################################### {data_get.kod}')
             print(f"cit_name = {cit_name}, cit_id = {cit_id}")
-#            cursor.execute((query_str), (cit_id,))  # !!!!OK
-#            connection.commit()
+            #            cursor.execute((query_str), (cit_id,))  # !!!!OK
+            #            connection.commit()
             print('Update ', connection.total_changes)  # rowcount())#total_changes total_changes() )
             connection.commit()
             tim = randint(5, 15)
             time.sleep(2)
 
-
         # data_items = get_json_items()
         # data_cat = get_json_cat_for_city()
-#        id_sity = '621568'
-#        data_get = get_json_cat_for_city(id_sity)
+        #        id_sity = '621568'
+        #        data_get = get_json_cat_for_city(id_sity)
         print(f'\n\n {data_get}')
         # print(data_items)
         # print(f'data = get_json() {data}')
         # get_offers(data)
 
+
+
+def main():
+    #get_city()
+    get_region()
 
 if __name__ == '__main__':
     main()

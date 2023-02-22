@@ -5,13 +5,13 @@ from pprint import pprint
 from urllib.parse import urlparse
 
 
-def get_dict_files_dir():
-
-    path_json = 'F:\Data\json\\'
-    file_path = path_json + "cat_633350.json"
-    x = [f.name for f in os.scandir(path_json) if f.is_file()]
-    print(x)
-    print(f'\n\n\n {file_path}')
+#def get_dict_files_dir():
+    #
+    # path_json = 'F:\Data\json\\'
+    # file_path = path_json + "cat_633350.json"
+    # x = [f.name for f in os.scandir(path_json) if f.is_file()]
+    # print(x)
+    # print(f'\n\n\n {file_path}')
 
 def url_parser(url):
 
@@ -29,27 +29,62 @@ def url_parser(url):
         'directories': directories,
         'queries': queries,
     }
-
     return elements
+
+def fix_region_to_db(buf):
+    buf = buf
+    url_path_cat = buf['uri_mweb']
+    frame = url_parser(url_path_cat)
+    dirLst = frame['directories']
+    url_path = dirLst[-1].strip()
+    id_cat = (buf["uri"].strip())[-6:]
+    print(f'{url_path}  {id_cat}')
+
+    with sqlite3.connect('realty.db', timeout=300) as connection:
+        cursor = connection.cursor()
+        query_str = f"""UPDATE regions 
+        SET url_path = ? WHERE id = ?
+        """
+        cursor.execute((query_str), (url_path, id_cat))  # !!!!OK
+        connection.commit()
+        print('Update ', connection.total_changes)  # rowcount())#total_changes total_changes() )
+
+
+def fix_city_to_db(buf):
+    buf = buf
+    url_path_cat = buf['uri_mweb']
+    frame = url_parser(url_path_cat)
+    dirLst = frame['directories']
+    url_path = dirLst[-1].strip()
+    id_cat = (buf["uri"].strip())[-6:]
+    print(f'{url_path}  {id_cat}')
+
+    with sqlite3.connect('realty.db', timeout=300) as connection:
+        cursor = connection.cursor()
+        query_str = f"""UPDATE cityes 
+        SET url_path = ? WHERE id = ?
+        """
+        cursor.execute((query_str), (url_path, id_cat))  # !!!!OK
+        connection.commit()
+        print('Update ', connection.total_changes)  # rowcount())#total_changes total_changes() )
+
+# connection.commit()
 
 
 def parse_url_path(file_name):
 
     with open(file_name, 'r', encoding='utf-8') as file:
-        #json.dump(ress, file, indent=2, ensure_ascii=False)
         data = json.load(file)
         try:
             buf = data['shops']
+            #fix_city_to_db(buf)
+            fix_region_to_db(buf)
+            kontrol = 'OK'
         except KeyError:
             print('Файл Пуст')
+            kontrol = '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ BREAK'
             return False
-
-        url_path_cat = buf['uri_mweb']
-        frame = url_parser(url_path_cat)
-        dirLst = frame['path'].split("/")
-        url_path = dirLst[-1].strip()
-        id_cat = (buf["uri"].strip())[-6:]
-        print(f'{url_path}  {id_cat}')
+        #print(kontrol)
 
 
 def find_file(file_path):
@@ -59,17 +94,14 @@ def find_file(file_path):
     full_path = path_json + file_path
 
     with sqlite3.connect('realty.db', timeout=300) as connection:
-        cursor = connection.cursor()
-
-        query_str = f"""UPDATE cityes 
-        SET index_post = '1' WHERE id = ?
-        """
-
+        # cursor = connection.cursor()
+        # query_str = f"""UPDATE cityes
+        # SET index_post = '1' WHERE id = ?
+        # """
         if os.path.exists(full_path):
-            print(full_path)
             #            cursor.execute((query_str), (cit_id,))  # !!!!OK
             #            connection.commit()
-            print('Update ', connection.total_changes)  # rowcount())#total_changes total_changes() )
+            #print('Update ', connection.total_changes)  # rowcount())#total_changes total_changes() )
             parse_url_path(full_path)
             #connection.commit()
 
@@ -87,8 +119,18 @@ def dict_factory(cursor, row):
     # fields = [column[0] for column in cursor.description]
     # return {key: value for key, value in zip(fields, row)}
 
+def get_data_region_to_json():
+    database = 'realty.db'
+    conn = sqlite3.connect(database)  # conn.row_factory = sqlite3.Row
+    conn.row_factory = dict_factory
+    c = conn.cursor()
+    temp = c.execute("SELECT * FROM regions WHERE url_path = 'None'")
+    # result = [{k: item[k] for k in item.keys()} for item in temp] #print(f'!!!!!!!!!!!!!! result = {result}')
+    rst = c.fetchall()  # rst is a list of dict
+    return rst #jsonify(rst)
 
-def get_data_to_json():
+
+def get_data_city_to_json():
     database = 'realty.db'
     conn = sqlite3.connect(database)  # conn.row_factory = sqlite3.Row
     conn.row_factory = dict_factory
@@ -96,25 +138,23 @@ def get_data_to_json():
     temp = c.execute("SELECT * FROM cityes WHERE url_path = 'None'")
     # result = [{k: item[k] for k in item.keys()} for item in temp] #print(f'!!!!!!!!!!!!!! result = {result}')
     rst = c.fetchall()  # rst is a list of dict
-    # pprint(rst)#, depth=0) #print(json.dumps(rst, sort_keys=False, indent=4))
-    #list_id(rst)
-    #conn.close()
     return rst #jsonify(rst)
+
+def main():
+
+    #city_dict = get_data_city_to_json()
+    city_dict = get_data_region_to_json()
+    for elem in city_dict:
+        full_name = f'cat_{elem["id"]}.json'
+        find_file(full_name)
+    #pprint(city_dict)
+    #get_from_file(file_path)
+    #get_dict_files_dir()
 
 
 if __name__ == '__main__':
-    city_dict = get_data_to_json()
-    for elem in city_dict:
 
-        #print(f'{elem["name"]}  {elem["id"]}')
-        #"cat_633350.json"
-        full_name = f'cat_{elem["id"]}.json'
-        #print(full_name)
-        find_file(full_name)
-    #pprint(city_dict)
-
-    #get_from_file(file_path)
-    #get_dict_files_dir()
+    main()
 
 # Another example with `scandir` (a little variation from docs.python.org)
 # This one is more efficient than `os.listdir`.

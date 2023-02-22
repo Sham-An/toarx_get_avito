@@ -1,0 +1,1935 @@
+{
+  "status": "ok",
+  "result": {
+    "shouldShowSaveSearch": true,
+    "showSearchCounter": true,
+    "count": 64769,
+    "totalCount": 64769,
+    "mainCount": 64769,
+    "expanded_count": 0,
+    "witchersCount": 0,
+    "lastStamp": 1676973540,
+    "items": [
+      {
+        "type": "item",
+        "value": {
+          "id": 2608537686,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676972040,
+          "title": "Нитки для машинной вышивки",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://77.img.avito.st/image/1/1.xMXrU7a_aCyV8fwv71j_oS7wbiZVUGmWX_BqKF84a7hc8A.Ze6ydwDF4IoBRb7U43YPW6a-6RTpDFb7GxmAELOZb9o",
+              "1280x960": "https://77.img.avito.st/image/1/1.xMXrU7axaCzd5Ooh71j_oS7waChX-mIu.OiFglsC5PCy--6HtIRxOJzRjSDPscisYqR3JD74OYfk",
+              "140x105": "https://77.img.avito.st/image/1/1.xMXrU7a_aCzF8rgv71j_oS7wbiZVUGmWX_BqKF9oaPxc8A.G-W_A30wsq-apD7yGzEFzu3TkUJ7dDoosPrinFi3qGY",
+              "208x156": "https://77.img.avito.st/image/1/1.xMXrU7a2aCz989Is71j_oS7waCZVUGmWX_Bq.nq7gIJJ-rG4gcTyvHu9E5_lAFpE35ob7To9L1pvzbH8",
+              "240x180": "https://77.img.avito.st/image/1/1.xMXrU7a2aCy984Is71j_oS7waCZVEGnGX_Bq.ZLI5XG6WR6JwRAsGO5gREJfwKfELPpiTAcuDlT3fAHw",
+              "288x216": "https://77.img.avito.st/image/1/1.xMXrU7a2aCyd9Not71j_oS7waCZVMG6eXvBq.3VMVmWWOem4gFWaN7s2zGOyocwJaS3NNkXQ9wbjcFvw",
+              "432x324": "https://77.img.avito.st/image/1/1.xMXrU7auaCy99uIr71j_oS7wag.TEssOFwnzLoFr_eQH-0qU9CfvmBRWsQhn-Q-Gz1Wiz0",
+              "640x480": "https://77.img.avito.st/image/1/1.xMXrU7a6aCzd-qop71j_oS7wbihfcGDuWvBsJFf4ag.sMTekZ2cMtApbffXA3k5XGc27l1bV0L0SkV5aPvu3co",
+              "75x55": "https://77.img.avito.st/image/1/1.xMXrU7awaCzL8QSc9WXlXV3yYibL8QQuXQ.YGCXt_qUxJkdtwdJg9oH_Vc0VnZjbl1LuMzMzmoXzR4",
+              "80x60": "https://77.img.avito.st/image/1/1.xMXrU7a5aCz98RKc9WXlXV30Yib989IsXfBsLP3xEi4.D59-7p0RQX58ib2MoLe9UsHq6xNg_l3xDVo0_njw7OI"
+            }
+          },
+          "price": "Цена не указана",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.369072089029",
+            "lng": "47.9867468040212"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2608537686",
+          "uri_mweb": "/astrahan/mebel_i_interer/nitki_dlya_mashinnoy_vyshivki_2608537686?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2637954174,
+          "category": {
+            "id": 21,
+            "name": "Бытовая техника"
+          },
+          "time": 1676972031,
+          "title": "Пятиволновая плойка",
+          "images": {
+            "count": 5,
+            "main": {
+              "100x75": "https://11.img.avito.st/image/1/1.LgBS87a_guksURbqArcWKpJQhOPs8INT5lCA7eaYgX3lUA.KMaLMTDFj-AbzmmMj2u9IKFvqc7br0pF5dORDgQGgbw",
+              "1280x960": "https://11.img.avito.st/image/1/1.LgBS87axgulkRADkArcWKpJQgu3uWojr.M3NPjVcfHDB8JJo-iO4OCLJMbJLXpivRYJhQYk72Nbo",
+              "140x105": "https://11.img.avito.st/image/1/1.LgBS87a_gul8UlLqArcWKpJQhOPs8INT5lCA7ebIgjnlUA.8tezYAwhP9hzZRLOvxPccY8heWnlh2QTbgE5MOEnNDE",
+              "208x156": "https://11.img.avito.st/image/1/1.LgBS87a2gulEUzjpArcWKpJQguPs8INT5lCA.3KfJRw9w-FwlO-jYF0MQZGB-JS-WXJEfSMSF2aozsdE",
+              "240x180": "https://11.img.avito.st/image/1/1.LgBS87a2gukEU2jpArcWKpJQguPssIMD5lCA.Grbl5h2fsdyw-Ydatj-EGLpnzjrfUi0V6UzJt2K0tgc",
+              "288x216": "https://11.img.avito.st/image/1/1.LgBS87a2gukkVDDoArcWKpJQguPskIRb51CA.Ri0WzsJ9CEHhTZVsXuPVuRRp_zdTuE_h1aV7uUpTXI8",
+              "432x324": "https://11.img.avito.st/image/1/1.LgBS87augukEVgjuArcWKpJQgA.5tGbB_N2DMDC8ypK97NkqKqPurFveJA3GaHU7YpXCg4",
+              "640x480": "https://11.img.avito.st/image/1/1.LgBS87a6gulkWkDsArcWKpJQhO3m0Ior41CG4e5YgA.LWWV0mMy-TsgQCpxNJWv9DJl8BMFAiunx2hVgcW2ShY",
+              "75x55": "https://11.img.avito.st/image/1/1.LgBS87awgulyUe4NA8ZBneRSiONyUe7r5A.coLFEqLL-kPkzBGKn6cWp7qIXomcK5UYTRWRA3GcIqQ",
+              "80x60": "https://11.img.avito.st/image/1/1.LgBS87a5gulEUfgNA8ZBneRUiONEUzjp5FCG6URR-Os.rjWGxgKmeQHGDeBU-6_twj4dNlMuKNxfCi6yGKgybxI"
+            }
+          },
+          "price": "1 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.3813431255558",
+            "lng": "48.1013390515865"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2637954174",
+          "uri_mweb": "/astrahan/bytovaya_tehnika/pyativolnovaya_ployka_2637954174?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2532780911,
+          "category": {
+            "id": 87,
+            "name": "Посуда и товары для кухни"
+          },
+          "time": 1676972027,
+          "title": "Форма для льда IKEA",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://11.img.avito.st/image/1/1.rn-XxLa_ApbpZpaVx47CGU9nBJwpxwMsI2cAkiOvAQIgZw.7goVsl0kDuQG295kbr3Ww72QxhHLC5GksY4w9wfDkMw",
+              "1280x960": "https://11.img.avito.st/image/1/1.rn-XxLaxApahc4Cbx47CGU9nApIrbQiU.8bdZWPMaQCTRJ7S3L6US30F67BxXrJVJvEMM5LfmLD4",
+              "140x105": "https://11.img.avito.st/image/1/1.rn-XxLa_Apa5ZdKVx47CGU9nBJwpxwMsI2cAkiP_AkYgZw.s1_f4ptjZaOVsIzSnGVcS7wtTYYkycVP_rZ7d2Nt1lI",
+              "208x156": "https://11.img.avito.st/image/1/1.rn-XxLa2ApaBZLiWx47CGU9nApwpxwMsI2cA.r3XcQvCvmFPrstAuHVIfNFblWzJx_OsPiI1uCJ7ja-A",
+              "240x180": "https://11.img.avito.st/image/1/1.rn-XxLa2ApbBZOiWx47CGU9nApwphwN8I2cA.AUzN58gwKwh35m_DbGPpmtJcshVB081ivLGxynaDtiM",
+              "288x216": "https://11.img.avito.st/image/1/1.rn-XxLa2ApbhY7CXx47CGU9nApwppwQkImcA.MtqFhJW4MHlcDu_yAcoAYd4S_fPduveL4ae3N6R46h8",
+              "432x324": "https://11.img.avito.st/image/1/1.rn-XxLauApbBYYiRx47CGU9nAA.fQ9LGFU03VkqyXOLVthFOlSqnTrSpTeCA9ZWFCvBqpg",
+              "640x480": "https://11.img.avito.st/image/1/1.rn-XxLa6ApahbcCTx47CGU9nBJIj5wpUJmcGnitvAA.nyFtHZ5qDqg4BYv4UUmVSlQ5Nm6vOCxKQ2j4c6Q1EP4",
+              "75x55": "https://11.img.avito.st/image/1/1.rn-XxLawApa3Zm5yyKWN-iFlCJy3Zm6UIQ.EH4aYbg3nVJy_nQicV0XL_Tm0gS-gOuxzYkInGxA_Cw",
+              "80x60": "https://11.img.avito.st/image/1/1.rn-XxLa5ApaBZnhyyKWN-iFjCJyBZLiWIWcGloFmeJQ.BrarBpWuGiwu_B04COLc4-b93D1ZXz_BhcSFWIoAkng"
+            }
+          },
+          "price": "115 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Знаменск"
+            }
+          ],
+          "location": "Знаменск",
+          "address": "",
+          "coords": {
+            "lat": "48.58509",
+            "lng": "45.742592"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2532780911",
+          "uri_mweb": "/astrahanskaya_oblast_znamensk/posuda_i_tovary_dlya_kuhni/forma_dlya_lda_ikea_2532780911?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2788811267,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676971918,
+          "title": "Дверь входная бу",
+          "images": {
+            "count": 4,
+            "main": {
+              "100x75": "https://93.img.avito.st/image/1/1.MGpPcra-nIMx0AiAIzpnOnnQnoXx2T6CQdOegf_TVoBv0J4.5MRLKK7kcWUYwxJaYr6zPgoAkxL_ZTW7K2ft8bq9ygQ",
+              "1280x960": "https://93.img.avito.st/image/1/1.MGpPcrawnIN5xR6OIzpnOnnQnoP_25SJ-Q.4kaCY7jJNImNaZ2gEUhYN7r8xHVcTWpmf6cnUzG59o8",
+              "140x105": "https://93.img.avito.st/image/1/1.MGpPcra-nINh00yAIzpnOnnQnoXx2T6CQdOegf_TBoMr0J4.8TcC7Ney4JvYRXN6WvRUlgGktZMRIWJRYuBIefydN38",
+              "208x156": "https://93.img.avito.st/image/1/1.MGpPcra1nINZ0iaDIzpnOnnQnoPx2T6CQdOegQ.QNaEHWHmA8OYnbGK3aOhrWHJMLCSY8XvrDWEIpjBz6g",
+              "240x180": "https://93.img.avito.st/image/1/1.MGpPcra1nIMZ0naDIzpnOnnQnoPx2X6CEdOegQ.UnsWpDqJ16o8JxyQAdCIgO8ZKesLJpSuJ35whxgpUCg",
+              "288x216": "https://93.img.avito.st/image/1/1.MGpPcra1nIM51S6CIzpnOnnQnoPx2V6FSdKegQ.lA7-TKkbBA7UFhC34_iUcyG7ebgBsit1MEodDh-JEv8",
+              "432x324": "https://93.img.avito.st/image/1/1.MGpPcratnIMZ1xaEIzpnOnnQnoE.IAMFwNil3Ka9uoKE2ObI0FeT6Ms7s2l_MvyHqFVQaAY",
+              "640x480": "https://93.img.avito.st/image/1/1.MGpPcra5nIN5216GIzpnOnnQnoX_0x6LOdaeh_PbloE.ruKpB5ESanOU3peYBi4TAosGJSkAMn3t_LthCQZ_OU4",
+              "75x55": "https://93.img.avito.st/image/1/1.MGpPcra3nINv0PBbEiglAfjRnInxR5_v-dE.ZIYkRbhsdvnbJKCPOJz_QZdPAD_uSMSKQ1QyIcS3e6Q",
+              "80x60": "https://93.img.avito.st/image/1/1.MGpPcra4nINZ0OZbEiglAfjRmonxcZ05-9Geh_txn_n5.6_8bYkgHtTE7aRebbIuGGFaPdJCEDx78YsIQMY29SY4"
+            }
+          },
+          "price": "2 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.332539139900156",
+            "lng": "48.05915720006942"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2788811267",
+          "uri_mweb": "/astrahan/remont_i_stroitelstvo/dver_vhodnaya_bu_2788811267?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2820225441,
+          "category": {
+            "id": 21,
+            "name": "Бытовая техника"
+          },
+          "time": 1676971899,
+          "title": "Холодильник атлант бу",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://35.img.avito.st/image/1/1.JjVR5La-itwvRh7fEch_ZWdGiNrvTyjdX0WI3uFFQN9xRog.A2EJIhtOHPtgbu44kiNmrg1UJ3AM5BhWFkBYk3od8co",
+              "1280x960": "https://35.img.avito.st/image/1/1.JjVR5LawitxnUwjREch_ZWdGiNzhTYLW5w.LNYEon4i3WWCXetUuDlmUhE04jQGM9jiMPaofP74Clk",
+              "140x105": "https://35.img.avito.st/image/1/1.JjVR5La-itx_RVrfEch_ZWdGiNrvTyjdX0WI3uFFENw1Rog.7sXOllIBtAV9gMGI4aT3VE-S1Z3qx1GH5v68VG1Wd2o",
+              "208x156": "https://35.img.avito.st/image/1/1.JjVR5La1itxHRDDcEch_ZWdGiNzvTyjdX0WI3g.FjAD1OnKvcviEgi9fZetDKwxe7UcjtW32CdGurp9Mzs",
+              "240x180": "https://35.img.avito.st/image/1/1.JjVR5La1itwHRGDcEch_ZWdGiNzvT2jdD0WI3g.GwppxbgKfLUluLzFF479_5aslMfNhbHPhxEOm-hGn94",
+              "288x216": "https://35.img.avito.st/image/1/1.JjVR5La1itwnQzjdEch_ZWdGiNzvT0jaV0SI3g.cPCyw7tE53qwfd9funmnf5VbXnOe5HL1GWSLr6kOnIs",
+              "432x324": "https://35.img.avito.st/image/1/1.JjVR5LatitwHQQDbEch_ZWdGiN4.F6b2qrjX1oKTiEIm9KaVGFmkvdv-7dY_W8vZy7Olj0o",
+              "640x480": "https://35.img.avito.st/image/1/1.JjVR5La5itxnTUjZEch_ZWdGiNrhRQjUJ0CI2O1NgN4.BiYiRnAtf0nTmuN_YZPoo98quGaPBHw5dqgIEh6422A",
+              "75x55": "https://35.img.avito.st/image/1/1.JjVR5La3itxxRuYoaLAzXuZHitbv0Ymw50c.BNO9fw9P5l_xpgVw6ek_C_DjiAT_--I29nwJ3U3H-O8",
+              "80x60": "https://35.img.avito.st/image/1/1.JjVR5La4itxHRvAoaLAzXuZHjNbv54tm5UeI2OXniabn.WA3JrkE72pp4HTLrqvzpSV8aBbbnGqXmDsFzYW5xCng"
+            }
+          },
+          "price": "5 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Знаменск"
+            }
+          ],
+          "location": "Знаменск",
+          "address": "",
+          "coords": {
+            "lat": "48.591491",
+            "lng": "45.72794"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2820225441",
+          "uri_mweb": "/astrahanskaya_oblast_znamensk/bytovaya_tehnika/holodilnik_atlant_bu_2820225441?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2860049769,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971850,
+          "title": "Комод и стол",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://72.img.avito.st/image/1/1.4UjrULa-TaGV8tmipWuzGN3yT6dV---g5fFPo1vxh6LL8k8.QyUhuixZv9ULlBuWsba0I9_XiHODoSuKQ1DmD8P8pmw",
+              "1280x960": "https://72.img.avito.st/image/1/1.4UjrULawTaHd58-spWuzGN3yT6Fb-UWrXQ.7RIprOGI8Wyn4YfmHAL_6EpYNtPwiy6h-oqQHHA41cw",
+              "140x105": "https://72.img.avito.st/image/1/1.4UjrULa-TaHF8Z2ipWuzGN3yT6dV---g5fFPo1vx16GP8k8.yicpr8xc4ion05PyeA5lV35faSC2XfF1bGIA8AOmF84",
+              "208x156": "https://72.img.avito.st/image/1/1.4UjrULa1TaH98PehpWuzGN3yT6FV---g5fFPow.7SF9qu0ugrcHWSO_7hJCyqEOErMYT6t0VuMIXLwO_XM",
+              "240x180": "https://72.img.avito.st/image/1/1.4UjrULa1TaG98KehpWuzGN3yT6FV-6-gtfFPow.9Ae9CZKazoiDVv_O7P0QYxfuUjsq_SgOAg9KMhzO-TY",
+              "288x216": "https://72.img.avito.st/image/1/1.4UjrULa1TaGd9_-gpWuzGN3yT6FV-4-n7fBPow.kf-d-RsKvFWWJw_E0DHT4NvtAub4kEDxA7ZZi5T8Zdo",
+              "432x324": "https://72.img.avito.st/image/1/1.4UjrULatTaG99cempWuzGN3yT6M.BoaaN2O3bU72rAU6kMFvI8itsThl5H_5IQ5Yi8NCDDg",
+              "640x480": "https://72.img.avito.st/image/1/1.4UjrULa5TaHd-Y-kpWuzGN3yT6db8c-pnfRPpVf5R6M.DOdanGP9e74wmJOYREr0tVtgP39frOP2t3dSdPEwY0Q",
+              "75x55": "https://72.img.avito.st/image/1/1.4UjrULa3TaHL8iFbxQ_0I1zzTatVZU7NXfM.8bL9UGB6nVpKWHLfq9x_zyjYrHb8kOXkHHWhgPA8PAo",
+              "80x60": "https://72.img.avito.st/image/1/1.4UjrULa4TaH98jdbxQ_0I1zzS6tVU0wbX_NPpV9TTttd.GB0jgti5e66_ar7jLLKOlLQy_jPNsnVvlT_HqHD716g"
+            }
+          },
+          "price": "1 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.370117",
+            "lng": "48.077721"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2860049769",
+          "uri_mweb": "/astrahan/mebel_i_interer/komod_i_stol_2860049769?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2777002948,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676971827,
+          "title": "Строймусор",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://24.img.avito.st/image/1/1.XdGElLa-8Tj6NmU7stkIgbI28z46P1M5ijXzOjQ1OzukNvM.hFsw9vQWVoTguacDewDiO0l7_qg3YH_efmEYgAZLYkE",
+              "1280x960": "https://24.img.avito.st/image/1/1.XdGElLaw8TiyI3M1stkIgbI28zg0PfkyMg.LHhO8CtvNQOG0VKof8fB0stI3jdxuI-PWjtgiWO-YeU",
+              "140x105": "https://24.img.avito.st/image/1/1.XdGElLa-8TiqNSE7stkIgbI28z46P1M5ijXzOjQ1azjgNvM.Ar2v8CWIgFPi9WYLwzipZZqREfnw_-l3gDKe0BshaOQ",
+              "208x156": "https://24.img.avito.st/image/1/1.XdGElLa18TiSNEs4stkIgbI28zg6P1M5ijXzOg.Zd1VsT4VAkuRmB8VVZHLB6syXbFO94CSNJKQ8egjPE0",
+              "240x180": "https://24.img.avito.st/image/1/1.XdGElLa18TjSNBs4stkIgbI28zg6PxM52jXzOg.UCa7EYoFGE0XWMcYwljVotlbeCHf79lRdHmMOF4wygA",
+              "288x216": "https://24.img.avito.st/image/1/1.XdGElLa18TjyM0M5stkIgbI28zg6PzM-gjTzOg.36fq5ahP55THXhJHp8jLhZ6AOU5j4zN25Y-1NGXjd20",
+              "432x324": "https://24.img.avito.st/image/1/1.XdGElLat8TjSMXs_stkIgbI28zo.hQWOV33hfUeeY5PJd0NbVgbsbkKbcFe4tfegfz4krrY",
+              "640x480": "https://24.img.avito.st/image/1/1.XdGElLa58TiyPTM9stkIgbI28z40NXMw8jDzPDg9-zo.HM6oZgEuZC8xvPCW4rSn9dtEM6CZfYmVLYgnpynBr1E",
+              "75x55": "https://24.img.avito.st/image/1/1.XdGElLa38TikNp263MxIujM38TI6ofJUMjc.LJIKVkihW0sp77o_AOw_20WR-MJp4fJyUxe_OIVithE",
+              "80x60": "https://24.img.avito.st/image/1/1.XdGElLa48TiSNou63MxIujM39zI6l_CCMDfzPDCX8kIy.WrUaI0NyZ_qxc4A3RohfhwFtAoH4fMwPToKMkuHRCig"
+            }
+          },
+          "price": "Бесплатно",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.34069",
+            "lng": "48.009814"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2777002948",
+          "uri_mweb": "/astrahan/remont_i_stroitelstvo/stroymusor_2777002948?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2061916234,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971796,
+          "title": "Стол-парта",
+          "images": {
+            "count": 4,
+            "main": {
+              "100x75": "https://33.img.avito.st/image/1/1.DOF3jLa_oAgJLjQLY9A1wYsvpgLJj6Gywy-iDMPno5zALw.03hHRC3ahGKgkACO6LmIy3mehtJs4M7tgnOi_iAsKeg",
+              "1280x960": "https://33.img.avito.st/image/1/1.DOF3jLaxoAhBOyIFY9A1wYsvoAzLJaoK.SZqW_vd5V7bgICvEUXpzAMK_5yfiDPOVWnXfFRAbMWo",
+              "140x105": "https://33.img.avito.st/image/1/1.DOF3jLa_oAhZLXALY9A1wYsvpgLJj6Gywy-iDMO3oNjALw.n7woGhHZnEFb91VATNoZ2_d5SpkGCLSeE--bATyTY1g",
+              "208x156": "https://33.img.avito.st/image/1/1.DOF3jLa2oAhhLBoIY9A1wYsvoALJj6Gywy-i.thwlzkPw62-66jHGbqUR6rPqEPIm1aLxajNw1AnUiBk",
+              "240x180": "https://33.img.avito.st/image/1/1.DOF3jLa2oAghLEoIY9A1wYsvoALJz6Hiwy-i.s8jNZ501_MjS8CvnuPU1Gr6UUPIkeYT4dcMQqEehlOM",
+              "288x216": "https://33.img.avito.st/image/1/1.DOF3jLa2oAgBKxIJY9A1wYsvoALJ76a6wi-i.B3cXcpH6Ydhlzhnn1a77nXh0qmzv9Tof3P13eP1tB6w",
+              "432x324": "https://33.img.avito.st/image/1/1.DOF3jLauoAghKSoPY9A1wYsvog.I80BoPxBcuwuZnJFkTtlM1ZllNNuApsIXryCx3lRcd0",
+              "640x480": "https://33.img.avito.st/image/1/1.DOF3jLa6oAhBJWINY9A1wYsvpgzDr6jKxi-kAMsnog.nMzXtcaqB2ZXYZ5nRnH5OP5tka-TnNxF5FULTJ84mgE",
+              "75x55": "https://33.img.avito.st/image/1/1.DOF3jLawoAhXLsyoPrhpQMEtqgJXLswKwQ.M1VCWMgfdRx4II7hNZ_UyzVDG6q_PqJCGMNY2igSbBo",
+              "80x60": "https://33.img.avito.st/image/1/1.DOF3jLa5oAhhLtqoPrhpQMErqgJhLBoIwS-kCGEu2go.hiaug2YT2L7hWgq1DVdH58r4Cswr7AoIzZdQUkrRWj0"
+            }
+          },
+          "price": "8 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.442094",
+            "lng": "47.96965"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2061916234",
+          "uri_mweb": "/astrahan/mebel_i_interer/stol-parta_2061916234?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2859933707,
+          "category": {
+            "id": 87,
+            "name": "Посуда и товары для кухни"
+          },
+          "time": 1676971784,
+          "title": "Фужер из цветного хрусталя",
+          "images": {
+            "count": 7,
+            "main": {
+              "100x75": "https://37.img.avito.st/image/1/1.jPVtPra-IBwTnLQfeTDWpVucIhrTlYIdY58iHt2f6h9NnCI.1X95pd6OHD4eJV5RbReqG-Q5AcZNKAkmmDfplRg-9RQ",
+              "1280x960": "https://37.img.avito.st/image/1/1.jPVtPrawIBxbiaIReTDWpVucIhzdlygW2w.IdHQ-q8ISS-vauPQRTPHIGMtWgn5IZaMnBsQ-a0Kv2M",
+              "140x105": "https://37.img.avito.st/image/1/1.jPVtPra-IBxDn_AfeTDWpVucIhrTlYIdY58iHt2fuhwJnCI.oAoUNY3JckqUR0Ei8pS56ZqR3SD9xsEotf3jBtOpKEA",
+              "208x156": "https://37.img.avito.st/image/1/1.jPVtPra1IBx7npoceTDWpVucIhzTlYIdY58iHg.pqfz3ffqgtNPasERvNTeZv-gem_Dz45-YxSP7ZPhqAM",
+              "240x180": "https://37.img.avito.st/image/1/1.jPVtPra1IBw7nsoceTDWpVucIhzTlcIdM58iHg.9lVWrqA4JdRJkI6DzbuqXvyXYK7cI_-GTaVmrTPpvck",
+              "288x216": "https://37.img.avito.st/image/1/1.jPVtPra1IBwbmZIdeTDWpVucIhzTleIaa54iHg.6QPw8zGgSZ8UPVsauJnXWA7_grSShqbLN0GfHIgKs_4",
+              "432x324": "https://37.img.avito.st/image/1/1.jPVtPratIBw7m6obeTDWpVucIh4.5WMC8E_iJc2O63mJW_nwysJGuF_dO9EjFUCNODLJ064",
+              "640x480": "https://37.img.avito.st/image/1/1.jPVtPra5IBxbl-IZeTDWpVucIhrdn6IUG5oiGNGXKh4.sAF2evApkfffA6RYuQVRSB4tSuJt1s9Uw6sdSuNbyIY",
+              "75x55": "https://37.img.avito.st/image/1/1.jPVtPra3IBxNnEy8dmmZntqdIBbTCyNw250.aoOGUUO5h_yd9E3msgbBSFrJ3PtMN9SJ88xKAueTOEY",
+              "80x60": "https://37.img.avito.st/image/1/1.jPVtPra4IBx7nFq8dmmZntqdJhbTPSGm2Z0iGNk9I2bb.LzhCy0U4RYLuzBDPsN5WdVhY5Imz9w71Jx97PTIiaTo"
+            }
+          },
+          "price": "700 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.403417",
+            "lng": "48.094462"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2859933707",
+          "uri_mweb": "/astrahan/posuda_i_tovary_dlya_kuhni/fuzher_iz_tsvetnogo_hrustalya_2859933707?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2528767196,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676971756,
+          "title": "Бак, барабан в сборе",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://29.img.avito.st/image/1/1.nLsYUba_MFJm86RRLHem3cDyNlimUjHorPIyVqw6M8av8g.5QyO62sq7th8JWJnKEodkk5_MCdNH6oED42C-RrI4jA",
+              "1280x960": "https://29.img.avito.st/image/1/1.nLsYUbaxMFIu5rJfLHem3cDyMFak-DpQ.WhWFbUEVgdSgOIS5hoVq-207v7hDGDvJK5Om85k1Y5E",
+              "140x105": "https://29.img.avito.st/image/1/1.nLsYUba_MFI28OBRLHem3cDyNlimUjHorPIyVqxqMIKv8g.tRNsFl6ILX6I8jgw8S9Thvlx5ipeRGNnyzVSFKaV1MU",
+              "208x156": "https://29.img.avito.st/image/1/1.nLsYUba2MFIO8YpSLHem3cDyMFimUjHorPIy.IhvGmouLwceb5CZ4W5uCFR9gbe_i5vcx-t05g7f6TLw",
+              "240x180": "https://29.img.avito.st/image/1/1.nLsYUba2MFJO8dpSLHem3cDyMFimEjG4rPIy.pK2P-BAJd8r6TiX0bBOPI4wzBrChBlZ9Ci9YRbVsT3A",
+              "288x216": "https://29.img.avito.st/image/1/1.nLsYUba2MFJu9oJTLHem3cDyMFimMjbgrfIy.P6EUHiz24UJR3_MLukbJlJmgOk_dhIUCZdVavXuyTME",
+              "432x324": "https://29.img.avito.st/image/1/1.nLsYUbauMFJO9LpVLHem3cDyMg.ZCxyWb25Sm4r3MSPIQszv_uErgWDq7XG_9TkKsqEJy8",
+              "640x480": "https://29.img.avito.st/image/1/1.nLsYUba6MFIu-PJXLHem3cDyNlascjiQqfI0WqT6Mg.PnP0IP6cyqlIJ5SAFf8v3vQe9wuyoAhZsvdk9mpNOu0",
+              "75x55": "https://29.img.avito.st/image/1/1.nLsYUbawMFI481zSK2a_Pq7wOlg481xQrg.nWXyHFDUIEHJwWZleiOQEAhkvgd8oXfIRKQ4u_AnSLg",
+              "80x60": "https://29.img.avito.st/image/1/1.nLsYUba5MFIO80rSK2a_Pq72OlgO8YpSrvI0Ug7zSlA.0DSWmdtZAoaLJYFzdkkr2uvkgt076p_w-giuNo1Sk_w"
+            }
+          },
+          "price": "500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Ахтубинск"
+            }
+          ],
+          "location": "Ахтубинск",
+          "address": "",
+          "coords": {
+            "lat": "48.2949282711587",
+            "lng": "46.1563090930673"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2528767196",
+          "uri_mweb": "/ahtubinsk/remont_i_stroitelstvo/bak_baraban_v_sbore_2528767196?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2822232447,
+          "category": {
+            "id": 21,
+            "name": "Бытовая техника"
+          },
+          "time": 1676971743,
+          "title": "Чайник электрический",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://15.img.avito.st/image/1/1.yp_Ivba-Zna2H_J10O6Sz_4fZHB2FsR3xhxkdHgcrHXoH2Q.ZOFPWVj7OzWyCM93LAnLNcd-4JXpbJ5LOCaYO2AZGs4",
+              "1280x960": "https://15.img.avito.st/image/1/1.yp_IvbawZnb-CuR70O6Sz_4fZHZ4FG58fg.TacHSA4A1GxE-Oh2HokkiIk0i7V1XoKCe8-5I2aShO8",
+              "140x105": "https://15.img.avito.st/image/1/1.yp_Ivba-ZnbmHLZ10O6Sz_4fZHB2FsR3xhxkdHgc_HasH2Q.n6BdlnJbSONnqWCv-jc2FvhgNO_O2ddMP3Z3BhROJTI",
+              "208x156": "https://15.img.avito.st/image/1/1.yp_Ivba1ZnbeHdx20O6Sz_4fZHZ2FsR3xhxkdA.DAqPfeC-ca36p83TGRu5TEZ-NQj7wL5Rk-NTCJcvxFs",
+              "240x180": "https://15.img.avito.st/image/1/1.yp_Ivba1ZnaeHYx20O6Sz_4fZHZ2FoR3lhxkdA.IFhVZY0cQcAhZTlpJYTGOO3WUi-YQELYUHo0ZqBslPQ",
+              "288x216": "https://15.img.avito.st/image/1/1.yp_Ivba1Zna-GtR30O6Sz_4fZHZ2FqRwzh1kdA.0C62xAZiYdUwfsMkr3TIXg1inw4U7NGGaxWGpBe31lw",
+              "432x324": "https://15.img.avito.st/image/1/1.yp_IvbatZnaeGOxx0O6Sz_4fZHQ.4C4WT9JTgyrddtaXDl9pp2DgHzMkIXqLGQW2lybF5yg",
+              "640x480": "https://15.img.avito.st/image/1/1.yp_Ivba5Znb-FKRz0O6Sz_4fZHB4HOR-vhlkcnQUbHQ.CJGfHYwolOO3dJBW4nlECplatI2StD7lrBlKZlSlwQk",
+              "75x55": "https://15.img.avito.st/image/1/1.yp_Ivba3ZnboHwrajujf9H8eZnx2iGUafh4.ZOvT1WMMeUozuEs1tyZZX4no7UlJ2QX7v2_1_ega3mE",
+              "80x60": "https://15.img.avito.st/image/1/1.yp_Ivba4ZnbeHxzajujf9H8eYHx2vmfMfB5kcny-ZQx-.AVjb6HgKef8-2Gk7fRf5c9LP_hK8tDO2D38vO_S6f4U"
+            }
+          },
+          "price": "2 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.33095634987016",
+            "lng": "48.01319451215768"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2822232447",
+          "uri_mweb": "/astrahan/bytovaya_tehnika/chaynik_elektricheskiy_2822232447?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2383649530,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676971741,
+          "title": "Изготовление и монтажпластиковых окон",
+          "images": {
+            "count": 5,
+            "main": {
+              "100x75": "https://06.img.avito.st/image/1/1.j3J9XLa_I5sD_reYbx6PKqj_JZHDXyIhyf8hn8k3IA_K_w.9aijnQFwGFxqxoeYF2QZA4cGV1HUYsGFKYBti6JXK3g",
+              "1280x960": "https://06.img.avito.st/image/1/1.j3J9XLaxI5tL66GWbx6PKqj_I5_B9SmZ.ipSzKE4iXTOG7WLVTWJ8XHhlklJ9nStXVH6TpfXLUhU",
+              "140x105": "https://06.img.avito.st/image/1/1.j3J9XLa_I5tT_fOYbx6PKqj_JZHDXyIhyf8hn8lnI0vK_w.bj1Wrn6ni1LlUHdup5zl2AxXnhbPCw-DdNK5zv8__N8",
+              "208x156": "https://06.img.avito.st/image/1/1.j3J9XLa2I5tr_Jmbbx6PKqj_I5HDXyIhyf8h.F5m4gclUaL5RdKRTNSAfnTOsXDQUWaWFyU4zHrFN6Ls",
+              "240x180": "https://06.img.avito.st/image/1/1.j3J9XLa2I5sr_Mmbbx6PKqj_I5HDHyJxyf8h.JSN5P-EGOuVWaMQkKhlk8VlTdN__6WeuxLY4PwcFcEg",
+              "288x216": "https://06.img.avito.st/image/1/1.j3J9XLa2I5sL-5Gabx6PKqj_I5HDPyUpyP8h.CSzNUOojUXv-19-BoBuZ2rscdZeOigXsSCWt30M4I8Y",
+              "432x324": "https://06.img.avito.st/image/1/1.j3J9XLauI5sr-amcbx6PKqj_IQ.WpBH3Vs35QRLPpxLSzXQjGRPbv2RNwsDwpEzPybcqnQ",
+              "640x480": "https://06.img.avito.st/image/1/1.j3J9XLa6I5tL9eGebx6PKqj_JZ_JfytZzP8nk8H3IQ.gyFUhLt4OV6uDQsgcdL3ytdHd1vXPKhjndnLiWhunyM",
+              "75x55": "https://06.img.avito.st/image/1/1.j3J9XLawI5td_k89KlGS-sv9KZFd_k-Zyw.GaH4iBu_Vy2V47k7CRC47DUygCPNi65NeBjRqYZ386E",
+              "80x60": "https://06.img.avito.st/image/1/1.j3J9XLa5I5tr_lk9KlGS-sv7KZFr_Jmby_8nm2v-WZk.yjOdyb2RvfiRUJfzsrpdki9A4NLxjvC4xZ5hS3Rsoqo"
+            }
+          },
+          "price": "200 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.347614",
+            "lng": "48.030178"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2383649530",
+          "uri_mweb": "/astrahan/remont_i_stroitelstvo/izgotovlenie_i_montazhplastikovyh_okon_2383649530?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2860074340,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971740,
+          "title": "Угловой шкаф детский",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://08.img.avito.st/image/1/1.5dGItLa-STj2Ft07zuu8gb4WSz42H-s5hhVLOjgVgzuoFks.RPDyVzZcPp1o5jImHS6Hi84jjYGqdTJGTSZdNMVrTPA",
+              "1280x960": "https://08.img.avito.st/image/1/1.5dGItLawSTi-A8s1zuu8gb4WSzg4HUEyPg.EocZ-99JJmXz1SWS-s7Z1OUFLJIoz16c0OkUKfgMwBM",
+              "140x105": "https://08.img.avito.st/image/1/1.5dGItLa-STimFZk7zuu8gb4WSz42H-s5hhVLOjgV0zjsFks.-8qg0sOPvFgX2gjA3sIJuiO6cVI-3Bj3v9q9b8MU02o",
+              "208x156": "https://08.img.avito.st/image/1/1.5dGItLa1STieFPM4zuu8gb4WSzg2H-s5hhVLOg.lLYE_JkpVoPAS8Ls2bQSdHL8jS2kfn2Y5xEhRT7EYvA",
+              "240x180": "https://08.img.avito.st/image/1/1.5dGItLa1STjeFKM4zuu8gb4WSzg2H6s51hVLOg.TQjgdQM7R3qfiJCbqCL2ZipYdvDxZ9uQ3hbjC8rw2hs",
+              "288x216": "https://08.img.avito.st/image/1/1.5dGItLa1STj-E_s5zuu8gb4WSzg2H4s-jhRLOg.Usvd5Nfbb7QH2MfzGuhNwlksv3W9nHi8T1m0Jxk-bnw",
+              "432x324": "https://08.img.avito.st/image/1/1.5dGItLatSTjeEcM_zuu8gb4WSzo.VG8wPlqEOGDMjcRJtXecPL2dBmiOyvebTwsYAMo3UaY",
+              "640x480": "https://08.img.avito.st/image/1/1.5dGItLa5STi-HYs9zuu8gb4WSz44Fcsw_hBLPDQdQzo.dCAfBEmh5eSArsWZj96TbYe1qB-Ik2O_p4vADB6kSNA",
+              "75x55": "https://08.img.avito.st/image/1/1.5dGItLa3STioFiXKwuDwuj8XSTI2gUpUPhc.XLgj83g9NeRrkQXwaa5zz3L_gnm5-X9sVNmHu8ZQo2I",
+              "80x60": "https://08.img.avito.st/image/1/1.5dGItLa4STieFjPKwuDwuj8XTzI2t0iCPBdLPDy3SkI-.qqctIldMKJVfE1iZ6AG2kRb__bOkLku9aHxkpgQEkUg"
+            }
+          },
+          "price": "2 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.370117",
+            "lng": "48.077721"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2860074340",
+          "uri_mweb": "/astrahan/mebel_i_interer/uglovoy_shkaf_detskiy_2860074340?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2585340297,
+          "category": {
+            "id": 87,
+            "name": "Посуда и товары для кухни"
+          },
+          "time": 1676971714,
+          "title": "Пиала для чая",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://29.img.avito.st/image/1/1.XCMRwra_8MpvYGTJJfd1JdVh9sCvwfFwpWHyzqWp816mYQ.QR7Hi0HcwrUylJOIIsWG23LqVexef8XR6SQkPS7bPF8",
+              "1280x960": "https://29.img.avito.st/image/1/1.XCMRwrax8MondXLHJfd1JdVh8M6ta_rI.xdb5HoCJeL3p35LOAxD8d3oLPGIVqWWdJ687kU-fayU",
+              "140x105": "https://29.img.avito.st/image/1/1.XCMRwra_8Mo_YyDJJfd1JdVh9sCvwfFwpWHyzqX58BqmYQ.l0sWBIXvtC_QAZIn63fKp3w4SF-Pbbf5CaRlRIqk8PA",
+              "208x156": "https://29.img.avito.st/image/1/1.XCMRwra28MoHYkrKJfd1JdVh8MCvwfFwpWHy.kq3iB-q6Kd7rfVZmeyKomAskrlxlFobOsJGW7s6nrm0",
+              "240x180": "https://29.img.avito.st/image/1/1.XCMRwra28MpHYhrKJfd1JdVh8MCvgfEgpWHy.kSITyqZ2DX-tl4kjTUB62L4mfeSLRfN7ySStf6xMikg",
+              "288x216": "https://29.img.avito.st/image/1/1.XCMRwra28MpnZULLJfd1JdVh8MCvofZ4pGHy.djL4lYcqdr5wBTJdbNuBn7Lqcn_E9KXUk1FW-UGpRJY",
+              "432x324": "https://29.img.avito.st/image/1/1.XCMRwrau8MpHZ3rNJfd1JdVh8g.flkP960YQAmUHGCLcNaTLf6kp1L7CiW04cCnQ6rtmjc",
+              "640x480": "https://29.img.avito.st/image/1/1.XCMRwra68MonazLPJfd1JdVh9s6l4fgIoGH0wq1p8g._z6P-FA45DHSzIEoNJ1Y5vfFYyVzCk8tauUpYM0PeMA",
+              "75x55": "https://29.img.avito.st/image/1/1.XCMRwraw8MoxYJxKMeYfuqdj-sAxYJzIpw.-9pLgK7Y7FfXIf8JlWz3HJZtjDJPmDgWwzzS9afe1_8",
+              "80x60": "https://29.img.avito.st/image/1/1.XCMRwra58MoHYIpKMeYfuqdl-sAHYkrKp2H0ygdgisg.5_0tXv0M4w6NgcRI29BuO1qxSyml7XZwArnII9_bVYc"
+            }
+          },
+          "price": "2 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.4052261888821",
+            "lng": "48.0849769940003"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2585340297",
+          "uri_mweb": "/astrahan/posuda_i_tovary_dlya_kuhni/piala_dlya_chaya_2585340297?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2792056652,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971650,
+          "title": "Картина маслом 70х50 см",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://48.img.avito.st/image/1/1.xcxpmba-aSUXO_0mb6KFnF87ayPXMsskZzhrJ9k4oyZJO2s.Ysc5XWxFKpCW7EiNXXF3KdkZIOnulXvdaYAPykxb5-Y",
+              "1280x960": "https://48.img.avito.st/image/1/1.xcxpmbawaSVfLusob6KFnF87ayXZMGEv3w.SxUwPmptfB7mpwSswoOl3HG5Dt4-9SHCxXRQvj9fywU",
+              "140x105": "https://48.img.avito.st/image/1/1.xcxpmba-aSVHOLkmb6KFnF87ayPXMsskZzhrJ9k48yUNO2s.WTzHdMDr3xbOQF_2eBe6VnAKF8YNc5tPwOFIZ3ZZb54",
+              "208x156": "https://48.img.avito.st/image/1/1.xcxpmba1aSV_OdMlb6KFnF87ayXXMsskZzhrJw.gQtdD1_ljAzBzVn4FkJBpi62uRMBW0bjfZ4yQOEl3KQ",
+              "240x180": "https://48.img.avito.st/image/1/1.xcxpmba1aSU_OYMlb6KFnF87ayXXMoskNzhrJw.YGYKBXT-E0-8HYnurD2qSCzuIbqsSMiwW2iVY0plhzM",
+              "288x216": "https://48.img.avito.st/image/1/1.xcxpmba1aSUfPtskb6KFnF87ayXXMqsjbzlrJw.jkvuBq3vhsYbQif3wiEejoYlxmYID5Mc82mjDFJXY1U",
+              "432x324": "https://48.img.avito.st/image/1/1.xcxpmbataSU_POMib6KFnF87ayc.SowwbIJB4TRxFE52wNbuaQWs9O1cD1vPTEtSt-nsD7E",
+              "640x480": "https://48.img.avito.st/image/1/1.xcxpmba5aSVfMKsgb6KFnF87ayPZOOstHz1rIdUwYyc.sI362BYf_z34Xn9Mt1h-QeLWBA0-Ww3zSuytTOIyc5U",
+              "75x55": "https://48.img.avito.st/image/1/1.xcxpmba3aSVJOwWXR9TQp946aS_XrGpJ3zo.42U7BnUx2M5rfCDbG4E3Cfa5qEnBRfDCCZNqNWQMEcI",
+              "80x60": "https://48.img.avito.st/image/1/1.xcxpmba4aSV_OxOXR9TQp946by_Xmmif3TprId2aal_f.NdQBZFfO9NLuJGbmRRWQLwPCc7gskdSM-uCPbCxevh4"
+            }
+          },
+          "price": "5 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.331394",
+            "lng": "48.027313"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2792056652",
+          "uri_mweb": "/astrahan/mebel_i_interer/kartina_maslom_70h50_sm_2792056652?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "reformulationsWidget",
+        "value": {
+          "titleText": "Возможно, вы ищете это",
+          "list": [
+            {
+              "title": "Apple",
+              "categoryId": 6,
+              "deeplink": "ru.avito://1/items/search?categoryId=6&context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&locationId=623110&presentationType=serp&query=apple",
+              "url": "/astrahanskaya_oblast/bytovaya_elektronika?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&q=apple"
+            },
+            {
+              "title": "A7",
+              "categoryId": 1,
+              "deeplink": "ru.avito://1/items/search?categoryId=1&context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&locationId=623110&presentationType=serp&query=a7",
+              "url": "/astrahanskaya_oblast/transport?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&q=a7"
+            },
+            {
+              "title": "Airpods",
+              "categoryId": 32,
+              "deeplink": "ru.avito://1/items/search?categoryId=32&context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&locationId=623110&params%5B132%5D=5034&presentationType=serp&query=airpods",
+              "url": "/astrahanskaya_oblast/audio_i_video?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&q=airpods"
+            },
+            {
+              "title": "Iphone",
+              "categoryId": 0,
+              "deeplink": "ru.avito://1/items/search?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&locationId=623110&presentationType=serp&query=iphone",
+              "url": "/astrahanskaya_oblast?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&q=iphone"
+            },
+            {
+              "title": "Airpods pro",
+              "categoryId": 32,
+              "deeplink": "ru.avito://1/items/search?categoryId=32&context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&locationId=623110&params%5B132%5D=5034&presentationType=serp&query=airpods+pro",
+              "url": "/astrahanskaya_oblast/audio_i_video?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&q=airpods+pro"
+            },
+            {
+              "title": "А5",
+              "categoryId": 10,
+              "deeplink": "ru.avito://1/items/search?categoryId=10&context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&locationId=623110&presentationType=serp&query=%D0%B05",
+              "url": "/astrahanskaya_oblast/zapchasti_i_aksessuary?context=H4sIAAAAAAAA_0q0MrKqLraysFJKK8rPDUhMT1WyLrYyMrBSKkpNyy_KLc1JLMnMzysOz0xJTy0ByVlClMYXEFRbCwgAAP__1PUHUV0AAAA&q=%D0%B05"
+            }
+          ],
+          "type": "reformulationsWidget"
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 1141565327,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676971572,
+          "title": "Песок для строительства",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://23.img.avito.st/image/1/1._q2hlba_UkTfN8ZH0Z6p7Q02VE4fllP-FTZQQBX-UdAWNg.H9A7Hc9VBiJR-b1lOe6D8modmnfJMnWfljUqBqRrwkg",
+              "1280x960": "https://23.img.avito.st/image/1/1._q2hlbaxUkSXItBJ0Z6p7Q02UkAdPFhG.-GoXpqKdNaPkQewmNIi9QP7g8eRxnXpAxFY-L2vhVQg",
+              "140x105": "https://23.img.avito.st/image/1/1._q2hlba_UkSPNIJH0Z6p7Q02VE4fllP-FTZQQBWuUpQWNg.IV3NqVzy_9PDB2JxFNTv_utRbTSNwxv7m9SCqWwEmqo",
+              "208x156": "https://23.img.avito.st/image/1/1._q2hlba2UkS3NehE0Z6p7Q02Uk4fllP-FTZQ.dE5uy4o-gr5_ckcRzw9QFh0M8yBIaUMX4I8YyMRnwSo",
+              "240x180": "https://23.img.avito.st/image/1/1._q2hlba2UkT3NbhE0Z6p7Q02Uk4f1lOuFTZQ.B5tqhCQZ74fZfayZVyH0vmP4Nn98n0gTSwOje5C7KoA",
+              "288x216": "https://23.img.avito.st/image/1/1._q2hlba2UkTXMuBF0Z6p7Q02Uk4f9lT2FDZQ.k_SmljMMmcdOgKZpJ4QcItYkrjamrPb6cwJHTGfDUn8",
+              "432x324": "https://23.img.avito.st/image/1/1._q2hlbauUkT3MNhD0Z6p7Q02UA.Gqhn5zFkm96SVqlLmSo5NLdbPehJoJWliMdlr_nDD0M",
+              "640x480": "https://23.img.avito.st/image/1/1._q2hlba6UkSXPJBB0Z6p7Q02VEAVtlqGEDZWTB0-UA.Ozcmtsu8fnxd-yDQgD0MfWqX860Sw__qClpcPgtpwWM",
+              "75x55": "https://23.img.avito.st/image/1/1._q2hlbawUkSBNz6Av8_7XBc0WE6BNz5GFw.QkPVTADG61UhpUJ7Z7S2WtSXfSE9bTCFehZbIYbmwCU",
+              "80x60": "https://23.img.avito.st/image/1/1._q2hlba5UkS3NyiAv8_7XBcyWE63NehEFzZWRLc3KEY.lYuXqPyNsI3Am2g1JHgBj8ot8rBovSChfAkPjQssPNA"
+            }
+          },
+          "price": "1 100 ₽ за тонну",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.347869",
+            "lng": "48.033574"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=1141565327",
+          "uri_mweb": "/astrahan/remont_i_stroitelstvo/pesok_dlya_stroitelstva_1141565327?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2859959956,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971555,
+          "title": "Полка настенная",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://84.img.avito.st/image/1/1.SXzFALa-5ZW7onGW220XLPOi55N7q0eUy6Hnl3WhL5blouc.gzRoUzw9ofM72rFmNcS30GXcxcVHNeF0JbhHrajnCCA",
+              "1280x960": "https://84.img.avito.st/image/1/1.SXzFALaw5ZXzt2eY220XLPOi55V1qe2fcw.TLgpg9Z2qM6I3oEt9K1GioFnmA3ofAPUxMqdmrXBTkc",
+              "140x105": "https://84.img.avito.st/image/1/1.SXzFALa-5ZXroTWW220XLPOi55N7q0eUy6Hnl3Whf5Whouc.l0pfA6tA1PqPOAsqgM-cJSwj_muY2EjQKIWIou0ByoU",
+              "208x156": "https://84.img.avito.st/image/1/1.SXzFALa15ZXToF-V220XLPOi55V7q0eUy6Hnlw.bMmkgyjJGoTe9lOZJvZZjvYnHmqLd0j4KBxHTdC4VS4",
+              "240x180": "https://84.img.avito.st/image/1/1.SXzFALa15ZWToA-V220XLPOi55V7qweUm6Hnlw.rVdp69i2fQuSlJgH1YCqmnI24FbyAc2U-9GfDlYfG3g",
+              "288x216": "https://84.img.avito.st/image/1/1.SXzFALa15ZWzp1eU220XLPOi55V7qyeTw6Dnlw.SIvkGrOw5VyOWoxzZjfQJ57BI5R8uVlYy2GjOMj59Jw",
+              "432x324": "https://84.img.avito.st/image/1/1.SXzFALat5ZWTpW-S220XLPOi55c.CoXwooDUqBkh4eDd8jPMAo-8ooju44Ol8NQRli9rwIg",
+              "640x480": "https://84.img.avito.st/image/1/1.SXzFALa55ZXzqSeQ220XLPOi55N1oWeds6TnkXmp75c.XUoafENTwQRFd0KPSkbKRkIdM_1pAaaGB_0l9eMxZW0",
+              "75x55": "https://84.img.avito.st/image/1/1.SXzFALa35ZXlook_vVNcF3Kj5Z97Neb5c6M.xnoaNtP-jeeIuoAiP_io9sm5YIRiJdOz9T-zVv0JZ-g",
+              "80x60": "https://84.img.avito.st/image/1/1.SXzFALa45ZXTop8_vVNcF3Kj4597A-QvcaPnkXED5u9z.70OH9Yz3u5DpEbOBAUuRa39rstYMx3oEpBBtHDvnzkg"
+            }
+          },
+          "price": "3 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.370117",
+            "lng": "48.077721"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2859959956",
+          "uri_mweb": "/astrahan/mebel_i_interer/polka_nastennaya_2859959956?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2617155688,
+          "category": {
+            "id": 87,
+            "name": "Посуда и товары для кухни"
+          },
+          "time": 1676971545,
+          "title": "Менажница",
+          "images": {
+            "count": 9,
+            "main": {
+              "100x75": "https://20.img.avito.st/image/1/1.GdAe17a_tTlgdSE6IN89-t50szOg1LSDqnS3Paq8tq2pdA.wA5kSjXDofnJOudxE_DSo5rNWCGXmnUhOeHwF6lDIrY",
+              "1280x960": "https://20.img.avito.st/image/1/1.GdAe17axtTkoYDc0IN89-t50tT2ifr87.p4lKTdz-FNuLBfpoYYtGStirsWsKsrrJS4PRLBHsxs8",
+              "140x105": "https://20.img.avito.st/image/1/1.GdAe17a_tTkwdmU6IN89-t50szOg1LSDqnS3ParstempdA.whle0gAnn59FnKybd0K_5_8_bdh2KcgTqtRKuYeMOTQ",
+              "208x156": "https://20.img.avito.st/image/1/1.GdAe17a2tTkIdw85IN89-t50tTOg1LSDqnS3.jNCxNpWvDIcG7EfW2rtXur-Ice-UP1x3DQ-vMfdN9aw",
+              "240x180": "https://20.img.avito.st/image/1/1.GdAe17a2tTlId185IN89-t50tTOglLTTqnS3.NMVwcED_UTg30tmL3OIxrBeDzMZLHwCe5BcUgsiR1pM",
+              "288x216": "https://20.img.avito.st/image/1/1.GdAe17a2tTlocAc4IN89-t50tTOgtLOLq3S3.KrSH3ZsIsHA9NwRMLtSnOwG9D7lY18WrzwZp0fIVA_Y",
+              "432x324": "https://20.img.avito.st/image/1/1.GdAe17autTlIcj8-IN89-t50tw.gBbqpI-ssP1hc6SIIyrRqP39DwfbU9if4UHIocCZrWQ",
+              "640x480": "https://20.img.avito.st/image/1/1.GdAe17a6tTkofnc8IN89-t50sz2q9L37r3SxMaJ8tw.xB7FsmRwvCW4kErur-NOqzIdKBVCWHlShjS1E_MfOuU",
+              "75x55": "https://20.img.avito.st/image/1/1.GdAe17awtTk-ddmzA_52Tah2vzM-ddk7qA.Z_igVxW14DJwLBZxmFj51YNYqy8muCBhq_ZBKKtnxFs",
+              "80x60": "https://20.img.avito.st/image/1/1.GdAe17a5tTkIdc-zA_52TahwvzMIdw85qHSxOQh1zzs.YPAD9gsW3az4CTKeEHql3XwtThwhzMARLqChy0eLPUM"
+            }
+          },
+          "price": "700 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.351122",
+            "lng": "48.072238"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2617155688",
+          "uri_mweb": "/astrahan/posuda_i_tovary_dlya_kuhni/menazhnitsa_2617155688?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2476411940,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971510,
+          "title": "Газовый мебельный лифт грузоподъемностью 60N",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://74.img.avito.st/image/1/1.WzMZlra_99pnNGPZI6cXe8Y18dCnlfZgrTX13q399E6uNQ.UqPRTWYniWuEiPJgzIqGPeDI4rJWwXSC7EPHORMK8Eg",
+              "1280x960": "https://74.img.avito.st/image/1/1.WzMZlrax99ovIXXXI6cXe8Y1996lP_3Y.jIYzvMf-YeMeLaXaMtqMelBQ2Vhw9SYIruujRNXosYI",
+              "140x105": "https://74.img.avito.st/image/1/1.WzMZlra_99o3NyfZI6cXe8Y18dCnlfZgrTX13q2t9wquNQ.8TpiRJNAw4xLieMqVzcmzJx01qR5tjhDpFeTv6FgW8s",
+              "208x156": "https://74.img.avito.st/image/1/1.WzMZlra299oPNk3aI6cXe8Y199CnlfZgrTX1.3oj67aozmdQG6PJzuMcF5-jEhUqnMFDs6DHvyjYIToQ",
+              "240x180": "https://74.img.avito.st/image/1/1.WzMZlra299pPNh3aI6cXe8Y199Cn1fYwrTX1.rGYc8CCipYIPBGX9SAIaysUn6JY4HQw06xw10R7vJSU",
+              "288x216": "https://74.img.avito.st/image/1/1.WzMZlra299pvMUXbI6cXe8Y199Cn9fForDX1.EkEwqLqhV98YJDvyMsad10wBZHQQ6WDxgU3IRfPe4TM",
+              "432x324": "https://74.img.avito.st/image/1/1.WzMZlrau99pPM33dI6cXe8Y19Q.e_w1A7IfVvlh-uz-3QoEGdBA8_UC52PdgvReHEq1yH4",
+              "640x480": "https://74.img.avito.st/image/1/1.WzMZlra699ovPzXfI6cXe8Y18d6ttf8YqDXz0qU99Q.2oAw5K9LJlIEAlx_tremOkuFJN97PG04S7b-biQJ41A",
+              "75x55": "https://74.img.avito.st/image/1/1.WzMZlraw99o5NJtUPddWsa83_dA5NJvYrw.0TWdCIxiIQrC87Npzt-uV9Q5K2gZqEOpZmsmUOT3Doo",
+              "80x60": "https://74.img.avito.st/image/1/1.WzMZlra599oPNI1UPddWsa8x_dAPNk3arzXz2g80jdg.pqrcv-jX_nunP71d8evKR-A3c6o47XY6XSUDjeM-lGM"
+            }
+          },
+          "price": "400 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.347614",
+            "lng": "48.030178"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2476411940",
+          "uri_mweb": "/astrahan/mebel_i_interer/gazovyy_mebelnyy_lift_gruzopodemnostyu_60n_2476411940?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2783718263,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971467,
+          "title": "Ковер",
+          "images": {
+            "count": 4,
+            "main": {
+              "100x75": "https://98.img.avito.st/image/1/1.mwMo_7a-N-pWXaPpEuHbUx5dNeyWVJXrJl416Jhe_ekIXTU.jcugdyGw4nKQ2gD8Fb8qt2cuPtwn2Gg6p0TzGgzwRXQ",
+              "1280x960": "https://98.img.avito.st/image/1/1.mwMo_7awN-oeSLXnEuHbUx5dNeqYVj_gng.niLInDBsrtPmlyBhZ8WfdsiIhUxau5LXUYB5l1Y2bzo",
+              "140x105": "https://98.img.avito.st/image/1/1.mwMo_7a-N-oGXufpEuHbUx5dNeyWVJXrJl416JherepMXTU.CihRFkbuPR7S3xHo7byyeXHgbWnxBWpaMTyCez3QnL0",
+              "208x156": "https://98.img.avito.st/image/1/1.mwMo_7a1N-o-X43qEuHbUx5dNeqWVJXrJl416A.zNJeN4qNbC_cEkK2TVtE_d7UoM1jsS8bnPaMlFNM7IQ",
+              "240x180": "https://98.img.avito.st/image/1/1.mwMo_7a1N-p-X93qEuHbUx5dNeqWVNXrdl416A.r1PaD9ke6xoNJeNL8lN7BZxEExtySQ4o93ftoYiOeYg",
+              "288x216": "https://98.img.avito.st/image/1/1.mwMo_7a1N-peWIXrEuHbUx5dNeqWVPXsLl816A.KrROkEqLQZSuW8hLHD9XvjH-uYWnt4Xvi6I6aw49WoI",
+              "432x324": "https://98.img.avito.st/image/1/1.mwMo_7atN-p-Wr3tEuHbUx5dNeg.UBldCLWbFJlNIgX7sapDA4iNDDIlgQtaIqvQvTPHWa8",
+              "640x480": "https://98.img.avito.st/image/1/1.mwMo_7a5N-oeVvXvEuHbUx5dNeyYXrXiXls17pRWPeg.WNPcR8uyIkLI4Bx4Y64bDbQjOAa2x2d6YBokxrW44po",
+              "75x55": "https://98.img.avito.st/image/1/1.mwMo_7a3N-oIXVtkI7KOaJ9cN-CWyjSGnlw.QZpT5Dc0jNjToqzx6cPWVP3MvUaCYmOD7UjiBfufE-w",
+              "80x60": "https://98.img.avito.st/image/1/1.mwMo_7a4N-o-XU1kI7KOaJ9cMeCW_DZQnFw17pz8NJCe.v3nlJpFWnOuY5vruOie7sPuA-0p2iluIvAXIbbKuEuI"
+            }
+          },
+          "price": "2 300 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.362504",
+            "lng": "48.003706"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2783718263",
+          "uri_mweb": "/astrahan/mebel_i_interer/kover_2783718263?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2691217489,
+          "category": {
+            "id": 21,
+            "name": "Бытовая техника"
+          },
+          "time": 1676971466,
+          "title": "Электрогрелка СССР",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://12.img.avito.st/image/1/1.eX6Zd7a_1Zfn1UGU5wZjf1bU050ndNQtLdTXky0c1gMu1A.if0AKv2uvip10G44jqHy2zDZDpZcjioHDrSyvRAE8dY",
+              "1280x960": "https://12.img.avito.st/image/1/1.eX6Zd7ax1ZevwFea5wZjf1bU1ZMl3t-V.JsgFtFXm-x5lawWZ8eCtfdXIQMrcT1pdhLsFPQfHw-Q",
+              "140x105": "https://12.img.avito.st/image/1/1.eX6Zd7a_1Ze31gWU5wZjf1bU050ndNQtLdTXky1M1Ucu1A.4HXDaOi-8nZcXZAORLXMNAeyAcNpsj1AoHkjuPYPKfA",
+              "208x156": "https://12.img.avito.st/image/1/1.eX6Zd7a21ZeP12-X5wZjf1bU1Z0ndNQtLdTX.CJT0Twmv6bFGUnIk4yH0jKlBgXWgpixqG-wql1oACe8",
+              "240x180": "https://12.img.avito.st/image/1/1.eX6Zd7a21ZfP1z-X5wZjf1bU1Z0nNNR9LdTX.L64aQOzmy5MVe1UNcYDLbR7U_KZWXz03Mw2cj32zLT0",
+              "288x216": "https://12.img.avito.st/image/1/1.eX6Zd7a21Zfv0GeW5wZjf1bU1Z0nFNMlLNTX.SavE9qe9c_uXggzdf9ZADxM_aGmNWeqTK6Sm5DlNTwo",
+              "432x324": "https://12.img.avito.st/image/1/1.eX6Zd7au1ZfP0l-Q5wZjf1bU1w.ygRUX5AOFefFmhzJeaE7POUb_U4kKEaW2nit4I_9AYI",
+              "640x480": "https://12.img.avito.st/image/1/1.eX6Zd7a61Zev3heS5wZjf1bU05MtVN1VKNTRnyXc1w.3DtlPSSi7NVMGBx7alVn3ifBNArMxazBUgYQuO4-AUc",
+              "75x55": "https://12.img.avito.st/image/1/1.eX6Zd7aw1Ze51bld_WA97C_W35251bmVLw.3h9t80DqzIdGQZzbRmoLW0BjvbIAHYWYieJ9c4Vv_Hc",
+              "80x60": "https://12.img.avito.st/image/1/1.eX6Zd7a51ZeP1a9d_WA97C_Q352P12-XL9TRl4_Vr5U.X5GG-xtaaBt7hLeCyGdNohyirOY1FK0tdixV09_4i4w"
+            }
+          },
+          "price": "200 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.33364",
+            "lng": "48.014736"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2691217489",
+          "uri_mweb": "/astrahan/bytovaya_tehnika/elektrogrelka_sssr_2691217489?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2295723673,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971459,
+          "title": "Шкаф",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://34.img.avito.st/image/1/1.b5R0Mba_w30Kk1d-JkACzpmSxXfKMsLHwJLBecBawOnDkg.Kp_BVdHWUoLWgReuisG30KGaIYIW1TeqTW6GL_CCy-c",
+              "1280x960": "https://34.img.avito.st/image/1/1.b5R0Mbaxw31ChkFwJkACzpmSw3nImMl_.tc7y7w0eV9BdxohuEG5igti00mKeCNx64h-A6rm8H6I",
+              "140x105": "https://34.img.avito.st/image/1/1.b5R0Mba_w31akBN-JkACzpmSxXfKMsLHwJLBecAKw63Dkg.ihYWy-c4zI9bHqvbZlSMwhuZ-mZKQA4e_WYU2iQ8M1s",
+              "208x156": "https://34.img.avito.st/image/1/1.b5R0Mba2w31ikXl9JkACzpmSw3fKMsLHwJLB.9gyV4r-I-pziJ2lucKZaDmSHTzCRCkLjYIisrmB559c",
+              "240x180": "https://34.img.avito.st/image/1/1.b5R0Mba2w30ikSl9JkACzpmSw3fKcsKXwJLB.p6IqQe7UMIvirANm4yWPyZeQ7-CNY0-2v-orgobrb94",
+              "288x216": "https://34.img.avito.st/image/1/1.b5R0Mba2w30ClnF8JkACzpmSw3fKUsXPwZLB.HdcrGU2uR879FXFFyIg4n1ZCLn7uzDdadYNSNzCG75k",
+              "432x324": "https://34.img.avito.st/image/1/1.b5R0Mbauw30ilEl6JkACzpmSwQ.bllF_Ad6d_3zGSMrxET8VBwarLSpEfuc8PYgW98ovOw",
+              "640x480": "https://34.img.avito.st/image/1/1.b5R0Mba6w31CmAF4JkACzpmSxXnAEsu_xZLHdciawQ.iHM7z7ztfblnDmjYLxtWXibwcKLPd78iixWsDlsrcag",
+              "75x55": "https://34.img.avito.st/image/1/1.b5R0Mbaww31Uk6-bEFFwJMKQyXdUk69_wg.C_7JryqkaJKAPU7oqKVyCd0pFoJYK0os6fhxdi__QpY",
+              "80x60": "https://34.img.avito.st/image/1/1.b5R0Mba5w31ik7mbEFFwJMKWyXdikXl9wpLHfWKTuX8.G8lD9bXUHbeRK3zoux8qZ29wcxmwu87yooyrnlBMZZU"
+            }
+          },
+          "price": "6 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.403417",
+            "lng": "48.094462"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2295723673",
+          "uri_mweb": "/astrahan/mebel_i_interer/shkaf_2295723673?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2614919844,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971393,
+          "title": "Двери для шкафа купе зеркальные",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://84.img.avito.st/image/1/1.CdSDH7a_pT39vTE-nSs1lka8ozc9HKSHN7ynOTd0pqk0vA.mFadV1Bps3Kn1u5V1lSzY115hiV6m-gQgdGXGI2Llts",
+              "1280x960": "https://84.img.avito.st/image/1/1.CdSDH7axpT21qCcwnSs1lka8pTk_tq8_.on_6iEag_mOG86PScL_i79hAkKssgdiXW0sp7PWIdtQ",
+              "140x105": "https://84.img.avito.st/image/1/1.CdSDH7a_pT2tvnU-nSs1lka8ozc9HKSHN7ynOTckpe00vA.FpglDe2j7LAmgvxSWmymEQIFcwS8IyRJu214nFmJ_Fs",
+              "208x156": "https://84.img.avito.st/image/1/1.CdSDH7a2pT2Vvx89nSs1lka8pTc9HKSHN7yn.aJY8005yFO81lXU8XUF7m8SAwjvM0MzOhcgZsfm0Vmk",
+              "240x180": "https://84.img.avito.st/image/1/1.CdSDH7a2pT3Vv089nSs1lka8pTc9XKTXN7yn.iBVl9HlqnuvxFPdWhqldLBQ-Pp3eCUOx8FfkuhxZLZo",
+              "288x216": "https://84.img.avito.st/image/1/1.CdSDH7a2pT31uBc8nSs1lka8pTc9fKOPNryn.4CdOeh4xfK2xk1-803-rswKtrJwP2S_vIuLpzgoMjiQ",
+              "432x324": "https://84.img.avito.st/image/1/1.CdSDH7aupT3Vui86nSs1lka8pw.l2rlhMDSvfsESg5mfO4RcWADenj5WY53LPGayxutO_g",
+              "640x480": "https://84.img.avito.st/image/1/1.CdSDH7a6pT21tmc4nSs1lka8ozk3PK3_MryhNT-0pw.JuZwaZhgLeofIbzmDb8jdp9TOQRzz7_p0g8iIN-bKvo",
+              "75x55": "https://84.img.avito.st/image/1/1.CdSDH7awpT2jvcmXoi4OTDW-rzejvck_NQ.2Z_B8tvSY6Nv4hybSKxbIiPsWKeoBw068Ptmcf-sX4k",
+              "80x60": "https://84.img.avito.st/image/1/1.CdSDH7a5pT2Vvd-Xoi4OTDW4rzeVvx89NbyhPZW93z8.IZEyUV-d4mTBNV5o8aLYvTF9Z7DtrX-S4IyyinFAwlA"
+            }
+          },
+          "price": "6 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.370869",
+            "lng": "48.076918"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2614919844",
+          "uri_mweb": "/astrahan/mebel_i_interer/dveri_dlya_shkafa_kupe_zerkalnye_2614919844?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2494664144,
+          "category": {
+            "id": 87,
+            "name": "Посуда и товары для кухни"
+          },
+          "time": 1676971380,
+          "title": "Доска для нарезки",
+          "images": {
+            "count": 1,
+            "main": {
+              "100x75": "https://97.img.avito.st/image/1/1.iHBTqLa_JJktCrCaT8KcFosLIpPtqyUj5wsmnefDJw3kCw.IpyJIBLXuK8q-NzrZloOmLwVZ9l8V87AlZMsTH1kbCo",
+              "1280x960": "https://97.img.avito.st/image/1/1.iHBTqLaxJJllH6aUT8KcFosLJJ3vAS6b.ty5g8WEkxVAFq4AkBItL-gu0YZGEblmDxW0ITDqu5oY",
+              "140x105": "https://97.img.avito.st/image/1/1.iHBTqLa_JJl9CfSaT8KcFosLIpPtqyUj5wsmneeTJEnkCw.Ci5Mca3IIgxGaTuuY7DyaPniWpESW-E0nG99QqIFEYc",
+              "208x156": "https://97.img.avito.st/image/1/1.iHBTqLa2JJlFCJ6ZT8KcFosLJJPtqyUj5wsm.L9gVSCHIlFxEZUkIcfzroCzWp4hKhpZLnWGasxfV2LI",
+              "240x180": "https://97.img.avito.st/image/1/1.iHBTqLa2JJkFCM6ZT8KcFosLJJPt6yVz5wsm.3DjSzb_4fbDvheV_slie8KFEHIbbVyG6JZR4jTRZTaY",
+              "288x216": "https://97.img.avito.st/image/1/1.iHBTqLa2JJklD5aYT8KcFosLJJPtyyIr5gsm.MBqUzUPWb7t5STjenLmP8ndiLQcNAMQMNafZk3jzDb4",
+              "432x324": "https://97.img.avito.st/image/1/1.iHBTqLauJJkFDa6eT8KcFosLJg.Y2EYhw0vFk0PYxITm4lV5cwQYwpmuBhnuryZ2ql16i8",
+              "640x480": "https://97.img.avito.st/image/1/1.iHBTqLa6JJllAeacT8KcFosLIp3niyxb4gsgke8DJg.uYESa2SPF41uDpw8LpSveytbP_jIGurvoUpLvYwiezY",
+              "75x55": "https://97.img.avito.st/image/1/1.iHBTqLawJJlzCkgxLLGr9eUJLpNzCkib5Q.vMdtgBqi-ITHucuxiPLU2LZM0rFUzoCaVDmmqaVWaz4",
+              "80x60": "https://97.img.avito.st/image/1/1.iHBTqLa5JJlFCl4xLLGr9eUPLpNFCJ6Z5QsgmUUKXps.pE80q9FAHCnJBSSgq_dmfNTFvTDwp-Cc2RSI-4FIHOE"
+            }
+          },
+          "price": "300 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.4102838724746",
+            "lng": "48.0865085071529"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2494664144",
+          "uri_mweb": "/astrahan/posuda_i_tovary_dlya_kuhni/doska_dlya_narezki_2494664144?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2552974902,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676971380,
+          "title": "Карнизы / Галтели / Плинтуса / Молдинги из гипса",
+          "images": {
+            "count": 10,
+            "main": {
+              "100x75": "https://45.img.avito.st/image/1/1.LJyvBra_gHXRpBR2-0olrWilhn8RBYHPG6WCcRttg-EYpQ.zOJDScTmePaWm_u5_A7Ke5fJIJ9WSX7LBZprcyNVqOU",
+              "1280x960": "https://45.img.avito.st/image/1/1.LJyvBraxgHWZsQJ4-0olrWilgHETr4p3.D7bYnAJpCt3V5GIl3H61sQUSoKULREYCjiHZ5kvLJJc",
+              "140x105": "https://45.img.avito.st/image/1/1.LJyvBra_gHWBp1B2-0olrWilhn8RBYHPG6WCcRs9gKUYpQ.WmNBIFYjVQXKZCHMAzf6lxzlO0_j0F2kr6EDuw4sXvs",
+              "208x156": "https://45.img.avito.st/image/1/1.LJyvBra2gHW5pjp1-0olrWilgH8RBYHPG6WC.R3XrS4AVt8TVpfe6lE0YmawzPP55OwMdjmn5_mpF1tE",
+              "240x180": "https://45.img.avito.st/image/1/1.LJyvBra2gHX5pmp1-0olrWilgH8RRYGfG6WC.nEqlpGNNPP8oGemEiwpPER2ohAwGIIrvM9F6jMAabR0",
+              "288x216": "https://45.img.avito.st/image/1/1.LJyvBra2gHXZoTJ0-0olrWilgH8RZYbHGqWC.1xgPjIM18LZVzDBpYaCFFWOTbAMGT_LXiWIMaBPWSEw",
+              "432x324": "https://45.img.avito.st/image/1/1.LJyvBraugHX5owpy-0olrWilgg.Mws6THbGofEvg3weADjjsHEURoq8jp77tnZef7JgeUQ",
+              "640x480": "https://45.img.avito.st/image/1/1.LJyvBra6gHWZr0Jw-0olrWilhnEbJYi3HqWEfROtgg.IPttOFprMkeaVjPwnOXi3rzn6r9x4AotgI8TBI2_kMU",
+              "75x55": "https://45.img.avito.st/image/1/1.LJyvBrawgHWPpOyV9gJYBhmnin-PpOx3GQ.1ApGIHwTcbK7SqL-1gBSnBcP6xpLZlMLMcqO1iH3b7s",
+              "80x60": "https://45.img.avito.st/image/1/1.LJyvBra5gHW5pPqV9gJYBhmhin-5pjp1GaWEdbmk-nc.vMRnxfq1YdlnqRmlm6asVgtxqD2Gh5fBV6Mar2_9v08"
+            }
+          },
+          "price": "250 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.347614",
+            "lng": "48.030178"
+          },
+          "userType": "private",
+          "hasVideo": true,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2552974902",
+          "uri_mweb": "/astrahan/remont_i_stroitelstvo/karnizy_galteli_plintusa_moldingi_iz_gipsa_2552974902?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2152964060,
+          "category": {
+            "id": 82,
+            "name": "Продукты питания"
+          },
+          "time": 1676971376,
+          "title": "Рыба вобла чищенная С икрой",
+          "images": {
+            "count": 5,
+            "main": {
+              "100x75": "https://76.img.avito.st/image/1/1.3aNWULa_cUoo8uVJYCPJxp_zd0DoU3Dw4vNzTuI7ct7h8w.Ty6YS8B84jb98pwtL9KCuetmW-0vdwtdVOc7YVBWIP0",
+              "1280x960": "https://76.img.avito.st/image/1/1.3aNWULaxcUpg5_NHYCPJxp_zcU7q-XtI.FSd9vA8K8l_vLQmp12fscJM9VSnbRf0yQ_JUPuMJuGU",
+              "140x105": "https://76.img.avito.st/image/1/1.3aNWULa_cUp48aFJYCPJxp_zd0DoU3Dw4vNzTuJrcZrh8w.tJGdow_-yXdQGj5lQDDQXOrgiSb2YIYXqa7ydrwUImc",
+              "208x156": "https://76.img.avito.st/image/1/1.3aNWULa2cUpA8MtKYCPJxp_zcUDoU3Dw4vNz.7UPAMGpCl9ZNdoQzGxu5meJULNVLHVP6WxOBrnGc_-c",
+              "240x180": "https://76.img.avito.st/image/1/1.3aNWULa2cUoA8JtKYCPJxp_zcUDoE3Cg4vNz.sJpKWDt_wQhZ5UESYTST_xbBinDqi_f-TDl7s3WLHrs",
+              "288x216": "https://76.img.avito.st/image/1/1.3aNWULa2cUog98NLYCPJxp_zcUDoM3f44_Nz.c4nN2w36jEGXh9IVIPMnU8IN5UV6Xq9vvrZlydGsXag",
+              "432x324": "https://76.img.avito.st/image/1/1.3aNWULaucUoA9ftNYCPJxp_zcw.G_iI-1Z0QLN1iHX3ILFnfs_wJqTYClAv31JD8EvNgP0",
+              "640x480": "https://76.img.avito.st/image/1/1.3aNWULa6cUpg-bNPYCPJxp_zd07ic3mI5_N1Qur7cw.CUiaASHqG-FEObYwoIWe1OiS399SdOUEMWifH9UlJNU",
+              "75x55": "https://76.img.avito.st/image/1/1.3aNWULawcUp28h3IMEn9N-Dxe0B28h1I4A.USBcrqZs9XcPPdYL0pQWedouUCHTDR37acpbhacJW6g",
+              "80x60": "https://76.img.avito.st/image/1/1.3aNWULa5cUpA8gvIMEn9N-D3e0BA8MtK4PN1SkDyC0g.-QoMJqKb2sYqdNKEv4c5FJGfcNQDi03mM2qG0RItWes"
+            }
+          },
+          "price": "500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Нариманов"
+            }
+          ],
+          "location": "Нариманов",
+          "address": "",
+          "coords": {
+            "lat": "46.851463",
+            "lng": "47.466189"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2152964060",
+          "uri_mweb": "/narimanov/produkty_pitaniya/ryba_vobla_chischennaya_s_ikroy_2152964060?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2766938598,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971226,
+          "title": "Лампочка, Bluetooth, колонка",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://22.img.avito.st/image/1/1.AwPx37a-r-qPfTvp--d1U8d9rexPdA3r_36t6EF-ZenRfa0.Q02RXozJ1dFPsUcalvsL3As81scRuedblxq6U4UWUXc",
+              "1280x960": "https://22.img.avito.st/image/1/1.AwPx37awr-rHaC3n--d1U8d9repBdqfgRw.XUvwDBVa2Mpvz4K8ZAHDfopXB5GeEUgiOJqTUICHapY",
+              "140x105": "https://22.img.avito.st/image/1/1.AwPx37a-r-rffn_p--d1U8d9rexPdA3r_36t6EF-NeqVfa0.iZqzsVT5fcm8ff9wkawJtFzocvd9m0Db_5qdJu4SwAQ",
+              "208x156": "https://22.img.avito.st/image/1/1.AwPx37a1r-rnfxXq--d1U8d9repPdA3r_36t6A.YlRZC8zVGxJq_PVOBkGmfplYv6iYVmHXC9BcRDshQkQ",
+              "240x180": "https://22.img.avito.st/image/1/1.AwPx37a1r-qnf0Xq--d1U8d9repPdE3rr36t6A.431HpVih4-ttMNmsFseKbsX_JR89B3zGNAre5B1Qakg",
+              "288x216": "https://22.img.avito.st/image/1/1.AwPx37a1r-qHeB3r--d1U8d9repPdG3s93-t6A.qOvJKsh1q5YOmL0JI1Cad5HUP2hV9u49IMsUk8pzVwo",
+              "432x324": "https://22.img.avito.st/image/1/1.AwPx37atr-qneiXt--d1U8d9reg.6GX8Gxqu9TFXHGt_fg13JezDo6pz-QMrSAoPFxY6DqI",
+              "640x480": "https://22.img.avito.st/image/1/1.AwPx37a5r-rHdm3v--d1U8d9rexBfi3ih3ut7k12peg.dj-GOLicNjZzNsfQM8dmseVMjTZdL-rJXJLxl5XICdQ",
+              "75x55": "https://22.img.avito.st/image/1/1.AwPx37a3r-rRfcNU3KQWaEZ8r-BP6qyGR3w.NvNBLnZpRozM4o4V5KrMR5PmBe7CUJTBm9ygi9WRXac",
+              "80x60": "https://22.img.avito.st/image/1/1.AwPx37a4r-rnfdVU3KQWaEZ8qeBP3K5QRXyt7kXcrJBH.dd6252gEYmIvrfXPGS8fmULKY8AcazADi2UA6fz2idE"
+            }
+          },
+          "price": "600 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.35610929901139",
+            "lng": "48.0747505774215"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2766938598",
+          "uri_mweb": "/astrahan/mebel_i_interer/lampochka_bluetooth_kolonka_2766938598?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "badgeBar": {
+            "badges": [
+              {
+                "id": 2293,
+                "title": "14 дней на возврат",
+                "style": {
+                  "fontColor": {
+                    "value": "#000000",
+                    "valueDark": "#E3E3E3"
+                  },
+                  "backgroundColor": {
+                    "value": "#B9ED85",
+                    "valueDark": "#124D04"
+                  }
+                }
+              }
+            ]
+          },
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2386174810,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676971224,
+          "title": "Готовые ворота и калитка",
+          "images": {
+            "count": 4,
+            "main": {
+              "100x75": "https://74.img.avito.st/image/1/1.czj-XLa_39GA_kvSlBVGdSv_2dtAX95rSv_d1Uo33EVJ_w.egzojMn62AkA_vOpE8ByLZnQAQWSiAsdk-EclFG_8L0",
+              "1280x960": "https://74.img.avito.st/image/1/1.czj-XLax39HI613clBVGdSv_39VC9dXT.bX2iFIFg2sbB4AJVyliwHyJL7eRA0EfyKqoZ5biylQs",
+              "140x105": "https://74.img.avito.st/image/1/1.czj-XLa_39HQ_Q_SlBVGdSv_2dtAX95rSv_d1Upn3wFJ_w.65RHCYnHP9d75woS_8PWOINICw1XYsB8JvBsD6DDccE",
+              "208x156": "https://74.img.avito.st/image/1/1.czj-XLa239Ho_GXRlBVGdSv_39tAX95rSv_d.IjEgCGx9-YcuV4UtMLLmBZ5DBUhqCftrfSyaxL1PG5k",
+              "240x180": "https://74.img.avito.st/image/1/1.czj-XLa239Go_DXRlBVGdSv_39tAH947Sv_d.5ztLUcE-CYY2gzQ908xeJwG39ODzziyM909C1iqTYxU",
+              "288x216": "https://74.img.avito.st/image/1/1.czj-XLa239GI-23QlBVGdSv_39tAP9ljS__d.sNIUBhfQ67AM8dDebBUZFSPid2WDd1j-5uKw5pHHlsc",
+              "432x324": "https://74.img.avito.st/image/1/1.czj-XLau39Go-VXWlBVGdSv_3Q.2YJQkG2dXEQ0JRWTIwnbcUNn7sK3rmeZ0YNtDG8QfC4",
+              "640x480": "https://74.img.avito.st/image/1/1.czj-XLa639HI9R3UlBVGdSv_2dVKf9cTT__b2UL33Q.jOnXhOKT2zFPNWQW5aZ-3_bEQygjbpylwiNNO3m76ug",
+              "75x55": "https://74.img.avito.st/image/1/1.czj-XLaw39He_rMPomR7sEj91dve_rPTSA.90c1xPWPe2cuLpia4QsGD8bQbTLRMUtoI_dUCIRjPF0",
+              "80x60": "https://74.img.avito.st/image/1/1.czj-XLa539Ho_qUPomR7sEj71dvo_GXRSP_b0ej-pdM.6AuNRCza4ZvWZvACC1LLhdDsQKEr2Lj3ckrvAp5yoRk"
+            }
+          },
+          "price": "30 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.347614",
+            "lng": "48.030178"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "delivery": {},
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2386174810",
+          "uri_mweb": "/astrahan/remont_i_stroitelstvo/gotovye_vorota_i_kalitka_2386174810?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2775062935,
+          "category": {
+            "id": 106,
+            "name": "Растения"
+          },
+          "time": 1676971186,
+          "title": "Комнатные растения",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://79.img.avito.st/image/1/1.xq5SRLa-akcs5v5EUgOO_mTmaEHs78hGXOVoReLloERy5mg.NXLD3q_EMj82BokeTZ7aN7fASdsZWr46M5JkoA2rrAk",
+              "1280x960": "https://79.img.avito.st/image/1/1.xq5SRLawakdk8-hKUgOO_mTmaEfi7WJN5A.oLgRjpsnlDQsjX6Xs4q4XMTwyDfEmP9U7xz88CP6uXQ",
+              "140x105": "https://79.img.avito.st/image/1/1.xq5SRLa-akd85bpEUgOO_mTmaEHs78hGXOVoReLl8Ec25mg.ylBvhCtjUZ2eDWK2Nl7GUGxXjIIW7L5vS4uU46lm5Fw",
+              "208x156": "https://79.img.avito.st/image/1/1.xq5SRLa1akdE5NBHUgOO_mTmaEfs78hGXOVoRQ.eq33gqpKwkyLQ4bwm_6Bf4rmDC0jD9d_dSLs-JMH2IM",
+              "240x180": "https://79.img.avito.st/image/1/1.xq5SRLa1akcE5IBHUgOO_mTmaEfs74hGDOVoRQ.aWE_V_isHmBHu60zZPxcafZiBP-BhLmsl3AVF-8s03U",
+              "288x216": "https://79.img.avito.st/image/1/1.xq5SRLa1akck49hGUgOO_mTmaEfs76hBVORoRQ.WYNmSO-2mPUibzLrRJyghRxqsoW6igXdYuNWaEc9hZw",
+              "432x324": "https://79.img.avito.st/image/1/1.xq5SRLatakcE4eBAUgOO_mTmaEU.wdGVcwLwmKRdNuxFfI7ou1Ww9aByRBuTg-otOKlLUqs",
+              "640x480": "https://79.img.avito.st/image/1/1.xq5SRLa5akdk7ahCUgOO_mTmaEHi5ehPJOBoQ-7tYEU.4dDA-c6NEbDMJGMYzseI_2L6-240KEZSYa0PFrea-n0",
+              "75x55": "https://79.img.avito.st/image/1/1.xq5SRLa3akdy5gbzAAHTxeXnak3scWkr5Oc.FDVssdLhhqP0PiO7RDFS34YpZ79Z9yCI3JINGotPWIA",
+              "80x60": "https://79.img.avito.st/image/1/1.xq5SRLa4akdE5hDzAAHTxeXnbE3sR2v95udoQ-ZHaT3k.WtPOxVDIpWjZfoZeLH0A56sQQCZbqP2JuSFFjDvVUUE"
+            }
+          },
+          "price": "2 500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "пос. городского типа Верхний Баскунчак"
+            }
+          ],
+          "location": "пос. городского типа Верхний Баскунчак",
+          "address": "",
+          "coords": {
+            "lat": "48.22301117201245",
+            "lng": "46.71517732134018"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2775062935",
+          "uri_mweb": "/verhniy_baskunchak/rasteniya/komnatnye_rasteniya_2775062935?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2133654177,
+          "category": {
+            "id": 21,
+            "name": "Бытовая техника"
+          },
+          "time": 1676971165,
+          "title": "Вытяжка elica",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://00.img.avito.st/image/1/1.wSkEo7a_bcB6AfnDCuCqTeIAa8q6oGx6sABvxLDIblSzAA.J1BbBSDpZTOCFwD3YEiUbR7eogsPeCs6ReWHybJ5vT4",
+              "1280x960": "https://00.img.avito.st/image/1/1.wSkEo7axbcAyFO_NCuCqTeIAbcS4CmfC.H_b6_L47nYIhL8ubrS8vga9Xr2IebABrabuvww1U8SQ",
+              "140x105": "https://00.img.avito.st/image/1/1.wSkEo7a_bcAqAr3DCuCqTeIAa8q6oGx6sABvxLCYbRCzAA.SpSPy7K8KqXssq6bahJMbu9YuCDP7490PR2gJZ5Fnww",
+              "208x156": "https://00.img.avito.st/image/1/1.wSkEo7a2bcASA9fACuCqTeIAbcq6oGx6sABv.eC1KFn8w4J4NjT9cg6AHezV1JNjd-RzKOIpNwF6lhkM",
+              "240x180": "https://00.img.avito.st/image/1/1.wSkEo7a2bcBSA4fACuCqTeIAbcq64GwqsABv.ambUZcuMnv4kEAw3CYVQNmqwyQeT4g2QFThDftVoiyA",
+              "288x216": "https://00.img.avito.st/image/1/1.wSkEo7a2bcByBN_BCuCqTeIAbcq6wGtysQBv.7H3OmgvO1FkQA6reoGWt5-OdXVOs3E1jYGg0KAhxOAI",
+              "432x324": "https://00.img.avito.st/image/1/1.wSkEo7aubcBSBufHCuCqTeIAbw.cf70RG170mVJgQqZIRwvj_G0QnYOaZqtivmNEPcx9cM",
+              "640x480": "https://00.img.avito.st/image/1/1.wSkEo7a6bcAyCq_FCuCqTeIAa8SwgGUCtQBpyLgIbw.v-482rJlwymLXoEemtLQsiTxkxNVlHKIhBACl-5o6rg",
+              "75x55": "https://00.img.avito.st/image/1/1.wSkEo7awbcAkAQF6UsXgkrICZ8okAQHCsg.akrD8mHH7vbKD8HnlD6f5Qb5hwlM05xu-0rsLFap3Ok",
+              "80x60": "https://00.img.avito.st/image/1/1.wSkEo7a5bcASARd6UsXgkrIEZ8oSA9fAsgBpwBIBF8I.BSES4jFvxtWPIQvCsMlijWV4aGQE0bc7lU7idBwMX0k"
+            }
+          },
+          "price": "2 700 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.347614",
+            "lng": "48.030169"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2133654177",
+          "uri_mweb": "/astrahan/bytovaya_tehnika/vytyazhka_elica_2133654177?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2491561461,
+          "category": {
+            "id": 21,
+            "name": "Бытовая техника"
+          },
+          "time": 1676971127,
+          "title": "Весы электронные",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://84.img.avito.st/image/1/1.ddj5fra_2TGH3E0yn0ddmifd3ztHfdiLTd3bNU0V2qVO3Q.yTwV9UvxjoBV81efb0yv4TXzwra1dQmp5lf5DKXBEzI",
+              "1280x960": "https://84.img.avito.st/image/1/1.ddj5frax2THPyVs8n0ddmifd2TVF19Mz.NK034OXtAPtzn8GgLx7VAoyvXR2j8COiIFarTyX2bVU",
+              "140x105": "https://84.img.avito.st/image/1/1.ddj5fra_2THX3wkyn0ddmifd3ztHfdiLTd3bNU1F2eFO3Q.NNTcz0ojzKrFDtiXgngoG3c-eJ2CnDRsWm4Oh_GrE14",
+              "208x156": "https://84.img.avito.st/image/1/1.ddj5fra22THv3mMxn0ddmifd2TtHfdiLTd3b.U9POejwOk5mZDU_HvMXnVluCqhEw7UH8xhsljs58H0E",
+              "240x180": "https://84.img.avito.st/image/1/1.ddj5fra22TGv3jMxn0ddmifd2TtHPdjbTd3b.DpWlymtEJ0t4gb6ojDN-T4KhAl8C_ppDlKJakm1XV6I",
+              "288x216": "https://84.img.avito.st/image/1/1.ddj5fra22TGP2Wswn0ddmifd2TtHHd-DTN3b.mmyfz4yz-4jBFgDd15hfCvb06OaLf0HyWS3-B20bluc",
+              "432x324": "https://84.img.avito.st/image/1/1.ddj5frau2TGv21M2n0ddmifd2w.bF2nV1qvfn7zFQUXDpTqVmNvyPAGtiRogZQ27kOej38",
+              "640x480": "https://84.img.avito.st/image/1/1.ddj5fra62THP1xs0n0ddmifd3zVNXdHzSN3dOUXV2w.StoFUPk80IGR7LpfsGno-du0-3M586NEKjiN7uUQYfM",
+              "75x55": "https://84.img.avito.st/image/1/1.ddj5fraw2THZ3LXj1VtyW0_f0zvZ3LUzTw.vO02FdW94gHANYzWzfTzxYIPrbp6EHuiZm70A4fy2GY",
+              "80x60": "https://84.img.avito.st/image/1/1.ddj5fra52THv3KPj1VtyW0_Z0zvv3mMxT93dMe_cozM.u7eJxmQtf5OkW7apCN70psAIo4KZsDnJ58V837d2aRY"
+            }
+          },
+          "price": "1 899 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Знаменск"
+            }
+          ],
+          "location": "Знаменск",
+          "address": "",
+          "coords": {
+            "lat": "48.580292",
+            "lng": "45.736312"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2491561461",
+          "uri_mweb": "/astrahanskaya_oblast_znamensk/bytovaya_tehnika/vesy_elektronnye_2491561461?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2491267310,
+          "category": {
+            "id": 19,
+            "name": "Ремонт и строительство"
+          },
+          "time": 1676971119,
+          "title": "Мойка из нержавейки с полкой, мойка глубокая",
+          "images": {
+            "count": 5,
+            "main": {
+              "100x75": "https://77.img.avito.st/image/1/1.vDkvera_ENBR2ITTW3zoevHZFtqReRFqm9kS1JsRE0SY2Q.1mwkHzwL91aVU4oN92j0gD7jsqoGS4AwUlg6fsUx5D0",
+              "1280x960": "https://77.img.avito.st/image/1/1.vDkveraxENAZzZLdW3zoevHZENST0xrS.5gwxBSHXgayWpKxVxROr-XBedakMHz_8kaL6G4k31ME",
+              "140x105": "https://77.img.avito.st/image/1/1.vDkvera_ENAB28DTW3zoevHZFtqReRFqm9kS1JtBEACY2Q.vg4D396z9FH-PXFIML05JSGe_rQXpIdcKHARGSk3diA",
+              "208x156": "https://77.img.avito.st/image/1/1.vDkvera2ENA52qrQW3zoevHZENqReRFqm9kS.74k9aJdd3gNlIxw81n6pNP4PcKXXJYT_uRedlxRi3dk",
+              "240x180": "https://77.img.avito.st/image/1/1.vDkvera2ENB52vrQW3zoevHZENqRORE6m9kS.Jrq3BUZhPEMEEn2mJeXIRGr_grjn-_DHtQIDrdfbYdI",
+              "288x216": "https://77.img.avito.st/image/1/1.vDkvera2ENBZ3aLRW3zoevHZENqRGRZimtkS.qkaktRSZFCW7euOsn-WcVc9W6sULNDmiVTQdTwro2cM",
+              "432x324": "https://77.img.avito.st/image/1/1.vDkverauENB535rXW3zoevHZEg.hTcqlT4Q2mbkIcQBXdYYUKI-0V1h0cd7F3YgymctZNQ",
+              "640x480": "https://77.img.avito.st/image/1/1.vDkvera6ENAZ09LVW3zoevHZFtSbWRgSntkU2JPREg.VZcSMqqwqhtwdvgZeyP4IUwkFGt4GhyxYfnONM1WFjk",
+              "75x55": "https://77.img.avito.st/image/1/1.vDkverawENAP2HwQPCO6upnbGtoP2HzSmQ.FqHT6rWLX23tjw7PAQ32Ft7H7U77csuGjUzKrNpP0dc",
+              "80x60": "https://77.img.avito.st/image/1/1.vDkvera5ENA52GoQPCO6upndGto52qrQmdkU0DnYatI.x_fHl7va4DFnwM7QsYpLfN2UaHfkY62TVBw1CNlGvjY"
+            }
+          },
+          "price": "500 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Знаменск"
+            }
+          ],
+          "location": "Знаменск",
+          "address": "",
+          "coords": {
+            "lat": "48.580292",
+            "lng": "45.736312"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2491267310",
+          "uri_mweb": "/astrahanskaya_oblast_znamensk/remont_i_stroitelstvo/moyka_iz_nerzhaveyki_s_polkoy_moyka_glubokaya_2491267310?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2491220857,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971111,
+          "title": "Прожектор галогеновый",
+          "images": {
+            "count": 2,
+            "main": {
+              "100x75": "https://60.img.avito.st/image/1/1.ubiNC7a_FVHzqYFS8x3k-1OoE1szCBTrOagXVTlgFsU6qA.i-fwRn8y4Jglh7VLT9heMy4nqIitDzuvnVBVrm8nqjI",
+              "1280x960": "https://60.img.avito.st/image/1/1.ubiNC7axFVG7vJdc8x3k-1OoFVUxoh9T.IPLoNNJPvXw3jmeJZsCULcvRgp9foSYvmeSgec-XFQk",
+              "140x105": "https://60.img.avito.st/image/1/1.ubiNC7a_FVGjqsVS8x3k-1OoE1szCBTrOagXVTkwFYE6qA.7Tq40fNrKcSgiwacoEClAP1VUcpvSypKQ5wJ0MIAi-s",
+              "208x156": "https://60.img.avito.st/image/1/1.ubiNC7a2FVGbq69R8x3k-1OoFVszCBTrOagX.A_NS9kq0O4ebrOwCrsZQmBOoIAwJEeCVDNUN9Iyqe9w",
+              "240x180": "https://60.img.avito.st/image/1/1.ubiNC7a2FVHbq_9R8x3k-1OoFVszSBS7OagX._BGeTBAS7madZFebhYZZdVPYr-L5OK00Cv4cmuQSDC8",
+              "288x216": "https://60.img.avito.st/image/1/1.ubiNC7a2FVH7rKdQ8x3k-1OoFVszaBPjOKgX.pQeQ3idDKWm4F8bdeOgM3AptL0ajL1sE5NpCkjaP6JU",
+              "432x324": "https://60.img.avito.st/image/1/1.ubiNC7auFVHbrp9W8x3k-1OoFw.ENBCtmcdAZgD_hAUmnk-Ep_ZqEoLYXmc4RNk-JleH_g",
+              "640x480": "https://60.img.avito.st/image/1/1.ubiNC7a6FVG7otdU8x3k-1OoE1U5KB2TPKgRWTGgFw.UvHs2eysYW2qJZz2gkWKQFMB8DswdnaQMsV4-WfTBV8",
+              "75x55": "https://60.img.avito.st/image/1/1.ubiNC7awFVGtqXmbjlu_OzuqH1utqXlTOw.DalXiS_DoGlmbXIUZNH7M2oP5Tfm0QQ_SDZPLJMj4AY",
+              "80x60": "https://60.img.avito.st/image/1/1.ubiNC7a5FVGbqW-bjlu_OzusH1ubq69RO6gRUZupb1M.JJfj3vxUmASkBakJtLCoHzAefLf5RCM1Zte-WO14W9I"
+            }
+          },
+          "price": "499 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Знаменск"
+            }
+          ],
+          "location": "Знаменск",
+          "address": "",
+          "coords": {
+            "lat": "48.580292",
+            "lng": "45.736312"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2491220857",
+          "uri_mweb": "/astrahanskaya_oblast_znamensk/mebel_i_interer/prozhektor_galogenovyy_2491220857?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 2628973431,
+          "category": {
+            "id": 20,
+            "name": "Мебель и интерьер"
+          },
+          "time": 1676971104,
+          "title": "Диван, 2 кресла и пуф",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://07.img.avito.st/image/1/1.nrtdmra_MlIjOKZRbaigkZ05NFjjmTPo6TkwVunxMcbqOQ.GEnK3PWP6xi13O0NJS42xCfS68u7JiL_aSKjvSC76d0",
+              "1280x960": "https://07.img.avito.st/image/1/1.nrtdmraxMlJrLbBfbaigkZ05MlbhMzhQ.jUx0-sczjaaEmtf7YHnwm8RerfNQtvM1o58L_ORLLs4",
+              "140x105": "https://07.img.avito.st/image/1/1.nrtdmra_MlJzO-JRbaigkZ05NFjjmTPo6TkwVumhMoLqOQ.N7z7nq6MTY0eYwcZmOuajMwSLbzc534sB3kXcXcqDnE",
+              "208x156": "https://07.img.avito.st/image/1/1.nrtdmra2MlJLOohSbaigkZ05MljjmTPo6Tkw.CSA8IA2Ne8eqruHJkTwgLZDy7V2h9y3tN7GiEF9evqo",
+              "240x180": "https://07.img.avito.st/image/1/1.nrtdmra2MlILOthSbaigkZ05Mljj2TO46Tkw.mmKrwm8LknbGhBJlqTy3eerB0fTVS5i1oOz-Vu4KA0E",
+              "288x216": "https://07.img.avito.st/image/1/1.nrtdmra2MlIrPYBTbaigkZ05Mljj-TTg6Dkw.BC8df2GcjjltgabJE_0ZefmbLrgRmSQe4FGe6RqXFRg",
+              "432x324": "https://07.img.avito.st/image/1/1.nrtdmrauMlILP7hVbaigkZ05MA.zOjWmjWjnGLnLsq7aTuyN1rFGsc6HN19yjtvynesoT8",
+              "640x480": "https://07.img.avito.st/image/1/1.nrtdmra6MlJrM_BXbaigkZ05NFbpuTqQ7Dk2WuExMA.dCPwgzTbD_zP8H1FwdzuKb1JPNJgW5hl2ghA0rZ3zpU",
+              "75x55": "https://07.img.avito.st/image/1/1.nrtdmrawMlJ9OF7WeqnxJus7OFh9OF5Q6w.4uQHxGQi8UXfuz85Xtv5y0GgqG_eJoud9Vwy17xLCUI",
+              "80x60": "https://07.img.avito.st/image/1/1.nrtdmra5MlJLOEjWeqnxJus9OFhLOohS6zk2Uks4SFA.FNhL5qhPkjESdMKgYTDzMQAOwVK9Kton_wjkVh36Q8I"
+            }
+          },
+          "price": "15 000 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Астрахань"
+            }
+          ],
+          "location": "Астрахань",
+          "address": "",
+          "coords": {
+            "lat": "46.323136",
+            "lng": "48.008143"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=2628973431",
+          "uri_mweb": "/astrahan/mebel_i_interer/divan_2_kresla_i_puf_2628973431?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      },
+      {
+        "type": "item",
+        "value": {
+          "id": 1851515400,
+          "category": {
+            "id": 21,
+            "name": "Бытовая техника"
+          },
+          "time": 1676971097,
+          "title": "Термопот",
+          "images": {
+            "count": 3,
+            "main": {
+              "100x75": "https://42.img.avito.st/image/1/1.K5yfRba_h3Xh5xN2xXVRyxzmgX8hRobPK-aFcSsuhOEo5g.ha5sMM513IJmA8djiGmIfjCFnDAsmVJMLBS4lv-qXLU",
+              "1280x960": "https://42.img.avito.st/image/1/1.K5yfRbaxh3Wp8gV4xXVRyxzmh3Ej7I13.DDU1J4Y5t16OBr_o0SmMlUNKSi4cOTTpob_cPsxoGQc",
+              "140x105": "https://42.img.avito.st/image/1/1.K5yfRba_h3Wx5Fd2xXVRyxzmgX8hRobPK-aFcSt-h6Uo5g.iI9ACdcYBTnaUkofRLacYZhfarEUMkDM4ZODmePSY5A",
+              "208x156": "https://42.img.avito.st/image/1/1.K5yfRba2h3WJ5T11xXVRyxzmh38hRobPK-aF.jk9IrS0ccfr5fYzJMBhe4JcP8Js67xUZeVWx_5pueSs",
+              "240x180": "https://42.img.avito.st/image/1/1.K5yfRba2h3XJ5W11xXVRyxzmh38hBoafK-aF.aCMJkgp6vqJdkEJ-_HTf82gxfYGVC5yINyYoZqZFhnc",
+              "288x216": "https://42.img.avito.st/image/1/1.K5yfRba2h3Xp4jV0xXVRyxzmh38hJoHHKuaF.hcBIDr6FsXX_ujIDp2eY0z1GQtSzhpN019XLqIfzfWM",
+              "432x324": "https://42.img.avito.st/image/1/1.K5yfRbauh3XJ4A1yxXVRyxzmhQ.GOaZpmZwSNpZFAq--UCXI0Xv9OPdWzXuljTcv0_6dyw",
+              "640x480": "https://42.img.avito.st/image/1/1.K5yfRba6h3Wp7EVwxXVRyxzmgXErZo-3LuaDfSPuhQ.BE8y6jTSJSTPE-Aad6MNEvwjf2H4XaWL3n89Oy3riug",
+              "75x55": "https://42.img.avito.st/image/1/1.K5yfRbawh3W_5-ubujI5QinkjX-_5-t3KQ.fMuVZlzRMp99RLcif246az0raWwy3Twn8-lJKfZcD7I",
+              "80x60": "https://42.img.avito.st/image/1/1.K5yfRba5h3WJ5_2bujI5QinijX-J5T11KeaDdYnn_Xc.VzHJzBV_3uW3CGPbGk4wuDcxeujtcM2d6oJAtUQcpZg"
+            }
+          },
+          "price": "3 599 ₽",
+          "isFavorite": false,
+          "geoReferences": [
+            {
+              "content": "Знаменск"
+            }
+          ],
+          "location": "Знаменск",
+          "address": "",
+          "coords": {
+            "lat": "48.586636",
+            "lng": "45.736748"
+          },
+          "userType": "private",
+          "hasVideo": false,
+          "hasRealtyLayout": false,
+          "isVerified": false,
+          "contactlessView": false,
+          "uri": "ru.avito://1/item/show?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA&itemId=1851515400",
+          "uri_mweb": "/astrahanskaya_oblast_znamensk/bytovaya_tehnika/termopot_1851515400?context=H4sIAAAAAAAA_0q0MrSqLrYytFKqULIutjI2tFLKSTVONsgptyxMLi6oKCtPy0_LTi5MKkgqSC1NzclIUbKuBQQAAP__EEN8DjUAAAA",
+          "comparison": {
+            "canBeAdded": false,
+            "isAdded": false,
+            "uri": ""
+          }
+        }
+      }
+    ],
+    "searchHint": "Поиск на Авито",
+    "seo": {
+      "title": "а - Купить товары для дома и дачи в Астраханской области | Авито",
+      "description": "64 769 объявлений о продаже товаров для дома и дачи по доступным ценам в Астраханской области. На Авито вы можете недорого купить товары для ремонта и строительства, бытовую технику, мебель, посуду, растения и продукты питания. Выбирайте среди предложений магазинов и частных объявлений о продаже товаров для дома на Авито.",
+      "h1": "Объявления по запросу «а» в Астраханской области",
+      "schemaOrg": {
+        "payload": "{\"@context\":\"https://schema.org\",\"@graph\":[{\"@context\":\"https://schema.org\",\"@type\":\"Product\",\"name\":\"а - Купить товары для дома и дачи в Астраханской области | Авито\",\"description\":\"64 769 объявлений о продаже товаров для дома и дачи по доступным ценам в Астраханской области. На Авито вы можете недорого купить товары для ремонта и строительства, бытовую технику, мебель, посуду, растения и продукты питания. Выбирайте среди предложений магазинов и частных объявлений о продаже товаров для дома на Авито.\",\"offers\":{\"@type\":\"AggregateOffer\",\"priceCurrency\":\"RUB\",\"lowPrice\":200,\"highPrice\":30000}}]}"
+      }
+    },
+    "seoNavigation": {
+      "breadcrumbs": []
+    },
+    "applyButton": {
+      "enabled": true,
+      "title": "Показать 65 тыс. объявлений",
+      "presentationType": "serp"
+    },
+    "nextPageId": "H4sIAAAAAAAA_0q0MrSqLrYyNLRSKskvScyJT8svzUtRss60MjMxN7O0rgUEAAD__-6K7VkhAAAA",
+    "searchSubscriptionAction": "ru.avito://1/searchSubscription/new/byParams?description=%D0%94%D0%BB%D1%8F+%D0%B4%D0%BE%D0%BC%D0%B0+%D0%B8+%D0%B4%D0%B0%D1%87%D0%B8%2C+%D0%90%D1%81%D1%82%D1%80%D0%B0%D1%85%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%C2%A0%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C+%D0%B0%2C+%D0%A7%D0%B0%D1%81%D1%82%D0%BD%D1%8B%D0%B5&filter%5BcategoryId%5D=2&filter%5BlocationId%5D=623110&filter%5Bparams%5D%5B201%5D=1060&filter%5Bparams%5D%5B504%5D=5256&filter%5BprivateOnly%5D=1&filter%5Bquery%5D=%D0%B0&pushFrequency=3&pushFrequencyOptions%5B0%5D%5Bid%5D=1&pushFrequencyOptions%5B0%5D%5Btitle%5D=%D0%A1%D1%80%D0%B0%D0%B7%D1%83&pushFrequencyOptions%5B1%5D%5Bid%5D=2&pushFrequencyOptions%5B1%5D%5Btitle%5D=%D0%A3%D1%82%D1%80%D0%BE%D0%BC&pushFrequencyOptions%5B2%5D%5Bid%5D=3&pushFrequencyOptions%5B2%5D%5Btitle%5D=%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%BE%D0%BC&pushFrequencyOptions%5B3%5D%5Bid%5D=0&pushFrequencyOptions%5B3%5D%5Btitle%5D=%D0%9D%D0%B5+%D0%BF%D1%80%D0%B8%D1%81%D1%8B%D0%BB%D0%B0%D1%82%D1%8C&title=%D0%9F%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B0+%D0%BD%D0%B0+%D0%BF%D0%BE%D0%B8%D1%81%D0%BA",
+    "saveToHistoryDescription": {
+      "title": "а",
+      "description": "Для дома и дачи, Астраханская область, Частные",
+      "deeplink": "ru.avito://1/items/search?categoryId=2&context=H4sIAAAAAAAA_0q0MrSqLraysFJKK8rPDUhMT1WyLrYys1IqSk1OzStRsq4FBAAA___svPlPIgAAAA&locationId=623110&params%5B201%5D=1060&params%5B504%5D=5256&presentationType=serp&privateOnly=1&query=%D0%B0&searchRadius=0&sort=date",
+      "rootCategoryId": null,
+      "verticalCategoryId": 4
+    },
+    "xHash": "le3c0lw9qcspxvwfofkcqbpbpeuelhd",
+    "verticalId": 4
+  }
+}
