@@ -24,6 +24,7 @@ def url_parser(url):
 def main():
 
     url_path = 'https://www.avito.ru/tarasovskiy/zapchasti_i_aksessuary?cd=1&d=1&q=%D1%81%D0%BA%D1%83%D1%82%D0%B5%D1%80'
+    url_path = 'https://www.avito.ru/tarasovskiy/zapchasti_i_aksessuary/porshnevaya_na_skuter_2761595799'
     pars_dump = url_parser(url_path)
     scheme = pars_dump['scheme']  #'scheme': 'https'
     netloc = pars_dump['netloc']  #'netloc': 'www.avito.ru'
