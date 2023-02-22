@@ -70,3 +70,5 @@ if __name__ == "__main__":
 
     df_output = url_components_to_df(url)#(df_sitemap)
     df_output.tail()
+
+    #UPDATE table1 SET name = ‘Людмила Иванова’ WHERE id = 2;

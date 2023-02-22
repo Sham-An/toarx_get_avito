@@ -246,6 +246,7 @@ def create_city_tab():
             id INTEGER PRIMARY KEY ,
             name Text,
             parent_id INTEGER,
+            url_path text,
             url_name text,
             index_post text
             )     
@@ -266,8 +267,9 @@ def create_regions_tab():
         Create Table if not exists regions(
             id INTEGER PRIMARY KEY ,
             name Text,
+            url_path text,
             url_name text,
-            index_post text
+            index_post text,
             kod_region text
             )     
     """)
@@ -308,7 +310,7 @@ def check_city(reg):
                 cursor = connection.cursor()
                 cursor.execute("""
                     INSERT INTO cityes VALUES (
-                     :id, :name, :parent_Id, :url_name, :index_post 
+                     :id, :name, :parent_Id, :url_path, :url_name, :index_post 
                     )
                     """, reg1)
                 connection.commit()
@@ -337,7 +339,7 @@ def check_region(reg):
                 cursor = connection.cursor()
                 cursor.execute("""
                     INSERT INTO regions VALUES (
-                     :id, :name, :url_name, :index_post, :kod_region
+                     :id, :name, :url_path, :url_name, :index_post, :kod_region
                     )
                     """, reg1)
                 connection.commit()
@@ -355,6 +357,7 @@ def list_region(data):
             break
         all_id.append(dataitems['id'])
         # Добавляем количество полей для корректного запроса заполнения SQL
+        dataitems.setdefault('url_path', 'None')  # , value)
         dataitems.setdefault('url_name', 'None')  # , value)
         dataitems.setdefault('index_post', 'None')  # , value)
         dataitems.setdefault('kod_region', 'None')  # , value)
@@ -373,6 +376,7 @@ def list_city(data):
             print('IIIIDDDD Поймали ДУБЛЯЖ!!!!!!!!!!!!!!!!!!!!!')
             break
         all_id.append(dataitems['id'])
+        dataitems.setdefault('url_path', 'None')
         dataitems.setdefault('url_name', 'None')  # , value)
         dataitems.setdefault('index_post', 'None')  # , value)
         #dataitems.setdefault('kod_region', 'None')  # , value)
@@ -402,14 +406,14 @@ def Open_json_city():
 
 if __name__ == '__main__':
     name = "Черке"
-    search_city_region(name)
+    #search_city_region(name)
     #search_city(name)
-    # create_city_tab()
+    #create_city_tab()
     #create_regions_tab()
     #Open_json_region()
     # reg = {'id': '777777', 'name': 'ЁЁЁЁ', 'parent_Id': '777776', 'url_name': 'None', 'index_post': 'None'}
-    # check_region(reg)
-    # Open_json_city()
+    #check_region(reg)
+    Open_json_city()
 
 #         //*[@id="app"]//div[@data-category-id]
 #WebXPATH //*[@id="app"]//div[@data-category-id]

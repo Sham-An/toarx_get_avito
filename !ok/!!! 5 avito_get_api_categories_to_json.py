@@ -1,4 +1,7 @@
 # авито парсер на питончике ._py
+#!!! json категории + url_path city
+# https://m.avito.ru/api/2/search/main?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=652120
+
 #api/1 Локации Наименование области : id, нас. пункта : id
 #{"status":"ok","result":{"locations":[{"parent":{"names":{"1":"Ростовская область"},"id":651110},"names":{"1":"Тарасовский"},"id":652120},{"names":{"1":"Ростовская область"},"id":651110},{"names":{"1":"Все регионы"},"id":621540}]}}
 #https://m.avito.ru/api/1/slocations?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=621540&limit=10&q=%D0%A2%D0%B0%D1%80%D0%B0%D1%81%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9
@@ -290,6 +293,7 @@ class HttpParser:
                     'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&'
                     f'locationId={region_id}&categoryId={category_id}&page=1&display=list&limit={limit_shows}'
                 )
+#https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&locationId=622470&categoryId=14&page=1&display=list'
 
             items = json_content['result']['items']
 

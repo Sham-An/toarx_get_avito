@@ -28,6 +28,7 @@ def create_category_tab():
             name Text,
             parentId Text, 
             showMap Text,
+            url_path text,
             url_name text
             )     
     """)
@@ -36,6 +37,7 @@ def create_category_tab():
 
 
 def check_categories(cat):
+    print(cat)
     # cat1 = cat
     # cat = {'id': 116, 'name': 'Готовый бизнес', 'parentId': 8, 'showMap': False}
     cat_id = cat["id"]
@@ -56,7 +58,7 @@ def check_categories(cat):
                 cursor = connection.cursor()
                 cursor.execute("""
                     INSERT INTO categories 
-                    VALUES (:id, :name, :parentId, :showMap, :url_name
+                    VALUES (:id, :name, :parentId, :showMap, :url_path, :url_name
                     )
                     """, cat)
                 connection.commit()
@@ -73,14 +75,16 @@ def get_cat_from_file():
 
     name = "no name"
     all_id = []
-    add_cat = {'url_name': 'Null', }
+    add_cat = {'url_name': '', }
+    add_cat2 = {'url_path': '', }
     for dataitems in data['categories']:
         # print(dataitems['id'], dataitems['name'])
 
         dataitems_copy = dataitems.copy()
         if 'children' in dataitems_copy:
             #dataitems_copy.setdefault('name_dir_en')  # , value)
-            dataitems_copy.setdefault('url_name')  # , value)
+            dataitems_copy.setdefault('url_path', "")
+            dataitems_copy.setdefault('url_name', "")  # , value)
             dataitems_copy.setdefault('parentId', 0)  # , value)
             dataitems_copy.pop('children')
             print(f'dataitems PARENT {dataitems_copy}')
@@ -95,11 +99,8 @@ def get_cat_from_file():
                     # break
                     continue
                 all_id.append(datainfo['id'])
-                # if name in datainfo['name']:
-                #     print(f'Поймали {name}')
-                #     continue
-                #     break
                 datainfo.update(add_cat)
+                datainfo.update(add_cat2)
                 print(f'CHILDREN {datainfo}')
                 check_categories(datainfo)
     all_id.sort()
@@ -210,4 +211,4 @@ if __name__ == '__main__':
     # check_categories(cat)
     #create_category_tab()
     get_cat_from_file()
-    main()
+    #main()
