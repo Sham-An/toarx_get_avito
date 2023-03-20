@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ru" data-vue-meta="%7B%22lang%22:%7B%22ssr%22:%22ru%22%7D%7D">
+<head >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover,maximum-scale=1,user-scalable=0">
+  <meta name="referrer" content="unsafe-url">
+  <title>Асинхронный python без головной боли (часть 2) / Хабр</title>
+  <style>
+    /* cyrillic-ext */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveSxf6TF0.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+    }
+
+    /* cyrillic */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveQhf6TF0.woff2) format('woff2');
+      unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+
+    /* latin-ext */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveSBf6TF0.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/firasans/v11/va9B4kDNxMZdWfMOD5VnZKveRhf6.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* non-breaking hyphen */
+    @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/l/font?kit=KFOlCnqEu92Fr1MmEU9vBh0_IsHAlmrO6g&skey=ee881451c540fdec&v=v29) format('woff2');
+      unicode-range: U+02011;
+    }
+  </style>
+  <link rel="preload" href="https://assets.habr.com/habr-web/css/chunk-vendors.b6238726.css" as="style"><link rel="preload" href="https://assets.habr.com/habr-web/js/chunk-vendors.f5a3d631.js" as="script"><link rel="preload" href="https://assets.habr.com/habr-web/css/app.59c6701f.css" as="style"><link rel="preload" href="https://assets.habr.com/habr-web/js/app.eaac855a.js" as="script"><link rel="preload" href="https://assets.habr.com/habr-web/js/7298.c8f1d73c.js" as="script">
+  <link rel="stylesheet" href="https://assets.habr.com/habr-web/css/chunk-vendors.b6238726.css"><link rel="stylesheet" href="https://assets.habr.com/habr-web/css/app.59c6701f.css">
+  <script>window.i18nFetch = new Promise((res, rej) => {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', '/js/i18n/ru-compiled.bb54036e20d5f2f436c26e6c1769b6b8.json');
+          xhr.responseType = 'json';
+          xhr.onload = function(e) {
+            if (this.status === 200) {
+              res({ru: xhr.response});
+            } else {
+              rej(e);
+            }
+          };
+          xhr.send();
+        });</script>
+  
+  <script data-vue-meta="ssr" type="application/ld+json" data-vmid="ldjson-schema">{"@context":"http:\/\/schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/habr.com\/ru\/post\/671798\/"},"headline":"Асинхронный python без головной боли (часть 2)","datePublished":"2022-06-16T17:34:31+03:00","dateModified":"2022-06-20T13:26:06+03:00","author":{"@type":"Person","name":"Владимир Кириевский"},"publisher":{"@type":"Organization","name":"Habr","logo":{"@type":"ImageObject","url":"https:\/\/habrastorage.org\/webt\/a_\/lk\/9m\/a_lk9mjkccjox-zccjrpfolmkmq.png"}},"description":"Это продолжение цикла статей про asyncio. Начало здесь.6. Веб-сервер aiohttp и другие жители асинхронного мираПродолжаем готовить asyncio. Теперь мы уже знаем до...","url":"https:\/\/habr.com\/ru\/post\/671798\/#post-content-body","about":["h_python","h_programming","f_develop"],"image":["https:\/\/habr.com\/share\/publication\/671798\/a35e0e52be6c9138bdc956742502f432\/","https:\/\/habrastorage.org\/getpro\/habr\/upload_files\/9c7\/89b\/34d\/9c789b34da2cb081afd3ab943b0ab223.png","https:\/\/habrastorage.org\/getpro\/habr\/upload_files\/49c\/4b1\/2ba\/49c4b12ba237c8839f761e36b03edbd5.png","https:\/\/habrastorage.org\/getpro\/habr\/upload_files\/234\/6dd\/da4\/2346ddda4ee1e447e28d1b0a0b2403ef.png"]}</script>
+  <script src="//www.googletagservices.com/tag/js/gpt.js" async></script>
+  <style>.grecaptcha-badge{visibility: hidden;}</style>
+  <meta name="habr-version" content="2.116.0">
+  
+  <meta data-vue-meta="ssr" property="fb:app_id" content="444736788986613"><meta data-vue-meta="ssr" property="fb:pages" content="472597926099084"><meta data-vue-meta="ssr" name="twitter:card" content="summary_large_image"><meta data-vue-meta="ssr" name="twitter:site" content="@habr_com"><meta data-vue-meta="ssr" property="og:site_name" content="Хабр" data-vmid="og:site_name"><meta data-vue-meta="ssr" property="og:title" content="Асинхронный python без головной боли (часть 2)" data-vmid="og:title"><meta data-vue-meta="ssr" name="twitter:title" content="Асинхронный python без головной боли (часть 2)" data-vmid="twitter:title"><meta data-vue-meta="ssr" name="aiturec:title" content="Асинхронный python без головной боли (часть 2)" data-vmid="aiturec:title"><meta data-vue-meta="ssr" name="description" content="Это продолжение цикла статей про asyncio . Начало здесь . 6. Веб-сервер aiohttp и другие жители асинхронного мира Продолжаем готовить asyncio . Теперь мы уже знаем достаточно, чтобы написать модный..." data-vmid="description"><meta data-vue-meta="ssr" itemprop="description" content="Это продолжение цикла статей про asyncio . Начало здесь . 6. Веб-сервер aiohttp и другие жители асинхронного мира Продолжаем готовить asyncio . Теперь мы уже знаем достаточно, чтобы написать модный..." data-vmid="description:itemprop"><meta data-vue-meta="ssr" property="og:description" content="Это продолжение цикла статей про asyncio . Начало здесь . 6. Веб-сервер aiohttp и другие жители асинхронного мира Продолжаем готовить asyncio . Теперь мы уже знаем достаточно, чтобы написать модный..." data-vmid="og:description"><meta data-vue-meta="ssr" name="twitter:description" content="Это продолжение цикла статей про asyncio . Начало здесь . 6. Веб-сервер aiohttp и другие жители асинхронного мира Продолжаем готовить asyncio . Теперь мы уже знаем достаточно, чтобы написать модный..." data-vmid="twitter:description"><meta data-vue-meta="ssr" property="aiturec:description" content="Это продолжение цикла статей про asyncio . Начало здесь . 6. Веб-сервер aiohttp и другие жители асинхронного мира Продолжаем готовить asyncio . Теперь мы уже знаем достаточно, чтобы написать модный..." data-vmid="aiturec:description"><meta data-vue-meta="ssr" itemprop="image" content="https://habrastorage.org/getpro/habr/upload_files/1a3/9e5/f3d/1a39e5f3d67e130fe4159f9080547204.jpg" data-vmid="image:itemprop"><meta data-vue-meta="ssr" property="og:image" content="https://habrastorage.org/getpro/habr/upload_files/1a3/9e5/f3d/1a39e5f3d67e130fe4159f9080547204.jpg" data-vmid="og:image"><meta data-vue-meta="ssr" property="og:image:width" content="1200" data-vmid="og:image:width"><meta data-vue-meta="ssr" property="og:image:height" content="630" data-vmid="og:image:height"><meta data-vue-meta="ssr" property="aiturec:image" content="https://habrastorage.org/getpro/habr/upload_files/1a3/9e5/f3d/1a39e5f3d67e130fe4159f9080547204.jpg" data-vmid="aiturec:image"><meta data-vue-meta="ssr" name="twitter:image" content="https://habrastorage.org/getpro/habr/upload_files/1a3/9e5/f3d/1a39e5f3d67e130fe4159f9080547204.jpg" data-vmid="twitter:image"><meta data-vue-meta="ssr" property="vk:image" content="https://habrastorage.org/getpro/habr/upload_files/1a3/9e5/f3d/1a39e5f3d67e130fe4159f9080547204.jpg?format=vk" data-vmid="vk:image"><meta data-vue-meta="ssr" property="aiturec:item_id" content="671798" data-vmid="aiturec:item_id"><meta data-vue-meta="ssr" property="aiturec:datetime" content="2022-06-16T14:34:31.000Z" data-vmid="aiturec:datetime"><meta data-vue-meta="ssr" content="https://habr.com/ru/post/671798/" property="og:url" data-vmid="og:url"><meta data-vue-meta="ssr" property="og:type" content="article" data-vmid="og:type"><meta data-vue-meta="ssr" property="og:locale" content="ru_RU" data-vmid="og:locale"><meta data-vue-meta="ssr" name="keywords" content="async, await, asyncio, асинхронность, асинхронное программирование, асинхронные задачи, асинхронные функции, асинхронный код, aiohttp">
+  <link data-vue-meta="ssr" href="https://habr.com/ru/rss/post/671798/?fl=ru" type="application/rss+xml" title="" rel="alternate" name="rss"><link data-vue-meta="ssr" href="https://habr.com/ru/post/671798/" rel="canonical" data-vmid="canonical"><link data-vue-meta="ssr" rel="image_src" href="https://habrastorage.org/getpro/habr/upload_files/1a3/9e5/f3d/1a39e5f3d67e130fe4159f9080547204.jpg" data-vmid="image:href">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#303b44">
+  <meta name="msapplication-TileColor" content="#629FBC">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    sizes="16x16"
+    href="https://assets.habr.com/habr-web/img/favicons/favicon-16.png"
+  >
+  <link
+    rel="shortcut icon"
+    type="image/png"
+    sizes="32x32"
+    href="https://assets.habr.com/habr-web/img/favicons/favicon-32.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="76x76"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-76.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="120x120"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-120.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="152x152"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-152.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="180x180"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-180.png"
+  >
+  <link
+    rel="apple-touch-icon"
+    type="image/png"
+    sizes="256x256"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-256.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1136x640.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2436x1125.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1792x828.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_828x1792.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1334x750.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1242x2668.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2208x1242.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1125x2436.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1242x2208.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2732x2048.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2688x1242.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2224x1668.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_750x1334.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2048x2732.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2388x1668.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1668x2224.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_640x1136.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1668x2388.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_2048x1536.png"
+  >
+  <link
+    rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="https://assets.habr.com/habr-web/img/splashes/splash_1536x2048.png"
+  >
+  <link
+    rel="mask-icon"
+    color="#77a2b6"
+    href="https://assets.habr.com/habr-web/img/favicons/apple-touch-icon-120.svg"
+  >
+  <link
+    crossorigin="use-credentials"
+    href="/manifest.webmanifest"
+    rel="manifest"
+  >
+  <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
+  <script>window.yaContextCb = window.yaContextCb || []</script>
+  <script src="https://yandex.ru/ads/system/context.js" async></script>
+</head>
+<body>
+
+
+<div id="app" data-server-rendered="true" data-async-called="true"><div class="tm-layout__wrapper"><!----> <div></div> <!----> <header class="tm-header"><div class="tm-page-width"><div class="tm-header__container"><!----> <span class="tm-header__logo-wrap"><a href="/ru/" class="tm-header__logo tm-header__logo_ru"><svg height="16" width="16" class="tm-svg-img tm-header__icon"><title>Хабр</title> <use xlink:href="/img/habr-logo-ru.svg#logo"></use></svg></a> <span class="tm-header__beta-sign" style="display:none;">β</span></span> <div class="tm-dropdown tm-header__projects"><div class="tm-dropdown__head"><button class="tm-header__dropdown-toggle"><svg height="16" width="16" class="tm-svg-img tm-header__icon tm-header__icon_dropdown"><title>Открыть список</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#arrow-down"></use></svg></button></div> <!----></div> <a href="/ru/sandbox/start/" class="tm-header__become-author-btn">
+            Как стать автором
+          </a> <div class="tm-feature tm-header__feature tm-feature tm-feature_variant-inline"><!----></div> <!----> <!----></div></div></header> <div class="tm-layout"><div class="tm-page-progress-bar"></div> <div data-menu-sticky="true" class="tm-base-layout__header tm-base-layout__header_is-sticky"><div class="tm-page-width"><div class="tm-base-layout__header-wrapper"><div class="tm-main-menu"><div class="tm-main-menu__section"><nav class="tm-main-menu__section-content"><!----> <a href="/ru/all/" class="tm-main-menu__item">
+        Все потоки
+      </a> <a href="/ru/flows/develop/" class="tm-main-menu__item">
+          Разработка
+        </a><a href="/ru/flows/admin/" class="tm-main-menu__item">
+          Администрирование
+        </a><a href="/ru/flows/design/" class="tm-main-menu__item">
+          Дизайн
+        </a><a href="/ru/flows/management/" class="tm-main-menu__item">
+          Менеджмент
+        </a><a href="/ru/flows/marketing/" class="tm-main-menu__item">
+          Маркетинг
+        </a><a href="/ru/flows/popsci/" class="tm-main-menu__item">
+          Научпоп
+        </a></nav></div></div> <div class="tm-header-user-menu tm-base-layout__user-menu"><a href="/ru/search/" class="tm-header-user-menu__item tm-header-user-menu__search"><svg height="24" width="24" class="tm-svg-img tm-header-user-menu__icon tm-header-user-menu__icon_search tm-header-user-menu__icon_dark"><title>Поиск</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#search"></use></svg></a> <!----> <!----> <!----> <div class="tm-header-user-menu__item tm-header-user-menu__user_desktop"><div class="tm-dropdown"><div class="tm-dropdown__head"><svg height="24" width="24" data-test-id="menu-toggle-guest" class="tm-svg-img tm-header-user-menu__icon tm-header-user-menu__icon_dark"><title>Профиль</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#header-user"></use></svg> <!----></div> <!----></div> <!----></div> <!----></div></div></div></div> <!----> <div class="tm-page-width"></div> <main class="tm-layout__container"><div hl="ru" data-async-called="true" class="tm-page"><div class="tm-page-width"><!----> <div class="tm-page__wrapper"><div class="tm-page__main tm-page__main_has-sidebar"><div class="pull-down"><!----> <div class="pull-down__header" style="height:0px;"><div class="pull-down__content" style="bottom:10px;"><svg height="24" width="24" class="tm-svg-img pull-down__arrow"><title>Обновить</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#pull-arrow"></use></svg></div></div> <div class="tm-article-presenter"> <div class="tm-article-presenter__body"><div class="tm-misprint-area"><div class="tm-misprint-area__wrapper"><article class="tm-article-presenter__content tm-article-presenter__content_narrow"><div class="tm-article-presenter__header"> <div class="tm-article-snippet tm-article-presenter__snippet tm-article-snippet"><div class="tm-article-snippet__meta-container"><div class="tm-article-snippet__meta"><span class="tm-user-info tm-article-snippet__author"><a href="/ru/users/vlakir/" title="vlakir" class="tm-user-info__userpic"><div class="tm-entity-image"><img alt="" height="24" src="//habrastorage.org/r/w48/getpro/habr/avatars/2d4/687/18c/2d468718c41f806815ae84313e2dce83.jpg" width="24" class="tm-entity-image__pic"></div></a> <span class="tm-user-info__user"><a href="/ru/users/vlakir/" class="tm-user-info__username">
+      vlakir
+      <!----></a> <span class="tm-article-datetime-published"><time datetime="2022-06-16T14:34:31.000Z" title="2022-06-16, 17:34">16  июн  2022 в 17:34</time></span></span></span></div> <!----></div> <h1 lang="ru" class="tm-article-snippet__title tm-article-snippet__title_h1"><span>Асинхронный python без головной боли (часть 2)</span></h1> <div class="tm-article-snippet__stats"><!----> <div class="tm-article-reading-time"><span class="tm-svg-icon__wrapper tm-article-reading-time__icon"><svg height="24" width="24" class="tm-svg-img tm-svg-icon"><title>Время на прочтение</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#clock"></use></svg></span> <span class="tm-article-reading-time__label">
+    9 мин
+  </span></div> <span class="tm-icon-counter tm-data-icons__item"><svg height="24" width="24" class="tm-svg-img tm-icon-counter__icon"><title>Количество просмотров</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#counter-views"></use></svg> <span class="tm-icon-counter__value">20K</span></span></div> <div class="tm-article-snippet__hubs-container"><div class="tm-article-snippet__hubs"><span class="tm-article-snippet__hubs-item"><a href="/ru/hub/python/" class="tm-article-snippet__hubs-item-link"><span>Python</span> <span title="Профильный хаб" class="tm-article-snippet__profiled-hub">*</span></a></span><span class="tm-article-snippet__hubs-item"><a href="/ru/hub/programming/" class="tm-article-snippet__hubs-item-link"><span>Программирование</span> <span title="Профильный хаб" class="tm-article-snippet__profiled-hub">*</span></a></span></div></div> <div class="tm-article-snippet__labels-container"><div class="tm-article-snippet__labels"><div class="tm-article-snippet__label tm-article-snippet__label_variant-tutorial"><span>
+          Туториал
+        </span></div> </div></div> <!----> <!----></div></div> <!----> <div data-gallery-root="" lang="ru" class="tm-article-body"><div></div> <div id="post-content-body"><div><div class="article-formatted-body article-formatted-body article-formatted-body_version-2"><div xmlns="http://www.w3.org/1999/xhtml"><p><strong><em>Это продолжение цикла статей про </em></strong><code>asyncio</code><strong><em>. Начало </em></strong><a href="https://habr.com/ru/post/667630/" rel="noopener noreferrer nofollow"><strong><em>здесь</em></strong></a><strong><em>.</em></strong></p><h2>6. Веб-сервер aiohttp и другие жители асинхронного мира</h2><p>Продолжаем готовить <code>asyncio</code>. Теперь мы уже знаем достаточно, чтобы написать модный асинхронный микросервис. Реализуем известный архитектурный паттерн "API-шлюз". Это довольно простая штука. По запросу на свой API-интерфейс приложение собирает данные из других API, обрабатывает и возвращает результат пользователю. При этом пользователь знает только одну точку входа, а все внутренние подробности (кто куда и зачем сходил) от него скрыты.</p><figure class="full-width "><img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/9c7/89b/34d/9c789b34da2cb081afd3ab943b0ab223.png" width="789" height="512" data-src="https://habrastorage.org/getpro/habr/upload_files/9c7/89b/34d/9c789b34da2cb081afd3ab943b0ab223.png"/><figcaption></figcaption></figure><p>В предыдущей главе мы научились запрашивать погоду у сервиса <a href="https://openweathermap.org/api" rel="noopener noreferrer nofollow">api.openweathermap.org</a>. Давайте его слегка <s>украдем</s> импортозаместим. Вернее сказать, русифицируем. Пусть пользователь нашего сервиса передает название города на русском языке в параметрах GET-запроса и получает ответ в виде json опять-таки на великом и могучем. А откуда мы взяли информацию о погоде, пользователю знать не положено. Может у нас собственные метеостанции в каждой деревне стоят, поди проверь.</p><p>Мы уже освоили http-клиента библиотеки <code>aiohttp</code>, с помощью которого можно обращаться к внешним API. Оказывается, в этой же библиотеке есть и все необходимое для создания полноценного http-сервера. Для начала напишем просто зеркальный прокси:</p><h3>Пример 6.1</h3><pre><code class="python">import asyncio
+import json
+from aiohttp import ClientSession, web
+
+
+async def get_weather(city):
+    async with ClientSession() as session:
+        url = f'http://api.openweathermap.org/data/2.5/weather'
+        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}
+
+        async with session.get(url=url, params=params) as response:
+            weather_json = await response.json()
+            try:
+                return weather_json["weather"][0]["main"]
+            except KeyError:
+                return 'Нет данных'
+
+
+async def handle(request):
+    city = request.rel_url.query['city']
+    weather = await get_weather(city)
+    result = {'city': city, 'weather': weather}
+
+    return web.Response(text=json.dumps(result, ensure_ascii=False))
+
+
+async def main():
+    app = web.Application()
+    app.add_routes([web.get('/weather', handle)])
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, 'localhost', 8080)
+    await site.start()
+
+    while True:
+        await asyncio.sleep(3600)
+
+
+if __name__ == '__main__':
+    asyncio.run(main())
+</code></pre><p>В асинхронной функции <code>get_weather</code> ничего нового нет, мы ее лишь слегка причесали, чтобы запрос погоды для несуществующего города не приводил к трагическим последствиям для всего нашего приложения. За обработку запроса отвечает функция <code>handle</code> ("ручка" на сленге бэкендеров). Из запроса извлекается параметр city и передается в <code>get_weather</code>. Далее формируется результирующий ответ в виде json. Адрес нашего сервиса и тип запроса задается в<code>app.add_routes</code>.</p><p>Стоп! А где же задачи? Не переживайте. Когда мы имеем дело с асинхронными веб-фреймворками (а <code>aiohttp</code> — это именно фреймворк, хоть и супер-минималистический), вся работа по созданию и запуску задач <code>asyncio</code> происходит у фреймворка "под капотом". Нам, как разработчикам, теперь нет нужды беспокоится об этих низменных деталях. Приложение мирно спит в бесконечном неблокирующем цикле, пока не придет запрос GET на определенный URL. Как только это произойдет, отработает логика в ручке. И снова баю-бай до следующего запроса. Но если первый запрос еще не успел обработаться, как поступил следующий, фреймворк отработает его в отдельной задаче, не дожидаясь (по возможности) окончания обработки первого. В этом сама суть асинхронности.</p><figure class="bordered "><img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/49c/4b1/2ba/49c4b12ba237c8839f761e36b03edbd5.png" width="450" height="161" data-src="https://habrastorage.org/getpro/habr/upload_files/49c/4b1/2ba/49c4b12ba237c8839f761e36b03edbd5.png"/><figcaption></figcaption></figure><p>Заходим браузером на адрес: <code>localhost:8080/weather?city=Sochi</code> и получаем симпатичный json:</p><pre><code>{"city": "Sochi", "weather": "Clouds"}
+</code></pre><p>Кстати, если вы всерьез решили заняться бэкенд-разработкой, одним браузером вам никак не обойтись. Потребуется инструмент, позволяющий залезать вглубь HTTP. Стандарт де-факто здесь <a href="https://www.postman.com" rel="noopener noreferrer nofollow">Postman</a>, но в природе существуют и альтернативные решения. </p><p>Скелет нашего приложения готов, теперь начинаем наращивать на нем мышцы. Воспользуемся бесплатным API переводчика <a href="https://libretranslate.de/" rel="noopener noreferrer nofollow">libretranslate.de</a>:</p><h3>Пример 6.2</h3><pre><code class="python">import asyncio
+import json
+from aiohttp import ClientSession, web
+
+
+async def get_weather(city):
+    async with ClientSession() as session:
+        url = f'http://api.openweathermap.org/data/2.5/weather'
+        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}
+
+        async with session.get(url=url, params=params) as response:
+            weather_json = await response.json()
+            try:
+                return weather_json["weather"][0]["main"]
+            except KeyError:
+                return 'Нет данных'
+
+
+async def get_translation(text, source, target):
+    async with ClientSession() as session:
+        url = 'https://libretranslate.de/translate'
+
+        data = {'q': text, 'source': source, 'target': target, 'format': 'text'}
+
+        async with session.post(url, json=data) as response:
+            translate_json = await response.json()
+
+            try:
+                return translate_json['translatedText']
+            except KeyError:
+                return text
+
+
+async def handle(request):
+    city_ru = request.rel_url.query['city']
+    city_en = await get_translation(city_ru, 'ru', 'en')
+
+    weather_en = await get_weather(city_en)
+    weather_ru = await get_translation(weather_en, 'en', 'ru')
+
+    result = {'city': city_ru, 'weather': weather_ru}
+
+    return web.Response(text=json.dumps(result, ensure_ascii=False))
+
+
+async def main():
+    app = web.Application()
+    app.add_routes([web.get('/weather', handle)])
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, 'localhost', 8080)
+    await site.start()
+
+    while True:
+        await asyncio.sleep(3600)
+
+
+if __name__ == '__main__':
+    asyncio.run(main())</code></pre><p>Теперь в ручке дважды вызывается асинхронная функция <code>get_translation</code> (обратите внимание, на этот раз мы передаем параметры внешнему сервису в виде json через тело запроса POST) и, вуаля:</p><p><code>localhost:8080/weather?city=Сочи</code></p><pre><code>{"city": "Сочи", "weather": "Облака"}
+</code></pre><p><em>Над всей Испанией безоблачное небо, а в деревне Гадюкино опять идут дожди...</em></p><p>Но что это за микросервис без логгера? Однако использовать в насквозь асинхронном приложении привычную синхронную (а значит блокирующую) библиотеку <code>logging</code> — это не наш путь. Воспользуемся правильной асинхронной библиотекой логгирования <code>aiologger</code>:</p><h3>Пример 6.3</h3><pre><code class="python">import asyncio
+import json
+from aiohttp import ClientSession, web
+from aiologger.loggers.json import JsonLogger
+
+
+logger = JsonLogger.with_default_handlers(
+            level='DEBUG',
+            serializer_kwargs={'ensure_ascii': False},
+        )
+
+
+async def get_weather(city):
+    async with ClientSession() as session:
+        url = f'http://api.openweathermap.org/data/2.5/weather'
+        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}
+
+        async with session.get(url=url, params=params) as response:
+            weather_json = await response.json()
+            try:
+                return weather_json["weather"][0]["main"]
+            except KeyError:
+                return 'Нет данных'
+
+
+async def get_translation(text, source, target):
+    await logger.info(f'Поступил запрос на на перевод слова: {text}')
+
+    async with ClientSession() as session:
+        url = 'https://libretranslate.de/translate'
+
+        data = {'q': text, 'source': source, 'target': target, 'format': 'text'}
+
+        async with session.post(url, json=data) as response:
+            translate_json = await response.json()
+
+            try:
+                return translate_json['translatedText']
+            except KeyError:
+                logger.error(f'Невозможно получить перевод для слова: {text}')
+                return text
+
+
+async def handle(request):
+    city_ru = request.rel_url.query['city']
+
+    await logger.info(f'Поступил запрос на город: {city_ru}')
+
+    city_en = await get_translation(city_ru, 'ru', 'en')
+    weather_en = await get_weather(city_en)
+    weather_ru = await get_translation(weather_en, 'en', 'ru')
+
+    result = {'city': city_ru, 'weather': weather_ru}
+
+    return web.Response(text=json.dumps(result, ensure_ascii=False))
+
+
+async def main():
+    app = web.Application()
+    app.add_routes([web.get('/weather', handle)])
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, 'localhost', 8080)
+    await site.start()
+
+    while True:
+        await asyncio.sleep(3600)
+
+
+if __name__ == '__main__':
+    asyncio.run(main())</code></pre><p>Обратите внимание, асинхронный логгер ни на миллисекунду не задержит работу нашего приложения в целом. Он будет использовать паузы, пока мы ожидаем запроса от пользователя или ответа от внешнего сервиса. Поэтому, если мы будем наблюдать за его работой под серьезной нагрузкой, может обнаружиться, что он заметно отстает от реального времени. Но в конечном итоге все что должно будет выведено в лог и ни один символ не потеряется.</p><p>Ну а теперь вишенка на торте — асинхронный доступ к базе данных. Предположим, в процессе работы нашего приложения нам надо что-то писать в БД, ну, например, сохранять поступившие запросы (ничего более умного мне как-то в голову не пришло). Самая простая БД в мире, как известно, — это SQLite. И для нее, к счастью, есть асинхронный драйвер <code>aiosqlite</code>. Пробуем:</p><h3>Пример 6.4</h3><pre><code class="python">import json
+import aiosqlite
+import asyncio
+from aiohttp import ClientSession, web
+from aiologger.loggers.json import JsonLogger
+from datetime import datetime
+
+
+logger = JsonLogger.with_default_handlers(
+            level='DEBUG',
+            serializer_kwargs={'ensure_ascii': False},
+        )
+
+
+async def create_table():
+    async with aiosqlite.connect('weather.db') as db:
+        await db.execute('CREATE TABLE IF NOT EXISTS requests '
+                         '(date text, city text, weather text)')
+        await db.commit()
+
+
+async def save_to_db(city, weather):
+    async with aiosqlite.connect('weather.db') as db:
+        await db.execute('INSERT INTO requests VALUES (?, ?, ?)',
+                         (datetime.now(), city, weather))
+        await db.commit()
+
+
+async def get_weather(city):
+    async with ClientSession() as session:
+        url = f'http://api.openweathermap.org/data/2.5/weather'
+        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}
+
+        async with session.get(url=url, params=params) as response:
+            weather_json = await response.json()
+            try:
+                return weather_json["weather"][0]["main"]
+            except KeyError:
+                return 'Нет данных'
+
+
+async def get_translation(text, source, target):
+    await logger.info(f'Поступил запрос на на перевод слова: {text}')
+
+    async with ClientSession() as session:
+        url = 'https://libretranslate.de/translate'
+
+        data = {'q': text, 'source': source, 'target': target, 'format': 'text'}
+
+        async with session.post(url, json=data) as response:
+            translate_json = await response.json()
+
+            try:
+                return translate_json['translatedText']
+            except KeyError:
+                logger.error(f'Невозможно получить перевод для слова: {text}')
+                return text
+
+
+async def handle(request):
+    city_ru = request.rel_url.query['city']
+
+    await logger.info(f'Поступил запрос на город: {city_ru}')
+
+    city_en = await get_translation(city_ru, 'ru', 'en')
+    weather_en = await get_weather(city_en)
+    weather_ru = await get_translation(weather_en, 'en', 'ru')
+
+    result = {'city': city_ru, 'weather': weather_ru}
+
+    await save_to_db(city_ru, weather_ru)
+
+    return web.Response(text=json.dumps(result, ensure_ascii=False))
+
+
+async def main():
+    await create_table()
+    app = web.Application()
+    app.add_routes([web.get('/weather', handle)])
+    runner = web.AppRunner(app)
+    await runner.setup()
+    site = web.TCPSite(runner, 'localhost', 8080)
+    await site.start()
+
+    while True:
+        await asyncio.sleep(3600)
+
+
+if __name__ == '__main__':
+    asyncio.run(main())</code></pre><details class="spoiler"><summary>Для продвинутых</summary><div class="spoiler__content"><p>Документация <code>aiohttp</code> не рекомендует создавать новую <code>ClientSession</code> для каждого запроса. В высоконагруженных приложениях это может привести к снижению производительности. Правильным решением является создание единственной сессии для всего приложения (или, как вариант, нескольких сессий — отдельно для каждого внешнего сервиса). Реализовать это можно так:</p><p>Пример 6.5</p><pre><code class="python">import json
+import aiosqlite
+import asyncio
+from aiohttp import ClientSession, web
+from aiologger.loggers.json import JsonLogger
+from datetime import datetime
+
+
+logger = JsonLogger.with_default_handlers(
+            level='DEBUG',
+            serializer_kwargs={'ensure_ascii': False},
+        )
+
+# здесь будут храниться объекты, общие для всего приложения
+app_storage = {}
+
+
+async def create_table():
+    async with aiosqlite.connect('weather.db') as db:
+        await db.execute('CREATE TABLE IF NOT EXISTS requests '
+                         '(date text, city text, weather text)')
+        await db.commit()
+
+
+async def save_to_db(city, weather):
+    async with aiosqlite.connect('weather.db') as db:
+        await db.execute('INSERT INTO requests VALUES (?, ?, ?)',
+                         (datetime.now(), city, weather))
+        await db.commit()
+
+
+async def get_weather(city):
+    url = f'http://api.openweathermap.org/data/2.5/weather'
+    params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}
+
+    # используем единую сессию
+    async with app_storage['session'].get(url=url, params=params) as response:
+        weather_json = await response.json()
+        try:
+            return weather_json["weather"][0]["main"]
+        except KeyError:
+            return 'Нет данных'
+
+
+async def get_translation(text, source, target):
+    await logger.info(f'Поступил запрос на на перевод слова: {text}')
+
+    url = 'https://libretranslate.de/translate'
+
+    data = {'q': text, 'source': source, 'target': target, 'format': 'text'}
+
+    # используем единую сессию
+    async with app_storage['session'].post(url, json=data) as response:
+        translate_json = await response.json()
+
+        try:
+            return translate_json['translatedText']
+        except KeyError:
+            logger.error(f'Невозможно получить перевод для слова: {text}')
+            return text
+
+
+async def handle(request):
+    city_ru = request.rel_url.query['city']
+
+    await logger.info(f'Поступил запрос на город: {city_ru}')
+
+    city_en = await get_translation(city_ru, 'ru', 'en')
+    weather_en = await get_weather(city_en)
+    weather_ru = await get_translation(weather_en, 'en', 'ru')
+
+    result = {'city': city_ru, 'weather': weather_ru}
+
+    await save_to_db(city_ru, weather_ru)
+
+    return web.Response(text=json.dumps(result, ensure_ascii=False))
+
+
+async def main():
+    # создаем единую сессию для всего приложения
+    app_storage['session'] = ClientSession()
+
+    # контекстный менеджер чтобы сессия корректно закрылась после завершения приложения
+    async with app_storage['session']:
+        await create_table()
+        app = web.Application()
+
+        app.add_routes([web.get('/weather', handle)])
+        runner = web.AppRunner(app)
+        await runner.setup()
+        site = web.TCPSite(runner, 'localhost', 8080)
+        await site.start()
+
+        while True:
+            await asyncio.sleep(3600)
+
+
+if __name__ == '__main__':
+    asyncio.run(main())</code></pre><p></p></div></details><p>Можете заглянуть внутрь созданного на лету файла <code>weather.db</code> (только используйте не текстовый просмотрщик, а какую-нибудь утилиту для работы с БД, например, <a href="https://dbeaver.io/" rel="noopener noreferrer nofollow">DBeaver</a>). Для каждого запроса создается соответствующая запись в таблице <code>requests</code>. И снова никаких блокировок, мы ведь живем в асинхронном мире.</p><p>В заключение этого раздела хочу вас поздравить. Теперь вы имеете в руках все необходимое для создания собственных асинхронных веб-приложений. Неважно какой фреймворк вы будете использовать: <code>FastAPI</code>, <code>Tornado</code>, <code>Falcon</code> или какой-нибудь еще. Принцип останется тот же самый как в старом добром <code>aiohttp</code>: создаем ручку и в ней нанизываем "шашлык" из вызовов асинхронных функций. Главное, за чем необходимо следить — это чтобы в эти функции не затесался какой-нибудь блокирующий зловред из скучной пыльной синхронной вселенной.</p><figure class="full-width "><img src="https://habrastorage.org/r/w1560/getpro/habr/upload_files/234/6dd/da4/2346ddda4ee1e447e28d1b0a0b2403ef.png" width="1200" height="1053" data-src="https://habrastorage.org/getpro/habr/upload_files/234/6dd/da4/2346ddda4ee1e447e28d1b0a0b2403ef.png"/><figcaption></figcaption></figure><p>На этом временно прощаемся.</p><p><strong><em>Продолжение следует...</em></strong></p><p></p></div></div></div> <!----> <!----></div> <!----> <div class="tm-article-poll-container"><div class="tm-article-poll tm-article-poll_variant-bordered"><div class="tm-notice tm-article-poll__notice tm-notice_positive"><!----> <div class="tm-notice__inner"><!----> <div class="tm-notice__content"><span>Только зарегистрированные пользователи могут участвовать в опросе. <a rel="nofollow" href="/kek/v1/auth/habrahabr/?back=/ru/post/671798/&hl=ru">Войдите</a>, пожалуйста.</span></div></div></div> <div class="tm-article-poll__header">О чем бы вы хотели узнать в следующей статье цикла?</div> <div class="tm-article-poll__answers"><div class="tm-article-poll__answer"><div class="tm-article-poll__answer-data"><span class="tm-article-poll__answer-percent tm-article-poll__answer-percent_winning">
+            59.82%
+          </span> <span class="tm-article-poll__answer-label">О работе с популярными асинхронными фреймворками и библиотеками</span> <span class="tm-article-poll__answer-votes">
+            134
+          </span></div> <div class="tm-article-poll__answer-bar"><div class="tm-article-poll__answer-progress tm-article-poll__answer-progress_winning" style="width:59.82%;"></div></div></div><div class="tm-article-poll__answer"><div class="tm-article-poll__answer-data"><span class="tm-article-poll__answer-percent">
+            40.18%
+          </span> <span class="tm-article-poll__answer-label">Лучше будем углубляться в низкоуровневые детали asyncio и научимся сами писать фреймворки</span> <span class="tm-article-poll__answer-votes">
+            90
+          </span></div> <div class="tm-article-poll__answer-bar"><div class="tm-article-poll__answer-progress" style="width:40.18%;"></div></div></div></div> <div class="tm-article-poll__stats">
+       Проголосовали 224 пользователя.  
+
+       Воздержались 18 пользователей. 
+    </div></div></div></div> <!----> <div class="tm-article-presenter__meta"><div class="tm-separated-list tm-article-presenter__meta-list"><span class="tm-separated-list__title">Теги:</span> <ul class="tm-separated-list__list"><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5Basync%5D" class="tm-tags-list__link">async</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5Bawait%5D" class="tm-tags-list__link">await</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5Basyncio%5D" class="tm-tags-list__link">asyncio</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C%5D" class="tm-tags-list__link">асинхронность</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D0%BE%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%5D" class="tm-tags-list__link">асинхронное программирование</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5%20%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8%5D" class="tm-tags-list__link">асинхронные задачи</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5%20%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8%5D" class="tm-tags-list__link">асинхронные функции</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5B%D0%B0%D1%81%D0%B8%D0%BD%D1%85%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9%20%D0%BA%D0%BE%D0%B4%5D" class="tm-tags-list__link">асинхронный код</a></li><li class="tm-separated-list__item"><a href="/ru/search/?target_type=posts&amp;order=relevance&amp;q=%5Baiohttp%5D" class="tm-tags-list__link">aiohttp</a></li></ul></div> <div class="tm-separated-list tm-article-presenter__meta-list"><span class="tm-separated-list__title">Хабы:</span> <ul class="tm-separated-list__list"><li class="tm-separated-list__item"><a href="/ru/hub/python/" class="tm-hubs-list__link">Python</a></li><li class="tm-separated-list__item"><a href="/ru/hub/programming/" class="tm-hubs-list__link">Программирование</a></li></ul></div></div></article></div> <!----></div> <div class="tm-article-sticky-panel"><div class="tm-data-icons tm-article-sticky-panel__icons"><div class="tm-article-rating tm-data-icons__item"><div class="tm-votes-meter tm-article-rating__votes-switcher"><svg height="24" width="24" class="tm-svg-img tm-votes-meter__icon tm-votes-meter__icon tm-votes-meter__icon_appearance-article"><title>Всего голосов 13: ↑12 и ↓1</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#counter-rating"></use></svg> <span title="Всего голосов 13: ↑12 и ↓1" class="tm-votes-meter__value tm-votes-meter__value tm-votes-meter__value_positive tm-votes-meter__value_appearance-article tm-votes-meter__value_rating">+11</span></div> <DIV class="v-portal" style="display:none;"></DIV></div> <!----> <!----> <button title="Добавить в закладки" type="button" class="bookmarks-button tm-data-icons__item"><span class="tm-svg-icon__wrapper bookmarks-button__icon"><svg height="24" width="24" class="tm-svg-img tm-svg-icon"><title>Добавить в закладки</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#counter-favorite"></use></svg></span> <span title="Количество пользователей, добавивших публикацию в закладки" class="bookmarks-button__counter">
+    143
+  </span></button> <div title="Поделиться" class="tm-sharing tm-data-icons__item"><button type="button" class="tm-sharing__button"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="tm-sharing__icon"><path fill="currentColor" d="M13.8 13.8V18l7.2-6.6L13.8 5v3.9C5 8.9 3 18.6 3 18.6c2.5-4.4 6-4.8 10.8-4.8z"></path></svg></button> <DIV class="v-portal" style="display:none;"></DIV></div> <div title="Читать комментарии" class="tm-article-comments-counter-link tm-data-icons__item"><a href="/ru/post/671798/comments/" class="tm-article-comments-counter-link__link"><svg height="24" width="24" class="tm-svg-img tm-article-comments-counter-link__icon"><title>Комментарии</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#counter-comments"></use></svg> <span class="tm-article-comments-counter-link__value">
+      17
+    </span></a> <!----></div> <!----> <DIV class="v-portal" style="display:none;"></DIV></div></div></div>  <div class="tm-article-presenter__footer"><div class="tm-article-blocks"><!----> <div></div> <section class="tm-block tm-block tm-block_spacing-bottom"><!----> <div class="tm-block__body tm-block__body tm-block__body_variant-balanced"><div class="tm-article-author"> <div class="tm-user-card tm-article-author__user-card tm-user-card tm-user-card_variant-article"><div class="tm-user-card__info-container"><div class="tm-user-card__header"><div class="tm-user-card__header-data"><a href="/ru/users/vlakir/" class="tm-user-card__userpic tm-user-card__userpic_size-40"><div class="tm-entity-image"><img alt="" src="//habrastorage.org/getpro/habr/avatars/2d4/687/18c/2d468718c41f806815ae84313e2dce83.jpg" class="tm-entity-image__pic"></div></a> <div class="tm-user-card__meta"><div title=" 55 голосов " class="tm-counter-container tm-karma tm-karma"><div class="tm-counter-container__header"><div class="tm-karma__votes tm-karma__votes_positive">
+      53
+    </div></div> <div class="tm-counter-container__footer"><div class="tm-karma__text">
+      Карма
+    </div> <DIV class="v-portal" style="display:none;"></DIV></div></div> <div title="Рейтинг пользователя" class="tm-counter-container"><div class="tm-counter-container__header"> <div class="tm-votes-lever tm-votes-lever tm-votes-lever_appearance-rating"><!----> <div class="tm-votes-lever__score tm-votes-lever__score tm-votes-lever__score_appearance-rating"><span class="tm-votes-lever__score-counter tm-votes-lever__score-counter tm-votes-lever__score-counter_rating">
+        0
+      </span></div> <!----></div></div> <div class="tm-counter-container__footer"><span class="tm-rating__text tm-rating__text">
+      Рейтинг
+    </span></div></div></div></div></div> <div class="tm-user-card__info tm-user-card__info tm-user-card__info_variant-article"><div class="tm-user-card__title tm-user-card__title tm-user-card__title_variant-article"><span class="tm-user-card__name tm-user-card__name tm-user-card__name_variant-article">Владимир Кириевский</span> <a href="/ru/users/vlakir/" class="tm-user-card__nickname tm-user-card__nickname tm-user-card__nickname_variant-article">
+          @vlakir
+        </a> <!----></div> <p class="tm-user-card__short-info tm-user-card__short-info tm-user-card__short-info_variant-article">Python developer</p></div></div> <div class="tm-user-card__buttons tm-user-card__buttons tm-user-card__buttons_variant-article"><!----> <!----> <button type="submit" class="tm-user-card__button btn btn_transparent btn_small">
+      Задонатить
+    </button> <!----> <!----></div></div> <div class="tm-article-author__user-contacts"><a href="https://gitflic.ru/user/vlakir" rel="noopener" target="_blank" class="tm-article-author__contact">
+      Сайт
+    </a><a href="https://telegram.me/vlakir" rel="noopener" target="_blank" class="tm-article-author__contact">
+      Telegram
+    </a></div></div> <DIV class="v-portal" style="display:none;"></DIV></div> <!----></section> <div class="tm-adfox-banner__container tm-page-article__banner"><!----> <div id="adfox_164725660339535756" class="tm-adfox-banner tm-adfox-banner tm-adfox-banner_variant-leaderboard"></div></div> <div class="tm-article-blocks__comments"><div class="tm-article-page-comments"><div class="tm-article-comments-counter-link tm-article-comments-counter-button"><a href="/ru/post/671798/comments/" class="tm-article-comments-counter-link__link tm-article-comments-counter-link__link_button-style"><svg height="24" width="24" class="tm-svg-img tm-article-comments-counter-link__icon tm-article-comments-counter-link__icon_contrasted"><title>Комментарии</title> <use xlink:href="/img/megazord-v28.617e16ca..svg#counter-comments"></use></svg> <span class="tm-article-comments-counter-link__value tm-article-comments-counter-link__value_contrasted">
+       Комментарии 17 
+    </span></a> <!----></div></div></div>  <section class="tm-block tm-block tm-block_spacing-bottom"><header class="tm-block__header tm-block__header tm-block__header_variant-borderless"><div class="tm-block__header-container"><h2 class="tm-block__title tm-block__title tm-block__title_variant-large">Публикации</h2> </div> <!----></header> <div class="tm-block__body tm-block__body tm-block__body_variant-condensed-slim"><div class="tm-tabs tm-tabs"><div><span class="tm-tabs__tab-item"><button class="tm-tabs__tab-link tm-tabs__tab-link tm-tabs__tab-link_active tm-tabs__tab-link_slim">
+        Лучшие за сутки
+      </button></span><span class="tm-tabs__tab-item"><button class="tm-tabs__tab-link tm-tabs__tab-link tm-tabs__tab-link_slim">
+        Похожие
+      </button></span></div> <!----></div> <div class="similar-and-daily__tab-view"><div><!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <div class="tm-placeholder-article-cards"><div class="tm-placeholder-article-card"><div class="tm-placeholder__user"><div class="tm-placeholder__user-pic loads"></div> <div class="tm-placeholder__user-date loads"></div></div> <div class="tm-placeholder-article-card__title"><div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div> <div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div></div> <div class="tm-placeholder-article-card__icons tm-placeholder__counters"><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div></div></div><div class="tm-placeholder-article-card"><div class="tm-placeholder__user"><div class="tm-placeholder__user-pic loads"></div> <div class="tm-placeholder__user-date loads"></div></div> <div class="tm-placeholder-article-card__title"><div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div> <div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div></div> <div class="tm-placeholder-article-card__icons tm-placeholder__counters"><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div></div></div><div class="tm-placeholder-article-card"><div class="tm-placeholder__user"><div class="tm-placeholder__user-pic loads"></div> <div class="tm-placeholder__user-date loads"></div></div> <div class="tm-placeholder-article-card__title"><div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div> <div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div></div> <div class="tm-placeholder-article-card__icons tm-placeholder__counters"><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div></div></div><div class="tm-placeholder-article-card"><div class="tm-placeholder__user"><div class="tm-placeholder__user-pic loads"></div> <div class="tm-placeholder__user-date loads"></div></div> <div class="tm-placeholder-article-card__title"><div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div> <div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div></div> <div class="tm-placeholder-article-card__icons tm-placeholder__counters"><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div></div></div><div class="tm-placeholder-article-card"><div class="tm-placeholder__user"><div class="tm-placeholder__user-pic loads"></div> <div class="tm-placeholder__user-date loads"></div></div> <div class="tm-placeholder-article-card__title"><div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div> <div class="tm-placeholder__line tm-placeholder-article-card__title-line loads"></div></div> <div class="tm-placeholder-article-card__icons tm-placeholder__counters"><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div><div class="tm-placeholder-data-icon"><div class="tm-placeholder__icon tm-placeholder__icon_large loads"></div> <div class="tm-placeholder__line tm-placeholder__line_icon-text"></div></div></div></div></div> <!----> <!----> <!----> <!----></div> <!----></div></div> <!----></section> <div><div><!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <div class="tm-placeholder-promo"><div class="tm-placeholder-promo__header"><div class="tm-placeholder__line tm-placeholder__line_promo-title"></div></div> <div class="tm-placeholder-promo__body"><div class="tm-placeholder-promo__posts"><div class="tm-placeholder-promo__post"><div class="tm-placeholder-promo__image"></div> <div class="tm-placeholder__line tm-placeholder__line_post-title"></div></div> <div class="tm-placeholder-promo__post"><div class="tm-placeholder-promo__image"></div> <div class="tm-placeholder__line tm-placeholder__line_post-title"></div></div> <div class="tm-placeholder-promo__post"><div class="tm-placeholder-promo__image"></div> <div class="tm-placeholder__line tm-placeholder__line_post-title"></div></div></div> <div class="tm-placeholder-promo__dots"><div class="tm-placeholder-promo__dot"></div> <div class="tm-placeholder-promo__dot"></div> <div class="tm-placeholder-promo__dot"></div></div></div></div> <!----> <!----> <!----> <!----> <!----></div></div> <div><div><!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <div class="tm-placeholder-inset tm-placeholder-salary"><div class="tm-placeholder-inset__header"><div class="tm-placeholder__line tm-placeholder__line_inset-header loads"></div></div> <div class="tm-placeholder-salary__body"><div class="tm-placeholder-salary__text"><div class="tm-placeholder__line tm-placeholder__line_salary_average"></div> <div class="tm-placeholder-salary__description"><div class="tm-placeholder__line loads"></div> <div class="tm-placeholder__line loads"></div> <div class="tm-placeholder__line loads"></div> <div class="tm-placeholder__line loads"></div></div></div> <div class="tm-placeholder-salary__image loads"></div></div> <div class="tm-placeholder-inset__footer tm-placeholder-inset__footer_salary"><div class="tm-placeholder__line tm-placeholder__line_inset-footer loads"></div></div></div> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----></div></div> <!----> </div></div></div></div></div> <div class="tm-page__sidebar"><div class="tm-layout-sidebar"><div class="tm-layout-sidebar__ads tm-layout-sidebar__ads_initial"><div class="tm-adfox-banner__container tm-layout-sidebar__banner tm-layout-sidebar__banner_top"><!----> <div id="adfox_164725680533065327" class="tm-adfox-banner tm-adfox-banner tm-adfox-banner_variant-half-page"></div></div></div> <div class="tm-sexy-sidebar tm-sexy-sidebar_initial" style="margin-top:0px;"><!----> <section data-navigatable="" tabindex="0" data-async-called="true" class="tm-block tm-stories-block tm-block tm-block_spacing-around"><header class="tm-block__header tm-block__header"><div class="tm-block__header-container"><h2 class="tm-block__title tm-block__title">Истории</h2> </div> <!----></header> <div class="tm-block__body tm-block__body tm-block__body_variant-equal"><div class="tm-stories-empty"><div class="tm-stories-card-empty"><div class="tm-stories-card-empty__image"></div> <div class="tm-stories-card-empty__title"><div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div></div></div><div class="tm-stories-card-empty"><div class="tm-stories-card-empty__image"></div> <div class="tm-stories-card-empty__title"><div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div></div></div><div class="tm-stories-card-empty"><div class="tm-stories-card-empty__image"></div> <div class="tm-stories-card-empty__title"><div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div></div></div><div class="tm-stories-card-empty"><div class="tm-stories-card-empty__image"></div> <div class="tm-stories-card-empty__title"><div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div></div></div><div class="tm-stories-card-empty"><div class="tm-stories-card-empty__image"></div> <div class="tm-stories-card-empty__title"><div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div></div></div><div class="tm-stories-card-empty"><div class="tm-stories-card-empty__image"></div> <div class="tm-stories-card-empty__title"><div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div> <div class="tm-stories-card-empty__title-block"></div></div></div></div> <!----></div> <!----></section> <section data-async-called="true" class="tm-block tm-block tm-block_spacing-around"><header class="tm-block__header tm-block__header"><div class="tm-block__header-container"><h2 class="tm-block__title tm-block__title">Работа</h2> </div> <!----></header> <div class="tm-block__body tm-block__body"><div class="tm-vacancies-block__item"><a href="https://career.habr.com/vacancies/data_scientist" target="_blank" class="tm-vacancies-block__vacancy-title">
+        Data Scientist
+      </a> <div class="tm-vacancies-block__vacancies-count">
+        126
+    вакансий
+      </div></div><div class="tm-vacancies-block__item"><a href="https://career.habr.com/vacancies/programmist_python" target="_blank" class="tm-vacancies-block__vacancy-title">
+        Python разработчик
+      </a> <div class="tm-vacancies-block__vacancies-count">
+        144
+    вакансии
+      </div></div><div class="tm-vacancies-block__item"><a href="https://career.habr.com/vacancies/django_razrabotchik" target="_blank" class="tm-vacancies-block__vacancy-title">
+        Django разработчик
+      </a> <div class="tm-vacancies-block__vacancies-count">
+        58
+    вакансий
+      </div></div></div> <footer class="tm-block__footer"><a href="https://career.habr.com/catalog" class="tm-block-extralink">
+      Все вакансии
+    </a></footer></section> <div class="tm-adfox-banner__container tm-layout-sidebar__banner tm-layout-sidebar__banner_bottom"><!----> <div id="adfox_164725691003361602" class="tm-adfox-banner tm-adfox-banner tm-adfox-banner_variant-medium-rectangle"></div></div></div></div></div></div></div></div></main> <!----></div> <div class="tm-footer-menu"><div class="tm-page-width"><div class="tm-footer-menu__container"><div class="tm-footer-menu__block"><p class="tm-footer-menu__block-title">
+          Ваш аккаунт
+        </p> <div class="tm-footer-menu__block-content"><ul class="tm-footer-menu__list"><li class="tm-footer-menu__list-item"><a href="/kek/v1/auth/habrahabr/?back=/ru/post/671798/&amp;hl=ru" rel="nofollow" target="_self">
+                Войти
+              </a></li><li class="tm-footer-menu__list-item"><a href="/kek/v1/auth/habrahabr-register/?back=/ru/post/671798/&amp;hl=ru" rel="nofollow" target="_self">
+                Регистрация
+              </a></li></ul></div></div><div class="tm-footer-menu__block"><p class="tm-footer-menu__block-title">
+          Разделы
+        </p> <div class="tm-footer-menu__block-content"><ul class="tm-footer-menu__list"><li class="tm-footer-menu__list-item"><a href="/ru/" class="footer-menu__item-link router-link-active">
+                Публикации
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/news/" class="footer-menu__item-link">
+                Новости
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/hubs/" class="footer-menu__item-link">
+                Хабы
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/companies/" class="footer-menu__item-link">
+                Компании
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/users/" class="footer-menu__item-link">
+                Авторы
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/sandbox/" class="footer-menu__item-link">
+                Песочница
+              </a></li></ul></div></div><div class="tm-footer-menu__block"><p class="tm-footer-menu__block-title">
+          Информация
+        </p> <div class="tm-footer-menu__block-content"><ul class="tm-footer-menu__list"><li class="tm-footer-menu__list-item"><a href="/ru/docs/help/" class="footer-menu__item-link">
+                Устройство сайта
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/docs/authors/codex/" class="footer-menu__item-link">
+                Для авторов
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/docs/companies/corpblogs/" class="footer-menu__item-link">
+                Для компаний
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/docs/docs/transparency/" class="footer-menu__item-link">
+                Документы
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://account.habr.com/info/agreement" target="_blank">
+                Соглашение
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://account.habr.com/info/confidential/" target="_blank">
+                Конфиденциальность
+              </a></li></ul></div></div><div class="tm-footer-menu__block"><p class="tm-footer-menu__block-title">
+          Услуги
+        </p> <div class="tm-footer-menu__block-content"><ul class="tm-footer-menu__list"><li class="tm-footer-menu__list-item"><a href="https://company.habr.com/ru/corporate-blogs/" target="_blank">
+                Корпоративный блог
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://company.habr.com/ru/advertising/" target="_blank">
+                Медийная реклама
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://company.habr.com/ru/native-special/" target="_blank">
+                Нативные проекты
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://company.habr.com/ru/education-programs/" target="_blank">
+                Образовательные программы
+              </a></li><li class="tm-footer-menu__list-item"><a href="https://company.habr.com/ru/hello-startup/" target="_blank">
+                Стартапам
+              </a></li><li class="tm-footer-menu__list-item"><a href="/ru/megaprojects/" class="footer-menu__item-link">
+                Мегапроекты
+              </a></li></ul></div></div></div></div></div> <div class="tm-footer"><div class="tm-page-width"><div class="tm-footer__container"><!----> <div class="tm-footer__social"><a href="https://www.facebook.com/habrahabr.ru" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Facebook</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-facebook"></use></svg></a><a href="https://twitter.com/habr_com" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Twitter</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-twitter"></use></svg></a><a href="https://vk.com/habr" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>VK</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-vkontakte"></use></svg></a><a href="https://telegram.me/habr_com" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Telegram</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-telegram"></use></svg></a><a href="https://www.youtube.com/channel/UCd_sTwKqVrweTt4oAKY5y4w" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Youtube</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-youtube"></use></svg></a><a href="https://zen.yandex.ru/habr" rel="nofollow noopener noreferrer" target="_blank" class="tm-svg-icon__wrapper tm-social-icons__icon"><svg height="16" width="16" class="tm-svg-img tm-svg-icon"><title>Яндекс Дзен</title> <use xlink:href="/img/social-icons-sprite.svg#social-logo-zen"></use></svg></a></div> <DIV class="v-portal" style="display:none;"></DIV> <button class="tm-footer__link"><!---->
+        Настройка языка
+      </button> <a href="/ru/feedback/" class="tm-footer__link">
+        Техническая поддержка
+      </a> <a href="/berserk-mode-nope" class="tm-footer__link">
+        Вернуться на старую версию
+      </a> <div class="tm-footer-copyright"><span class="tm-copyright"><span class="tm-copyright__years">© 2006–2023, </span> <span class="tm-copyright__name"><a href="https://company.habr.com/" rel="noopener" target="_blank" class="tm-copyright__link">Habr</a></span></span></div></div></div></div> <!----> <!----></div> <div class="vue-portal-target"></div></div>
+<script>window.__INITIAL_STATE__={"adblock":{"hasAcceptableAdsFilter":false,"hasAdblock":false},"articlesList":{"articlesList":{"671798":{"id":"671798","timePublished":"2022-06-16T14:34:31+00:00","isCorporative":false,"lang":"ru","titleHtml":"Асинхронный python без головной боли (часть 2)","leadData":{"textHtml":"\u003Cp\u003E\u003Cstrong\u003EПродолжаем вкусно готовить asyncio\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\u003Cp\u003EТеперь мы уже знаем достаточно, чтобы написать модный асинхронный микросервис, реализующий паттерн \"API-шлюз\". И попутно познакомимся с асинхронным логгированием и доступом к базе данных.\u003C\u002Fp\u003E\u003Cp\u003E\u003C\u002Fp\u003E","imageUrl":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F1a3\u002F9e5\u002Ff3d\u002F1a39e5f3d67e130fe4159f9080547204.jpg","buttonTextHtml":"Выпей меня","image":{"url":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F1a3\u002F9e5\u002Ff3d\u002F1a39e5f3d67e130fe4159f9080547204.jpg","fit":"cover","positionY":0,"positionX":0}},"editorVersion":"2.0","postType":"article","postLabels":[],"author":{"id":"2253916","alias":"vlakir","fullname":"Владимир Кириевский","avatarUrl":"\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Favatars\u002F2d4\u002F687\u002F18c\u002F2d468718c41f806815ae84313e2dce83.jpg","speciality":"Python developer","scoreStats":{"score":53,"votesCount":55},"rating":0,"relatedData":null,"contacts":[{"title":"Сайт","url":"https:\u002F\u002Fgitflic.ru\u002Fuser\u002Fvlakir","value":"https:\u002F\u002Fgitflic.ru\u002Fuser\u002Fvlakir","siteTitle":null,"favicon":null},{"title":"Telegram","url":"https:\u002F\u002Ftelegram.me\u002Fvlakir","value":"vlakir","siteTitle":null,"favicon":null}],"authorContacts":[{"title":"Сайт","url":"https:\u002F\u002Fgitflic.ru\u002Fuser\u002Fvlakir","value":"https:\u002F\u002Fgitflic.ru\u002Fuser\u002Fvlakir","siteTitle":null,"favicon":null},{"title":"Telegram","url":"https:\u002F\u002Ftelegram.me\u002Fvlakir","value":"vlakir","siteTitle":null,"favicon":null}],"paymentDetails":{"paymentYandexMoney":"410012385050149","paymentPayPalMe":null,"paymentWebmoney":null}},"statistics":{"commentsCount":17,"favoritesCount":143,"readingCount":19887,"score":11,"votesCount":13,"votesCountPlus":12,"votesCountMinus":1},"hubs":[{"id":"340","alias":"python","type":"collective","title":"Python","titleHtml":"Python","isProfiled":true,"relatedData":null},{"id":"359","alias":"programming","type":"collective","title":"Программирование","titleHtml":"Программирование","isProfiled":true,"relatedData":null}],"flows":[{"id":"1","alias":"develop","title":"Разработка","titleHtml":"Разработка"}],"relatedData":null,"textHtml":"\u003Cdiv xmlns=\"http:\u002F\u002Fwww.w3.org\u002F1999\u002Fxhtml\"\u003E\u003Cp\u003E\u003Cstrong\u003E\u003Cem\u003EЭто продолжение цикла статей про \u003C\u002Fem\u003E\u003C\u002Fstrong\u003E\u003Ccode\u003Easyncio\u003C\u002Fcode\u003E\u003Cstrong\u003E\u003Cem\u003E. Начало \u003C\u002Fem\u003E\u003C\u002Fstrong\u003E\u003Ca href=\"https:\u002F\u002Fhabr.com\u002Fru\u002Fpost\u002F667630\u002F\" rel=\"noopener noreferrer nofollow\"\u003E\u003Cstrong\u003E\u003Cem\u003Eздесь\u003C\u002Fem\u003E\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E\u003Cstrong\u003E\u003Cem\u003E.\u003C\u002Fem\u003E\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\u003Ch2\u003E6. Веб-сервер aiohttp и другие жители асинхронного мира\u003C\u002Fh2\u003E\u003Cp\u003EПродолжаем готовить \u003Ccode\u003Easyncio\u003C\u002Fcode\u003E. Теперь мы уже знаем достаточно, чтобы написать модный асинхронный микросервис. Реализуем известный архитектурный паттерн \"API-шлюз\". Это довольно простая штука. По запросу на свой API-интерфейс приложение собирает данные из других API, обрабатывает и возвращает результат пользователю. При этом пользователь знает только одну точку входа, а все внутренние подробности (кто куда и зачем сходил) от него скрыты.\u003C\u002Fp\u003E\u003Cfigure class=\"full-width \"\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw1560\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F9c7\u002F89b\u002F34d\u002F9c789b34da2cb081afd3ab943b0ab223.png\" width=\"789\" height=\"512\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F9c7\u002F89b\u002F34d\u002F9c789b34da2cb081afd3ab943b0ab223.png\"\u002F\u003E\u003Cfigcaption\u003E\u003C\u002Ffigcaption\u003E\u003C\u002Ffigure\u003E\u003Cp\u003EВ предыдущей главе мы научились запрашивать погоду у сервиса \u003Ca href=\"https:\u002F\u002Fopenweathermap.org\u002Fapi\" rel=\"noopener noreferrer nofollow\"\u003Eapi.openweathermap.org\u003C\u002Fa\u003E. Давайте его слегка \u003Cs\u003Eукрадем\u003C\u002Fs\u003E импортозаместим. Вернее сказать, русифицируем. Пусть пользователь нашего сервиса передает название города на русском языке в параметрах GET-запроса и получает ответ в виде json опять-таки на великом и могучем. А откуда мы взяли информацию о погоде, пользователю знать не положено. Может у нас собственные метеостанции в каждой деревне стоят, поди проверь.\u003C\u002Fp\u003E\u003Cp\u003EМы уже освоили http-клиента библиотеки \u003Ccode\u003Eaiohttp\u003C\u002Fcode\u003E, с помощью которого можно обращаться к внешним API. Оказывается, в этой же библиотеке есть и все необходимое для создания полноценного http-сервера. Для начала напишем просто зеркальный прокси:\u003C\u002Fp\u003E\u003Ch3\u003EПример 6.1\u003C\u002Fh3\u003E\u003Cpre\u003E\u003Ccode class=\"python\"\u003Eimport asyncio\nimport json\nfrom aiohttp import ClientSession, web\n\n\nasync def get_weather(city):\n    async with ClientSession() as session:\n        url = f'http:\u002F\u002Fapi.openweathermap.org\u002Fdata\u002F2.5\u002Fweather'\n        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}\n\n        async with session.get(url=url, params=params) as response:\n            weather_json = await response.json()\n            try:\n                return weather_json[\"weather\"][0][\"main\"]\n            except KeyError:\n                return 'Нет данных'\n\n\nasync def handle(request):\n    city = request.rel_url.query['city']\n    weather = await get_weather(city)\n    result = {'city': city, 'weather': weather}\n\n    return web.Response(text=json.dumps(result, ensure_ascii=False))\n\n\nasync def main():\n    app = web.Application()\n    app.add_routes([web.get('\u002Fweather', handle)])\n    runner = web.AppRunner(app)\n    await runner.setup()\n    site = web.TCPSite(runner, 'localhost', 8080)\n    await site.start()\n\n    while True:\n        await asyncio.sleep(3600)\n\n\nif __name__ == '__main__':\n    asyncio.run(main())\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cp\u003EВ асинхронной функции \u003Ccode\u003Eget_weather\u003C\u002Fcode\u003E ничего нового нет, мы ее лишь слегка причесали, чтобы запрос погоды для несуществующего города не приводил к трагическим последствиям для всего нашего приложения. За обработку запроса отвечает функция \u003Ccode\u003Ehandle\u003C\u002Fcode\u003E (\"ручка\" на сленге бэкендеров). Из запроса извлекается параметр city и передается в \u003Ccode\u003Eget_weather\u003C\u002Fcode\u003E. Далее формируется результирующий ответ в виде json. Адрес нашего сервиса и тип запроса задается в\u003Ccode\u003Eapp.add_routes\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\u003Cp\u003EСтоп! А где же задачи? Не переживайте. Когда мы имеем дело с асинхронными веб-фреймворками (а \u003Ccode\u003Eaiohttp\u003C\u002Fcode\u003E — это именно фреймворк, хоть и супер-минималистический), вся работа по созданию и запуску задач \u003Ccode\u003Easyncio\u003C\u002Fcode\u003E происходит у фреймворка \"под капотом\". Нам, как разработчикам, теперь нет нужды беспокоится об этих низменных деталях. Приложение мирно спит в бесконечном неблокирующем цикле, пока не придет запрос GET на определенный URL. Как только это произойдет, отработает логика в ручке. И снова баю-бай до следующего запроса. Но если первый запрос еще не успел обработаться, как поступил следующий, фреймворк отработает его в отдельной задаче, не дожидаясь (по возможности) окончания обработки первого. В этом сама суть асинхронности.\u003C\u002Fp\u003E\u003Cfigure class=\"bordered \"\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw1560\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F49c\u002F4b1\u002F2ba\u002F49c4b12ba237c8839f761e36b03edbd5.png\" width=\"450\" height=\"161\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F49c\u002F4b1\u002F2ba\u002F49c4b12ba237c8839f761e36b03edbd5.png\"\u002F\u003E\u003Cfigcaption\u003E\u003C\u002Ffigcaption\u003E\u003C\u002Ffigure\u003E\u003Cp\u003EЗаходим браузером на адрес: \u003Ccode\u003Elocalhost:8080\u002Fweather?city=Sochi\u003C\u002Fcode\u003E и получаем симпатичный json:\u003C\u002Fp\u003E\u003Cpre\u003E\u003Ccode\u003E{\"city\": \"Sochi\", \"weather\": \"Clouds\"}\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cp\u003EКстати, если вы всерьез решили заняться бэкенд-разработкой, одним браузером вам никак не обойтись. Потребуется инструмент, позволяющий залезать вглубь HTTP. Стандарт де-факто здесь \u003Ca href=\"https:\u002F\u002Fwww.postman.com\" rel=\"noopener noreferrer nofollow\"\u003EPostman\u003C\u002Fa\u003E, но в природе существуют и альтернативные решения. \u003C\u002Fp\u003E\u003Cp\u003EСкелет нашего приложения готов, теперь начинаем наращивать на нем мышцы. Воспользуемся бесплатным API переводчика \u003Ca href=\"https:\u002F\u002Flibretranslate.de\u002F\" rel=\"noopener noreferrer nofollow\"\u003Elibretranslate.de\u003C\u002Fa\u003E:\u003C\u002Fp\u003E\u003Ch3\u003EПример 6.2\u003C\u002Fh3\u003E\u003Cpre\u003E\u003Ccode class=\"python\"\u003Eimport asyncio\nimport json\nfrom aiohttp import ClientSession, web\n\n\nasync def get_weather(city):\n    async with ClientSession() as session:\n        url = f'http:\u002F\u002Fapi.openweathermap.org\u002Fdata\u002F2.5\u002Fweather'\n        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}\n\n        async with session.get(url=url, params=params) as response:\n            weather_json = await response.json()\n            try:\n                return weather_json[\"weather\"][0][\"main\"]\n            except KeyError:\n                return 'Нет данных'\n\n\nasync def get_translation(text, source, target):\n    async with ClientSession() as session:\n        url = 'https:\u002F\u002Flibretranslate.de\u002Ftranslate'\n\n        data = {'q': text, 'source': source, 'target': target, 'format': 'text'}\n\n        async with session.post(url, json=data) as response:\n            translate_json = await response.json()\n\n            try:\n                return translate_json['translatedText']\n            except KeyError:\n                return text\n\n\nasync def handle(request):\n    city_ru = request.rel_url.query['city']\n    city_en = await get_translation(city_ru, 'ru', 'en')\n\n    weather_en = await get_weather(city_en)\n    weather_ru = await get_translation(weather_en, 'en', 'ru')\n\n    result = {'city': city_ru, 'weather': weather_ru}\n\n    return web.Response(text=json.dumps(result, ensure_ascii=False))\n\n\nasync def main():\n    app = web.Application()\n    app.add_routes([web.get('\u002Fweather', handle)])\n    runner = web.AppRunner(app)\n    await runner.setup()\n    site = web.TCPSite(runner, 'localhost', 8080)\n    await site.start()\n\n    while True:\n        await asyncio.sleep(3600)\n\n\nif __name__ == '__main__':\n    asyncio.run(main())\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cp\u003EТеперь в ручке дважды вызывается асинхронная функция \u003Ccode\u003Eget_translation\u003C\u002Fcode\u003E (обратите внимание, на этот раз мы передаем параметры внешнему сервису в виде json через тело запроса POST) и, вуаля:\u003C\u002Fp\u003E\u003Cp\u003E\u003Ccode\u003Elocalhost:8080\u002Fweather?city=Сочи\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\u003Cpre\u003E\u003Ccode\u003E{\"city\": \"Сочи\", \"weather\": \"Облака\"}\n\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cp\u003E\u003Cem\u003EНад всей Испанией безоблачное небо, а в деревне Гадюкино опять идут дожди...\u003C\u002Fem\u003E\u003C\u002Fp\u003E\u003Cp\u003EНо что это за микросервис без логгера? Однако использовать в насквозь асинхронном приложении привычную синхронную (а значит блокирующую) библиотеку \u003Ccode\u003Elogging\u003C\u002Fcode\u003E — это не наш путь. Воспользуемся правильной асинхронной библиотекой логгирования \u003Ccode\u003Eaiologger\u003C\u002Fcode\u003E:\u003C\u002Fp\u003E\u003Ch3\u003EПример 6.3\u003C\u002Fh3\u003E\u003Cpre\u003E\u003Ccode class=\"python\"\u003Eimport asyncio\nimport json\nfrom aiohttp import ClientSession, web\nfrom aiologger.loggers.json import JsonLogger\n\n\nlogger = JsonLogger.with_default_handlers(\n            level='DEBUG',\n            serializer_kwargs={'ensure_ascii': False},\n        )\n\n\nasync def get_weather(city):\n    async with ClientSession() as session:\n        url = f'http:\u002F\u002Fapi.openweathermap.org\u002Fdata\u002F2.5\u002Fweather'\n        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}\n\n        async with session.get(url=url, params=params) as response:\n            weather_json = await response.json()\n            try:\n                return weather_json[\"weather\"][0][\"main\"]\n            except KeyError:\n                return 'Нет данных'\n\n\nasync def get_translation(text, source, target):\n    await logger.info(f'Поступил запрос на на перевод слова: {text}')\n\n    async with ClientSession() as session:\n        url = 'https:\u002F\u002Flibretranslate.de\u002Ftranslate'\n\n        data = {'q': text, 'source': source, 'target': target, 'format': 'text'}\n\n        async with session.post(url, json=data) as response:\n            translate_json = await response.json()\n\n            try:\n                return translate_json['translatedText']\n            except KeyError:\n                logger.error(f'Невозможно получить перевод для слова: {text}')\n                return text\n\n\nasync def handle(request):\n    city_ru = request.rel_url.query['city']\n\n    await logger.info(f'Поступил запрос на город: {city_ru}')\n\n    city_en = await get_translation(city_ru, 'ru', 'en')\n    weather_en = await get_weather(city_en)\n    weather_ru = await get_translation(weather_en, 'en', 'ru')\n\n    result = {'city': city_ru, 'weather': weather_ru}\n\n    return web.Response(text=json.dumps(result, ensure_ascii=False))\n\n\nasync def main():\n    app = web.Application()\n    app.add_routes([web.get('\u002Fweather', handle)])\n    runner = web.AppRunner(app)\n    await runner.setup()\n    site = web.TCPSite(runner, 'localhost', 8080)\n    await site.start()\n\n    while True:\n        await asyncio.sleep(3600)\n\n\nif __name__ == '__main__':\n    asyncio.run(main())\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cp\u003EОбратите внимание, асинхронный логгер ни на миллисекунду не задержит работу нашего приложения в целом. Он будет использовать паузы, пока мы ожидаем запроса от пользователя или ответа от внешнего сервиса. Поэтому, если мы будем наблюдать за его работой под серьезной нагрузкой, может обнаружиться, что он заметно отстает от реального времени. Но в конечном итоге все что должно будет выведено в лог и ни один символ не потеряется.\u003C\u002Fp\u003E\u003Cp\u003EНу а теперь вишенка на торте — асинхронный доступ к базе данных. Предположим, в процессе работы нашего приложения нам надо что-то писать в БД, ну, например, сохранять поступившие запросы (ничего более умного мне как-то в голову не пришло). Самая простая БД в мире, как известно, — это SQLite. И для нее, к счастью, есть асинхронный драйвер \u003Ccode\u003Eaiosqlite\u003C\u002Fcode\u003E. Пробуем:\u003C\u002Fp\u003E\u003Ch3\u003EПример 6.4\u003C\u002Fh3\u003E\u003Cpre\u003E\u003Ccode class=\"python\"\u003Eimport json\nimport aiosqlite\nimport asyncio\nfrom aiohttp import ClientSession, web\nfrom aiologger.loggers.json import JsonLogger\nfrom datetime import datetime\n\n\nlogger = JsonLogger.with_default_handlers(\n            level='DEBUG',\n            serializer_kwargs={'ensure_ascii': False},\n        )\n\n\nasync def create_table():\n    async with aiosqlite.connect('weather.db') as db:\n        await db.execute('CREATE TABLE IF NOT EXISTS requests '\n                         '(date text, city text, weather text)')\n        await db.commit()\n\n\nasync def save_to_db(city, weather):\n    async with aiosqlite.connect('weather.db') as db:\n        await db.execute('INSERT INTO requests VALUES (?, ?, ?)',\n                         (datetime.now(), city, weather))\n        await db.commit()\n\n\nasync def get_weather(city):\n    async with ClientSession() as session:\n        url = f'http:\u002F\u002Fapi.openweathermap.org\u002Fdata\u002F2.5\u002Fweather'\n        params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}\n\n        async with session.get(url=url, params=params) as response:\n            weather_json = await response.json()\n            try:\n                return weather_json[\"weather\"][0][\"main\"]\n            except KeyError:\n                return 'Нет данных'\n\n\nasync def get_translation(text, source, target):\n    await logger.info(f'Поступил запрос на на перевод слова: {text}')\n\n    async with ClientSession() as session:\n        url = 'https:\u002F\u002Flibretranslate.de\u002Ftranslate'\n\n        data = {'q': text, 'source': source, 'target': target, 'format': 'text'}\n\n        async with session.post(url, json=data) as response:\n            translate_json = await response.json()\n\n            try:\n                return translate_json['translatedText']\n            except KeyError:\n                logger.error(f'Невозможно получить перевод для слова: {text}')\n                return text\n\n\nasync def handle(request):\n    city_ru = request.rel_url.query['city']\n\n    await logger.info(f'Поступил запрос на город: {city_ru}')\n\n    city_en = await get_translation(city_ru, 'ru', 'en')\n    weather_en = await get_weather(city_en)\n    weather_ru = await get_translation(weather_en, 'en', 'ru')\n\n    result = {'city': city_ru, 'weather': weather_ru}\n\n    await save_to_db(city_ru, weather_ru)\n\n    return web.Response(text=json.dumps(result, ensure_ascii=False))\n\n\nasync def main():\n    await create_table()\n    app = web.Application()\n    app.add_routes([web.get('\u002Fweather', handle)])\n    runner = web.AppRunner(app)\n    await runner.setup()\n    site = web.TCPSite(runner, 'localhost', 8080)\n    await site.start()\n\n    while True:\n        await asyncio.sleep(3600)\n\n\nif __name__ == '__main__':\n    asyncio.run(main())\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cdetails class=\"spoiler\"\u003E\u003Csummary\u003EДля продвинутых\u003C\u002Fsummary\u003E\u003Cdiv class=\"spoiler__content\"\u003E\u003Cp\u003EДокументация \u003Ccode\u003Eaiohttp\u003C\u002Fcode\u003E не рекомендует создавать новую \u003Ccode\u003EClientSession\u003C\u002Fcode\u003E для каждого запроса. В высоконагруженных приложениях это может привести к снижению производительности. Правильным решением является создание единственной сессии для всего приложения (или, как вариант, нескольких сессий — отдельно для каждого внешнего сервиса). Реализовать это можно так:\u003C\u002Fp\u003E\u003Cp\u003EПример 6.5\u003C\u002Fp\u003E\u003Cpre\u003E\u003Ccode class=\"python\"\u003Eimport json\nimport aiosqlite\nimport asyncio\nfrom aiohttp import ClientSession, web\nfrom aiologger.loggers.json import JsonLogger\nfrom datetime import datetime\n\n\nlogger = JsonLogger.with_default_handlers(\n            level='DEBUG',\n            serializer_kwargs={'ensure_ascii': False},\n        )\n\n# здесь будут храниться объекты, общие для всего приложения\napp_storage = {}\n\n\nasync def create_table():\n    async with aiosqlite.connect('weather.db') as db:\n        await db.execute('CREATE TABLE IF NOT EXISTS requests '\n                         '(date text, city text, weather text)')\n        await db.commit()\n\n\nasync def save_to_db(city, weather):\n    async with aiosqlite.connect('weather.db') as db:\n        await db.execute('INSERT INTO requests VALUES (?, ?, ?)',\n                         (datetime.now(), city, weather))\n        await db.commit()\n\n\nasync def get_weather(city):\n    url = f'http:\u002F\u002Fapi.openweathermap.org\u002Fdata\u002F2.5\u002Fweather'\n    params = {'q': city, 'APPID': '2a4ff86f9aaa70041ec8e82db64abf56'}\n\n    # используем единую сессию\n    async with app_storage['session'].get(url=url, params=params) as response:\n        weather_json = await response.json()\n        try:\n            return weather_json[\"weather\"][0][\"main\"]\n        except KeyError:\n            return 'Нет данных'\n\n\nasync def get_translation(text, source, target):\n    await logger.info(f'Поступил запрос на на перевод слова: {text}')\n\n    url = 'https:\u002F\u002Flibretranslate.de\u002Ftranslate'\n\n    data = {'q': text, 'source': source, 'target': target, 'format': 'text'}\n\n    # используем единую сессию\n    async with app_storage['session'].post(url, json=data) as response:\n        translate_json = await response.json()\n\n        try:\n            return translate_json['translatedText']\n        except KeyError:\n            logger.error(f'Невозможно получить перевод для слова: {text}')\n            return text\n\n\nasync def handle(request):\n    city_ru = request.rel_url.query['city']\n\n    await logger.info(f'Поступил запрос на город: {city_ru}')\n\n    city_en = await get_translation(city_ru, 'ru', 'en')\n    weather_en = await get_weather(city_en)\n    weather_ru = await get_translation(weather_en, 'en', 'ru')\n\n    result = {'city': city_ru, 'weather': weather_ru}\n\n    await save_to_db(city_ru, weather_ru)\n\n    return web.Response(text=json.dumps(result, ensure_ascii=False))\n\n\nasync def main():\n    # создаем единую сессию для всего приложения\n    app_storage['session'] = ClientSession()\n\n    # контекстный менеджер чтобы сессия корректно закрылась после завершения приложения\n    async with app_storage['session']:\n        await create_table()\n        app = web.Application()\n\n        app.add_routes([web.get('\u002Fweather', handle)])\n        runner = web.AppRunner(app)\n        await runner.setup()\n        site = web.TCPSite(runner, 'localhost', 8080)\n        await site.start()\n\n        while True:\n            await asyncio.sleep(3600)\n\n\nif __name__ == '__main__':\n    asyncio.run(main())\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cp\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdetails\u003E\u003Cp\u003EМожете заглянуть внутрь созданного на лету файла \u003Ccode\u003Eweather.db\u003C\u002Fcode\u003E (только используйте не текстовый просмотрщик, а какую-нибудь утилиту для работы с БД, например, \u003Ca href=\"https:\u002F\u002Fdbeaver.io\u002F\" rel=\"noopener noreferrer nofollow\"\u003EDBeaver\u003C\u002Fa\u003E). Для каждого запроса создается соответствующая запись в таблице \u003Ccode\u003Erequests\u003C\u002Fcode\u003E. И снова никаких блокировок, мы ведь живем в асинхронном мире.\u003C\u002Fp\u003E\u003Cp\u003EВ заключение этого раздела хочу вас поздравить. Теперь вы имеете в руках все необходимое для создания собственных асинхронных веб-приложений. Неважно какой фреймворк вы будете использовать: \u003Ccode\u003EFastAPI\u003C\u002Fcode\u003E, \u003Ccode\u003ETornado\u003C\u002Fcode\u003E, \u003Ccode\u003EFalcon\u003C\u002Fcode\u003E или какой-нибудь еще. Принцип останется тот же самый как в старом добром \u003Ccode\u003Eaiohttp\u003C\u002Fcode\u003E: создаем ручку и в ней нанизываем \"шашлык\" из вызовов асинхронных функций. Главное, за чем необходимо следить — это чтобы в эти функции не затесался какой-нибудь блокирующий зловред из скучной пыльной синхронной вселенной.\u003C\u002Fp\u003E\u003Cfigure class=\"full-width \"\u003E\u003Cimg src=\"https:\u002F\u002Fhabrastorage.org\u002Fr\u002Fw1560\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F234\u002F6dd\u002Fda4\u002F2346ddda4ee1e447e28d1b0a0b2403ef.png\" width=\"1200\" height=\"1053\" data-src=\"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F234\u002F6dd\u002Fda4\u002F2346ddda4ee1e447e28d1b0a0b2403ef.png\"\u002F\u003E\u003Cfigcaption\u003E\u003C\u002Ffigcaption\u003E\u003C\u002Ffigure\u003E\u003Cp\u003EНа этом временно прощаемся.\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003E\u003Cem\u003EПродолжение следует...\u003C\u002Fem\u003E\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\u003Cp\u003E\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E","tags":[{"titleHtml":"async"},{"titleHtml":"await"},{"titleHtml":"asyncio"},{"titleHtml":"асинхронность"},{"titleHtml":"асинхронное программирование"},{"titleHtml":"асинхронные задачи"},{"titleHtml":"асинхронные функции"},{"titleHtml":"асинхронный код"},{"titleHtml":"aiohttp"}],"metadata":{"stylesUrls":[],"scriptUrls":[],"shareImageUrl":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F1a3\u002F9e5\u002Ff3d\u002F1a39e5f3d67e130fe4159f9080547204.jpg","shareImageWidth":1200,"shareImageHeight":630,"vkShareImageUrl":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F1a3\u002F9e5\u002Ff3d\u002F1a39e5f3d67e130fe4159f9080547204.jpg","schemaJsonLd":"{\"@context\":\"http:\\\u002F\\\u002Fschema.org\",\"@type\":\"Article\",\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https:\\\u002F\\\u002Fhabr.com\\\u002Fru\\\u002Fpost\\\u002F671798\\\u002F\"},\"headline\":\"Асинхронный python без головной боли (часть 2)\",\"datePublished\":\"2022-06-16T17:34:31+03:00\",\"dateModified\":\"2022-06-20T13:26:06+03:00\",\"author\":{\"@type\":\"Person\",\"name\":\"Владимир Кириевский\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Habr\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fwebt\\\u002Fa_\\\u002Flk\\\u002F9m\\\u002Fa_lk9mjkccjox-zccjrpfolmkmq.png\"}},\"description\":\"Это продолжение цикла статей про asyncio. Начало здесь.6. Веб-сервер aiohttp и другие жители асинхронного мираПродолжаем готовить asyncio. Теперь мы уже знаем до...\",\"url\":\"https:\\\u002F\\\u002Fhabr.com\\\u002Fru\\\u002Fpost\\\u002F671798\\\u002F#post-content-body\",\"about\":[\"h_python\",\"h_programming\",\"f_develop\"],\"image\":[\"https:\\\u002F\\\u002Fhabr.com\\\u002Fshare\\\u002Fpublication\\\u002F671798\\\u002Fa35e0e52be6c9138bdc956742502f432\\\u002F\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fgetpro\\\u002Fhabr\\\u002Fupload_files\\\u002F9c7\\\u002F89b\\\u002F34d\\\u002F9c789b34da2cb081afd3ab943b0ab223.png\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fgetpro\\\u002Fhabr\\\u002Fupload_files\\\u002F49c\\\u002F4b1\\\u002F2ba\\\u002F49c4b12ba237c8839f761e36b03edbd5.png\",\"https:\\\u002F\\\u002Fhabrastorage.org\\\u002Fgetpro\\\u002Fhabr\\\u002Fupload_files\\\u002F234\\\u002F6dd\\\u002Fda4\\\u002F2346ddda4ee1e447e28d1b0a0b2403ef.png\"]}","metaDescription":"Это продолжение цикла статей про asyncio . Начало здесь . 6. Веб-сервер aiohttp и другие жители асинхронного мира Продолжаем готовить asyncio . Теперь мы уже знаем достаточно, чтобы написать модный...","mainImageUrl":null,"amp":false,"customTrackerLinks":[]},"polls":[{"id":"37784","timeElapsed":null,"answersType":"radio","votesCount":224,"passCount":18,"textHtml":"О чем бы вы хотели узнать в следующей статье цикла?","relatedData":null,"variants":[{"id":"176918","textHtml":"О работе с популярными асинхронными фреймворками и библиотеками","votesCount":134,"percent":59.82,"selected":false},{"id":"176920","textHtml":"Лучше будем углубляться в низкоуровневые детали asyncio и научимся сами писать фреймворки","votesCount":90,"percent":40.18,"selected":false}]}],"commentsEnabled":true,"rulesRemindEnabled":false,"votesEnabled":true,"status":"published","plannedPublishTime":null,"checked":null,"hasPinnedComments":false,"format":"tutorial","readingTime":9,"complexity":null,"isEditorial":false}},"articlesIds":{},"isLoading":false,"pagesCount":{},"route":{},"reasonsList":null,"view":"cards","lastVisitedRoute":{},"ssrCommentsArticleIds":[""],"karma":{"userReasonsList":null}},"authorContribution":{"authors":{}},"betaTest":{"currentAnnouncement":null,"announcements":{},"announcementCards":null,"announcementComments":{},"announcementCommentThreads":{},"announcementCommentingStatuses":{},"archivedList":[]},"authorStatistics":{"articleRefs":{},"articleIds":{},"pagesCount":{},"route":{},"viewsCount":[],"maxStatsCount":{}},"career":{"seoLandings":[{"title":"Data Scientist","vacanciesCount":126,"itemUrl":"https:\u002F\u002Fcareer.habr.com\u002Fvacancies\u002Fdata_scientist","itemHubs":["bigdata","r","data_mining","python","machine_learning"]},{"title":"Python разработчик","vacanciesCount":144,"itemUrl":"https:\u002F\u002Fcareer.habr.com\u002Fvacancies\u002Fprogrammist_python","itemHubs":["django","flask","python"]},{"title":"Django разработчик","vacanciesCount":58,"itemUrl":"https:\u002F\u002Fcareer.habr.com\u002Fvacancies\u002Fdjango_razrabotchik","itemHubs":["django","python"]}],"hubs":"python,programming"},"comments":{"articleComments":{},"articlePinnedComments":{},"searchCommentsResults":null,"pagesCount":null,"commentAccess":{},"scrollParents":{},"pageArticleComments":{"lastViewedComment":0,"postId":null,"lastCommentTimestamp":"","moderated":[],"moderatedIds":[],"commentRoute":""}},"companies":{"companyRefs":{},"companyIds":{},"companyTopIds":{},"pagesCount":{},"companyProfiles":{},"companiesCategories":[],"companiesCategoriesTotalCount":0,"companiesWidgets":{},"companiesWorkers":{},"companiesFans":{},"route":{},"isLoading":false,"companyWorkersLoading":false,"companyFansLoading":false,"vacancies":{},"companiesGalleries":{},"companiesBanners":{},"companiesLandingVacancies":{},"companiesTechnologies":{},"workplaceInfo":null},"companyAdmin":{"companyInfo":null,"companyInfoLoading":false,"faqArticles":null,"brandingPreviewImageUrl":null,"jivoStatus":0,"adminNotifications":null},"companiesContribution":{"hubs":{},"flows":{},"companyRefs":{}},"companyHubsContribution":{"contributionRefs":{"hubRefs":{},"hubIds":{}}},"conversation":{"messages":[],"respondent":null,"isLoadMore":false},"conversations":{"conversations":[],"unreadCount":0,"pagesCount":0},"desktopState":{"desktopFl":null,"desktopHl":null,"isChecked":false,"isLoginDemanded":false},"docs":{"menu":{},"articles":{},"mainMenu":[],"loading":{"main":false,"dropdown":false,"article":false}},"feature":{"isProbablyVisible":true},"flows":{"updates":{"countNewPostsBySubscription":null,"countNewPostsAll":54,"countNewNewsAll":42},"flows":[{"alias":"develop","id":"1","route":{"name":"FLOW_PAGE","params":{"flowName":"develop"}}},{"alias":"admin","id":"6","route":{"name":"FLOW_PAGE","params":{"flowName":"admin"}}},{"alias":"design","id":"2","route":{"name":"FLOW_PAGE","params":{"flowName":"design"}}},{"alias":"management","id":"3","route":{"name":"FLOW_PAGE","params":{"flowName":"management"}}},{"alias":"marketing","id":"4","route":{"name":"FLOW_PAGE","params":{"flowName":"marketing"}}},{"alias":"popsci","id":"7","route":{"name":"FLOW_PAGE","params":{"flowName":"popsci"}}}]},"global":{"isPwa":false,"device":"desktop","isHabrCom":true},"hubs":{"hubRefs":{},"hubIds":{},"pagesCount":{},"isLoading":false,"route":{}},"hubsBlock":{"hubRefs":{},"hubIds":{}},"i18n":{"fl":"ru","hl":"ru"},"info":{"infoPage":{},"isLoading":true},"location":{"urlStruct":{"protocol":null,"slashes":null,"auth":null,"host":null,"port":null,"hostname":null,"hash":null,"search":null,"query":{},"pathname":null,"path":null,"href":""}},"me":{"user":null,"uuid":null,"ppgDemanded":false,"karmaResetInfo":{"canReincarnate":null,"wasReincarnated":null,"currentScore":null},"notes":null},"modal":{"modals":[]},"mostReadingList":{"mostReadingListIds":[],"mostReadingListRefs":null,"promoPost":null},"ppa":{"articles":{},"card":null,"transactions":null,"totalTransactions":null,"isAccessible":null},"projectsBlocks":{"activeBlocks":{"salary":"project-block-article"}},"promoData":{"isLoading":false,"hasLoaded":false,"featurer":null,"megaposts":null,"promoLinks":null,"promoPosts":null},"pullRefresh":{"shouldRefresh":false},"sandbox":{"articleIds":[],"articleRefs":{},"pagesCount":null,"route":{},"lastVisitedRoute":{},"isLoading":false},"search":{"searchQueryError":"Field is required"},"settingsOther":{"inputs":{"uiLang":{"errors":[],"ref":null,"value":""},"articlesLangEnglish":{"errors":[],"ref":null,"value":false},"articlesLangRussian":{"errors":[],"ref":null,"value":false},"agreement":{"errors":[],"ref":null,"value":false},"email":{"errors":[],"ref":null,"value":true},"digest":{"errors":[],"ref":null,"value":true}}},"similarList":{"similarListIds":[],"similarListRefs":null},"ssr":{"error":null,"isDataLoaded":false,"isDataLoading":false,"isHydrationFailed":false,"isServer":false},"stories":{"stories":[{"id":"story-312","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fb0d\u002F133\u002Fd40\u002Fb0d133d40933666d885f3e652a5f44d3.png","title":"Хабр Карьера","link":"https:\u002F\u002Fu.habr.com\u002FERhfj"},"title":"Публичная консультация с экспертом: рекрутеры","lang":"ru","startTime":"2023-03-20T13:00:00+03:00","finishTime":"2023-03-27T23:59:16+03:00","slides":[{"id":"story-312_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F920\u002F7cb\u002F296\u002F9207cb2967242e4680d19b4c47ef7d0b.png","button":{"title":"Смотреть","link":"https:\u002F\u002Fu.habr.com\u002FERhfj","colorType":"dark"}},{"id":"story-312_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F176\u002F12e\u002Fc7e\u002F17612ec7eb02d86e03c10a2638816aff.png","button":{"title":"Подробнее","link":"https:\u002F\u002Fu.habr.com\u002FERhfj","colorType":"dark"}},{"id":"story-312_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F90e\u002F5b7\u002F7d0\u002F90e5b77d0ec43c97459e3ed783d3dbfb.png","button":{"title":"Смотреть","link":"https:\u002F\u002Fu.habr.com\u002FERhfj","colorType":"dark"}},{"id":"story-312_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F72a\u002F33b\u002F733\u002F72a33b733dfc380174db7e124b1a464c.png","button":{"title":"Подробнее","link":"https:\u002F\u002Fu.habr.com\u002FERhfj","colorType":"dark"}}]},{"id":"story-046","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Flx\u002Fdx\u002F1j\u002Flxdx1jswzf3dnisg2hh1h80-wjg.png","title":"Geek Travel","link":null},"title":"Обсерватория на Кавказе, где наблюдают за солнцем","lang":"ru","startTime":"2023-03-20T10:00:00+03:00","finishTime":"2023-03-26T23:59:00+03:00","slides":[{"id":"story-046_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fv-\u002Fyh\u002Fvk\u002Fv-yhvk1as5vlinwjhdpujchwe9u.jpeg","button":null},{"id":"story-046_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fwi\u002F_5\u002Fuv\u002Fwi_5uvclpiix5drdy6ffwqdo1t8.png","button":null},{"id":"story-046_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Faz\u002Fyp\u002F0j\u002Fazyp0jvmjxqquvenzkkirol4fk8.jpeg","button":null},{"id":"story-046_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fj1\u002Ffn\u002Fwi\u002Fj1fnwiyvjky9iwqhjp-mrybnamg.jpeg","button":null},{"id":"story-046_5","image":"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fl9\u002F6f\u002Fzr\u002Fl96fzrwwnlfat36nqhtch5hajfc.jpeg","button":null},{"id":"story-046_6","image":"https:\u002F\u002Fhabrastorage.org\u002Fwebt\u002Fz4\u002Fos\u002Fqn\u002Fz4osqng77eedkh0la5tq8clqw0k.jpeg","button":null}]},{"id":"story-310","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F755\u002F06c\u002Fe7f\u002F75506ce7f8701ea8761ea0ac9d2b72d9.png","title":"Хабр","link":null},"title":"Тренируйся: физкульт-подборка","lang":"ru","startTime":"2023-03-17T11:00:44+03:00","finishTime":"2023-03-26T23:59:00+03:00","slides":[{"id":"story-310_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F649\u002F416\u002F979\u002F64941697969ed302b95b0a11602221d8.jpg","button":null},{"id":"story-310_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F90b\u002F662\u002F984\u002F90b662984b76a7975dc7be8d250cd6b3.jpg","button":{"title":"Вставай на лыжи","link":"https:\u002F\u002Fu.habr.com\u002F8NOwN","colorType":"light"}},{"id":"story-310_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F58a\u002F32e\u002Ff76\u002F58a32ef76f19b55c9169dc5d7c1aa42e.jpg","button":{"title":"Воодушевиться","link":"https:\u002F\u002Fu.habr.com\u002Fv7Zfv","colorType":"light"}},{"id":"story-310_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F134\u002F46d\u002F40c\u002F13446d40c83ee0e5647aca89c8f22b55.jpg","button":{"title":"Смотреть обзор","link":"https:\u002F\u002Fu.habr.com\u002Fn52KP","colorType":"light"}},{"id":"story-310_5","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F373\u002F0c3\u002Fd52\u002F3730c3d521fc2b7f2b3835ef935f96d3.jpg","button":{"title":"Прогуляться","link":"https:\u002F\u002Fu.habr.com\u002F1Hpbs","colorType":"light"}},{"id":"story-310_6","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fd3c\u002Fb9c\u002Fb42\u002Fd3cb9cb42046eb5b44450aeecd4ef650.jpg","button":{"title":"Подробнее","link":"https:\u002F\u002Fu.habr.com\u002FRZxhy","colorType":"light"}},{"id":"story-310_7","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fbef\u002F940\u002F5ed\u002Fbef9405ed753baca270fef3de37c5735.jpg","button":{"title":"Читать исследование","link":"https:\u002F\u002Fu.habr.com\u002FEMnZT","colorType":"light"}},{"id":"story-310_8","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fb3d\u002Faf4\u002F957\u002Fb3daf495751f36899dc6c7598ef0b42c.jpg","button":{"title":"Поразмыслить","link":"https:\u002F\u002Fu.habr.com\u002FWJzt6","colorType":"light"}}]},{"id":"story-306","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fd6d\u002F0b1\u002Fded\u002Fd6d0b1dedccbc6341c6baf47655a0db6.png","title":"Хабр Карьера","link":"https:\u002F\u002Fu.habr.com\u002FVlmCt"},"title":"Активность найма на IT-рынке в феврале","lang":"ru","startTime":"2023-03-16T13:30:00+03:00","finishTime":"2023-03-23T12:32:01+03:00","slides":[{"id":"story-306_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F30f\u002Fb45\u002F893\u002F30fb45893c552ecf3b995c009e6bfc0c.png","button":null},{"id":"story-306_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F502\u002F27e\u002Fabe\u002F50227eabe88c7db20428d4765a76bda6.png","button":{"title":"Подробности","link":"https:\u002F\u002Fu.habr.com\u002FVlmCt","colorType":"dark"}},{"id":"story-306_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Ffb8\u002Fdff\u002F14e\u002Ffb8dff14e42e9bc581d7dbe2a4883702.png","button":{"title":"Подробности","link":"https:\u002F\u002Fu.habr.com\u002FVlmCt","colorType":"dark"}},{"id":"story-306_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fb9c\u002F36f\u002Fa90\u002Fb9c36fa9030932baf8db79dfb0d4e10d.png","button":{"title":"Подробности","link":"https:\u002F\u002Fu.habr.com\u002FVlmCt","colorType":"dark"}}]},{"id":"story-304","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F3ed\u002Fb5c\u002F631\u002F3edb5c631d4119ffe72a967100710f77.png","title":"Хабр","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002Fhabr\u002Fblog\u002F"},"title":"Недельный топ годноты из блогов компаний","lang":"ru","startTime":"2023-03-16T12:35:00+03:00","finishTime":"2023-03-23T12:27:07+03:00","slides":[{"id":"story-304_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fba7\u002F2d4\u002Fb11\u002Fba72d4b11395bbe28e314bee69ea4ff8.png","button":null},{"id":"story-304_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F94c\u002F675\u002F621\u002F94c675621bb6ac67a7390b972221912d.jpg","button":{"title":"Разобраться","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002Fods\u002Fblog\u002F716918\u002F","colorType":"light"}},{"id":"story-304_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fc09\u002Fb0b\u002Fc1d\u002Fc09b0bc1d077b9f3687646f5ab7274cf.jpg","button":{"title":"Читать обзор","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002Fglobalsign\u002Fblog\u002F720536\u002F","colorType":"dark"}},{"id":"story-304_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fa5d\u002Fb3b\u002F5ca\u002Fa5db3b5ca86775853ca6d7d61e62f759.jpg","button":{"title":"Подробнее","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002Ffirst\u002Fblog\u002F720058\u002F","colorType":"light"}},{"id":"story-304_5","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fc21\u002F0e1\u002Fad1\u002Fc210e1ad1dc812b99a275445512a0c27.jpg","button":{"title":"Узнать больше","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002F3rdman\u002Fblog\u002F720524\u002F","colorType":"light"}},{"id":"story-304_6","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fb17\u002F4ef\u002F6dd\u002Fb174ef6dd0ff551cb561efd4ef2d231a.jpg","button":{"title":"К истокам","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002Fispmanager\u002Fblog\u002F720312\u002F","colorType":"light"}},{"id":"story-304_7","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F067\u002Fa42\u002Fb37\u002F067a42b377312d6898954bd5c6b7832f.jpg","button":{"title":"Много формул","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002Fsibur_official\u002Fblog\u002F720982\u002F","colorType":"light"}},{"id":"story-304_8","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F5c3\u002F390\u002Fcdb\u002F5c3390cdb922a969b1539fc19a5edc6c.jpg","button":{"title":"Смотреть список","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002Fruvds\u002Fblog\u002F720822\u002F","colorType":"light"}}]},{"id":"story-302","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Ffa0\u002F939\u002F5d1\u002Ffa09395d14e24eccbc732d3224b88c35.png","title":"Хабр Карьера","link":"https:\u002F\u002Fu.habr.com\u002FiBejh"},"title":"Техническое собеседование тестировщика","lang":"ru","startTime":"2023-03-15T17:25:00+03:00","finishTime":"2023-03-22T17:18:24+03:00","slides":[{"id":"story-302_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fd3a\u002F834\u002F476\u002Fd3a834476c7f0ef78c446688b40bcf92.png","button":null},{"id":"story-302_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F37d\u002F2cd\u002F716\u002F37d2cd716ea3bcf76205f7b0e53cbfce.png","button":null},{"id":"story-302_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fb1b\u002Fe49\u002Fbca\u002Fb1be49bca3163216af7498c51df10d57.png","button":{"title":"Смотреть","link":"https:\u002F\u002Fu.habr.com\u002FiBejh","colorType":"dark"}}]},{"id":"story-296","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fd59\u002Fa4b\u002Fc74\u002Fd59a4bc74deec559888728bac63c8744.png","title":"Хабр Карьера","link":"https:\u002F\u002Fu.habr.com\u002FfnoO9"},"title":"Кем работать в IT: Scrum-мастер","lang":"ru","startTime":"2023-03-14T11:10:00+03:00","finishTime":"2023-03-21T23:59:00+03:00","slides":[{"id":"story-296_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F50c\u002Ff4e\u002Fb0b\u002F50cf4eb0b63bacf94fe49737d0e00958.png","button":null},{"id":"story-296_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F4cf\u002F981\u002Fb95\u002F4cf981b95ef9afeb773d191612ddfec3.png","button":null},{"id":"story-296_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F3ab\u002Fe79\u002F5da\u002F3abe795da78dcd4c1f951a7eb6481608.png","button":{"title":"Подробнее","link":"https:\u002F\u002Fu.habr.com\u002FfnoO9","colorType":"dark"}},{"id":"story-296_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F72f\u002Fe3e\u002F46f\u002F72fe3e46faaf60ec518100b155b61d73.png","button":{"title":"Подробнее","link":"https:\u002F\u002Fu.habr.com\u002FfnoO9","colorType":"dark"}},{"id":"story-296_5","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F471\u002F060\u002F9a1\u002F4710609a1dfa6a508fef8ec62f031621.png","button":{"title":"Подробнее","link":"https:\u002F\u002Fu.habr.com\u002FfnoO9","colorType":"dark"}},{"id":"story-296_6","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F67f\u002F49b\u002F88c\u002F67f49b88c5e399b4d75c560288b72796.png","button":{"title":"Подробнее","link":"https:\u002F\u002Fu.habr.com\u002FfnoO9","colorType":"dark"}}]},{"id":"story-278","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F3b2\u002F2b9\u002F874\u002F3b22b9874c30d2e95f06e8ba591d7226.png","title":"Хабр","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002Fhabr\u002Fblog\u002F"},"title":"Схватил за мозг","lang":"ru","startTime":"2023-03-06T11:00:00+03:00","finishTime":"2023-03-22T23:59:00+03:00","slides":[{"id":"story-278_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F6d2\u002F515\u002F649\u002F6d2515649a98ebff0fff2c95f13aa9e6.jpg","button":null},{"id":"story-278_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F6ba\u002F37c\u002F756\u002F6ba37c75671941bb212e0bf815f99550.jpg","button":{"title":"Что оказалось?","link":"https:\u002F\u002Fu.habr.com\u002Fbrain01","colorType":"light"}},{"id":"story-278_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F702\u002Fbe8\u002Fa8f\u002F702be8a8fe21d483936df54dc074b96a.jpg","button":{"title":"Осознать","link":"https:\u002F\u002Fu.habr.com\u002Fbrain02","colorType":"light"}},{"id":"story-278_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F9e2\u002F2c2\u002F499\u002F9e22c2499018c37dbb4064053ef7e0a0.jpg","button":{"title":"Отложить таблетку","link":"https:\u002F\u002Fu.habr.com\u002Fbrain03","colorType":"dark"}},{"id":"story-278_5","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F756\u002F85f\u002F99b\u002F75685f99b00f7a2323028948818a1b66.jpg","button":{"title":"Смотреть советы","link":"https:\u002F\u002Fu.habr.com\u002Fbrain04","colorType":"dark"}},{"id":"story-278_6","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F442\u002F9a8\u002F159\u002F4429a8159a4280575a30cf1bbbdb3b08.jpg","button":{"title":"Уделить внимание","link":"https:\u002F\u002Fu.habr.com\u002Fbrain05","colorType":"light"}},{"id":"story-278_7","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F892\u002Fe3e\u002Fa8b\u002F892e3ea8b4ad8934c6858348943804fd.jpg","button":{"title":"Записать нужное","link":"https:\u002F\u002Fu.habr.com\u002Fbrain06","colorType":"light"}},{"id":"story-278_8","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Ffa5\u002Ffe9\u002F7bb\u002Ffa5fe97bb1ec4af1e7b1e164171b795c.jpg","button":{"title":"Какое именно?","link":"https:\u002F\u002Fu.habr.com\u002Fbrain07","colorType":"light"}}]},{"id":"story-272","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F82b\u002Fdd7\u002F7d8\u002F82bdd77d8ef7304d3b1b599191c2bb1c.png","title":"Сезоны Хабра","link":"https:\u002F\u002Fu.habr.com\u002F5P6i7"},"title":"Открыт сезон ML","lang":"ru","startTime":"2023-03-02T09:00:41+03:00","finishTime":"2023-03-31T20:53:00+03:00","slides":[{"id":"story-272_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F27f\u002Fd3a\u002Fddf\u002F27fd3addfe06da09592bdcf61db15795.jpg","button":null},{"id":"story-272_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F935\u002F582\u002F992\u002F935582992e378add33c898451b2a0d9f.jpg","button":null},{"id":"story-272_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fe13\u002Feb8\u002Fa24\u002Fe13eb8a24b60622d3da72fd6e7ed3fda.jpg","button":null},{"id":"story-272_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fa85\u002F83f\u002F5cc\u002Fa8583f5ccfae747135343f0e68c84112.jpg","button":{"title":"Подробнее","link":"https:\u002F\u002Fu.habr.com\u002F5P6i7","colorType":"light"}},{"id":"story-272_5","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F60d\u002F1cb\u002F98c\u002F60d1cb98cdd42d2696ebc0ec54740a23.jpg","button":{"title":"Подробнее","link":"https:\u002F\u002Fu.habr.com\u002F5P6i7","colorType":"light"}}]},{"id":"story-262","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F2fa\u002Fc8a\u002Fba8\u002F2fac8aba82b995297abea595da7990d1.png","title":"Хабр","link":"https:\u002F\u002Fhabr.com\u002Fru\u002Fcompany\u002Fhabr\u002Fblog\u002F"},"title":"Наука сна","lang":"ru","startTime":"2023-02-28T12:15:00+03:00","finishTime":"2023-03-22T23:59:00+03:00","slides":[{"id":"story-262_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fa90\u002F725\u002F61c\u002Fa9072561c280c46933ff54fd8702cade.jpg","button":null},{"id":"story-262_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Ffd7\u002F658\u002F956\u002Ffd7658956ea825b1c317c7f688c48058.jpg","button":{"title":"Читать лекцию","link":"https:\u002F\u002Fu.habr.com\u002Fson01","colorType":"light"}},{"id":"story-262_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F366\u002Fd2e\u002F707\u002F366d2e70725209177fa82a4119139c86.jpg","button":{"title":"При чём же?","link":"https:\u002F\u002Fu.habr.com\u002Fson02","colorType":"light"}},{"id":"story-262_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F4bd\u002F40f\u002F731\u002F4bd40f731bfbf571a709dd2f357f06b4.jpg","button":{"title":"Заглянуть в дневник","link":"https:\u002F\u002Fu.habr.com\u002Fson03","colorType":"light"}},{"id":"story-262_5","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F944\u002F7ad\u002Fe2f\u002F9447ade2f38c3c36790be75bf4462047.jpg","button":{"title":"Последствия","link":"https:\u002F\u002Fu.habr.com\u002Fson04","colorType":"light"}},{"id":"story-262_6","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F74c\u002Fce1\u002F4dc\u002F74cce14dc903b245dca90df3f2747abb.jpg","button":{"title":"Смотреть список","link":"https:\u002F\u002Fu.habr.com\u002Fson05","colorType":"light"}},{"id":"story-262_7","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fbc9\u002Fa62\u002F9f0\u002Fbc9a629f0c5ef2027cf7796749a06914.jpg","button":{"title":"Следы в истории","link":"https:\u002F\u002Fu.habr.com\u002Fson06","colorType":"light"}},{"id":"story-262_8","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F085\u002F0ee\u002F868\u002F0850ee868132e1ec4ec3b24caf7e719a.jpg","button":{"title":"Что придумали?","link":"https:\u002F\u002Fu.habr.com\u002Fson07","colorType":"light"}}]},{"id":"story-152","author":{"logo":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fa49\u002F0d3\u002F609\u002Fa490d3609f29b6dfc53a7b88ab47ca64.png","title":"Хабр","link":"https:\u002F\u002Fu.habr.com\u002Fstory_HiM-anketa"},"title":"Сеньоры — очень странные люди","lang":"ru","startTime":"2023-01-23T11:00:00+03:00","finishTime":"2023-03-31T23:59:00+03:00","slides":[{"id":"story-152_1","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fbbb\u002F901\u002F063\u002Fbbb9010630ae483ed1f41ec4e2572c13.png","button":null},{"id":"story-152_2","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F4f8\u002F66c\u002F14f\u002F4f866c14f0ca8999334438d7f17c0e3a.png","button":null},{"id":"story-152_3","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F6b9\u002Fa07\u002Fa61\u002F6b9a07a612df213ac3a1c179301828df.png","button":null},{"id":"story-152_4","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Ff6b\u002Fadb\u002Fb99\u002Ff6badbb9969d7e34ef4f7492767c6a77.png","button":null},{"id":"story-152_5","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fd9c\u002F9ac\u002F878\u002Fd9c9ac878bec5b494699e0080dd2e813.png","button":null},{"id":"story-152_6","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fdb1\u002Faf9\u002Fc3b\u002Fdb1af9c3bb557f6cee698cf67610f977.png","button":null},{"id":"story-152_7","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002F5cf\u002Fbed\u002F65b\u002F5cfbed65bd20b7051b1aac2b9d6e807e.png","button":null},{"id":"story-152_8","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Ffa8\u002F251\u002F4a9\u002Ffa82514a9471cd455339e97178d8c021.png","button":null},{"id":"story-152_9","image":"https:\u002F\u002Fhabrastorage.org\u002Fgetpro\u002Fhabr\u002Fupload_files\u002Fbd5\u002F901\u002Fe95\u002Fbd5901e952d9cf638355a3cc8b0c0911.png","button":{"title":"Хочу помочь джуну","link":"https:\u002F\u002Fu.habr.com\u002Fstory_HiM-anketa","colorType":"light"}}]}]},"technotext":{"years":[],"technotextDocForNominees":null,"technotextDocForWinners":null,"technotextInfo":{},"technotextInfoLoading":false,"technotextWinners":{},"technotextWinnersLoading":false},"userHubsContribution":{"contributionRefs":{"hubRefs":{},"hubIds":{}}},"userInvites":{"availableInvites":0,"usedInvitesIds":[],"usedInvitesRefs":{},"usedInvitesPagesCount":0,"unusedInvitesIds":[],"unusedInvitesRefs":{},"unusedInvitesPagesCount":0},"userVotes":{"karmaVotesList":[],"karmaVotesPagesCount":null,"karmaVotesListLoading":false,"commentsVotesList":[],"commentsVotesPagesCount":null,"commentsVotesListLoading":false,"postsVotesList":[],"postsVotesPagesCount":null,"postsVotesListLoading":false,"userVotesList":[],"userVotesPagesCount":null,"userVotesListLoading":false},"users":{"authorRefs":{},"authorIds":{},"pagesCount":{},"authorProfiles":{},"userHubs":{},"userInvitations":{},"authorFollowers":{},"authorFollowed":{},"userSpecialization":{},"karmaStats":[],"statistics":null,"isLoading":false,"authorFollowersLoading":false,"authorFollowedLoading":false,"userHubsLoading":false,"userInvitationsLoading":false,"route":{}},"viewport":{"prevScrollY":{},"scrollY":0,"width":0},"tracker":{"items":{},"pagesCache":{},"markedViewedSilently":{},"markedRead":{},"unreadCounters":{"applications":null,"system":null,"mentions":null,"subscribers":null,"posts_and_comments":null},"unviewedCounters":{"applications":null,"system":null,"mentions":null,"subscribers":null,"posts_and_comments":null}}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script>
+<script src="https://assets.habr.com/habr-web/js/chunk-vendors.f5a3d631.js" defer></script><script src="https://assets.habr.com/habr-web/js/7298.c8f1d73c.js" defer></script><script src="https://assets.habr.com/habr-web/js/app.eaac855a.js" defer></script>
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-726094-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+  
+  <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(24049213, "init", {
+      defer:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:false,
+    });
+  </script>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/24049213" style="position:absolute; left:-9999px;" alt="" />
+    </div>
+  </noscript>
+  
+    <script type="text/javascript">
+      window.addEventListener('load', function () {
+        setTimeout(() => {
+          const img = new Image();
+          img.src = 'https://vk.com/rtrg?p=VK-RTRG-421343-57vKE';
+        }, 0);
+      });
+    </script>
+  
+<script src="/js/ads.js" onload="window['zhY4i4nJ9K'] = true"></script>
+</body>
+</html>

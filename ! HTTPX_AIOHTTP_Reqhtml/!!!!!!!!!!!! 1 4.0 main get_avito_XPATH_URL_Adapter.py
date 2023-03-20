@@ -2,21 +2,11 @@
 # Для корректной работы парсера рекомендую вам использовать TLS не ниже V1.2.
 #https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30
 
+#https://www.avito.ru/rostovskaya_oblast/mototsikly_i_mototehnika?cd=1&f=ASgCAgECAUXGmgwXeyJmcm9tIjoyMDAwLCJ0byI6NzAwMH0&q=скутер&s=1
 #
-import io
-from urllib.request import urlopen
-import lxml.html
 from lxml import html
-from lxml import etree
-from bs4 import BeautifulSoup
-from random import randint
+#from bs4 import BeautifulSoup
 #######################################
-import json
-import sqlite3
-import time
-from datetime import datetime
-import requests
-from realty import check_database
 import ssl
 import requests
 ##########################################
@@ -24,6 +14,21 @@ from requests.adapters import HTTPAdapter
 #from requests.packages.urllib3.poolmanager import PoolManager
 from urllib3.poolmanager import PoolManager
 #from requests.packages.urllib3.util import ssl_
+from urllib3.util import ssl_
+# from bs4 import BeautifulSoup
+#######################################
+import ssl
+
+import requests
+from requests_html import HTMLSession
+# https://www.avito.ru/rostovskaya_oblast/mototsikly_i_mototehnika?cd=1&f=ASgCAgECAUXGmgwXeyJmcm9tIjoyMDAwLCJ0byI6NzAwMH0&q=скутер&s=1
+#
+from lxml import html
+##########################################
+from requests.adapters import HTTPAdapter # TLS не ниже V1.2
+# from requests.packages.urllib3.poolmanager import PoolManager
+from urllib3.poolmanager import PoolManager
+# from requests.packages.urllib3.util import ssl_
 from urllib3.util import ssl_
 
 CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
@@ -180,6 +185,7 @@ def parse_xml(resp_text):
         title = item.xpath(path_title)[0]
         #title = item.xpath('.//div[@class="iva-item-descriptionStep-QGE8Y"]//text()')[0]
 
+        #.//link[@rel = "canonical"] 
         #description = item.xpath('./div[@class="description"]/text()')
 #        if index < 10:
             #print(etree.tostring(item), name, description)
@@ -201,7 +207,8 @@ def parse_xml(resp_text):
 
 def main():
     #CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
-    session = requests.session()
+    #session = requests.session()
+    session = HTMLSession()
     adapter = TlsAdapter(ssl.OP_NO_TLSv1 | ssl.OP_NO_TLSv1_1)
     session.mount("https://", adapter)
 
@@ -213,10 +220,12 @@ def main():
                 #?pmax=7000&pmin=2000
                 #&forceLocation=1&localPriority=1
         url_0 = 'https://www.avito.ru/rostov-na-donu/mototsikly_i_mototehnika/mopedy_i_skutery/?radius=100&p=2&forceLocation=1&localPriority=1&pmin=1000&pmax=10000'
-        url_0 = 'https://www.avito.ru/rostovskaya_oblast/mototsikly_i_mototehnika/mopedy_i_skutery?cd=1&q=скутер&forceLocation=1&localPriority=1&pmax=7000&pmin=2000'
+        url_0 = 'https://www.avito.ru/rostovskaya_oblast/mototsikly_i_mototehnika?cd=1&q=скутер&forceLocation=1&localPriority=1&pmax=7000&pmin=2000&s=1'
+        url_0 = str('https://www.avito.ru/rostovskaya_oblast/mototsikly_i_mototehnika?cd=1&f=ASgCAgECAUXGmgwXeyJmcm9tIjoyMDAwLCJ0byI6NzAwMH0&q'+'=скутер&s=1')
         #url_0 = 'https://www.avito.ru/rostov-na-donu?cd=1&q=e-mu+1616'
         url_av_1 = 'https://www.avito.ru/novosibirsk/muzykalnye_instrumenty/midi-klaviatura_cme_u-key_2521013620'
         url_av = url_0
+        print(f'url_av = {url_av}')
         url_api = 'https://m.avito.ru/api/9/items?key=af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir&categoryId=9&params%5B1283%5D=14756&locationId=640000&params%5B110000%5D=329273&withImagesOnly=1&page=1&lastStamp=1611316560&display=list&limit=30'
         #url_av = url_api
 

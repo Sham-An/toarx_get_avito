@@ -104,8 +104,9 @@ params = {
     'lastStamp': 1660975970,
     'display': 'list',
     'limit': limit_page,
-    'query': search,
+    'q': search,
 }
+
 cicle_stop = True       # Переменная для остановки цикла
 cikle = 0               # Переменная для перебора страниц с объявлениями
 items = []              # Список, куда складываем объявления
