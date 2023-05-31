@@ -1,14 +1,14 @@
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
 
-#from first_project.config import TOKEN_API
+# from first_project.config import TOKEN_API
 import config
 
 # bot = Bot(TOKEN_API)
 # dp = Dispatcher(bot)
 
 bot_login = config.bot_login
-TOKEN_API = config.api_reg #config.api_key
+TOKEN_API = config.api_reg  # config.api_key
 
 bot = Bot(TOKEN_API)
 dp = Dispatcher(bot)
@@ -17,10 +17,12 @@ dp = Dispatcher(bot)
 async def on_startup(_):
     print('I have been started up')
 
+
 kb = ReplyKeyboardMarkup(resize_keyboard=True)
 b1 = KeyboardButton(text="/help")
 b2 = KeyboardButton(text="/vote")
 kb.add(b1, b2)
+
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
@@ -28,7 +30,8 @@ async def start_command(message: types.Message):
                            text='Welcome to our bot!',
                            reply_markup=kb)
 
-@dp.message_handler(commands=['vote']) # handler example
+
+@dp.message_handler(commands=['vote'])  # handler example
 async def vote_command(message: types.Message):
     ikb = InlineKeyboardMarkup(row_width=2)
     ib1 = InlineKeyboardButton(text='❤️',
@@ -41,6 +44,7 @@ async def vote_command(message: types.Message):
                          photo="https://cdn.mos.cms.futurecdn.net/xs77NtybWu6MPkoRtYApuJ-320-80.jpg",
                          caption='Нравится ли тебе данная фотография?',
                          reply_markup=ikb)
+
 
 @dp.callback_query_handler()
 async def vote_callback(callback: types.CallbackQuery):

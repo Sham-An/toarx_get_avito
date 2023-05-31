@@ -66,7 +66,7 @@ url_api_9 = 'https://m.avito.ru/api/9/items'    # Урл первого API, п�
 #'lastStamp': 1610905380,
 # Тут уже видно цену и название объявлений
 params = {
-    'categoryId': 14,
+    'categoryId': 24,
     'params[30]': 4969,
     'locationId': locationId,
     'searchRadius': searchRadius,

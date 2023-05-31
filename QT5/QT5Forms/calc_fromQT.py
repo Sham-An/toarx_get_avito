@@ -8,13 +8,13 @@
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
-from PySide2 import QtWidgets
-from PySide2.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
+from PySide6 import QtWidgets
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QObject, QPoint,
                             QRect, QSize, QUrl, Qt)
-from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
                            QFontDatabase, QIcon, QLinearGradient, QPalette, QPainter, QPixmap,
                            QRadialGradient)
-from PySide2.QtWidgets import *
+from PySide6.QtWidgets import *
 from calc_ui_PySide import *
 
 

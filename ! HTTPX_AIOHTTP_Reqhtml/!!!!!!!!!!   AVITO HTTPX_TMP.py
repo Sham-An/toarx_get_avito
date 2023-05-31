@@ -1,9 +1,9 @@
 
 import ssl
 import httpx
-
+from lxml import html
 # create an ssl context
-ssl_context = ssl.SSLContext(protocol=ssl.PROTOCOL_TLS)
+ssl_context = ssl.SSLContext(protocol=ssl.PROTOCOL_TLS_CLIENT)#+PROTOCOL_TLS_CLIENT) #PROTOCOL_TLS)#
 ssl_context = httpx.create_ssl_context()
 # ssl.PROTOCOL_TLS - Selects the highest protocol version that both the client and server support.
 # Despite the name, this option can select both "SSL" and "TLS" protocols.
@@ -19,6 +19,7 @@ ssl_context.set_ciphers(CIPHERS)
 # httpx verify param lets you pass a standard library ssl.SSLContext
 url = 'https://example.com'
 url = 'https://www.avito.ru/tarasovskiy/mototsikly_i_mototehnika?cd=1&radius=50&searchRadius=50'
+
 
 response = httpx.get(url, verify=ssl_context)
 

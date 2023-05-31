@@ -1,30 +1,51 @@
 import asyncio
-import json
-from aiohttp import ClientSession, web
-from aiologger.loggers.json import JsonLogger
+import requests
+import aiohttp
 
 key = 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'
 CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
 
-
-logger = JsonLogger.with_default_handlers(
-            level='DEBUG',
-            serializer_kwargs={'ensure_ascii': False},
-        )
-
-
-
 async def main():
-    app = web.Application()
-    app.add_routes([web.get('/weather', handle)])
-    runner = web.AppRunner(app)
-    await runner.setup()
-    site = web.TCPSite(runner, 'localhost', 8080)
-    await site.start()
+    async with aiohttp.ClientSession() as session:
+        async with session.get(
+                "https://m.avito.ru/api/11/items?key=1") as resp:
+            print(resp.status)
+            print(await resp.text())
+    r = requests.get(
+        "https://m.avito.ru/api/11/items?key=1").text
+    print(r)
 
-    while True:
-        await asyncio.sleep(3600)
 
+loop = asyncio.get_event_loop()
+loop.run_until_complete(main())
+
+# import asyncio
+# import json
+# from aiohttp import ClientSession, web
+# from aiologger.loggers.json import JsonLogger
+#
+# key = 'af0deccbgcgidddjgnvljitntccdduijhdinfgjgfjir'
+# CIPHERS = """ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-SHA256:AES256-SHA"""
+#
+#
+# logger = JsonLogger.with_default_handlers(
+#             level='DEBUG',
+#             serializer_kwargs={'ensure_ascii': False},
+#         )
+#
+#
+#
+# async def main():
+#     app = web.Application()
+#     app.add_routes([web.get('/weather', handle)])
+#     runner = web.AppRunner(app)
+#     await runner.setup()
+#     site = web.TCPSite(runner, 'localhost', 8080)
+#     await site.start()
+#
+#     while True:
+#         await asyncio.sleep(3600)
+#
 
 if __name__ == '__main__':
     asyncio.run(main())
